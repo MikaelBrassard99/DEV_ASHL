@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<title>WJC - Pro Team PlayersInfo</title>
+<script type="text/javascript" src="WJC.js"></script>
+<meta name="author" content="Simon Tremblay, sths.simont.info" />
+<meta charset="utf-8" />
+<meta name="Decription" content="Bernard Brassard - STHS - Version : 2.3.2.2" />
+<link href="STHSMain.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+@media screen and (max-width: 1200px) {
+.STHSWarning {display:block;}
+table.basictablesorter tbody td:nth-child(15){display:none;}
+table.basictablesorter thead th:nth-child(15){display:none;}
+table.basictablesorter tbody td:nth-child(16){display:none;}
+table.basictablesorter thead th:nth-child(16){display:none;}
+table.basictablesorter tbody td:nth-child(17){display:none;}
+table.basictablesorter thead th:nth-child(17){display:none;}
+}@media screen and (max-width: 960px) {
+table.basictablesorter tbody td:nth-child(8){display:none;}
+table.basictablesorter thead th:nth-child(8){display:none;}
+table.basictablesorter tbody td:nth-child(9){display:none;}
+table.basictablesorter thead th:nth-child(9){display:none;}
+table.basictablesorter tbody td:nth-child(11){display:none;}
+table.basictablesorter thead th:nth-child(11){display:none;}
+table.basictablesorter tbody td:nth-child(12){display:none;}
+table.basictablesorter thead th:nth-child(12){display:none;}
+}@media screen and (max-width: 720px) {
+table.basictablesorter tbody td:nth-child(2){display:none;}
+table.basictablesorter thead th:nth-child(2){display:none;}
+table.basictablesorter tbody td:nth-child(3){display:none;}
+table.basictablesorter thead th:nth-child(3){display:none;}
+}</style>
+<link href="WJC.css" rel="stylesheet" type="text/css" />
+</head><body>
+<div class="tabsmenu standard"><ul class="tabmenu-links">
+<li><a class="tabmenuhome" href="./WJC-index.html">WJC Home</a></li>
+<li id="STHSMenu-Main"><a href="#tabmenu1">Main</a></li>
+<li id="STHSMenu-ProLeague"><a href="#tabmenu2">Pro League</a></li>
+<li id="STHSMenu-ProTeam" class="activemenu"><a href="#tabmenu3">Pro Team</a></li>
+<li id="STHSMenu-League"><a href="#tabmenu6">League</a></li>
+<li id="STHSMenu-Record"><a href="#tabmenu7">Record</a></li>
+<li id="STHSMenu-DirectLink"><a href="#tabmenu8">Team's Direct Link</a></li>
+</ul><div class="tab-contentmenu">
+<div class="tabmenu" id="tabmenu1">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC.stc">STHS Client League File</a></td>
+<td><a href="WJC-TodayGames.html">Today's Games</a></td>
+<td><a href="WJC-TodayTransactions.html">Today's Transactions</a></td>
+<td><a href="WJC-Schedule.html">Schedule </a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu" id="tabmenu2">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-ProStanding.html">Standing</a></td>
+<td><a href="WJC-ProLeaders.html">Leader</a></td>
+<td><a href="WJC-ProIndividualLeaders.html">Individual Leaders</a></td>
+<td><a href="WJC-ProAllPlayersStats.html">All Players Stats</a></td>
+<td><a href="WJC-ProPowerRanking.html">Power Ranking</a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu active" id="tabmenu3">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-ProTeamRoster.html">Roster</a></td>
+<td><a href="WJC-ProTeamScoring.html">Scoring</a></td>
+<td><a href="WJC-ProTeamPlayersInfo.html">PlayersInfo</a></td>
+<td><a href="WJC-ProTeamLines.html">Lines</a></td>
+<td><a href="WJC-ProTeamSchedule.html">Schedule</a></td>
+<td><a href="WJC-ProTeamStats.html">Stats</a></td>
+<td><a href="WJC-ProTeamStatsVS.html">StatsVS</a></td>
+<td><a href="WJC-TeamFinance.html">Finance</a></td>
+<td><a href="WJC-TeamProspects.html">Future</a></td>
+<td><a href="WJC-TeamHistory.html">History</a></td>
+<td><a href="WJC-TeamInjurySuspension.html">Injury/Suspension</a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu" id="tabmenu6">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-Coaches.html">Coaches</a></td>
+<td><a href="WJC-Transactions.html">Transactions</a></td>
+<td><a href="WJC-Waivers.html">Waivers</a></td>
+<td><a href="WJC-Unassigned.html">Unassigned</a></td>
+<td><a href="WJC-FreeAgents.html">FreeAgents</a></td>
+<td><a href="WJC-TeamsAndGMInfo.html">Team/GM</a></td>
+<td><a href="WJC-TradeHistory.html">Trade History</a></td>
+<td><a href="WJC-RerateDifference.html">RerateDifference</a></td>
+<td><a href="RSSFeed.xml">RSS Feed</a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu" id="tabmenu7">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-LeagueRecords.html">League Records</a></td>
+<td><a href="WJC-TeamRecords.html">Team Records</a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu" id="tabmenu8">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-ProTeamRoster.html#Canada">CAN</a></td>
+<td><a href="WJC-ProTeamRoster.html#Finlande">FIN</a></td>
+<td><a href="WJC-ProTeamRoster.html#Russie">RUS</a></td>
+<td><a href="WJC-ProTeamRoster.html#Slovaquie">SLO</a></td>
+<td><a href="WJC-ProTeamRoster.html#Suède">SWE</a></td>
+<td><a href="WJC-ProTeamRoster.html#RépubliqueTchèque">TCH</a></td>
+<td><a href="WJC-ProTeamRoster.html#TeamWorld">TWO</a></td>
+<td><a href="WJC-ProTeamRoster.html#États-Unis">USA</a></td>
+</tr></table></div>
+</div></div><br />
+<table class="STHSTableFullW"><tr><td class="STHSHeaderTitle">Pro Team PlayersInfo</td><td class="STHSHeaderDate">Last Update - 3 janvier 2016 at 09:02</td></tr>
+</table><div class="STHSWarning">Your browser screen resolution is too small for this page. Some information are hidden to keep the page readable.<br /></div>
+<script type="text/javascript">jQuery(function($,undefined) {$.basictablesorter.addParser({id: 'thousands',is: function(s) {return false;}, format: function(s) { return s.replace('$','').replace(/,/g,'');}, type: 'numeric' }); $("table").basictablesorter({headers:{11:{sorter:'thousands'},12:{sorter:'thousands'},13:{sorter:'thousands'},14:{sorter:'thousands'},15:{sorter:'thousands'}}});});</script>
+<div class="STHSTopLink"><a id="STHSRosterTop"></a> <a href="#Canada">Canada</a> | <a href="#États-Unis">États-Unis</a> | <a href="#Finlande">Finlande</a> | <a href="#RépubliqueTchèque">République Tchèque</a> | <a href="#Russie">Russie</a> | <a href="#Slovaquie">Slovaquie</a> | <a href="#Suède">Suède</a> | <a href="#TeamWorld">Team World</a> | <a href="javascript:STHS_JS_CloseAll('');">Close All Team View</a> | <a href="javascript:STHS_JS_OpenAll('');">Open All Team View</a>
+</div>
+<h1 class="TeamPlayerInfoPro_CAN"><a id="Canada">Canada</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Canada">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Canada">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Canada">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Canada">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Canada">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Canada">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Canada">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Canada">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Canada">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Canada">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Canada">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Canada">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam10">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Canada');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Canada" style="display: block;">
+<table class="basictablesorter"><thead><tr>
+<th class="STHSW200">Player Name</th><th class="STHSW25">CNT</th><th class="STHSW65">PO</th><th class="STHSW25">Age</th><th class="STHSW65">Birthday</th><th class="STHSW65">Weight</th><th class="STHSW55">Height</th><th class="STHSW45">Health<br /># Loss</th><th class="STHSW45">Force<br />Waiver</th><th class="STHSW65">Contract</th><th class="STHSW100">Type</th><th class="STHSW75">One Way<br />Contract</th><th class="STHSW85">Salary Ave</th><th class="STHSW85">Salary #1</th><th class="STHSW85">Salary #2</th><th class="STHSW85">Salary #3</th><th class="STHSW85">Salary #4</th></tr></thead>
+<tr><td>Anthony Beauvillier</td><td>CAN</td><td>C/LW</td><td>18</td><td>1997-01-22</td><td>179 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Brayden Point</td><td>CAN</td><td>C</td><td>19</td><td>1996-01-22</td><td>161 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Connor McDavid</td><td>CAN</td><td>C</td><td>18</td><td>1997-01-22</td><td>196 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Dylan Strome</td><td>CAN</td><td>C/LW</td><td>18</td><td>1997-01-22</td><td>194 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Ethan Bear</td><td>CAN</td><td>D</td><td>18</td><td>1997-01-22</td><td>196 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Haydn Fleury</td><td>CAN</td><td>D</td><td>19</td><td>1996-01-22</td><td>203 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jake DeBrusk</td><td>CAN</td><td>LW</td><td>19</td><td>1996-01-22</td><td>179 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jake Virtanen</td><td>CAN</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>207 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jared McCann</td><td>CAN</td><td>C</td><td>19</td><td>1996-01-22</td><td>185 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Joe Hicketts</td><td>CAN</td><td>D</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>5 ft8</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Lawson Crouse</td><td>CAN</td><td>LW</td><td>18</td><td>1997-01-22</td><td>209 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>MacKenzie Blackwood</td><td>CAN</td><td>G</td><td>19</td><td>1996-01-22</td><td>225 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Mason McDonald</td><td>CAN</td><td>G</td><td>19</td><td>1996-01-22</td><td>201 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Mathew Barzal</td><td>CAN</td><td>C</td><td>18</td><td>1997-01-22</td><td>183 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Mitchell Marner</td><td>CAN</td><td>C/RW</td><td>18</td><td>1997-01-22</td><td>161 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Noah Juulsen</td><td>CAN</td><td>D</td><td>18</td><td>1997-01-22</td><td>185 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Robby Fabbri</td><td>CAN</td><td>C/RW</td><td>19</td><td>1996-01-22</td><td>170 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Sam Bennett</td><td>CAN</td><td>C/LW/RW</td><td>19</td><td>1996-01-22</td><td>185 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Samuel Montembeault</td><td>CAN</td><td>G</td><td>19</td><td>1996-01-22</td><td>181 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Thomas Chabot</td><td>CAN</td><td>D</td><td>18</td><td>1997-01-22</td><td>190 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Travis Dermott</td><td>CAN</td><td>D</td><td>19</td><td>1996-01-22</td><td>196 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Travis Konecny</td><td>CAN</td><td>C/RW</td><td>18</td><td>1997-01-22</td><td>174 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Travis Sanheim</td><td>CAN</td><td>D</td><td>19</td><td>1996-01-22</td><td>198 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Vince Dunn</td><td>CAN</td><td>D</td><td>19</td><td>1996-01-22</td><td>185 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+</table><br />
+<table class="basictablesorter"><tr>
+<td class="STHSW100">Total Players</td><td class="STHSW100">Average Age</td><td class="STHSW120">Average Weight</td><td class="STHSW120">Average Height</td><td class="STHSW120">Average Contract</td><td class="STHSW120">Average Salary</td><td class="STHSW140">Players who can play<br />both Pro and Farm </td><td class="STHSW140">Players who can play<br />Pro Only</td><td class="STHSW140">Players who can play<br />Farm Only</td></tr>
+<tr><td>24</td><td>18,6</td><td>188 Lbs</td><td>6 ft 1</td><td>1,00 years</td><td>0 $</td>
+<td>24</td><td>0</td><td>0</td></tr></table></div>
+<h1 class="TeamPlayerInfoPro_USA"><a id="États-Unis">États-Unis</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#États-Unis">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#États-Unis">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#États-Unis">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#États-Unis">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#États-Unis">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#États-Unis">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#États-Unis">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#États-Unis">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#États-Unis">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#États-Unis">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#États-Unis">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#États-Unis">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam13">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_États-Unis');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_États-Unis" style="display: block;">
+<table class="basictablesorter"><thead><tr>
+<th class="STHSW200">Player Name</th><th class="STHSW25">CNT</th><th class="STHSW65">PO</th><th class="STHSW25">Age</th><th class="STHSW65">Birthday</th><th class="STHSW65">Weight</th><th class="STHSW55">Height</th><th class="STHSW45">Health<br /># Loss</th><th class="STHSW45">Force<br />Waiver</th><th class="STHSW65">Contract</th><th class="STHSW100">Type</th><th class="STHSW75">One Way<br />Contract</th><th class="STHSW85">Salary Ave</th><th class="STHSW85">Salary #1</th><th class="STHSW85">Salary #2</th><th class="STHSW85">Salary #3</th><th class="STHSW85">Salary #4</th></tr></thead>
+<tr><td>Alex DeBrincat</td><td>USA</td><td>C</td><td>18</td><td>1997-01-22</td><td>161 Lbs</td><td>5 ft7</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Alex Nedeljkovic</td><td>USA</td><td>G</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Alex Tuch</td><td>USA</td><td>C/RW</td><td>19</td><td>1996-01-22</td><td>220 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Auston Matthews</td><td>USA</td><td>C</td><td>18</td><td>1997-01-22</td><td>194 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Brandon Carlo</td><td>USA</td><td>D</td><td>19</td><td>1996-01-22</td><td>203 Lbs</td><td>6 ft5</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Brandon Fortunato</td><td>USA</td><td>D</td><td>19</td><td>1996-01-22</td><td>150 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Brock Boeser</td><td>USA</td><td>RW</td><td>18</td><td>1997-01-22</td><td>192 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Caleb Jones</td><td>USA</td><td>D</td><td>18</td><td>1997-01-22</td><td>192 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Christian Dvorak</td><td>USA</td><td>C/LW</td><td>19</td><td>1996-01-22</td><td>196 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Colin White</td><td>USA</td><td>C/RW</td><td>18</td><td>1997-01-22</td><td>183 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Conor Garland</td><td>USA</td><td>RW</td><td>19</td><td>1996-01-22</td><td>163 Lbs</td><td>5 ft8</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Dylan Larkin</td><td>USA</td><td>C/LW</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Eric Schierhorn</td><td>USA</td><td>G</td><td>19</td><td>1996-01-22</td><td>185 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jack Eichel</td><td>USA</td><td>C</td><td>19</td><td>1996-01-22</td><td>205 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jack Roslovic</td><td>USA</td><td>C/RW</td><td>18</td><td>1997-01-22</td><td>183 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jake Walman</td><td>USA</td><td>D</td><td>19</td><td>1996-01-22</td><td>170 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kris Oldham</td><td>USA</td><td>G</td><td>18</td><td>1997-01-22</td><td>203 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kyle Connor</td><td>USA</td><td>C/LW</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Louis Belpedio</td><td>USA</td><td>D</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Matthew Tkachuk</td><td>USA</td><td>LW</td><td>18</td><td>1997-01-22</td><td>194 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Nick Schmaltz</td><td>USA</td><td>C</td><td>19</td><td>1996-01-22</td><td>181 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Noah Hanifin</td><td>USA</td><td>D</td><td>18</td><td>1997-01-22</td><td>203 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Sonny Milano</td><td>USA</td><td>LW</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Zachary Werenski</td><td>USA</td><td>D</td><td>18</td><td>1997-01-22</td><td>214 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+</table><br />
+<table class="basictablesorter"><tr>
+<td class="STHSW100">Total Players</td><td class="STHSW100">Average Age</td><td class="STHSW120">Average Weight</td><td class="STHSW120">Average Height</td><td class="STHSW120">Average Contract</td><td class="STHSW120">Average Salary</td><td class="STHSW140">Players who can play<br />both Pro and Farm </td><td class="STHSW140">Players who can play<br />Pro Only</td><td class="STHSW140">Players who can play<br />Farm Only</td></tr>
+<tr><td>24</td><td>18,6</td><td>189 Lbs</td><td>6 ft 1</td><td>1,00 years</td><td>0 $</td>
+<td>24</td><td>0</td><td>0</td></tr></table></div>
+<h1 class="TeamPlayerInfoPro_FIN"><a id="Finlande">Finlande</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Finlande">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Finlande">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Finlande">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Finlande">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Finlande">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Finlande">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Finlande">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Finlande">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Finlande">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Finlande">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Finlande">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Finlande">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam11">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Finlande');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Finlande" style="display: block;">
+<table class="basictablesorter"><thead><tr>
+<th class="STHSW200">Player Name</th><th class="STHSW25">CNT</th><th class="STHSW65">PO</th><th class="STHSW25">Age</th><th class="STHSW65">Birthday</th><th class="STHSW65">Weight</th><th class="STHSW55">Height</th><th class="STHSW45">Health<br /># Loss</th><th class="STHSW45">Force<br />Waiver</th><th class="STHSW65">Contract</th><th class="STHSW100">Type</th><th class="STHSW75">One Way<br />Contract</th><th class="STHSW85">Salary Ave</th><th class="STHSW85">Salary #1</th><th class="STHSW85">Salary #2</th><th class="STHSW85">Salary #3</th><th class="STHSW85">Salary #4</th></tr></thead>
+<tr><td>Aleksi Saarela</td><td>FIN</td><td>C/LW</td><td>18</td><td>1997-01-22</td><td>198 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Antti Kalapudas</td><td>FIN</td><td>C</td><td>19</td><td>1996-01-22</td><td>168 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Eetu Sopanen</td><td>FIN</td><td>D</td><td>19</td><td>1996-01-22</td><td>225 Lbs</td><td>6 ft5</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Emil Larmi</td><td>FIN</td><td>G</td><td>19</td><td>1996-01-22</td><td>183 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jesper Mattila</td><td>FIN</td><td>D</td><td>18</td><td>1997-01-22</td><td>170 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jesse Puljujarvi</td><td>FIN</td><td>RW</td><td>17</td><td>1998-01-22</td><td>196 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Joni Tuulola</td><td>FIN</td><td>D</td><td>19</td><td>1996-01-22</td><td>172 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jonne Tammela</td><td>FIN</td><td>LW/RW</td><td>18</td><td>1997-01-22</td><td>181 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Juho Lammikko</td><td>FIN</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>203 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Julius Nattinen</td><td>FIN</td><td>C/LW</td><td>18</td><td>1997-01-22</td><td>190 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kaapo Kahkonen </td><td>FIN</td><td>G</td><td>19</td><td>1996-01-22</td><td>216 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kasperi Kapanen</td><td>FIN</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>179 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Mikko Rantanen</td><td>FIN</td><td>RW</td><td>19</td><td>1996-01-22</td><td>212 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Miro Keskitalo</td><td>FIN</td><td>D</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Miro Makinen</td><td>FIN</td><td>C</td><td>19</td><td>1996-01-22</td><td>168 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Niko Mikkola</td><td>FIN</td><td>D</td><td>19</td><td>1996-01-22</td><td>183 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Olli Juolevi</td><td>FIN</td><td>D</td><td>17</td><td>1998-01-22</td><td>183 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Patrik Laine</td><td>FIN</td><td>LW/RW</td><td>17</td><td>1998-01-22</td><td>209 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Roope Hintz</td><td>FIN</td><td>C/LW/RW</td><td>19</td><td>1996-01-22</td><td>185 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Sami Niku</td><td>FIN</td><td>D</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Sebastian Aho*</td><td>FIN</td><td>LW</td><td>18</td><td>1997-01-22</td><td>172 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Sebastian Repo</td><td>FIN</td><td>C/RW</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Veini Vehvilainen</td><td>FIN</td><td>G</td><td>18</td><td>1997-01-22</td><td>172 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Vili Saarijarvi</td><td>FIN</td><td>D</td><td>18</td><td>1997-01-22</td><td>165 Lbs</td><td>5 ft9</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+</table><br />
+<table class="basictablesorter"><tr>
+<td class="STHSW100">Total Players</td><td class="STHSW100">Average Age</td><td class="STHSW120">Average Weight</td><td class="STHSW120">Average Height</td><td class="STHSW120">Average Contract</td><td class="STHSW120">Average Salary</td><td class="STHSW140">Players who can play<br />both Pro and Farm </td><td class="STHSW140">Players who can play<br />Pro Only</td><td class="STHSW140">Players who can play<br />Farm Only</td></tr>
+<tr><td>24</td><td>18,5</td><td>186 Lbs</td><td>6 ft 1</td><td>1,00 years</td><td>0 $</td>
+<td>24</td><td>0</td><td>0</td></tr></table></div>
+<h1 class="TeamPlayerInfoPro_TCH"><a id="RépubliqueTchèque">République Tchèque</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#RépubliqueTchèque">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#RépubliqueTchèque">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#RépubliqueTchèque">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#RépubliqueTchèque">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#RépubliqueTchèque">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#RépubliqueTchèque">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#RépubliqueTchèque">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#RépubliqueTchèque">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#RépubliqueTchèque">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#RépubliqueTchèque">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#RépubliqueTchèque">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#RépubliqueTchèque">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam19">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_RépubliqueTchèque');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_RépubliqueTchèque" style="display: block;">
+<table class="basictablesorter"><thead><tr>
+<th class="STHSW200">Player Name</th><th class="STHSW25">CNT</th><th class="STHSW65">PO</th><th class="STHSW25">Age</th><th class="STHSW65">Birthday</th><th class="STHSW65">Weight</th><th class="STHSW55">Height</th><th class="STHSW45">Health<br /># Loss</th><th class="STHSW45">Force<br />Waiver</th><th class="STHSW65">Contract</th><th class="STHSW100">Type</th><th class="STHSW75">One Way<br />Contract</th><th class="STHSW85">Salary Ave</th><th class="STHSW85">Salary #1</th><th class="STHSW85">Salary #2</th><th class="STHSW85">Salary #3</th><th class="STHSW85">Salary #4</th></tr></thead>
+<tr><td>Alex Rasner</td><td>TCH</td><td>D</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Daniel Vladar</td><td>TCH</td><td>G</td><td>18</td><td>1997-01-22</td><td>185 Lbs</td><td>6 ft5</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>David Kase</td><td>TCH</td><td>C/LW/RW</td><td>18</td><td>1997-01-22</td><td>170 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>David Pastrnak</td><td>TCH</td><td>RW</td><td>19</td><td>1996-01-22</td><td>181 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>David Sklenicka</td><td>TCH</td><td>D</td><td>19</td><td>1996-01-22</td><td>181 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>David Tomasek</td><td>TCH</td><td>C</td><td>19</td><td>1996-01-22</td><td>185 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Dominik Lakatos</td><td>TCH</td><td>C/LW</td><td>18</td><td>1997-01-22</td><td>179 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Dominik Masin</td><td>TCH</td><td>D</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Filip Chlapik</td><td>TCH</td><td>C</td><td>18</td><td>1997-01-22</td><td>196 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Filip Hronek</td><td>TCH</td><td>D</td><td>18</td><td>1997-01-22</td><td>163 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jakub Vrana</td><td>TCH</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>185 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jakub Zboril</td><td>TCH</td><td>D</td><td>18</td><td>1997-01-22</td><td>185 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jan Dufek</td><td>TCH</td><td>RW</td><td>18</td><td>1997-01-22</td><td>183 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jan Scotka</td><td>TCH</td><td>D</td><td>19</td><td>1996-01-22</td><td>201 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jiri Smejkal</td><td>TCH</td><td>RW</td><td>19</td><td>1996-01-22</td><td>183 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Karel Vejmelka</td><td>TCH</td><td>G</td><td>19</td><td>1996-01-22</td><td>203 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Libor Hajek</td><td>TCH</td><td>D</td><td>17</td><td>1998-01-22</td><td>196 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Michael Spacek</td><td>TCH</td><td>C/RW</td><td>18</td><td>1997-01-22</td><td>187 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Michal Gago</td><td>TCH</td><td>LW</td><td>18</td><td>1997-01-22</td><td>179 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Ondrej Miklis</td><td>TCH</td><td>D</td><td>19</td><td>1996-01-22</td><td>181 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Pavel Zacha</td><td>TCH</td><td>C/LW</td><td>18</td><td>1997-01-22</td><td>209 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Simon Stransky</td><td>TCH</td><td>LW</td><td>18</td><td>1997-01-22</td><td>170 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Tomas Soustal</td><td>TCH</td><td>C</td><td>18</td><td>1997-01-22</td><td>198 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Vitek Vanecek</td><td>TCH</td><td>G</td><td>19</td><td>1996-01-22</td><td>181 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+</table><br />
+<table class="basictablesorter"><tr>
+<td class="STHSW100">Total Players</td><td class="STHSW100">Average Age</td><td class="STHSW120">Average Weight</td><td class="STHSW120">Average Height</td><td class="STHSW120">Average Contract</td><td class="STHSW120">Average Salary</td><td class="STHSW140">Players who can play<br />both Pro and Farm </td><td class="STHSW140">Players who can play<br />Pro Only</td><td class="STHSW140">Players who can play<br />Farm Only</td></tr>
+<tr><td>24</td><td>18,4</td><td>185 Lbs</td><td>6 ft 1</td><td>1,00 years</td><td>0 $</td>
+<td>24</td><td>0</td><td>0</td></tr></table></div>
+<h1 class="TeamPlayerInfoPro_RUS"><a id="Russie">Russie</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Russie">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Russie">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Russie">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Russie">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Russie">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Russie">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Russie">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Russie">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Russie">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Russie">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Russie">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Russie">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam12">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Russie');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Russie" style="display: block;">
+<table class="basictablesorter"><thead><tr>
+<th class="STHSW200">Player Name</th><th class="STHSW25">CNT</th><th class="STHSW65">PO</th><th class="STHSW25">Age</th><th class="STHSW65">Birthday</th><th class="STHSW65">Weight</th><th class="STHSW55">Height</th><th class="STHSW45">Health<br /># Loss</th><th class="STHSW45">Force<br />Waiver</th><th class="STHSW65">Contract</th><th class="STHSW100">Type</th><th class="STHSW75">One Way<br />Contract</th><th class="STHSW85">Salary Ave</th><th class="STHSW85">Salary #1</th><th class="STHSW85">Salary #2</th><th class="STHSW85">Salary #3</th><th class="STHSW85">Salary #4</th></tr></thead>
+<tr><td>Aleksandar Mikulovich</td><td>RUS</td><td>D</td><td>19</td><td>1996-01-22</td><td>205 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Alexandar Georgiyev</td><td>RUS</td><td>G</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Alexander Dergachyov</td><td>RUS</td><td>C/RW</td><td>19</td><td>1996-01-22</td><td>220 Lbs</td><td>6 ft5</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Damir Sharipzyanov</td><td>RUS</td><td>D</td><td>19</td><td>1996-01-22</td><td>187 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Denis Gurianov</td><td>RUS</td><td>LW/RW</td><td>18</td><td>1997-01-22</td><td>183 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Dmitri Sergeyev</td><td>RUS</td><td>D</td><td>19</td><td>1996-01-22</td><td>201 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Dmitri Sokolov</td><td>RUS</td><td>C</td><td>17</td><td>1998-01-22</td><td>205 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>German Rubtstov</td><td>RUS</td><td>C</td><td>17</td><td>1998-01-22</td><td>174 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Ilya Samsonov</td><td>RUS</td><td>G</td><td>18</td><td>1997-01-22</td><td>201 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Ivan Provorov</td><td>RUS</td><td>D</td><td>18</td><td>1997-01-22</td><td>201 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kirill Kaprizov</td><td>RUS</td><td>LW/RW</td><td>18</td><td>1997-01-22</td><td>192 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Maxim Lazarev</td><td>RUS</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>170 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Maxim Tretiak</td><td>RUS</td><td>G</td><td>19</td><td>1996-01-22</td><td>218 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Mikhail Sergachyov</td><td>RUS</td><td>D</td><td>17</td><td>1998-01-22</td><td>205 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Nikita Popugayev</td><td>RUS</td><td>C/LW/RW</td><td>17</td><td>1998-01-22</td><td>159 Lbs</td><td>5 ft8</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Nikita Zhuldikov</td><td>RUS</td><td>D</td><td>19</td><td>1996-01-22</td><td>209 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Nikolai Chebykin</td><td>RUS</td><td>C/LW/RW</td><td>18</td><td>1997-01-22</td><td>183 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Radel Fazleyev</td><td>RUS</td><td>C/LW</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Sergei Boikov</td><td>RUS</td><td>D</td><td>19</td><td>1996-01-22</td><td>194 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Sergei Zborovskiy</td><td>RUS</td><td>D</td><td>18</td><td>1997-01-22</td><td>194 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Vitaly Abramov</td><td>RUS</td><td>LW/RW</td><td>17</td><td>1998-01-22</td><td>170 Lbs</td><td>5 ft9</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Vladislav Kamenev</td><td>RUS</td><td>C/LW</td><td>19</td><td>1996-01-22</td><td>185 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Yakov Trenin</td><td>RUS</td><td>C/LW</td><td>18</td><td>1997-01-22</td><td>194 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Yevgeni Svechnikov</td><td>RUS</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>205 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+</table><br />
+<table class="basictablesorter"><tr>
+<td class="STHSW100">Total Players</td><td class="STHSW100">Average Age</td><td class="STHSW120">Average Weight</td><td class="STHSW120">Average Height</td><td class="STHSW120">Average Contract</td><td class="STHSW120">Average Salary</td><td class="STHSW140">Players who can play<br />both Pro and Farm </td><td class="STHSW140">Players who can play<br />Pro Only</td><td class="STHSW140">Players who can play<br />Farm Only</td></tr>
+<tr><td>24</td><td>18,3</td><td>192 Lbs</td><td>6 ft 2</td><td>1,00 years</td><td>0 $</td>
+<td>24</td><td>0</td><td>0</td></tr></table></div>
+<h1 class="TeamPlayerInfoPro_SLO"><a id="Slovaquie">Slovaquie</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Slovaquie">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Slovaquie">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Slovaquie">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Slovaquie">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Slovaquie">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Slovaquie">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Slovaquie">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Slovaquie">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Slovaquie">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Slovaquie">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Slovaquie">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Slovaquie">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam14">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Slovaquie');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Slovaquie" style="display: block;">
+<table class="basictablesorter"><thead><tr>
+<th class="STHSW200">Player Name</th><th class="STHSW25">CNT</th><th class="STHSW65">PO</th><th class="STHSW25">Age</th><th class="STHSW65">Birthday</th><th class="STHSW65">Weight</th><th class="STHSW55">Height</th><th class="STHSW45">Health<br /># Loss</th><th class="STHSW45">Force<br />Waiver</th><th class="STHSW65">Contract</th><th class="STHSW100">Type</th><th class="STHSW75">One Way<br />Contract</th><th class="STHSW85">Salary Ave</th><th class="STHSW85">Salary #1</th><th class="STHSW85">Salary #2</th><th class="STHSW85">Salary #3</th><th class="STHSW85">Salary #4</th></tr></thead>
+<tr><td>Adam Huska</td><td>SLO</td><td>G</td><td>18</td><td>1997-01-22</td><td>190 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Andrej Hatala</td><td>SLO</td><td>D</td><td>18</td><td>1997-01-22</td><td>187 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Christian Jaros</td><td>SLO</td><td>D</td><td>19</td><td>1996-01-22</td><td>201 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Christian Pavlas</td><td>SLO</td><td>G</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Erik Cernak</td><td>SLO</td><td>D</td><td>18</td><td>1997-01-22</td><td>203 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Filip Adamcik</td><td>SLO</td><td>C</td><td>19</td><td>1996-01-22</td><td>205 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Filip Ondrus</td><td>SLO</td><td>C</td><td>19</td><td>1996-01-22</td><td>168 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jakub Melisko</td><td>SLO</td><td>D</td><td>19</td><td>1996-01-22</td><td>183 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jakub Sukel</td><td>SLO</td><td>RW</td><td>19</td><td>1996-01-22</td><td>172 Lbs</td><td>5 ft9</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jakub Tatar</td><td>SLO</td><td>LW</td><td>19</td><td>1996-01-22</td><td>203 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jozef Huna</td><td>SLO</td><td>C</td><td>19</td><td>1996-01-22</td><td>161 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Juraj Siska</td><td>SLO</td><td>RW</td><td>19</td><td>1996-01-22</td><td>198 Lbs</td><td>6 ft3</td><td>22</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kristian Pospisil</td><td>SLO</td><td>RW</td><td>19</td><td>1996-01-22</td><td>179 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Ladislav Romancik</td><td>SLO</td><td>D</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>6 ft5</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Marco Halama</td><td>SLO</td><td>C</td><td>19</td><td>1996-01-22</td><td>159 Lbs</td><td>5 ft8</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Matej Palocko</td><td>SLO</td><td>RW</td><td>19</td><td>1996-01-22</td><td>165 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Matus Sukel</td><td>SLO</td><td>C</td><td>19</td><td>1996-01-22</td><td>172 Lbs</td><td>5 ft9</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Oliver Kosecky</td><td>SLO</td><td>D</td><td>18</td><td>1997-01-22</td><td>181 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Radovan Bondra</td><td>SLO</td><td>LW/RW</td><td>18</td><td>1997-01-22</td><td>218 Lbs</td><td>6 ft5</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Samuel Solensky</td><td>SLO</td><td>LW</td><td>17</td><td>1998-01-22</td><td>168 Lbs</td><td>5 ft9</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+</table><br />
+<table class="basictablesorter"><tr>
+<td class="STHSW100">Total Players</td><td class="STHSW100">Average Age</td><td class="STHSW120">Average Weight</td><td class="STHSW120">Average Height</td><td class="STHSW120">Average Contract</td><td class="STHSW120">Average Salary</td><td class="STHSW140">Players who can play<br />both Pro and Farm </td><td class="STHSW140">Players who can play<br />Pro Only</td><td class="STHSW140">Players who can play<br />Farm Only</td></tr>
+<tr><td>20</td><td>18,7</td><td>185 Lbs</td><td>6 ft 1</td><td>1,00 years</td><td>0 $</td>
+<td>20</td><td>0</td><td>0</td></tr></table></div>
+<h1 class="TeamPlayerInfoPro_SWE"><a id="Suède">Suède</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Suède">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Suède">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Suède">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Suède">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Suède">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Suède">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Suède">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Suède">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Suède">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Suède">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Suède">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Suède">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam6">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Suède');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Suède" style="display: block;">
+<table class="basictablesorter"><thead><tr>
+<th class="STHSW200">Player Name</th><th class="STHSW25">CNT</th><th class="STHSW65">PO</th><th class="STHSW25">Age</th><th class="STHSW65">Birthday</th><th class="STHSW65">Weight</th><th class="STHSW55">Height</th><th class="STHSW45">Health<br /># Loss</th><th class="STHSW45">Force<br />Waiver</th><th class="STHSW65">Contract</th><th class="STHSW100">Type</th><th class="STHSW75">One Way<br />Contract</th><th class="STHSW85">Salary Ave</th><th class="STHSW85">Salary #1</th><th class="STHSW85">Salary #2</th><th class="STHSW85">Salary #3</th><th class="STHSW85">Salary #4</th></tr></thead>
+<tr><td>Adrian Kempe</td><td>SWE</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>203 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Alexander Nylander</td><td>SWE</td><td>LW/RW</td><td>17</td><td>1998-01-22</td><td>172 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Andreas Englund</td><td>SWE</td><td>D</td><td>19</td><td>1996-01-22</td><td>198 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Axel Holmstrom</td><td>SWE</td><td>C</td><td>19</td><td>1996-01-22</td><td>205 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Carl Grundstrom</td><td>SWE</td><td>LW</td><td>18</td><td>1997-01-22</td><td>190 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Daniel Bernhardt</td><td>SWE</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>192 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Erik Kallgren</td><td>SWE</td><td>G</td><td>19</td><td>1996-01-22</td><td>190 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Felix Sandstrom</td><td>SWE</td><td>G</td><td>18</td><td>1997-01-22</td><td>192 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Gabriel Carlsson</td><td>SWE</td><td>D</td><td>18</td><td>1997-01-22</td><td>183 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Gustav Forsling</td><td>SWE</td><td>D</td><td>19</td><td>1996-01-22</td><td>181 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jacob Cederholm</td><td>SWE</td><td>D</td><td>17</td><td>1998-01-22</td><td>181 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jacob Forsbacka-Karlsson</td><td>SWE</td><td>C</td><td>19</td><td>1996-01-22</td><td>192 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jacob Larsson</td><td>SWE</td><td>D</td><td>18</td><td>1997-01-22</td><td>190 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jens Looke</td><td>SWE</td><td>LW/RW</td><td>18</td><td>1997-01-22</td><td>190 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Joel Eriksson Ek</td><td>SWE</td><td>C/LW/RW</td><td>18</td><td>1997-01-22</td><td>183 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kevin Stenlund</td><td>SWE</td><td>C</td><td>19</td><td>1996-01-22</td><td>205 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Linus Soderstrom</td><td>SWE</td><td>G</td><td>19</td><td>1996-01-22</td><td>196 Lbs</td><td>6 ft5</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Lukas Vejdemo</td><td>SWE</td><td>C/LW/RW</td><td>19</td><td>1996-01-22</td><td>194 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Marcus Pettersson</td><td>SWE</td><td>D</td><td>19</td><td>1996-01-22</td><td>183 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Oskar Lindblom</td><td>SWE</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>192 Lbs</td><td>6 ft2</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Rasmus Asplund</td><td>SWE</td><td>C/LW</td><td>18</td><td>1997-01-22</td><td>176 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Robin Kovacs</td><td>SWE</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Sebastian Aho</td><td>SWE</td><td>D</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>William Nylander</td><td>SWE</td><td>C/LW/RW</td><td>19</td><td>1996-12-19</td><td>190 Lbs</td><td>5 ft11</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+</table><br />
+<table class="basictablesorter"><tr>
+<td class="STHSW100">Total Players</td><td class="STHSW100">Average Age</td><td class="STHSW120">Average Weight</td><td class="STHSW120">Average Height</td><td class="STHSW120">Average Contract</td><td class="STHSW120">Average Salary</td><td class="STHSW140">Players who can play<br />both Pro and Farm </td><td class="STHSW140">Players who can play<br />Pro Only</td><td class="STHSW140">Players who can play<br />Farm Only</td></tr>
+<tr><td>24</td><td>18,5</td><td>189 Lbs</td><td>6 ft 2</td><td>1,00 years</td><td>0 $</td>
+<td>24</td><td>0</td><td>0</td></tr></table></div>
+<h1 class="TeamPlayerInfoPro_TWO"><a id="TeamWorld">Team World</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#TeamWorld">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#TeamWorld">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#TeamWorld">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#TeamWorld">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#TeamWorld">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#TeamWorld">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#TeamWorld">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#TeamWorld">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#TeamWorld">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#TeamWorld">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#TeamWorld">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#TeamWorld">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam9">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_TeamWorld');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_TeamWorld" style="display: block;">
+<table class="basictablesorter"><thead><tr>
+<th class="STHSW200">Player Name</th><th class="STHSW25">CNT</th><th class="STHSW65">PO</th><th class="STHSW25">Age</th><th class="STHSW65">Birthday</th><th class="STHSW65">Weight</th><th class="STHSW55">Height</th><th class="STHSW45">Health<br /># Loss</th><th class="STHSW45">Force<br />Waiver</th><th class="STHSW65">Contract</th><th class="STHSW100">Type</th><th class="STHSW75">One Way<br />Contract</th><th class="STHSW85">Salary Ave</th><th class="STHSW85">Salary #1</th><th class="STHSW85">Salary #2</th><th class="STHSW85">Salary #3</th><th class="STHSW85">Salary #4</th></tr></thead>
+<tr><td>Alexander Osipkov</td><td>BEL</td><td>G</td><td>18</td><td>1997-01-22</td><td>174 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Alexander True</td><td>DEN</td><td>C</td><td>18</td><td>1997-01-22</td><td>176 Lbs</td><td>6 ft4</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Auguste Impose</td><td>SWI</td><td>LW/RW</td><td>18</td><td>1997-01-22</td><td>187 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Christian Mieritz</td><td>DEN</td><td>D</td><td>18</td><td>1997-01-22</td><td>198 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Daniel Sprong</td><td>NED</td><td>LW/RW</td><td>18</td><td>1997-01-22</td><td>181 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Danila Karaban</td><td>BEL</td><td>C</td><td>19</td><td>1996-01-22</td><td>168 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Denis Malgin</td><td>SWI</td><td>C/RW</td><td>18</td><td>1997-01-22</td><td>176 Lbs</td><td>5 ft9</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Dmytro Timashov</td><td>UKR</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>192 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Jonas Siegenthaler</td><td>SWI</td><td>D</td><td>18</td><td>1997-01-22</td><td>220 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Joren van Pottelberghe</td><td>SWI</td><td>G</td><td>18</td><td>1997-01-22</td><td>187 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kay Schweri</td><td>SWI</td><td>RW</td><td>19</td><td>1996-01-22</td><td>176 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Kevin Fiala</td><td>SWI</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>192 Lbs</td><td>5 ft10</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Martins Dzierkals</td><td>LET</td><td>RW</td><td>18</td><td>1997-01-22</td><td>170 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Matias Lassen</td><td>DEN</td><td>D</td><td>19</td><td>1996-01-22</td><td>181 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Morten Jensen</td><td>DEN</td><td>D</td><td>18</td><td>1997-01-22</td><td>181 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Nikolaj Ehlers</td><td>DEN</td><td>LW/RW</td><td>19</td><td>1996-01-22</td><td>172 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Noah Rod</td><td>SWI</td><td>C/LW/RW</td><td>19</td><td>1996-01-22</td><td>187 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Pavel Karnaukhov</td><td>BEL</td><td>C</td><td>18</td><td>1997-01-22</td><td>209 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Simon Kindschi</td><td>SWI</td><td>D</td><td>19</td><td>1996-01-22</td><td>229 Lbs</td><td>6 ft3</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Stepan Falkovsky</td><td>BEL</td><td>D</td><td>19</td><td>1996-01-22</td><td>225 Lbs</td><td>6 ft7</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Thomas Lillie</td><td>DEN</td><td>G</td><td>19</td><td>1996-01-22</td><td>183 Lbs</td><td>6 ft0</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Tim Dubois</td><td>SWI</td><td>D</td><td>19</td><td>1996-01-22</td><td>146 Lbs</td><td>5 ft8</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Timo Meier</td><td>SWI</td><td>C/LW/RW</td><td>19</td><td>1996-01-22</td><td>209 Lbs</td><td>6 ft1</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+<tr><td>Vladislav Goncharov</td><td>BEL</td><td>D</td><td>19</td><td>1996-01-22</td><td>152 Lbs</td><td>5 ft6</td><td>0</td><td>No</td><td>1 year   </td><td>Pro &amp; Farm</td><td>No</td><td>0 $</td><td>0 $</td><td></td><td></td><td></td></tr>
+</table><br />
+<table class="basictablesorter"><tr>
+<td class="STHSW100">Total Players</td><td class="STHSW100">Average Age</td><td class="STHSW120">Average Weight</td><td class="STHSW120">Average Height</td><td class="STHSW120">Average Contract</td><td class="STHSW120">Average Salary</td><td class="STHSW140">Players who can play<br />both Pro and Farm </td><td class="STHSW140">Players who can play<br />Pro Only</td><td class="STHSW140">Players who can play<br />Farm Only</td></tr>
+<tr><td>24</td><td>18,5</td><td>186 Lbs</td><td>6 ft 0</td><td>1,00 years</td><td>0 $</td>
+<td>24</td><td>0</td><td>0</td></tr></table></div>
+<br /><br /><br /><a href="#" class="scrollup">Scroll</a><div class="footer">Output by the <a href="http://sths.simont.info">SimonT Hockey Simulator (STHS)</a> for Bernard Brassard<span class="FooterW3C"> - Original Page <a href="http://validator.w3.org/check?uri=referer">W3C HTML5 Valid</a></span>
+<div style="display:none;visibility:hidden"><a href="http://sths.simont.info">Hockey Simulator</a> - <a href="http://sths.simont.info">Hockey Simulation</a> - <a href="http://sths.simont.info">Hockey Manager</a></div></div>
+</body></html>

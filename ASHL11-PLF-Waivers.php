@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<script src="STHSMain.js"></script>
+<title>ASHL - Waivers</title>
+<script src="ASHL11-PLF.js"></script>
+<meta name="author" content="Simon Tremblay, sths.simont.info" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Decription" content="Simon Brassard - STHS - Version : 3.3.2.2 - ASHL11-STHS.db - ASHL11-STHSCareerStat.db"/>
+<link href="STHSMain.css" rel="stylesheet" type="text/css" />
+<?php If (file_exists("STHSMain-CSSOverwrite.css") == True){echo "<link href=\"STHSMain-CSSOverwrite.css\" rel=\"stylesheet\" type=\"text/css\" />";}?>
+<style>.tabsmenu{display:none;}</style> <!-- Do Not Show Top Menu STHS Option Apply -->
+<?php If (file_exists("STHSSetting.php") == true){
+require_once "STHSSetting.php";
+$db = new SQLite3($DatabaseFile);
+include "Menu.php";}?>
+<table class="STHSWaiver_Table"><thead><tr><th>
+<b>Player</b></th><th>
+<b>From Team</b></th><th>
+<b>Picked by</b></th><th>
+<b>Day Put on Waivers</b></th><th>
+<b>Day Removed from Waivers</b></th></tr></thead><tbody>
+<tr><td colspan="5" style="text-align:center;"><br /><h2 class="STHSWaivers_NoPlayerOnWaiver">No Player on Waivers</h2></td></tr>
+</tbody></table>
+<br />
+<h1 class="STHSWaivers_WaiverOrder">Waiver Order</h1>
+1 - New York Islanders<br />
+2 - Quebec Nordiques<br />
+3 - Washington Capitals<br />
+4 - Seattle Kraken<br />
+5 - Pittsburgh Penguins<br />
+6 - Calgary Flames<br />
+7 - Buffalo Sabres<br />
+8 - Winnipeg Jets<br />
+9 - Vancouver Canucks<br />
+10 - Edmonton Oilers<br />
+11 - Colorado Avalanche<br />
+12 - San Jose Sharks<br />
+13 - Anaheim Ducks<br />
+14 - Minnesota Wild<br />
+15 - Columbus Blue Jackets<br />
+16 - Nashville Predators<br />
+17 - Carolina Hurricanes<br />
+18 - Detroit Red Wings<br />
+19 - Boston Bruins<br />
+20 - Philadelphia Flyers<br />
+21 - Toronto Maple Leafs<br />
+22 - New York Rangers<br />
+23 - Los Angeles Kings<br />
+24 - Ottawa Senators<br />
+25 - New Jersey Devils<br />
+26 - St. Louis Blues<br />
+27 - Dallas Stars<br />
+28 - Chicago Blackhawks<br />
+29 - Tampa Bay Lightning<br />
+30 - Florida Panthers<br />
+31 - Montreal Canadiens<br />
+32 - Vegas Golden Knights<br />
+33 - Arizona Coyotes<br />
+<?php include "Footer.php";?>

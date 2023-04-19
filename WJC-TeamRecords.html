@@ -1,0 +1,1324 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<title>WJC - Team Records</title>
+<script type="text/javascript" src="WJC.js"></script>
+<meta name="author" content="Simon Tremblay, sths.simont.info" />
+<meta charset="utf-8" />
+<meta name="Decription" content="Bernard Brassard - STHS - Version : 2.3.2.2" />
+<link href="STHSMain.css" rel="stylesheet" type="text/css" />
+<link href="WJC.css" rel="stylesheet" type="text/css" />
+</head><body>
+<div class="tabsmenu standard"><ul class="tabmenu-links">
+<li><a class="tabmenuhome" href="./WJC-index.html">WJC Home</a></li>
+<li id="STHSMenu-Main"><a href="#tabmenu1">Main</a></li>
+<li id="STHSMenu-ProLeague"><a href="#tabmenu2">Pro League</a></li>
+<li id="STHSMenu-ProTeam"><a href="#tabmenu3">Pro Team</a></li>
+<li id="STHSMenu-League"><a href="#tabmenu6">League</a></li>
+<li id="STHSMenu-Record" class="activemenu"><a href="#tabmenu7">Record</a></li>
+<li id="STHSMenu-DirectLink"><a href="#tabmenu8">Team's Direct Link</a></li>
+</ul><div class="tab-contentmenu">
+<div class="tabmenu" id="tabmenu1">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC.stc">STHS Client League File</a></td>
+<td><a href="WJC-TodayGames.html">Today's Games</a></td>
+<td><a href="WJC-TodayTransactions.html">Today's Transactions</a></td>
+<td><a href="WJC-Schedule.html">Schedule </a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu" id="tabmenu2">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-ProStanding.html">Standing</a></td>
+<td><a href="WJC-ProLeaders.html">Leader</a></td>
+<td><a href="WJC-ProIndividualLeaders.html">Individual Leaders</a></td>
+<td><a href="WJC-ProAllPlayersStats.html">All Players Stats</a></td>
+<td><a href="WJC-ProPowerRanking.html">Power Ranking</a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu" id="tabmenu3">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-ProTeamRoster.html">Roster</a></td>
+<td><a href="WJC-ProTeamScoring.html">Scoring</a></td>
+<td><a href="WJC-ProTeamPlayersInfo.html">PlayersInfo</a></td>
+<td><a href="WJC-ProTeamLines.html">Lines</a></td>
+<td><a href="WJC-ProTeamSchedule.html">Schedule</a></td>
+<td><a href="WJC-ProTeamStats.html">Stats</a></td>
+<td><a href="WJC-ProTeamStatsVS.html">StatsVS</a></td>
+<td><a href="WJC-TeamFinance.html">Finance</a></td>
+<td><a href="WJC-TeamProspects.html">Future</a></td>
+<td><a href="WJC-TeamHistory.html">History</a></td>
+<td><a href="WJC-TeamInjurySuspension.html">Injury/Suspension</a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu" id="tabmenu6">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-Coaches.html">Coaches</a></td>
+<td><a href="WJC-Transactions.html">Transactions</a></td>
+<td><a href="WJC-Waivers.html">Waivers</a></td>
+<td><a href="WJC-Unassigned.html">Unassigned</a></td>
+<td><a href="WJC-FreeAgents.html">FreeAgents</a></td>
+<td><a href="WJC-TeamsAndGMInfo.html">Team/GM</a></td>
+<td><a href="WJC-TradeHistory.html">Trade History</a></td>
+<td><a href="WJC-RerateDifference.html">RerateDifference</a></td>
+<td><a href="RSSFeed.xml">RSS Feed</a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu active" id="tabmenu7">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-LeagueRecords.html">League Records</a></td>
+<td><a href="WJC-TeamRecords.html">Team Records</a></td>
+<td class="STHSW1"></td></tr></table></div>
+<div class="tabmenu" id="tabmenu8">
+<table class="MenuSTHS"><tr>
+<td><a href="WJC-ProTeamRoster.html#Canada">CAN</a></td>
+<td><a href="WJC-ProTeamRoster.html#Finlande">FIN</a></td>
+<td><a href="WJC-ProTeamRoster.html#Russie">RUS</a></td>
+<td><a href="WJC-ProTeamRoster.html#Slovaquie">SLO</a></td>
+<td><a href="WJC-ProTeamRoster.html#Suède">SWE</a></td>
+<td><a href="WJC-ProTeamRoster.html#RépubliqueTchèque">TCH</a></td>
+<td><a href="WJC-ProTeamRoster.html#TeamWorld">TWO</a></td>
+<td><a href="WJC-ProTeamRoster.html#États-Unis">USA</a></td>
+</tr></table></div>
+</div></div><br />
+<table class="STHSTableFullW"><tr><td class="STHSHeaderTitle">Team Records</td><td class="STHSHeaderDate">Last Update - 3 janvier 2016 at 09:02</td></tr>
+</table><div class="STHSWarning">Your browser screen resolution is too small for this page. Some information are hidden to keep the page readable.<br /></div>
+<div class="STHSTopLink"><a id="STHSRosterTop"></a> <a href="#Canada">Canada</a> | <a href="#États-Unis">États-Unis</a> | <a href="#Finlande">Finlande</a> | <a href="#RépubliqueTchèque">République Tchèque</a> | <a href="#Russie">Russie</a> | <a href="#Slovaquie">Slovaquie</a> | <a href="#Suède">Suède</a> | <a href="#TeamWorld">Team World</a> | <a href="javascript:STHS_JS_CloseAll('');">Close All Team View</a> | <a href="javascript:STHS_JS_OpenAll('');">Open All Team View</a>
+</div>
+<h1 class="TeamRecordsPro_CAN"><a id="Canada">Canada</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Canada">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Canada">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Canada">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Canada">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Canada">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Canada">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Canada">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Canada">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Canada">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Canada">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Canada">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Canada">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam10">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Canada');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Canada" style="display: block;">
+<br /><table class="STHSRecordTable">
+<tr><td colspan="5"><b>Most Goals in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>8</td><td>5</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>2</td><td>3</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>11</td><td>3</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Goals in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Goals Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Assists in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>8</td><td>7</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>2</td><td>6</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>11</td><td>5</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Assists in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>18</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Assist in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>18</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Game Points in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>8</td><td>12</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>2</td><td>9</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>11</td><td>8</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Game Points in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>29</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Game Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>29</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>8</td><td>31</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>11</td><td>30</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>2</td><td>27</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>88</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>88</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>21</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>8</td><td>15</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>11</td><td>9</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>45</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Block In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>45</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>81</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>81</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Pim In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>12</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>8</td><td>12</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>11</td><td>8</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>32</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>32</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Hits In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>11</td><td>25</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>2</td><td>19</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>8</td><td>13</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Hits In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>57</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Hit In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>57</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>20,00%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>87,50%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>20,00%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>87,50%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>5</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Points In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>5</td><td></td></tr>
+
+</table></div>
+<h1 class="TeamRecordsPro_USA"><a id="États-Unis">États-Unis</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#États-Unis">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#États-Unis">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#États-Unis">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#États-Unis">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#États-Unis">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#États-Unis">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#États-Unis">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#États-Unis">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#États-Unis">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#États-Unis">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#États-Unis">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#États-Unis">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam13">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_États-Unis');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_États-Unis" style="display: block;">
+<br /><table class="STHSRecordTable">
+<tr><td colspan="5"><b>Most Goals in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>4</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>6</td><td>4</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>9</td><td>1</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Goals in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>9</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>9</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Goals Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>7</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>7</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Assists in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>6</td><td>8</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>1</td><td>5</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>9</td><td>1</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Assists in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>14</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Assist in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>14</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Game Points in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>6</td><td>12</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>1</td><td>9</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>9</td><td>2</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Game Points in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>23</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Game Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>23</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>6</td><td>35</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>1</td><td>30</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>9</td><td>30</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>95</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>95</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>6</td><td>13</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>9</td><td>10</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>1</td><td>9</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>32</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Block In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>32</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>77</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>77</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Pim In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>8</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>9</td><td>6</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>6</td><td>4</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>18</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>18</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Hits In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>9</td><td>23</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>1</td><td>18</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>6</td><td>13</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Hits In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>54</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Hit In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>54</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>27,30%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>77,80%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>27,30%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>77,80%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>6</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Points In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>6</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win Home In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+</table></div>
+<h1 class="TeamRecordsPro_FIN"><a id="Finlande">Finlande</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Finlande">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Finlande">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Finlande">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Finlande">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Finlande">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Finlande">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Finlande">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Finlande">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Finlande">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Finlande">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Finlande">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Finlande">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam11">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Finlande');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Finlande" style="display: block;">
+<br /><table class="STHSRecordTable">
+<tr><td colspan="5"><b>Most Goals in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>4</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>12</td><td>4</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>6</td><td>2</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Goals in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Goals Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Assists in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>7</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>12</td><td>7</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>6</td><td>4</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Assists in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>18</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Assist in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>18</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Game Points in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>11</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>12</td><td>11</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>6</td><td>6</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Game Points in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>28</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Game Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>28</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>12</td><td>30</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>6</td><td>29</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>3</td><td>27</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>86</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>86</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>12</td><td>10</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>3</td><td>9</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>6</td><td>8</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>27</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Block In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>27</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>84</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>84</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Pim In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>12</td><td>10</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>6</td><td>8</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>3</td><td>4</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>22</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>22</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Hits In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>25</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>12</td><td>18</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>6</td><td>13</td><td><a href="WJC-6.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Hits In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>56</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Hit In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>56</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>8,30%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>81,80%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>8,30%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>81,80%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>3</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Points In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>3</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win Home In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+</table></div>
+<h1 class="TeamRecordsPro_TCH"><a id="RépubliqueTchèque">République Tchèque</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#RépubliqueTchèque">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#RépubliqueTchèque">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#RépubliqueTchèque">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#RépubliqueTchèque">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#RépubliqueTchèque">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#RépubliqueTchèque">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#RépubliqueTchèque">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#RépubliqueTchèque">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#RépubliqueTchèque">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#RépubliqueTchèque">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#RépubliqueTchèque">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#RépubliqueTchèque">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam19">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_RépubliqueTchèque');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_RépubliqueTchèque" style="display: block;">
+<br /><table class="STHSRecordTable">
+<tr><td colspan="5"><b>Most Goals in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>2</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>7</td><td>2</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>9</td><td>2</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Goals in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>6</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>6</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Goals Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>8</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>8</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Assists in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>4</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>7</td><td>4</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>9</td><td>4</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Assists in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>12</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Assist in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>12</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Game Points in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>6</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>7</td><td>6</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>9</td><td>6</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Game Points in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>18</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Game Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>18</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>7</td><td>28</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>9</td><td>24</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>3</td><td>20</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>72</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>72</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>9</td><td>21</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>7</td><td>15</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>3</td><td>10</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>46</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Block In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>46</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>92</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>92</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Pim In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>7</td><td>9</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>3</td><td>8</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>9</td><td>6</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>23</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>23</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Hits In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>3</td><td>17</td><td><a href="WJC-3.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>9</td><td>17</td><td><a href="WJC-9.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>7</td><td>12</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Hits In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>46</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Hit In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>46</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11,10%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>88,90%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11,10%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>88,90%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Points In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+</table></div>
+<h1 class="TeamRecordsPro_RUS"><a id="Russie">Russie</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Russie">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Russie">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Russie">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Russie">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Russie">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Russie">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Russie">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Russie">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Russie">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Russie">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Russie">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Russie">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam12">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Russie');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Russie" style="display: block;">
+<br /><table class="STHSRecordTable">
+<tr><td colspan="5"><b>Most Goals in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>4</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>5</td><td>3</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>3</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Goals in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Goals Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>8</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>8</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Assists in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>6</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>10</td><td>6</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>5</td><td>5</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Assists in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>17</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Assist in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>17</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Game Points in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>10</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>10</td><td>9</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>5</td><td>8</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Game Points in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>27</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Game Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>27</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>5</td><td>28</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>2</td><td>27</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>25</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>80</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>80</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>5</td><td>15</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>2</td><td>13</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>9</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>37</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Block In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>37</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>84</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>84</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Pim In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>5</td><td>12</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>2</td><td>8</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>6</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>26</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>26</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Hits In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>2</td><td>16</td><td><a href="WJC-2.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>5</td><td>15</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>13</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Hits In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>44</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Hit In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>44</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>21,40%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>92,30%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>21,40%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>92,30%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>6</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Points In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>6</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win Visitor In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+</table></div>
+<h1 class="TeamRecordsPro_SLO"><a id="Slovaquie">Slovaquie</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Slovaquie">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Slovaquie">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Slovaquie">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Slovaquie">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Slovaquie">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Slovaquie">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Slovaquie">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Slovaquie">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Slovaquie">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Slovaquie">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Slovaquie">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Slovaquie">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam14">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Slovaquie');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Slovaquie" style="display: block;">
+<br /><table class="STHSRecordTable">
+<tr><td colspan="5"><b>Most Goals in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>4</td><td>2</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>11</td><td>2</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>1</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Goals in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>5</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>5</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Goals Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>9</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>9</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Assists in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>4</td><td>4</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>11</td><td>3</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>1</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Assists in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>8</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Assist in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>8</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Game Points in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>4</td><td>6</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>11</td><td>5</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>2</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Game Points in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>13</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Game Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>13</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>4</td><td>33</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>10</td><td>33</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>11</td><td>19</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>85</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>85</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>4</td><td>13</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>11</td><td>9</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>6</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>28</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Block In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>28</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>82</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>82</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Pim In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>4</td><td>10</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>11</td><td>10</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>10</td><td>2</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>22</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>22</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Hits In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>11</td><td>21</td><td><a href="WJC-11.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>10</td><td>19</td><td><a href="WJC-10.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>4</td><td>11</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Hits In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>51</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Hit In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>51</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>15,40%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>72,70%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>15,40%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>72,70%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>0</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>3</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>3</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Points In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+</table></div>
+<h1 class="TeamRecordsPro_SWE"><a id="Suède">Suède</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#Suède">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#Suède">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#Suède">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#Suède">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#Suède">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#Suède">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#Suède">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#Suède">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#Suède">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#Suède">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#Suède">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#Suède">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam6">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_Suède');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_Suède" style="display: block;">
+<br /><table class="STHSRecordTable">
+<tr><td colspan="5"><b>Most Goals in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>5</td><td>4</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>8</td><td>4</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>4</td><td>3</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Goals in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Goals Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Assists in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>8</td><td>8</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>5</td><td>7</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>4</td><td>5</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Assists in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>20</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Assist in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>20</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Game Points in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>8</td><td>12</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>5</td><td>11</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>4</td><td>8</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Game Points in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>31</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Game Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>31</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>8</td><td>35</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>4</td><td>27</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>5</td><td>24</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>86</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>86</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>4</td><td>17</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>5</td><td>10</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>8</td><td>6</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>33</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Block In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>33</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>92</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>92</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Pim In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>5</td><td>14</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>4</td><td>12</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>8</td><td>12</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>38</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>38</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Hits In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>4</td><td>17</td><td><a href="WJC-4.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>5</td><td>17</td><td><a href="WJC-5.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>8</td><td>17</td><td><a href="WJC-8.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Hits In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>51</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Hit In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>51</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>5,90%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>84,20%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>5,90%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>84,20%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>6</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Points In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>6</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win Home In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+</table></div>
+<h1 class="TeamRecordsPro_TWO"><a id="TeamWorld">Team World</a></h1>
+<div class="STHSTeamLink">
+[ <a href="WJC-ProTeamRoster.html#TeamWorld">Pro Team Roster</a> ]
+[ <a href="WJC-ProTeamScoring.html#TeamWorld">Pro Team Scoring</a> ]
+[ <a href="WJC-TeamFinance.html#TeamWorld">Team Finance</a> ]
+[ <a href="WJC-ProTeamPlayersInfo.html#TeamWorld">Pro Team PlayersInfo</a> ]
+[ <a href="WJC-ProTeamLines.html#TeamWorld">Pro Team Lines</a> ]
+[ <a href="WJC-TeamProspects.html#TeamWorld">Team Prospects</a> ]
+[ <a href="WJC-ProTeamSchedule.html#TeamWorld">Pro Team Schedule</a> ]
+[ <a href="WJC-ProTeamStats.html#TeamWorld">Pro Team Stats</a> ]
+[ <a href="WJC-ProTeamStatsVS.html#TeamWorld">Pro Team Stats VS</a> ]
+[ <a href="WJC-TeamInjurySuspension.html#TeamWorld">Team Injury Suspension</a> ]
+[ <a href="WJC-TeamHistory.html#TeamWorld">Team History</a> ]
+[ <a href="WJC-TeamRecords.html#TeamWorld">Team Records</a> ]
+[ <a href="WJC-FarmTeamRoster.html#FarmTeam9">Farm Team Roster</a> ]
+ [ <a href="#STHSRosterTop"><b>Page Top</b></a> ]
+[ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_TeamWorld');"><b>Close / Open Team View</b></a> ]
+</div><div id="STHS_JS_Team_TeamWorld" style="display: block;">
+<br /><table class="STHSRecordTable">
+<tr><td colspan="5"><b>Most Goals in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>12</td><td>5</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>1</td><td>3</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>7</td><td>3</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Goals in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>11</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Goals Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Goal Against in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>10</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Assists in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>12</td><td>8</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>7</td><td>6</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>1</td><td>5</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Assists in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>19</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Assist in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>19</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Game Points in 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>12</td><td>13</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>7</td><td>9</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>1</td><td>8</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Game Points in 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>30</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Game Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>30</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>7</td><td>35</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>12</td><td>29</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>1</td><td>24</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>88</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>88</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>7</td><td>13</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>1</td><td>12</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>12</td><td>12</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Shots Blocked In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>37</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Block In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>37</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>88</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Shots Against In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>88</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Pim In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>7</td><td>13</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>12</td><td>12</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>1</td><td>8</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>33</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Pim In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>33</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Hits In 1 Game</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>1</td><td>23</td><td><a href="WJC-1.html">Game Direct Link</a></td></tr><tr><td>2</td><td>1</td><td>12</td><td>18</td><td><a href="WJC-12.html">Game Direct Link</a></td></tr><tr><td>3</td><td>1</td><td>7</td><td>13</td><td><a href="WJC-7.html">Game Direct Link</a></td></tr>
+<tr><td colspan="5"><b>Most Hits In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>54</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Hit In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>54</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>27,30%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Best PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>78,60%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PP In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>27,30%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Worse PK In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>78,60%</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Win In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Lost In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Point In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>7</td><td></td></tr>
+
+<tr><td colspan="5"><b>Less Points In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>7</td><td></td></tr>
+
+<tr><td colspan="5"><b>Most Win Home In 1 Year</b></td></tr>
+<tr><td class="STHSW30">#</td><td class="STHSW50">Year</td><td class="STHSW50">Game</td><td class="STHSW75">Value</td><td class="STHSW250">Link</td></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>2</td><td></td></tr>
+
+</table></div>
+<br /><br /><br /><a href="#" class="scrollup">Scroll</a><div class="footer">Output by the <a href="http://sths.simont.info">SimonT Hockey Simulator (STHS)</a> for Bernard Brassard<span class="FooterW3C"> - Original Page <a href="http://validator.w3.org/check?uri=referer">W3C HTML5 Valid</a></span>
+<div style="display:none;visibility:hidden"><a href="http://sths.simont.info">Hockey Simulator</a> - <a href="http://sths.simont.info">Hockey Simulation</a> - <a href="http://sths.simont.info">Hockey Manager</a></div></div>
+</body></html>
