@@ -665,6 +665,22 @@ a.tabmenuhome { color:#000000;}
 
 }
 
+.STHSIndex_GamesResultScrollBox {
+        width:100%;
+        height: 120px;
+        /* border-left: 1px solid black;
+        border-left: 1px solid black; */
+        border-collapse: separate;
+        font-size: medium;
+        border-spacing: 0;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: rgba(245,245,245,1)
+    }
+    .STHSIndex_GamesResultScrollBox th {font-weight: bold;}
+    .STHSIndex_GamesResultScrollBox td {padding-left: 5%;padding-right: 5%; width: 50%}
+    .STHSIndex_GamesResultScrollBox td > a {text-decoration: none;}
+
 .next_day_boxscore {
 
 	width: 100%;
@@ -698,6 +714,7 @@ a.tabmenuhome { color:#000000;}
 .STHSIndex_GamesResult th {font-weight: bold;}
 
 .STHSIndex_GamesResult td > a {text-decoration: none;}
+
 
 
 
@@ -1071,7 +1088,7 @@ a.tabmenuhome { color:#000000;}
 
     margin-bottom: 0;
 
-    height: 100%;
+    height: 120px;
 
 }
 

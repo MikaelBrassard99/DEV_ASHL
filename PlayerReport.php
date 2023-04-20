@@ -198,7 +198,7 @@ function getSeasonName($name)
 	}
 }
 
-$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12, $DatabaseFile];
+$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $https://www.ashligue.com, $DatabaseFile];
 $count = 0;
 //dictionnaire des donnees des joueurs selon le count (annee)
 $dictLeagueGeneral[[]];
