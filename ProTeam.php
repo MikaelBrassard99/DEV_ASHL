@@ -15,9 +15,7 @@ function toggleDiv(divId) {
 }
 </script>
 <?php
-/*
-Syntax to call this webpage should be ProTeam.php?Team=2 where only the number change and it's based on the Tean Number Field.
-*/
+
 $Team = (int)0;
 $TypeText = (string)"Pro";
 $LeagueName = (string)"";
