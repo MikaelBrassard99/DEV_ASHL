@@ -20,7 +20,7 @@
 		}
 
 		@media screen and (max-width: 890px) {
-			.ASHL_Banner {
+			.ASHL_Banner { 
 				display: none;
 			}
 
@@ -29,6 +29,9 @@
 			}
 
 			.MagicScroll {
+				display: none;
+			}
+			.container_slick{
 				display: none;
 			}
 		}
@@ -56,13 +59,25 @@ if (file_exists($DatabaseFile) == false) {
 		$Query = "Select Name, LastTransactionOutput from LeagueGeneral";
 		$LeagueGeneralMenu = $dbMenu->querySingle($Query, true);
 		$LeagueName = $LeagueGeneralMenu['Name'];
+	}else{
+	
 	}
+
 	$Query = "Select ShowExpansionDraftLinkinTopMenu, ShowWebClientInDymanicWebsite, ProcessDatabaseTransaction, ShowRSSFeed, OutputCustomURL1, OutputCustomURL1Name, OutputCustomURL2, OutputCustomURL2Name, SplitTodayGames from LeagueOutputOption";
 	$LeagueOutputOptionMenu = $dbMenu->querySingle($Query, true);
 	$Query = "Select OutputName, OutputFileFormat, EntryDraftStart, OffSeason, DatabaseCreationDate, PlayOffStarted, ProConferenceName1, ProConferenceName2, FarmConferenceName1, FarmConferenceName2 from LeagueGeneral";
 	$LeagueGeneralMenu = $dbMenu->querySingle($Query, true);
 	$Query = "Select FarmEnable, WaiversEnable, ProTwoConference, FarmTwoConference from LeagueSimulation";
 	$LeagueSimulationMenu = $dbMenu->querySingle($Query, true);
+
+	$Query = "Select Name, ScheduleNextDay, DefaultSimulationPerDay, PointSystemSO, OffSeason, Days73StarPro, Days303StarPro, Days73StarFarm, Days303StarFarm from LeagueGeneral";
+	$LeagueGeneral = $db->querySingle($Query,true);		
+	$LeagueName = $LeagueGeneral['Name'];
+
+	$Query = "SELECT * FROM SchedulePro WHERE Day = " . ($LeagueGeneral['ScheduleNextDay'] - $LeagueGeneral['DefaultSimulationPerDay']) . " ORDER BY GameNumber ";
+	$QuerySchedule = "SELECT SchedulePro.*, 'Pro' AS Type, TeamProStatVisitor.Last10W AS VLast10W, TeamProStatVisitor.Last10L AS VLast10L, TeamProStatVisitor.Last10T AS VLast10T, TeamProStatVisitor.Last10OTW AS VLast10OTW, TeamProStatVisitor.Last10OTL AS VLast10OTL, TeamProStatVisitor.Last10SOW AS VLast10SOW, TeamProStatVisitor.Last10SOL AS VLast10SOL, TeamProStatVisitor.GP AS VGP, TeamProStatVisitor.W AS VW, TeamProStatVisitor.L AS VL, TeamProStatVisitor.T AS VT, TeamProStatVisitor.OTW AS VOTW, TeamProStatVisitor.OTL AS VOTL, TeamProStatVisitor.SOW AS VSOW, TeamProStatVisitor.SOL AS VSOL, TeamProStatVisitor.Points AS VPoints, TeamProStatVisitor.Streak AS VStreak, TeamProStatHome.Last10W AS HLast10W, TeamProStatHome.Last10L AS HLast10L, TeamProStatHome.Last10T AS HLast10T, TeamProStatHome.Last10OTW AS HLast10OTW, TeamProStatHome.Last10OTL AS HLast10OTL, TeamProStatHome.Last10SOW AS HLast10SOW, TeamProStatHome.Last10SOL AS HLast10SOL, TeamProStatHome.GP AS HGP, TeamProStatHome.W AS HW, TeamProStatHome.L AS HL, TeamProStatHome.T AS HT, TeamProStatHome.OTW AS HOTW, TeamProStatHome.OTL AS HOTL, TeamProStatHome.SOW AS HSOW, TeamProStatHome.SOL AS HSOL, TeamProStatHome.Points AS HPoints, TeamProStatHome.Streak AS HStreak FROM (SchedulePRO LEFT JOIN TeamProStat AS TeamProStatHome ON SchedulePRO.HomeTeam = TeamProStatHome.Number) LEFT JOIN TeamProStat AS TeamProStatVisitor ON SchedulePRO.VisitorTeam = TeamProStatVisitor.Number WHERE DAY >= " . $LeagueGeneral['ScheduleNextDay'] . " AND DAY <= " . ($LeagueGeneral['ScheduleNextDay'] + $LeagueGeneral['DefaultSimulationPerDay'] -1) . " ORDER BY Day, GameNumber";
+	$LatestScore = $dbMenu->query($Query);
+	$Schedule = $dbMenu->query($QuerySchedule);
 
 	if ($LeagueGeneralMenu['OffSeason'] == "True") {
 		$MenuFreeAgentYear = 0;
@@ -76,7 +91,7 @@ if (file_exists($DatabaseFile) == false) {
 		$datetimeToday = new DateTime();
 		$datetimeTomorrow = new DateTime('tomorrow');
 		echo "<div class=\"MagicScroll\">";
-			echo "<div style=\"height:auto\"><table class=\"STHSIndex_GamesResultScrollBox\"><tr><td>To	day</td></tr></table></div>";
+			echo "<div style=\"height:auto\"><table class=\"STHSIndex_GamesResultScrollBox\"><tr><td>Today</td></tr></table></div>";
 			if (empty($LatestScore) == false) {
 				while ($row = $LatestScore->fetchArray()) {
 					echo "<div style=\"\">";
@@ -514,8 +529,8 @@ if (file_exists($DatabaseFile) == false) {
 		}
 	} else {
 		MagicScrollOptions = {
-			items: 8,
-			step: 2,
+			items: 3,
+			step: 1,
 		}
 	}
 </script>
