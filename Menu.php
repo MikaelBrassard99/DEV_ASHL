@@ -2,8 +2,6 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link type="text/css" rel="stylesheet" href="magicscroll/magicscroll.css" />
 	<style>
 		@media screen and (max-width: 1060px) {
 			.ASHL_Banner {
@@ -91,26 +89,32 @@ if (file_exists($DatabaseFile) == false) {
 		$datetimeToday = new DateTime();
 		$datetimeTomorrow = new DateTime('tomorrow');
 		echo "<div class=\"MagicScroll\">";
-			echo "<div style=\"height:auto\"><table class=\"STHSIndex_GamesResultScrollBox\"><tr><td>Today</td></tr></table></div>";
+			echo "<div style=\"\">";
+				echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
+					echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">Today</td></tr>";
+				echo "</table>";
+		 	echo "</div>";
 			if (empty($LatestScore) == false) {
 				while ($row = $LatestScore->fetchArray()) {
 					echo "<div style=\"\">";
 						echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
-							echo "<tr><th>Day " . $row['Day']. "</th><th class=\"STHSW45\">#" . $row['GameNumber']. "</th></tr>";
-							echo "<tr><td>" . $row['VisitorTeamName']. "</td><td class=\"STHSRight\">" . $row['VisitorScore'] . "</td></tr>";
-							echo "<tr><td>" . $row['HomeTeamName']. "</td><td class=\"STHSRight\">" . $row['HomeScore'] . "</td></tr>";
+							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">" . $row['VisitorTeamName']. " - " . $row['VisitorScore'] . "</td></tr>";
+							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">" . $row['HomeTeamName']. " - " . $row['HomeScore'] . "</td></tr>";
 						echo "</table>";
 					echo "</div>";
 				}
 			}
-			echo "<div style=\"height:auto\"><table class=\"STHSIndex_GamesResultScrollBox\"><tr><td>Next day</td></tr></table></div>";
+		echo "<div style=\"\">";
+			echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
+				echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">Next day</td></tr>";
+			echo "</table>";
+		 echo "</div>";
 			if (empty($Schedule) == false) {
 				while ($row = $Schedule->fetchArray()) {
 					echo "<div style=\"\">";
 						echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
-							echo "<tr><th>Day " . $row['Day']. "</th><th class=\"STHSW45\">#" . $row['GameNumber']. "</th></tr>";
 							echo "<tr>";
-								echo "<td>";
+								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
 									echo $row['VisitorTeamAbbre'] . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
 									if ($LeagueGeneral['PointSystemSO'] == "True") {
 										echo $row['VL'] . "-" . ($row['VOTL'] + $row['VSOL']);
@@ -121,7 +125,7 @@ if (file_exists($DatabaseFile) == false) {
 								echo "</td>";
 							echo "</tr>";
 							echo "<tr>";
-								echo "<td>";
+								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
 									echo $row['HomeTeamAbbre'] . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
 									if ($LeagueGeneral['PointSystemSO'] == "True") {
 										echo $row['HL'] . "-" . ($row['HOTL'] + $row['HSOL']);
@@ -489,10 +493,6 @@ if (file_exists($DatabaseFile) == false) {
 			</td>
 		</tr>
 	</table>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.min.js" />
 	</script>
 	<script type="text/javascript" src="magicscroll/magicscroll.js"></script>
@@ -521,16 +521,19 @@ if (file_exists($DatabaseFile) == false) {
 		MagicScrollOptions = {
 			items: 3,
 			step:1,
+			autoplay: 5000
 		}
 	} else if (x < 975) {
 		MagicScrollOptions = {
 			items: 3,
-			step: 1,
+			step:1,
+			autoplay: 5000
 		}
 	} else {
 		MagicScrollOptions = {
 			items: 3,
-			step: 1,
+			step:1,
+			autoplay: 5000
 		}
 	}
 </script>
