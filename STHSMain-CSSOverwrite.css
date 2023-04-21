@@ -529,7 +529,7 @@ a.tabmenuhome { color:#000000;}
 
 .STHSRight{text-align:right;}
 
-.STHSIndex_GamesResultScrollBox_TeamName{text-align:left; font-size: Large;background:linear-gradient(to right, #31a8e0, #a9d0e2);}
+.STHSIndex_GamesResultScrollBox_TeamName{text-align:left; font-size: Large;background:white;padding-left: 15%; padding-top: 0%;}
 
 .STHSAlignTop{vertical-align: top;}
 
@@ -672,13 +672,12 @@ a.tabmenuhome { color:#000000;}
         height: 60px;
         border-collapse: separate;
         border-spacing: 0;
-        border: 1px solid black;
+        border: 2px solid #31a8e0;;
         /* border-radius: 10px; */
-        background-color: rgba(245,245,245,1)
+        background-color: white;
     }
     .STHSIndex_GamesResultScrollBox th {font-weight: bold;}
-    .STHSIndex_GamesResultScrollBox td {padding-left: 5%;padding-right: 5%; width: 50%}
-    .STHSIndex_GamesResultScrollBox td > a {text-decoration: none;}
+    .STHSIndex_GamesResultScrollBox td > a {text-decoration: none; height: 24px; width: 24px;}
 
 .next_day_boxscore {
 
@@ -1088,9 +1087,6 @@ a.tabmenuhome { color:#000000;}
     margin-bottom: 0;
 
     height: 60px;
-
-    background:linear-gradient(to right, #31a8e0, #a9d0e2);
-
 }
 
 
@@ -1190,7 +1186,7 @@ a.tabmenuhome { color:#000000;}
 }
 .mcs-wrapper,
 .mcs-item img {
-    line-height: 100%;
+    /* line-height: 100%; */
 }
 
 .MagicScroll {
@@ -1203,7 +1199,6 @@ a.tabmenuhome { color:#000000;}
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
-    background:linear-gradient(to right, #31a8e0, #a9d0e2);
 }
 
 .MagicScroll.mcs-height-auto .mcs-item > a {
@@ -1354,8 +1349,8 @@ body.mcs-dragging button.mcs-button.mcs-horizontal.mcs-button-arrow {
 }
 
 .mcs-item img {
-    width: auto;
-    height: auto;
+    /* width: auto;
+    height: auto; */
     vertical-align: middle;
 }
 

@@ -102,8 +102,8 @@ if (file_exists($DatabaseFile) == false) {
 				while ($row = $LatestScoreProScroll->fetchArray()) {
 					echo "<div style=\"\">";
 						echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
-							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">" . $row['VisitorTeamName']. " - " . $row['VisitorScore'] . "</td></tr>";
-							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">" . $row['HomeTeamName']. " - " . $row['HomeScore'] . "</td></tr>";
+							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\"><img src=\"./images/Pro-team/" . $row['VisitorTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " " . $row['VisitorTeamAbbre']. " - " . $row['VisitorScore'] . "</td></tr>";
+							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\"><img src=\"./images/Pro-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " " . $row['HomeTeamAbbre']. " - " . $row['HomeScore'] . "</td></tr>";
 						echo "</table>";
 					echo "</div>";
 				}
@@ -112,8 +112,8 @@ if (file_exists($DatabaseFile) == false) {
 				while ($row = $LatestScoreFarmScroll->fetchArray()) {
 					echo "<div style=\"\">";
 						echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
-							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">" . $row['VisitorTeamName']. " - " . $row['VisitorScore'] . "</td></tr>";
-							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">" . $row['HomeTeamName']. " - " . $row['HomeScore'] . "</td></tr>";
+							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\"><img src=\"./images/Farm-team/" . $row['VisitorTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " " . $row['VisitorTeamAbbre']. " - " . $row['VisitorScore'] . "</td></tr>";
+							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\"><img src=\"./images/Farm-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " " . $row['HomeTeamAbbre']. " - " . $row['HomeScore'] . "</td></tr>";
 						echo "</table>";
 					echo "</div>";
 				}
