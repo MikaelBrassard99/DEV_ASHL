@@ -420,6 +420,7 @@ if ($LeagueSimulation != Null and $TeamFarmInfo != Null) {
 <li><a href="#tabmain9"><?php echo $TeamLang['History']; ?></a></li>
 <li><a href="#tabmain10"><?php echo $TeamLang['TeamTransaction']; ?></a></li>
 <li><a href="#tabmain12"><?php echo $TeamLang['InjurySuspension']; ?></a></li>
+<li><a href="#tabmain14"><?php echo $TeamLang['LinesEditor']; ?></a></li>
 <?php
 if ($TeamCareerStatFound == true) {
 	echo "<li><a href=\"#tabmain11\">" . $TeamLang['CareerTeamStat'] . "</a></li>\n";
@@ -2950,6 +2951,16 @@ if (empty($TeamInjurySuspension) == false) {
 	}
 }
 ?>
+
+<br /><br />
+</div>
+<div class="tabmain<?php
+	echo " active"; ?>" id="tabmain14">
+<br />
+<?php
+	include "WebClientIndex.php";
+?>
+
 <br /><br />
 </div>
 

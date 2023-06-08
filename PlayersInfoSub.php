@@ -13,7 +13,7 @@
 <th data-priority="1" title="Contract Duration" class="STHSW45"><?php echo $PlayersLang['Contract'];?></th>
 <?php echo "<th data-priority=\"1\" class=\"STHSW25\" title=\"Status\">" . $PlayersLang['Status'] . "</th>";?>
 <th class="columnSelector-false STHSW55" data-priority="1" title="Type"><?php echo $PlayersLang['Type'];?></th>
-<th data-priority="1" title="Current Salary" class="STHSW85"><?php echo $LeagueGeneral['LeagueYearOutput'] . "-" . $LeagueGeneral['LeagueYearOutput'] + 1;?></th>
+<th data-priority="1" title="Current Salary" class="STHSW100"><?php echo $LeagueGeneral['LeagueYearOutput'] . "-" . $LeagueGeneral['LeagueYearOutput'] + 1;?></th>
 <?php 
 if($LeagueOutputOption != Null){if ($FreeAgentYear == -1){
 	if($LeagueOutputOption['OutputSalariesRemaining'] == "True"){echo "<th data-priority=\"6\" title=\"Salary Remaining\" class=\"columnSelector-false STHSW85\">" . $PlayersLang['SalaryRemaining'] . "</th>";}
@@ -25,15 +25,15 @@ if($LeagueOutputOption != Null){if ($FreeAgentYear == -1){
 <th data-priority="6" title="Salary Cap Remaining" class="columnSelector-false STHSW85"><?php echo $PlayersLang['SalaryCapRemaining'];?></th>
 <th data-priority="6" title="Exclude from Salary Cap" class="columnSelector-false columnSelector-false STHSW35"><?php echo $PlayersLang['ExcludefromSalaryCap'];?></th>
 <?php
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 2\">" . $LeagueGeneral['LeagueYearOutput'] + 1 . "-" . $LeagueGeneral['LeagueYearOutput'] + 2; "</th>";
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 3\">" . $LeagueGeneral['LeagueYearOutput'] + 2 . "-" . $LeagueGeneral['LeagueYearOutput'] + 3; "</th>";
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 4\">" . $LeagueGeneral['LeagueYearOutput'] + 3 . "-" . $LeagueGeneral['LeagueYearOutput'] + 4; "</th>";
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 5\">" . $LeagueGeneral['LeagueYearOutput'] + 4 . "-" . $LeagueGeneral['LeagueYearOutput'] + 5; "</th>";
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 6\">" . $LeagueGeneral['LeagueYearOutput'] + 5 . "-" . $LeagueGeneral['LeagueYearOutput'] + 6; "</th>";
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 7\">" . $LeagueGeneral['LeagueYearOutput'] + 6 . "-" . $LeagueGeneral['LeagueYearOutput'] + 7; "</th>";
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 8\">" . $LeagueGeneral['LeagueYearOutput'] + 7 . "-" . $LeagueGeneral['LeagueYearOutput'] + 8; "</th>";
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 9\">" . $LeagueGeneral['LeagueYearOutput'] + 8 . "-" . $LeagueGeneral['LeagueYearOutput'] + 9; "</th>";
-	echo "<th class=\"STHSW85\" data-priority=\"1\" title=\"Salary Year 10\">" . $LeagueGeneral['LeagueYearOutput'] + 9 . "-" . $LeagueGeneral['LeagueYearOutput'] + 10; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 2\">" . $LeagueGeneral['LeagueYearOutput'] + 1 . "-" . $LeagueGeneral['LeagueYearOutput'] + 2; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 3\">" . $LeagueGeneral['LeagueYearOutput'] + 2 . "-" . $LeagueGeneral['LeagueYearOutput'] + 3; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 4\">" . $LeagueGeneral['LeagueYearOutput'] + 3 . "-" . $LeagueGeneral['LeagueYearOutput'] + 4; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 5\">" . $LeagueGeneral['LeagueYearOutput'] + 4 . "-" . $LeagueGeneral['LeagueYearOutput'] + 5; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 6\">" . $LeagueGeneral['LeagueYearOutput'] + 5 . "-" . $LeagueGeneral['LeagueYearOutput'] + 6; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 7\">" . $LeagueGeneral['LeagueYearOutput'] + 6 . "-" . $LeagueGeneral['LeagueYearOutput'] + 7; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 8\">" . $LeagueGeneral['LeagueYearOutput'] + 7 . "-" . $LeagueGeneral['LeagueYearOutput'] + 8; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 9\">" . $LeagueGeneral['LeagueYearOutput'] + 8 . "-" . $LeagueGeneral['LeagueYearOutput'] + 9; "</th>";
+	echo "<th class=\"STHSW100\" data-priority=\"1\" title=\"Salary Year 10\">" . $LeagueGeneral['LeagueYearOutput'] + 9 . "-" . $LeagueGeneral['LeagueYearOutput'] + 10; "</th>";
 
 ?>
 <th data-priority="5" title="Hyperlink" class="columnSelector-false STHSW65">Link</th>

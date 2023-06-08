@@ -280,7 +280,7 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
 
             </ul>
             <div class="tabmain-content">
-                <div class="tabmain <?php if ($LeagueGeneral['DivisionNewNHLPlayoff'] == "True") {
+                <div class="tabmain <?php if ($LeagueGeneral['ProDivisionNewNHLPlayoff'] == "True") {
                                         echo "active";
                                     } ?>" id="tabmain1">
 
@@ -382,7 +382,7 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
                     ?>
 
                 </div>
-                <div class="tabmain <?php if ($LeagueGeneral['DivisionNewNHLPlayoff'] == "False") {
+                <div class="tabmain <?php if ($LeagueGeneral['ProDivisionNewNHLPlayoff'] == "False") {
                                         echo "active";
                                     } ?>" id="tabmain2">
                     <?php

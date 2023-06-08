@@ -21,24 +21,24 @@
 	
 	// Look for a team ID in the URL, if non exists use 0
 
-	$t = (isset($_REQUEST["TeamID"])) ? filter_var($_REQUEST["TeamID"], FILTER_SANITIZE_NUMBER_INT): 0;
+	$t = (isset($_REQUEST["Team"])) ? filter_var($_REQUEST["Team"], FILTER_SANITIZE_NUMBER_INT): 0;
 	$row = array();
 	if($t > 0){
 		$rs = api_dbresult_teamsbyname($db,"Pro",$t);
 		$row = $rs->fetchArray();
 	}
 	// Make a default header 
-	// 5 Paramaters. PageID, database, teamid, League = Pro/Farm, $headcode (custom headercode can be added. DEFAULT "")
+	// 5 Paramaters. PageID, database, Team, League = Pro/Farm, $headcode (custom headercode can be added. DEFAULT "")
 	api_layout_header("rostereditor",$db,$t,false,$WebClientHeadCode);
 	include "Menu.php";
 	api_alpha_testing();
-	api_html_form_teamid($db,$t);
+	// api_html_form_Team($db,$t);
 	api_security_logout();
 	api_security_authenticate($_POST,$row);
 
 	if(api_security_access($row)){
 		// Display the roster editor page using API.
-		// use 3 paramaters Database, TeamID, showH1Tag (DEFAULT true/false)   
+		// use 3 paramaters Database, Team, showH1Tag (DEFAULT true/false)   
 		if($t > 0){api_pageinfo_editor_roster($db,$t);}
 	}else{
 		api_html_login_form($row);

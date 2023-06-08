@@ -485,7 +485,9 @@ $TeamLang = array(
     'Annee de contrat | Salaire'        => 'Annee de contrat | Salaire',
     'Recrue'        => 'Recrue',
     'Disponible pour echange'        => 'Disponible pour echange',
-    'Condition | Blessure'        => 'Condition | Blessure'
+    'Condition | Blessure'        => 'Condition | Blessure',
+    'LinesEditor' => 'Éditeur de l\'alignement'
+
 );
 
 $IndexLang = array(

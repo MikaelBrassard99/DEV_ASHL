@@ -20,7 +20,7 @@
 	$db = api_sqlite_connect($DatabaseFile);
 
 	// Look for a team ID in the URL, if non exists use 0
-	$t = (isset($_REQUEST["TeamID"])) ? filter_var($_REQUEST["TeamID"], FILTER_SANITIZE_NUMBER_INT): 0;
+	$t = (isset($_REQUEST["Team"])) ? filter_var($_REQUEST["Team"], FILTER_SANITIZE_NUMBER_INT): 0;
 	$l = (isset($_REQUEST["League"])) ? filter_var($_REQUEST["League"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH) : false;
 	If (strtolower($l) <> "farm"){$l = "Pro";}else{$l = "Farm";}
 	$row = array();
@@ -32,14 +32,14 @@
 	api_layout_header("lineeditor",$db,$t,$l,$WebClientHeadCode);
 	include "Menu.php";
 	api_alpha_testing();
-	api_html_form_teamid($db,$t,true);
+	// api_html_form_Team($db,$t,true);
 	api_security_logout();
 	api_security_authenticate($_POST,$row);
 	
 
 	if(api_security_access($row)){
 		// Display the line editor page using API.
-		// use 4 paramaters Database, TeamID, $league("Pro","Farm"), showH1Tag (DEFAULT true/false)   
+		// use 4 paramaters Database, Team, $league("Pro","Farm"), showH1Tag (DEFAULT true/false)   
 		if($t > 0){api_pageinfo_editor_lines($db,$t,$l);}
 	}else{
 		api_html_login_form($row);

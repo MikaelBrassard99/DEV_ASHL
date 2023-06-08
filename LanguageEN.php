@@ -484,7 +484,8 @@ $TeamLang = array(
     'Annee de contrat | Salaire'        => 'Year of contract | Salary',
     'Recrue'        => 'Rookie',
     'Disponible pour echange'        => 'Available for trade',
-    'Condition | Blessure'        => 'Condition | Injury'
+    'Condition | Blessure'        => 'Condition | Injury',
+    'LinesEditor' => 'Lines Editor'
 );
 
 $IndexLang = array(

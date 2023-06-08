@@ -192,13 +192,16 @@ function getSeasonName($name)
 		case "ASHL12-STHS.db":
 			return "2022-2023";
 			break;
+		case "ASHL13-STHS.db":
+			return "2023-2024";
+			break;
 		default:
 			return $name;
 			break;
 	}
 }
 
-$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $https://www.ashligue.com, $DatabaseFile];
+$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12, $DatabaseFileS13, $DatabaseFile];
 $count = 0;
 //dictionnaire des donnees des joueurs selon le count (annee)
 $dictLeagueGeneral[[]];
