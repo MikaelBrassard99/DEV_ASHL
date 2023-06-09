@@ -991,6 +991,15 @@ a.tabmenuhome { color:#000000;}
     transform: translate(-50%, -50%);
     font-family: 'SF Obliquities Extended', sans-serif;                                                                                                
 }
+
+.STHSPHPPlayerJerseyPlayerNumber {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'SF Obliquities Extended', sans-serif;
+    font-size: 60px;
+}
 .STHSPHPPlayerJerseyTeamImage {width:75%;height:75%;padding-left:0px;padding-right:0px;vertical-align:middle}
 
 

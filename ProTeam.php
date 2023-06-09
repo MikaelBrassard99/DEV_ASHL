@@ -1042,22 +1042,34 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5ForwardLeftWing']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 					<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 					<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line15vs5ForwardLeftWing']," ") . "</div>
+					<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 				</div>
 			</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5ForwardCenter']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 					<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 					<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line15vs5ForwardCenter']," ") . "</div>
+					<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 				</div>
 			</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5ForwardRightWing']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();			
 	echo "	<td>
 				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 					<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 					<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line15vs5ForwardRightWing']," ") . "</div>
+					<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 				</div>
 			</td>";
 	#echo "<td>" . $TeamLines['Line15vs5ForwardTime'] . "</td>";
@@ -1065,22 +1077,34 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line15vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5ForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5ForwardLeftWing']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line25vs5ForwardLeftWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5ForwardCenter']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line25vs5ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5ForwardRightWing']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line25vs5ForwardRightWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line25vs5ForwardTime'] . "</td>";
@@ -1088,22 +1112,34 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line25vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5ForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5ForwardLeftWing']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line35vs5ForwardLeftWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5ForwardCenter']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line35vs5ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5ForwardRightWing']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line35vs5ForwardRightWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line35vs5ForwardTime'] . "</td>";
@@ -1111,22 +1147,34 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line35vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5ForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5ForwardLeftWing']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line45vs5ForwardLeftWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5ForwardCenter']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line45vs5ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5ForwardRightWing']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line45vs5ForwardRightWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line45vs5ForwardTime'] . "</td>";
@@ -1154,16 +1202,24 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5DefenseDefense1']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line15vs5DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5DefenseDefense2']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line15vs5DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	echo "<td></td>";
@@ -1172,16 +1228,24 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line15vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5DefenseDefense1']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line25vs5DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5DefenseDefense2']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line25vs5DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	echo "<td></td>";
@@ -1190,16 +1254,24 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line25vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5DefenseDefense1']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line35vs5DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5DefenseDefense2']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line35vs5DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	echo "<td></td>";
@@ -1208,16 +1280,24 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line35vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5DefenseDefense1']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line45vs5DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5DefenseDefense2']."'";
+	$PlayerNumber = $db->query($Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line45vs5DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	echo "<td></td>";
@@ -1340,6 +1420,7 @@ if ($PlayerInfoAverage != Null) {
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PPDefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	echo "<td></td>";
