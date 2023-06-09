@@ -989,18 +989,19 @@ a.tabmenuhome { color:#000000;}
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'SF Obliquities Extended', sans-serif;                                                                                                
+    font-family: 'SF Obliquities Extended', sans-serif;  
+    font-size: 1.9vw;                                                                                              
 }
 
 .STHSPHPPlayerJerseyPlayerNumber {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 49%;
     transform: translate(-50%, -50%);
     font-family: 'SF Obliquities Extended', sans-serif;
-    font-size: 60px;
+    font-size: 5vw;
 }
-.STHSPHPPlayerJerseyTeamImage {width:75%;height:75%;padding-left:0px;padding-right:0px;vertical-align:middle}
+.STHSPHPPlayerJerseyTeamImage {width:100%;height:100%;padding-left:0px;padding-right:0px;vertical-align:middle}
 
 
 .STHSPHPTeamStatsTeamImage {width:24px;height:24px;padding-left:0px;padding-right:8px;vertical-align:middle}

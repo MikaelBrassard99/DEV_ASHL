@@ -1041,9 +1041,12 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
+	// Make QueryG global
+	$QueryG = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)=";
 	echo "<tr>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5ForwardLeftWing']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line15vs5ForwardLeftWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1052,8 +1055,9 @@ if ($PlayerInfoAverage != Null) {
 					<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 				</div>
 			</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5ForwardCenter']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line15vs5ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1062,9 +1066,10 @@ if ($PlayerInfoAverage != Null) {
 					<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 				</div>
 			</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5ForwardRightWing']."'";
-	$PlayerNumber = $db->query($Query);
-	$Row = $PlayerNumber->fetchArray();			
+	$Query = '"'.$TeamLines['Line15vs5ForwardRightWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 					<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
@@ -1077,8 +1082,9 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line15vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5ForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5ForwardLeftWing']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line25vs5ForwardLeftWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1087,8 +1093,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5ForwardCenter']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line25vs5ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1097,8 +1104,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5ForwardRightWing']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line25vs5ForwardRightWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1112,8 +1120,9 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line25vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5ForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5ForwardLeftWing']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line35vs5ForwardLeftWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1122,8 +1131,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5ForwardCenter']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line35vs5ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1132,8 +1142,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5ForwardRightWing']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line35vs5ForwardRightWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1147,8 +1158,9 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line35vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5ForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5ForwardLeftWing']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line45vs5ForwardLeftWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1157,8 +1169,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5ForwardCenter']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line45vs5ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1167,8 +1180,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5ForwardRightWing']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line45vs5ForwardRightWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1202,8 +1216,9 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5DefenseDefense1']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line15vs5DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1212,8 +1227,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line15vs5DefenseDefense2']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line15vs5DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1228,8 +1244,9 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line15vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5DefenseDefense1']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line25vs5DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1238,8 +1255,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line25vs5DefenseDefense2']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line25vs5DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1254,8 +1272,9 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line25vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5DefenseDefense1']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line35vs5DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1264,8 +1283,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line35vs5DefenseDefense2']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line35vs5DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1280,8 +1300,9 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line35vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5DefenseDefense1']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line45vs5DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1290,8 +1311,9 @@ if ($PlayerInfoAverage != Null) {
 			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
-	$Query = "SELECT PlayerInfo.Name, PlayerInfo.Jersey FROM PlayerInfo WHERE (PlayerInfo.Name)='".$TeamLines['Line45vs5DefenseDefense2']."'";
-	$PlayerNumber = $db->query($Query);
+	$Query = '"'.$TeamLines['Line45vs5DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
 	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
@@ -1326,22 +1348,37 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = '"'.$TeamLines['Line1PPForwardLeftWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PPForwardLeftWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line1PPForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PPForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line1PPForwardRightWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PPForwardRightWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line1PPForwardTime'] . "</td>";
@@ -1349,22 +1386,37 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line1PPForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PPForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = '"'.$TeamLines['Line2PPForwardLeftWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PPForwardLeftWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line2PPForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PPForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line2PPForwardRightWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PPForwardRightWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line2PPForwardTime'] . "</td>";
@@ -1392,16 +1444,26 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = '"'.$TeamLines['Line1PPDefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PPDefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line1PPDefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PPDefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	echo "<td></td>";
@@ -1410,12 +1472,21 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line1PPDefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PPDefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = '"'.$TeamLines['Line2PPDefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PPDefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line2PPDefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
@@ -1448,16 +1519,26 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = '"'.$TeamLines['Line1PK4ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PK4ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line1PK4ForwardWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PK4ForwardWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line1PK4ForwardTime'] . "</td>";
@@ -1465,16 +1546,26 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line1PK4ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK4ForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = '"'.$TeamLines['Line2PK4ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PK4ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line2PK4ForwardWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PK4ForwardWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line2PK4ForwardTime'] . "</td>";
@@ -1501,16 +1592,26 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = '"'.$TeamLines['Line1PK4DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PK4DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line1PK4DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PK4DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line1PK4DefenseTime'] . "</td>";
@@ -1518,16 +1619,26 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line1PK4DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK4DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = '"'.$TeamLines['Line2PK4DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PK4DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line2PK4DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PK4DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line2PK4DefenseTime'] . "</td>";
@@ -1559,26 +1670,41 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = '"'.$TeamLines['Line1PK3ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PK3ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line1PK3ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3ForwardOF'] . "</td>";
+	$Query = '"'.$TeamLines['Line1PK3DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PK3DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line1PK3DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PK3DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line1PK3DefenseTime'] . "</td>";
@@ -1586,26 +1712,41 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line1PK3DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = '"'.$TeamLines['Line2PK3ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PK3ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line2PK3ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK3ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK3ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK3ForwardOF'] . "</td>";
+	$Query = '"'.$TeamLines['Line2PK3DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PK3DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line2PK3DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PK3DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line2PK3DefenseTime'] . "</td>";
@@ -1632,16 +1773,26 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = '"'.$TeamLines['Line14VS4ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line14VS4ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line14VS4ForwardWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line14VS4ForwardWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line14VS4ForwardTime'] . "</td>";
@@ -1649,16 +1800,26 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line14VS4ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line14VS4ForwardOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = '"'.$TeamLines['Line24VS4ForwardCenter'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line24VS4ForwardCenter']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line24VS4ForwardWing'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line24VS4ForwardWing']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line24VS4ForwardTime'] . "</td>";
@@ -1685,16 +1846,26 @@ if ($PlayerInfoAverage != Null) {
 </tr>
 <?php if ($TeamLines != Null) {
 	echo "<tr>";
+	$Query = '"'.$TeamLines['Line14VS4DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line14VS4DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line14VS4DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line14VS4DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line14VS4DefenseTime'] . "</td>";
@@ -1702,16 +1873,26 @@ if ($PlayerInfoAverage != Null) {
 	#echo "<td>" . $TeamLines['Line14VS4DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line14VS4DefenseOF'] . "</td>";
 	echo "</tr>\n<tr>";
+	$Query = '"'.$TeamLines['Line24VS4DefenseDefense1'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line24VS4DefenseDefense1']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
+	$Query = '"'.$TeamLines['Line24VS4DefenseDefense2'].'";';
+	// ***REGLAGE DU BUG de ' dans un nom *****
+	$PlayerNumber = $db->query($QueryG . ' ' . $Query);
+	$Row = $PlayerNumber->fetchArray();
 	echo "	<td>
 		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
 			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
 			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line24VS4DefenseDefense2']," ") . "</div>
+			<div class=\"STHSPHPPlayerJerseyPlayerNumber\">" . $Row['Jersey'] . "</div>
 		</div>
 	</td>";
 	#echo "<td>" . $TeamLines['Line24VS4DefenseTime'] . "</td>";
