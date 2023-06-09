@@ -29,7 +29,7 @@ if ($lang == "fr") {
     <meta name="Decription" content="Demo Mode - STHS - Version : 3.2.7.8 - ASHL101-STHS.db - ASHL101-STHSCareerStat.db" />
     <link href="STHSMain.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="logo-ashl.gif" />
-
+    <link href="https://fonts.cdnfonts.com/css/sf-obliquities" rel="stylesheet">
 </head>
 <?php if (file_exists("STHSMain-CSSOverwrite.css") == True) {
     echo "<link href=\"STHSMain-CSSOverwrite.css\" rel=\"stylesheet\" type=\"text/css\" />";

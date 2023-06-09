@@ -1,5 +1,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@font-face{font-family:"nhl-new-jersey-regular";src:url("https://www.dafontfree.net/data/50/n/28624/NHL New Jersey.ttf") format("woff"),url("https://www.dafontfree.net/data/50/n/28624/NHL New Jersey.ttf") format("opentype"),url("https://www.dafontfree.net/data/50/n/28624/NHL New Jersey.ttf") format("truetype");}
 
 .tablesorter {font-family:Calibri;font-size: 10pt; background-color: rgb(222, 222, 222); margin:10px 0pt 15px;  width: 100%; text-align: left; border-spacing: 0px;border: #ccc 1px solid; border-width: 1px 0 0 1px;}
 
@@ -977,6 +978,21 @@ a.tabmenuhome { color:#000000;}
 .STHSPHPProspectsTeamImage {width:24px;height:24px;padding-left:0px;padding-right:8px;vertical-align:middle}
 
 .STHSPHPDraftPickTeamImage {width:48px;height:48px;padding-left:0px;padding-right:8px;vertical-align:middle}
+
+.ContainerSTHSPHPPlayerJerseyTeamImage {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.STHSPHPPlayerJerseyPlayerName {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'SF Obliquities Extended', sans-serif;                                                                                                
+}
+.STHSPHPPlayerJerseyTeamImage {width:75%;height:75%;padding-left:0px;padding-right:0px;vertical-align:middle}
+
 
 .STHSPHPTeamStatsTeamImage {width:24px;height:24px;padding-left:0px;padding-right:8px;vertical-align:middle}
 
@@ -2733,3 +2749,4 @@ body.mcs-dragging button.mcs-button.mcs-horizontal.mcs-button-arrow {
     filter: alpha(opacity = 75) !important;
     color: #ccc;
 }
+

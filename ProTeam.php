@@ -1031,7 +1031,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="8"><?php echo $TeamLang['5vs5Forward']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['LeftWing']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Center']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['RightWing']; ?></th>
@@ -1041,34 +1041,94 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line15vs5ForwardLeftWing'] . "</td>";
-	echo "<td>" . $TeamLines['Line15vs5ForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line15vs5ForwardRightWing'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+					<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+					<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line15vs5ForwardLeftWing']," ") . "</div>
+				</div>
+			</td>";
+	echo "	<td>
+				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+					<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+					<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line15vs5ForwardCenter']," ") . "</div>
+				</div>
+			</td>";
+	echo "	<td>
+				<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+					<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+					<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line15vs5ForwardRightWing']," ") . "</div>
+				</div>
+			</td>";
 	#echo "<td>" . $TeamLines['Line15vs5ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5ForwardOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line25vs5ForwardLeftWing'] . "</td>";
-	echo "<td>" . $TeamLines['Line25vs5ForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line25vs5ForwardRightWing'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line25vs5ForwardLeftWing']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line25vs5ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line25vs5ForwardRightWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line25vs5ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5ForwardOF'] . "</td>";
-	echo "</tr>\n<tr><td>3</td>";
-	echo "<td>" . $TeamLines['Line35vs5ForwardLeftWing'] . "</td>";
-	echo "<td>" . $TeamLines['Line35vs5ForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line35vs5ForwardRightWing'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line35vs5ForwardLeftWing']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line35vs5ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line35vs5ForwardRightWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line35vs5ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5ForwardOF'] . "</td>";
-	echo "</tr>\n<tr><td>4</td>";
-	echo "<td>" . $TeamLines['Line45vs5ForwardLeftWing'] . "</td>";
-	echo "<td>" . $TeamLines['Line45vs5ForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line45vs5ForwardRightWing'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line45vs5ForwardLeftWing']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line45vs5ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line45vs5ForwardRightWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line45vs5ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line45vs5ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line45vs5ForwardDF'] . "</td>";
@@ -1083,7 +1143,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="8"><?php echo $TeamLang['5vs5Defense']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Defense']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Defense']; ?></th>
 <th class="STHSW140"></th>
@@ -1093,33 +1153,73 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line15vs5DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line15vs5DefenseDefense2'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line15vs5DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line15vs5DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	echo "<td></td>";
 	#echo "<td>" . $TeamLines['Line15vs5DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line15vs5DefenseOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line25vs5DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line25vs5DefenseDefense2'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line25vs5DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line25vs5DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	echo "<td></td>";
 	#echo "<td>" . $TeamLines['Line25vs5DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line25vs5DefenseOF'] . "</td>";
-	echo "</tr>\n<tr><td>3</td>";
-	echo "<td>" . $TeamLines['Line35vs5DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line35vs5DefenseDefense2'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line35vs5DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line35vs5DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	echo "<td></td>";
 	#echo "<td>" . $TeamLines['Line35vs5DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line35vs5DefenseOF'] . "</td>";
-	echo "</tr>\n<tr><td>4</td>";
-	echo "<td>" . $TeamLines['Line45vs5DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line45vs5DefenseDefense2'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line45vs5DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line45vs5DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	echo "<td></td>";
 	#echo "<td>" . $TeamLines['Line45vs5DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line45vs5DefensePhy'] . "</td>";
@@ -1135,7 +1235,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="8"><?php echo $TeamLang['PowerPlayForward']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['LeftWing']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Center']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['RightWing']; ?></th>
@@ -1145,18 +1245,48 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line1PPForwardLeftWing'] . "</td>";
-	echo "<td>" . $TeamLines['Line1PPForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line1PPForwardRightWing'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PPForwardLeftWing']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PPForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PPForwardRightWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line1PPForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PPForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PPForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PPForwardOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line2PPForwardLeftWing'] . "</td>";
-	echo "<td>" . $TeamLines['Line2PPForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line2PPForwardRightWing'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PPForwardLeftWing']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PPForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PPForwardRightWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line2PPForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PPForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PPForwardDF'] . "</td>";
@@ -1171,7 +1301,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="8"><?php echo $TeamLang['PowerPlayDefense']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Defense']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Defense']; ?></th>
 <th class="STHSW140"></th>
@@ -1181,17 +1311,37 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php # echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line1PPDefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line1PPDefenseDefense2'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PPDefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PPDefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	echo "<td></td>";
 	#echo "<td>" . $TeamLines['Line1PPDefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PPDefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PPDefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PPDefenseOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line2PPDefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line2PPDefenseDefense2'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PPDefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PPDefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	echo "<td></td>";
 	#echo "<td>" . $TeamLines['Line2PPDefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PPDefensePhy'] . "</td>";
@@ -1207,7 +1357,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="7"><?php echo $TeamLang['PenaltyKill4PlayersForward']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Center']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Wing']; ?></th>
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['TimePCT']; ?></th>
@@ -1216,16 +1366,36 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line1PK4ForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line1PK4ForwardWing'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PK4ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PK4ForwardWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line1PK4ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK4ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK4ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK4ForwardOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line2PK4ForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line2PK4ForwardWing'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PK4ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PK4ForwardWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line2PK4ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK4ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK4ForwardDF'] . "</td>";
@@ -1240,7 +1410,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="7"><?php echo $TeamLang['PenaltyKill4PlayersDefense']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Defense']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Defense']; ?></th>
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['TimePCT']; ?></th>
@@ -1249,16 +1419,36 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line1PK4DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line1PK4DefenseDefense2'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PK4DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PK4DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line1PK4DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK4DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK4DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK4DefenseOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line2PK4DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line2PK4DefenseDefense2'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PK4DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PK4DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line2PK4DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK4DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK4DefenseDF'] . "</td>";
@@ -1273,7 +1463,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="12"><?php echo $TeamLang['PenaltyKill3Players']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Wing']; ?></th>
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['TimePCT']; ?></th>
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['PHY']; ?></th>
@@ -1287,26 +1477,56 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line1PK3ForwardCenter'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PK3ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line1PK3ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3ForwardOF'] . "</td>";
-	echo "<td>" . $TeamLines['Line1PK3DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line1PK3DefenseDefense2'] . "</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line1PK3DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line1PK3DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line1PK3DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line1PK3DefenseOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line2PK3ForwardCenter'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PK3ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line2PK3ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK3ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK3ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK3ForwardOF'] . "</td>";
-	echo "<td>" . $TeamLines['Line2PK3DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line2PK3DefenseDefense2'] . "</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line2PK3DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line2PK3DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line2PK3DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK3DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line2PK3DefenseDF'] . "</td>";
@@ -1321,7 +1541,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="7"><?php echo $TeamLang['4vs4Forward']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Center']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Wing']; ?></th>
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['TimePCT']; ?></th>
@@ -1330,16 +1550,36 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line14VS4ForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line14VS4ForwardWing'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line14VS4ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line14VS4ForwardWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line14VS4ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line14VS4ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line14VS4ForwardDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line14VS4ForwardOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line24VS4ForwardCenter'] . "</td>";
-	echo "<td>" . $TeamLines['Line24VS4ForwardWing'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line24VS4ForwardCenter']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line24VS4ForwardWing']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line24VS4ForwardTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line24VS4ForwardPhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line24VS4ForwardDF'] . "</td>";
@@ -1354,7 +1594,7 @@ if ($PlayerInfoAverage != Null) {
 <th colspan="7"><?php echo $TeamLang['4vs4Defense']; ?></th>
 </tr>
 <tr>
-<th class="STHSW25"><?php echo $TeamLang['LineNumber']; ?></th>
+<th class="STHSW25" style="display:none;"><?php echo $TeamLang['LineNumber']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Defense']; ?></th>
 <th class="STHSW140"><?php echo $TeamLang['Defense']; ?></th>
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['TimePCT']; ?></th>
@@ -1363,16 +1603,36 @@ if ($PlayerInfoAverage != Null) {
 <th class="STHSW25" style="display:none;"><?php echo $TeamLang['OF']; ?></th>
 </tr>
 <?php if ($TeamLines != Null) {
-	echo "<tr><td>1</td>";
-	echo "<td>" . $TeamLines['Line14VS4DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line14VS4DefenseDefense2'] . "</td>";
+	echo "<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line14VS4DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line14VS4DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line14VS4DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line14VS4DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line14VS4DefenseDF'] . "</td>";
 	#echo "<td>" . $TeamLines['Line14VS4DefenseOF'] . "</td>";
-	echo "</tr>\n<tr><td>2</td>";
-	echo "<td>" . $TeamLines['Line24VS4DefenseDefense1'] . "</td>";
-	echo "<td>" . $TeamLines['Line24VS4DefenseDefense2'] . "</td>";
+	echo "</tr>\n<tr>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" . stristr($TeamLines['Line24VS4DefenseDefense1']," ") . "</div>
+		</div>
+	</td>";
+	echo "	<td>
+		<div class=\"ContainerSTHSPHPPlayerJerseyTeamImage\">
+			<img src=\"./ashl-jersey-logo/" . $TeamLines['TeamNumber'] . ".png\" alt=\"\" class=\"STHSPHPPlayerJerseyTeamImage \" />
+			<div class=\"STHSPHPPlayerJerseyPlayerName\">" .  stristr($TeamLines['Line24VS4DefenseDefense2']," ") . "</div>
+		</div>
+	</td>";
 	#echo "<td>" . $TeamLines['Line24VS4DefenseTime'] . "</td>";
 	#echo "<td>" . $TeamLines['Line24VS4DefensePhy'] . "</td>";
 	#echo "<td>" . $TeamLines['Line24VS4DefenseDF'] . "</td>";

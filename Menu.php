@@ -15,6 +15,9 @@
 			.MagicScroll {
 				display: block;
 			}
+			.container_slick{
+				display: block;
+			}
 		}
 
 		@media screen and (max-width: 890px) {
