@@ -451,7 +451,7 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 						</tr>
 						<tr>
 							<td><?php echo $TeamLang['Disponible pour echange'] ?></td>
-							<td><?php echo ($PlayerInfo['AvailableforTrade'] == "False") ? "Indisponible pour echange" : "Disponible pour echange"; ?></td>
+							<td><?php echo (($PlayerInfo['DraftYear'] == 0) ? "N/A" : $PlayerInfo['DraftYear'] . " | " . $PlayerInfo['DraftOverallPick'] . "e"); ?></td>
 						</tr>
 						<tr>
 							<td><?php echo $TeamLang['Condition | Blessure'] ?></td>

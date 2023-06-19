@@ -189,7 +189,7 @@ if (file_exists($DatabaseFile) == false) {
 		echo "</div>";
 		?>
 	</div>
-	<table style="border-collapse: collapse; width: 100%; height: 100%; padding:0px;margin:0px; position: relative;">
+	<table style="border-collapse: collapse; padding:0px;margin:0px; position: relative;">
 		<tr>
 			<td>
 				<a href=#><img src=images/ashl/ASHL.jpg class="ASHL_Banner"></a>
