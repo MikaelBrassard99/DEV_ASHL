@@ -58,6 +58,7 @@ echo "<title>" . $Title . "</title>";
 
 function PrintStandingTop($TeamStatLang, $StandardStandingOutput, $PointSystemSO)
 {
+    echo "<div style=\"overflow-x:auto;\">";
     echo "<table class=\"tablesorter STHSPHPStanding_Table\"><thead><tr>";
     echo "<th title=\"Position\" class=\"STHSW35\">PO</th>";
     echo "<th title=\"Team Name\" class=\"STHSW200\">" . $TeamStatLang['TeamName'] . "</th>";
@@ -103,7 +104,7 @@ function PrintStandingTable($TypeTextTeam, $Standing, $TypeText, $StandardStandi
             echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"" . $ColumnPerTable . "\"><hr style=\"border-top: 1px solid red;\"/></td></tr>";
         }
     }
-    echo "</tbody></table>";
+    echo "</tbody></table></div>";
 }
 
 function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStandingOutput, $PointSystemSO, $PointSystemW, $LoopCount, $DatabaseFile)
@@ -179,61 +180,7 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
 ?>
 
 <style>
-    @media screen and (max-width: 1060px) {
-        .STHSWarning {
-            display: block;
-        }
-
-        .STHSPHPStanding_Table thead th:nth-last-child(1) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table tbody td:nth-last-child(1) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table thead th:nth-last-child(3) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table tbody td:nth-last-child(3) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table thead th:nth-last-child(4) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table tbody td:nth-last-child(4) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table thead th:nth-last-child(5) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table tbody td:nth-last-child(5) {
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 890px) {
-        .STHSPHPStanding_Table thead th:nth-last-child(2) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table tbody td:nth-last-child(2) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table thead th:nth-last-child(6) {
-            display: none;
-        }
-
-        .STHSPHPStanding_Table tbody td:nth-last-child(6) {
-            display: none;
-        }
-    }
+   
 
     .STHSPHPStanding_Table tbody td.staticTD {
         font-size: 1pt;
@@ -242,14 +189,14 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
     }
 
     <?php
-    if ($Playoff == True) {
+    if ($Playoff == True){
         echo "#tabmain1{display:none;}\n";
         echo "#tabmain2{display:none;}\n";
         echo "#tabmain3{display:none;}\n";
         echo "#tabmain4{display:none;}\n";
-    } else {
+    }else{
         echo "#tabmain5{display:none;}\n";
-    } ?>
+    }?>
 </style>
 
 </head>
@@ -257,7 +204,6 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
 <body>
     <?php include "Menu.php"; ?>
     <div class="STHSWarning"><?php echo $WarningResolution; ?><br /></div>
-    <div style="width:100%;margin:auto;overflow-x:auto;">
         <?php
         //echo "<h1>" . $Title . "</h1>"; 
         ?>
@@ -267,10 +213,10 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
                 if ($Playoff == True) {
                     echo "<li><a class=\"activemain\" href=\"#tabmain5\">" . $StandingLang['Playoff'] . "</a></li>";
                 } else {
-                    if ($LeagueGeneral['DivisionNewNHLPlayoff'] == "True") {
+                    If ($LeagueGeneral['DivisionNewNHLPlayoff'] == "True"){
                         echo "<li class=\"activemain\"><a href=\"#tabmain1\">" . $StandingLang['Wildcard'] . "</a></li>";
                         echo "<li><a href=\"#tabmain2\">" . $StandingLang['Conference'] . "</a></li>";
-                    } else {
+                    }else{
                         echo "<li class=\"activemain\"><a href=\"#tabmain2\">" . $StandingLang['Conference'] . "</a></li>";
                     }
                     echo "<li><a href=\"#tabmain3\">" . $StandingLang['Division'] . "</a></li>";
@@ -324,13 +270,12 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
                                 if ($LoopCount > 6) {
                                     PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $LeagueOutputOption['StandardStandingOutput'], $LeagueGeneral['PointSystemSO'], $LeagueGeneral['PointSystemW'], $LoopCount, $DatabaseFile);
                                 }
-                                if ($LoopCount == 8) {
-                                    echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"" . $ColumnPerTable . "\"><hr style=\"border-top: 1px solid red;\"/></td></tr>";
-                                }
+                                		If ($LoopCount == 8){echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"" . $ColumnPerTable . "\"><hr /></td></tr>";}
+
                             }
                         }
 
-                        echo "</tbody></table>";
+                        echo "</tbody></table></div>";
 
 
                         echo "<h2>" . $LeagueGeneral['ConferenceName2'] . "</h2>";
@@ -377,7 +322,7 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
                             }
                         }
 
-                        echo "</tbody></table>";
+                        echo "</tbody></table></div>";
                     }
                     ?>
 
@@ -525,7 +470,6 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
                 </div>
 
             </div>
-        </div>
 
 
 

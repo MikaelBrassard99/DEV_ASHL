@@ -1,48 +1,8 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<style>
-		@media screen and (max-width: 1060px) {
-			.ASHL_Banner {
-				display: block;
-			}
-
-			.ASHL_Logo {
-				display: block;
-			}
-
-			.MagicScroll {
-				display: block;
-			}
-			.container_slick{
-				display: block;
-			}
-		}
-
-		@media screen and (max-width: 890px) {
-			.ASHL_Banner { 
-				display: none;
-			}
-
-			.ASHL_Logo {
-				display: none;
-			}
-
-			.MagicScroll {
-				display: none;
-			}
-			.container_slick{
-				display: none;
-			}
-		}
-	</style>
-</head>
-
-
 <?php
-$MenuFreeAgentYear = (int)1;
-if (file_exists($DatabaseFile) == false) {
+require_once "STHSSetting.php";
+$MenuFreeAgentYear = (integer)1;
+$MenuTeamTeamID = (integer)0;
+If (file_exists($DatabaseFile) == false){
 	$LeagueName = $DatabaseNotFound;
 	$LeagueOutputOptionMenu = Null;
 	$LeagueGeneralMenu = Null;
@@ -53,7 +13,8 @@ if (file_exists($DatabaseFile) == false) {
 	$TeamFarmMenu = Null;
 	$TeamFarmMenu1 = Null;
 	$TeamFarmMenu2 = Null;
-	echo "<h1>" . $DatabaseNotFound . "</h1>";
+	echo "<br /><br /><h1 class=\"STHSCenter\">" . $DatabaseNotFound . "</h1>";
+	echo "<style>#cssmenu{display:none;}<style>";
 } else {
 	$dbMenu = new SQLite3($DatabaseFile);
 	if ($LeagueName == "") {

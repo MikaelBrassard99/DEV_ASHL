@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php include "Header.php"; ?>
 <script>
 function toggleDiv(divId) {
@@ -311,100 +312,43 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 ?>
 <style>
 <?php
-if ($TeamCareerStatFound == true) {
+if ($TeamCareerStatFound == true){
 	echo "#tablesorter_colSelect11:checked + label {background: #5797d7;  border-color: #555;}\n";
 	echo "#tablesorter_colSelect11:checked ~ #tablesorter_ColumnSelector11 {display: block;}\n";
+	echo "#tablesorter_colSelect11SeasonP:checked + label {background: #5797d7;  border-color: #555;}\n";
+	echo "#tablesorter_colSelect11SeasonP:checked ~ #tablesorter_ColumnSelector11SeasonP {display: block;}\n";
+	echo "#tablesorter_colSelect11SeasonG:checked + label {background: #5797d7;  border-color: #555;}\n";
+	echo "#tablesorter_colSelect11SeasonG:checked ~ #tablesorter_ColumnSelector11SeasonG {display: block;}\n";
+	echo "#tablesorter_colSelect11PlayoffP:checked + label {background: #5797d7;  border-color: #555;}\n";
+	echo "#tablesorter_colSelect11PlayoffP:checked ~ #tablesorter_ColumnSelector11PlayoffP {display: block;}\n";
+	echo "#tablesorter_colSelect11PlayoffG:checked + label {background: #5797d7;  border-color: #555;}\n";
+	echo "#tablesorter_colSelect11PlayoffG:checked ~ #tablesorter_ColumnSelector11PlayoffG {display: block;}\n";	
 }
-?>#tablesorter_colSelect1P:checked+label {
-	background: #5797d7;
-	border-color: #555;
-}
-
-#tablesorter_colSelect1P:checked~#tablesorter_ColumnSelector1P {
-	display: block;
-	z-index: 10;
-}
-
-#tablesorter_colSelect1G:checked+label {
-	background: #5797d7;
-	border-color: #555;
-}
-
-#tablesorter_colSelect1G:checked~#tablesorter_ColumnSelector1G {
-	display: block;
-}
-
-#tablesorter_colSelect2P:checked+label {
-	background: #5797d7;
-	border-color: #555;
-}
-
-#tablesorter_colSelect2P:checked~#tablesorter_ColumnSelector2P {
-	display: block;
-	z-index: 10;
-}
-
-#tablesorter_colSelect2G:checked+label {
-	background: #5797d7;
-	border-color: #555;
-}
-
-#tablesorter_colSelect2G:checked~#tablesorter_ColumnSelector2G {
-	display: block;
-}
-
-#tablesorter_colSelect3:checked+label {
-	background: #5797d7;
-	border-color: #555;
-}
-
-#tablesorter_colSelect3:checked~#tablesorter_ColumnSelector3 {
-	display: block;
-}
-
-#tablesorter_colSelect5:checked+label {
-	background: #5797d7;
-	border-color: #555;
-}
-
-#tablesorter_colSelect5:checked~#tablesorter_ColumnSelector5 {
-	display: block;
-}
-
-#tablesorter_colSelect6:checked+label {
-	background: #5797d7;
-	border-color: #555;
-}
-
-#tablesorter_colSelect6:checked~#tablesorter_ColumnSelector6 {
-	display: block;
-}
-
-#tablesorter_colSelect8P:checked+label {
-	background: #5797d7;
-	border-color: #555;
-}
-
-#tablesorter_colSelect8P:checked~#tablesorter_ColumnSelector8P {
-	display: block;
-	z-index: 10;
-}
-
+if (empty($LeagueGeneral) == false){If ($LeagueGeneral['OffSeason'] == "True"){echo ".STHSPHPPlayerStat_HomeMainTD{display:none;}";}}
+?>
+#tablesorter_colSelect1P:checked + label {background: #5797d7;  border-color: #555;}
+#tablesorter_colSelect1P:checked ~ #tablesorter_ColumnSelector1P {display: block;z-index:10;}
+#tablesorter_colSelect1G:checked + label {background: #5797d7;  border-color: #555;}
+#tablesorter_colSelect1G:checked ~ #tablesorter_ColumnSelector1G {display: block;}
+#tablesorter_colSelect2P:checked + label {background: #5797d7;  border-color: #555;}
+#tablesorter_colSelect2P:checked ~ #tablesorter_ColumnSelector2P {display: block;z-index:10;}
+#tablesorter_colSelect2G:checked + label {background: #5797d7;  border-color: #555;}
+#tablesorter_colSelect2G:checked ~ #tablesorter_ColumnSelector2G {display: block;}
+#tablesorter_colSelect3:checked + label {background: #5797d7;  border-color: #555;}
+#tablesorter_colSelect3:checked ~ #tablesorter_ColumnSelector3 {display: block;}
+#tablesorter_colSelect5:checked + label {background: #5797d7;  border-color: #555;}
+#tablesorter_colSelect5:checked ~ #tablesorter_ColumnSelector5 {display: block;}
+#tablesorter_colSelect6:checked + label {background: #5797d7;  border-color: #555;}
+#tablesorter_colSelect6:checked ~ #tablesorter_ColumnSelector6 {display: block;}
+#tablesorter_colSelect8P:checked + label {background: #5797d7;  border-color: #555;}
+#tablesorter_colSelect8P:checked ~ #tablesorter_ColumnSelector8P {display: block;z-index:10;}
 @media screen and (max-width: 992px) {
-	.STHSWarning {
-		display: block;
-	}
-	
-	.STHSPHPTeamStatDepthChart_Table td:nth-child(3) {
-		display: none;
-	}
+.STHSWarning {display:block;}
+.STHSPHPTeamStatDepthChart_Table td:nth-child(3){display:none;}
+}@media screen and (max-width: 890px) {
+.STHSPHPTeamStatDepthChart_Table td:nth-child(2){display:none;}
 }
-
-@media screen and (max-width: 890px) {
-	.STHSPHPTeamStatDepthChart_Table td:nth-child(2) {
-		display: none;
-	}
-}
+.tabmain-links a{font-size:18px;}
 </style>
 </head>
 
@@ -498,7 +442,7 @@ if ($LeagueOutputOption != Null) {
 <div style="border-radius:1px;box-shadow:-1px 1px 1px rgba(0,0,0,0.15);border-style: solid;border-color: #dedede">
 
 <div class="tabmain<?php if($SubMenu ==0){echo " active";}?>" id="tabmain0">
-
+<div style="overflow-x:auto;">
 <table class="STHSPHPTeam_HomeTable"><tr><td class="STHSPHPPlayerStat_HomeMainTD">
 <?php
 $LoopCount = (integer)0;
@@ -782,7 +726,7 @@ If ($TeamInfo <> Null){
 	;}	
 	
 	
-	echo "</table>";
+	echo "</table></div>";
 }
 ?>
 </td></tr></table>
@@ -1310,12 +1254,13 @@ if ($PlayerStatTeam != Null) {
 	echo " active";
 } ?>" id="tabmain3">
 
-<div class="tablesorter_ColumnSelectorWrapper" style="overflow-x:auto;">
+<div class="tablesorter_ColumnSelectorWrapper">
 <input id="tablesorter_colSelect3" type="checkbox" class="hidden">
 <label class="tablesorter_ColumnSelectorButton" for="tablesorter_colSelect3"><?php echo $TableSorterLang['ShoworHideColumn']; ?></label>
 <div id="tablesorter_ColumnSelector3" class="tablesorter_ColumnSelector"></div>
 <?php include "FilterTip.php"; ?>
 </div>
+<div style="overflow-x:auto;">
 <table class="tablesorter STHSPHPTeam_PlayerInfoTable">
 <thead>
 <tr>
@@ -1325,6 +1270,7 @@ include "PlayersInfoSub.php";
 ?>
 </tbody>
 </table>
+</div>
 
 <table class="STHSPHPTeamStat_Table">
 <tr>
