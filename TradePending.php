@@ -1,8 +1,6 @@
-<!DOCTYPE html>
 <?php include "Header.php";?>
 <?php
 $Title = (string)"";
-$Active = 2; /* Show Webpage Top Menu */
 $Team = (integer)0;
 $LeagueName = (string)"";
 $TradeFound = (string)False;
@@ -35,10 +33,10 @@ If (file_exists($DatabaseFile) == false){
 }?>
 </head><body>
 <?php include "Menu.php";?>
-<?php echo "<h1>" . $Title . "</h1>"; ?>
-<br />
+
 
 <div style="width:99%;margin:auto;">
+	<?php echo "<h1>" . $Title . "</h1>"; ?><br />
 	<table class="STHSTableFullW">
 	
 <?php
@@ -55,12 +53,14 @@ if (empty($TradeFromTeam) == false){while ($Row = $TradeFromTeam ->fetchArray())
 	$AlreadyShow[$Team][$TradeMain['ToTeam']] = "Y";
 	$AlreadyShow[$TradeMain['ToTeam']][$Team] = "Y";
 	
-	$Query = "SELECT Number, Name, Abbre FROM TeamProInfo Where Number = " . $TradeMain['FromTeam'];
+	$Query = "SELECT Number, Name, Abbre, TeamThemeID FROM TeamProInfo Where Number = " . $TradeMain['FromTeam'];
 	$TeamFrom =  $db->querySingle($Query,true);
-	$Query = "SELECT Number, Name, Abbre FROM TeamProInfo Where Number = " . $TradeMain['ToTeam'];
+	$Query = "SELECT Number, Name, Abbre, TeamThemeID FROM TeamProInfo Where Number = " . $TradeMain['ToTeam'];
 	$TeamTo =  $db->querySingle($Query,true);
 	
-	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'] . $TeamFrom['Name'] . "</div><br />";
+	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'];
+	If ($TeamFrom['TeamThemeID'] > 0){echo "<img src=\"./images/" . $TeamFrom['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}
+    echo $TeamFrom['Name'] . "</div><br />";
 		
 	$Query = "Select * From Trade WHERE FromTeam = " . $Team . " AND ToTeam = " . $ToTeam  . " AND Player > 0 AND (ConfirmFrom = 'False' Or ConfirmTo = 'False') ORDER BY Player";
 	$Trade =  $db->query($Query);	
@@ -114,7 +114,9 @@ if (empty($TradeFromTeam) == false){while ($Row = $TradeFromTeam ->fetchArray())
 	If ($Trade['SumofSalaryCap'] > 0){	echo $TradeLang['SalaryCap'] . " : " . number_format($Trade['SumofSalaryCap'] ,0) . "$<br />";}
 	
 	echo "</td><td style=\"vertical-align:top\">";
-	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'] . $TeamTo['Name'] . "</div><br />";
+	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'];
+	If ($TeamTo['TeamThemeID'] > 0){echo "<img src=\"./images/" . $TeamTo['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}
+	echo $TeamTo['Name'] . "</div><br />";
 		
 	$Query = "Select * From Trade WHERE ToTeam = " . $Team . " AND FromTeam = " . $ToTeam . " AND Player > 0 AND (ConfirmFrom = 'False' Or ConfirmTo = 'False') ORDER BY Player";
 	$Trade =  $db->query($Query);	

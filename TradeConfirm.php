@@ -1,8 +1,6 @@
-<!DOCTYPE html>
 <?php include "Header.php";?>
 <?php
 $Title = (string)"";
-$Active = 2; /* Show Webpage Top Menu */
 $Team1 = (integer)0;
 $Team2 = (integer)0;
 $Team1Player = Null;
@@ -21,7 +19,6 @@ $Boofound = (boolean)False;
 $Team1Info = "";
 $Team2Info = "";
 
-$Password = (string)"";
 $Confirm = False;	
 $InformationMessage = (string)"";
 
@@ -51,17 +48,7 @@ If (file_exists($DatabaseFile) == false){
 			if(isset($_POST['Team2Money'])){$Team2Money = filter_var($_POST['Team2Money'], FILTER_SANITIZE_NUMBER_INT);} 
 			if(isset($_POST['Team1SalaryCap'])){$Team1SalaryCap = filter_var($_POST['Team1SalaryCap'], FILTER_SANITIZE_NUMBER_INT);} 
 			if(isset($_POST['Team2SalaryCap'])){$Team2SalaryCap = filter_var($_POST['Team2SalaryCap'], FILTER_SANITIZE_NUMBER_INT);} 		
-			if(isset($_POST["Password"]) && !empty($_POST["Password"])) {
-				$Password = filter_var($_POST["Password"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);
-				/* GM Hash */
-				$Query = "SELECT GMName, WebPassword FROM TeamProInfo WHERE Number = " . $Team1;
-				$TeamPassword = $db->querySingle($Query,true);
-				
-				/* Confirm GM Hash */
-				$GMCalculateHash = strtoupper(Hash('sha512', mb_convert_encoding(($TeamPassword['GMName'] . $Password), 'ASCII')));
-				$GMDatabaseHash = $TeamPassword['WebPassword'];
-				If ($GMCalculateHash == $GMDatabaseHash && $GMDatabaseHash != ""){$Confirm = True;}else{$InformationMessage = $News['IncorrectPassword'];}			
-			}
+			If ($Team1 == $CookieTeamNumber AND $CookieTeamNumber > 0){$Confirm = True;}else{$InformationMessage = $News['IllegalAction'];;}			
 		}else{
 			if(isset($_POST['Team1Player'])){$Team1Player = $_POST['Team1Player'];}
 			if(isset($_POST['Team2Player'])){$Team2Player = $_POST['Team2Player'];}
@@ -90,9 +77,9 @@ If (file_exists($DatabaseFile) == false){
 	If ($Team1 == 0 or $Team2 == 0 or $Team1 == $Team2){
 		echo "<style>#Trade{display:none}</style>";
 	}else{
-		$Query = "SELECT Number, Name FROM TeamProInfo Where Number = " . $Team1;
+		$Query = "SELECT Number, Name, TeamThemeID FROM TeamProInfo Where Number = " . $Team1;
 		$Team1Info =  $db->querySingle($Query,true);	
-		$Query = "SELECT Number, Name FROM TeamProInfo Where Number = " . $Team2;
+		$Query = "SELECT Number, Name, TeamThemeID FROM TeamProInfo Where Number = " . $Team2;
 		$Team2Info =  $db->querySingle($Query,true);	
 		
 	}
@@ -101,19 +88,20 @@ If (file_exists($DatabaseFile) == false){
 }?>
 </head><body>
 <?php include "Menu.php";?>
-<?php echo "<h1>" . $Title . "</h1>"; ?>
+
 <br />
 
 <div style="width:99%;margin:auto;">
-<?php if ($InformationMessage != ""){echo "<div style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $InformationMessage . "<br /><br /></div>";}?>
+<?php echo "<h1>" . $Title . "</h1>"; 
+if ($InformationMessage != ""){echo "<div style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $InformationMessage . "<br /><br /></div>";}?>
 <form id="Trade" name="Trade" method="post" action="TradeConfirm.php<?php If ($lang == "fr" ){echo "?Lang=fr";}?>">
 	<input type="hidden" id="Team1" name="Team1" value="<?php echo $Team1;?>">
 	<input type="hidden" id="Team2" name="Team2" value="<?php echo $Team2;?>">
 	<input type="hidden" id="Confirm" name="Confirm" value="YES">
 	<table class="STHSTableFullW">
 	<tr>
-		<td class="STHSPHPTradeTeamName"><?php If ($Team1Info != ""){echo $Team1Info['Name'];}?></td>
-		<td class="STHSPHPTradeTeamName"><?php If ($Team2Info != ""){echo $Team2Info['Name'];}?></td>
+		<td class="STHSPHPTradeTeamName"><?php if($Team1Info != Null){If ($Team1Info['TeamThemeID'] > 0){echo "<img src=\"./images/" . $Team1Info['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}echo $Team1Info['Name'];}?></td>
+		<td class="STHSPHPTradeTeamName"><?php if($Team2Info != Null){If ($Team2Info['TeamThemeID'] > 0){echo "<img src=\"./images/" . $Team2Info['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}echo $Team2Info['Name'];}?></td>
 	</tr>
 	
 	
@@ -325,7 +313,7 @@ If (file_exists($DatabaseFile) == false){
 		If ($Count > 0){echo "<input type=\"hidden\" id=\"Team2DraftPickCon\" name=\"Team2DraftPickCon\" value=\"" . htmlspecialchars(json_encode($Team2DraftPickCon),ENT_QUOTES) . "\">";}
 	}	
 	echo "<br />";
-	If ($Team1Money  > 0){echo $TradeLang['Money'] . " : " . number_format($Team2Money,0) . "$<input type=\"hidden\" name=\"Team2Money\" value=\"" . $Team2Money . "\"><br />";}
+	If ($Team2Money  > 0){echo $TradeLang['Money'] . " : " . number_format($Team2Money,0) . "$<input type=\"hidden\" name=\"Team2Money\" value=\"" . $Team2Money . "\"><br />";}
 	If ($Team2SalaryCap > 0 ){echo $TradeLang['SalaryCap'] . " : " . number_format($Team2SalaryCap,0) . "$<input type=\"hidden\" name=\"Team2SalaryCap\" value=\"" . $Team2SalaryCap . "\"><br />";}
 	If ($Confirm == True){
 		$Query = "INSERT INTO Trade (FromTeam,ToTeam,Money,SalaryCap,ConfirmFrom,ConfirmTo) VALUES('" . $Team2 . "','" . $Team1 . "','" . $Team2Money . "','" . $Team2SalaryCap . "','False','True')";
@@ -341,19 +329,16 @@ If (file_exists($DatabaseFile) == false){
 	</tr>
 	
 	<tr>
-		<td colspan="2" class="STHSPHPTradeType">
-		<?php If ($Confirm == False){echo "<strong>"; If ($Team1Info != ""){echo $Team1Info['Name'];} echo " " . $News['Password'] ."</strong><input type=\"password\" name=\"Password\" size=\"20\" value=\"\" required>";}?>
-		</td>
-		</tr><tr>
 	 	<td colspan="2" class="STHSPHPTradeType">
 		<?php
-		If ($Confirm == True){
-			echo $TradeLang['Confirm'];
-		}else{
-			echo "<input class=\"SubmitButton\" type=\"submit\" name=\"Submit\" value=\"" . $TradeLang['ConfirmSubmit'] . "\" /></td>";
+		if($Team1Info != Null){
+			If ($Confirm == True){
+				echo $TradeLang['Confirm'];
+			}else{
+				echo "<input class=\"SubmitButton\" type=\"submit\" name=\"Submit\" value=\"" . $Team1Info['Name'] . " - " . $TradeLang['ConfirmSubmit'] . "\" /></td>";
+			}
 		}?>
     </tr>
-	</table>
 	</table>
 </form>
 <br />

@@ -1,10 +1,7 @@
-<!DOCTYPE html>
 <?php include "Header.php";?>
 <?php
 $Title = (string)"";
-$Active = 2; /* Show Webpage Top Menu */
 $Team = (integer)0;
-$Password = (string)"";
 $Confirm = False;
 $Refuse = False;
 $InformationMessage = (string)"";
@@ -24,32 +21,19 @@ If (file_exists($DatabaseFile) == false){
 	if(isset($_POST['Team'])){$Team = filter_var($_POST['Team'], FILTER_SANITIZE_NUMBER_INT);}
 	if(isset($_POST['Submit'])){
 		if ($_POST['Submit'] == $TradeLang['ConfirmSubmit'] ){
-			if(isset($_POST["Password"]) && !empty($_POST["Password"])) {
-				$Password = filter_var($_POST["Password"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);
-				/* GM Hash */
-				$Query = "SELECT GMName, WebPassword FROM TeamProInfo WHERE Number = " . $Team;
-				$TeamPassword = $db->querySingle($Query,true);
-
-				/* Confirm GM Hash */
-				$GMCalculateHash = strtoupper(Hash('sha512', mb_convert_encoding(($TeamPassword['GMName'] . $Password), 'ASCII')));
-				$GMDatabaseHash = $TeamPassword['WebPassword'];
-				If ($GMCalculateHash == $GMDatabaseHash && $GMDatabaseHash != ""){$Confirm = True;}else{$InformationMessage = $News['IncorrectPassword'];}			
-				}
+			If ($Team == $CookieTeamNumber AND $CookieTeamNumber > 0){$Confirm = True;}else{$InformationMessage = $News['IllegalAction'];;}
 		}
 		if ($_POST['Submit'] == $TradeLang['RefuseSubmit']){
-			if(isset($_POST["Password"]) && !empty($_POST["Password"])) {
-				$Password = filter_var($_POST["Password"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);
-				/* GM Hash */
-				$Query = "SELECT GMName, WebPassword FROM TeamProInfo WHERE Number = " . $Team;
-				$TeamPassword = $db->querySingle($Query,true);
-
-				/* Refuse GM Hash */
-				$GMCalculateHash = strtoupper(Hash('sha512', mb_convert_encoding(($TeamPassword['GMName'] . $Password), 'ASCII')));
-				$GMDatabaseHash = $TeamPassword['WebPassword'];
-				If ($GMCalculateHash == $GMDatabaseHash && $GMDatabaseHash != ""){$Refuse = True;}else{$InformationMessage = $News['IncorrectPassword'];}			
-			}
+			If ($Team == $CookieTeamNumber AND $CookieTeamNumber > 0){$Refuse = True;}else{$InformationMessage = $News['IllegalAction'];;}
 		}
+	}
+	If ($CookieTeamNumber == 0){
+		$InformationMessage = $NoUserLogin;
+		$Team = 0;
+	}{
+		$Team = $CookieTeamNumber;
 	}	
+	
 	If ($Team > 0 and $Team <= 100){
 		$Query = "SELECT Number, Name FROM TeamProInfo Where Number = " . $Team;
 		$TeamInfo =  $db->querySingle($Query,true);
@@ -74,11 +58,12 @@ If (file_exists($DatabaseFile) == false){
 }?>
 </head><body>
 <?php include "Menu.php";?>
-<?php echo "<h1>" . $Title . "</h1>"; ?>
+
 <br />
 
 <div style="width:99%;margin:auto;">
-<?php if ($InformationMessage != ""){echo "<div style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $InformationMessage . "<br /><br /></div>";}?>
+<?php echo "<h1>" . $Title . "</h1>";
+if ($InformationMessage != ""){echo "<div style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $InformationMessage . "<br /><br /></div>";}?>
 <form id="Trade" name="Trade" method="post" action="TradeOtherTeam.php<?php If ($lang == "fr" ){echo "?Lang=fr";}?>">
 	<input type="hidden" id="Team" name="Team" value="<?php echo $Team;?>">
 	<table class="STHSTableFullW">
@@ -90,17 +75,19 @@ If (file_exists($DatabaseFile) == false){
 	<tr><td colspan="2" class="STHSPHPTradeType"><hr /><?php ?></td></tr>
 	<tr><td style="vertical-align:top">
 	
-	<?php
+	<?php if($LeagueName != $DatabaseNotFound){
 	$Query = "Select * From Trade WHERE FromTeam = " . $Team . " AND (ConfirmFrom = 'False' Or ConfirmTo = 'False')";
 	$TradeMain =  $db->querySingle($Query,true);
 	
 	If ($TradeMain != Null){
-	$Query = "SELECT Number, Name, Abbre FROM TeamProInfo Where Number = " . $TradeMain['FromTeam'];
+	$Query = "SELECT Number, Name, Abbre, TeamThemeID FROM TeamProInfo Where Number = " . $TradeMain['FromTeam'];
 	$TeamFrom =  $db->querySingle($Query,true);
-	$Query = "SELECT Number, Name, Abbre FROM TeamProInfo Where Number = " . $TradeMain['ToTeam'];
+	$Query = "SELECT Number, Name, Abbre, TeamThemeID FROM TeamProInfo Where Number = " . $TradeMain['ToTeam'];
 	$TeamTo =  $db->querySingle($Query,true);
 	
-	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'] . $TeamFrom['Name'] . "</div><br />";	
+	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'];
+	If ($TeamFrom['TeamThemeID'] > 0){echo "<img src=\"./images/" . $TeamFrom['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}
+    echo $TeamFrom['Name'] . "</div><br />";
 	
 	$TradeLog = "TRADE : From " . $TeamFrom['Name'] . " to " . $TeamTo['Name'] . " : ";
 	
@@ -196,7 +183,8 @@ If (file_exists($DatabaseFile) == false){
 			echo $TradeLang['Fail'];
 		}
 		
-		$Query = "INSERT Into LeagueLog (Number, Text, DateTime, TransactionType) VALUES ('" . rand(90000,99999) . "','" . $TradeLog . "','" . gmdate('Y-m-d H:i:s') . "','1')";
+		$Query = "INSERT Into LeagueLog (Number, Text, DateTime, TransactionType) VALUES ('" . rand(90000,99999) . "','" . str_replace("'","''",$TradeLog) . "','" . gmdate('Y-m-d H:i:s') . "','1')";
+		
 		try {
 			$db->exec($Query);
 		} catch (Exception $e) {
@@ -212,7 +200,9 @@ If (file_exists($DatabaseFile) == false){
 	}
 	
 	echo "</td><td style=\"vertical-align:top\">";
-	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'] . $TeamTo['Name'] . "</div><br />";
+	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'];
+	If ($TeamTo['TeamThemeID'] > 0){echo "<img src=\"./images/" . $TeamTo['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}
+	echo $TeamTo['Name'] . "</div><br />";	
 	
 	$TradeLog = "TRADE : From " . $TeamTo['Name'] . " to " . $TeamFrom['Name'] . " : ";
 	
@@ -308,7 +298,7 @@ If (file_exists($DatabaseFile) == false){
 			echo $TradeLang['Fail'];
 		}
 		
-		$Query = "INSERT Into LeagueLog (Number, Text, DateTime, TransactionType) VALUES ('" . rand(90000,99999) . "','" . $TradeLog . "','" . gmdate('Y-m-d H:i:s') . "','1')";
+		$Query = "INSERT Into LeagueLog (Number, Text, DateTime, TransactionType) VALUES ('" . rand(90000,99999) . "','" . str_replace("'","''",$TradeLog) . "','" . gmdate('Y-m-d H:i:s') . "','1')";
 		try {
 			$db->exec($Query);
 		} catch (Exception $e) {
@@ -323,26 +313,23 @@ If (file_exists($DatabaseFile) == false){
 		}
 	}
 	}
-	?>
+	}?>
 	
 	</td>
 	</tr>
 	
 	<tr>
-		<td colspan="2" class="STHSPHPTradeType">
-		<?php if($TeamInfo != Null){if($TeamInfo['Name'] != Null){If ($Confirm == False AND $Refuse == False){echo "<strong>" . $TeamInfo['Name']. " " . $News['Password'] ."</strong><input type=\"password\" name=\"Password\" size=\"20\" value=\"\" required>";}}}?>
-		</td>
-		</tr><tr>
-	 	<td colspan="2" class="STHSPHPTradeType">
-		<?php
-		If ($Confirm == True){
-			echo $TradeLang['Confirm'];
-		}elseif ($Refuse == True){
-			echo $TradeLang['Refuse'];
-		}else{
-			echo "<input class=\"SubmitButton\" type=\"submit\" name=\"Submit\" value=\"" . $TradeLang['ConfirmSubmit'] . "\" /> ";
-			echo "<input class=\"SubmitButton\" style=\"margin-left: 30px\" type=\"submit\" name=\"Submit\" value=\"" . $TradeLang['RefuseSubmit'] . "\" /></td>";
-		}?>
+	<td colspan="2" class="STHSPHPTradeType">
+	<?php
+	if(isset($TeamInfo)){if($TeamInfo['Name'] != Null){If ($Confirm == False AND $Refuse == False){echo "<strong style=\"padding-right:40px\">" . $TeamInfo['Name']. "</strong>";}}}
+	If ($Confirm == True){
+		echo $TradeLang['Confirm'];
+	}elseif ($Refuse == True){
+		echo $TradeLang['Refuse'];
+	}else{
+		echo "<input class=\"SubmitButton\" type=\"submit\" name=\"Submit\" value=\"" . $TradeLang['ConfirmSubmit'] . "\" /> ";
+		echo "<input class=\"SubmitButton\" style=\"margin-left: 30px\" type=\"submit\" name=\"Submit\" value=\"" . $TradeLang['RefuseSubmit'] . "\" /></td>";
+	}?>
     </tr>
 	</table>
 </form>
@@ -350,20 +337,11 @@ If (file_exists($DatabaseFile) == false){
 
 
 <?php 
-If ($Team == 0){
-	echo "<div class=\"STHSCenter\">";
-	echo "<form action=\"TradeOtherTeam.php";If ($lang == "fr" ){echo "?Lang=fr";}echo "\" method=\"post\">";
-	echo "<table class=\"STHSTableFullW\"><tr>";
-	echo "<th class=\"STHSPHPTradeType STHSW250\">" . $TradeLang['Team'] . "</th><tr>";
-	echo "<td><select name=\"Team\" class=\"STHSW250\"><option selected value=\"\"></option>";
-	$Query = "SELECT Number, Name FROM TeamProInfo Order By Name";
-	$TeamName = $db->query($Query);	
-	if (empty($TeamName) == false){while ($Row = $TeamName ->fetchArray()) {
-		echo "<option value=\"" . $Row['Number'] . "\">" . $Row['Name'] . "</option>"; 
-	}}
-	echo "</select></td></tr>";
-	echo "<tr><td class=\"STHSCenter\"><br /><input class=\"SubmitButton\" type=\"submit\" value=\"" . $SearchLang['Submit'] . "\"></td></tr>";
-	echo "</table></form></div>";
+If ($CookieTeamNumber == 0 ){
+	echo "<div class=\"STHSCenter\" style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $NoUserLogin . "</div>";
+}
+If ($CookieTeamNumber > 100){
+	echo "<div class=\"STHSCenter\" style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $News['IllegalAction'] . "</div>";
 }
 ?>
 </div>

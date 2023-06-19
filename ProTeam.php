@@ -433,10 +433,10 @@ if ($TeamCareerStatFound == true) {
 	echo "<li><a href=\"#tabmain11\">" . $TeamLang['CareerTeamStat'] . "</a></li>\n";
 }
 if ($LeagueOutputOption != Null) {
-	if ($LeagueOutputOption['ShowWebClientInDymanicWebsite'] == "True") {
+	// if ($LeagueOutputOption['ShowWebClientInDymanicWebsite'] == "True") {
 		echo "<li><a class=\"tabmenuhome\" href=\"WebClientRoster.php?TeamID=" . $Team . "\">" . $TeamLang['WebRosterEditor'] . "</a></li>\n";
 		echo "<li><a class=\"tabmenuhome\" href=\"WebClientLines.php?League=Pro&TeamID=" . $Team . "\">" . $TeamLang['WebLinesEditor'] . "</a></li>\n";
-	}
+	// }
 } ?>
 </ul>
 <div style="border-radius:1px;box-shadow:-1px 1px 1px rgba(0,0,0,0.15);border-style: solid;border-color: #dedede">
@@ -3776,16 +3776,6 @@ if (empty($TeamInjurySuspension) == false) {
 ?>
 
 <br /><br />
-</div>
-<div class="tabmain<?php
-	echo " active"; ?>" id="tabmain14">
-<br />
-<?php
-	include "WebClientIndex.php";
-?>
-
-<br /><br />
-</div>
 
 <div class="tabmain<?php if ($SubMenu == 11) {
 	echo " active";
