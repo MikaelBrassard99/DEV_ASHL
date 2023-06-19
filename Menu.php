@@ -132,7 +132,7 @@ if (file_exists($DatabaseFile) == false) {
 						echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
 							echo "<tr>";
 								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
-									echo $row['VisitorTeamAbbre'] . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
+									echo "<img src=\"./images/Pro-team/" . $row['VisitorTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
 									if ($LeagueGeneral['PointSystemSO'] == "True") {
 										echo $row['VL'] . "-" . ($row['VOTL'] + $row['VSOL']);
 									} else {
@@ -143,8 +143,8 @@ if (file_exists($DatabaseFile) == false) {
 							echo "</tr>";
 							echo "<tr>";
 								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
-									echo $row['HomeTeamAbbre'] . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
-									if ($LeagueGeneral['PointSystemSO'] == "True") {
+								echo "<img src=\"./images/Pro-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
+								if ($LeagueGeneral['PointSystemSO'] == "True") {
 										echo $row['HL'] . "-" . ($row['HOTL'] + $row['HSOL']);
 									} else {
 										echo ($row['HL'] + $row['HOTL'] + $row['HSOL']) . "-" . $row['HT'];
@@ -162,8 +162,8 @@ if (file_exists($DatabaseFile) == false) {
 						echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
 							echo "<tr>";
 								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
-									echo $row['VisitorTeamAbbre'] . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
-									if ($LeagueGeneral['PointSystemSO'] == "True") {
+								echo "<img src=\"./images/Farm-team/" . $row['VisitorTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
+								if ($LeagueGeneral['PointSystemSO'] == "True") {
 										echo $row['VL'] . "-" . ($row['VOTL'] + $row['VSOL']);
 									} else {
 										echo ($row['VL'] + $row['VOTL'] + $row['VSOL']) . "-" . $row['VT'];
@@ -173,8 +173,8 @@ if (file_exists($DatabaseFile) == false) {
 							echo "</tr>";
 							echo "<tr>";
 								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
-									echo $row['HomeTeamAbbre'] . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
-									if ($LeagueGeneral['PointSystemSO'] == "True") {
+								echo "<img src=\"./images/Farm-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
+								if ($LeagueGeneral['PointSystemSO'] == "True") {
 										echo $row['HL'] . "-" . ($row['HOTL'] + $row['HSOL']);
 									} else {
 										echo ($row['HL'] + $row['HOTL'] + $row['HSOL']) . "-" . $row['HT'];
