@@ -442,7 +442,6 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 						</tr>
 						<tr>
 							<td><?php echo $TeamLang['Annee de contrat | Salaire'] ?></td>
-
 							<td><?php echo ($PlayerInfo['NoTrade'] == "False") ? $PlayerInfo['Contract'] . "an(s) | " . $PlayerInfo['SalaryAverage'] . "$ avg" : $PlayerInfo['Contract'] . "an(s) | " . $PlayerInfo['SalaryAverage'] . "$ avg + NTC"; ?></td>
 						</tr>
 						<tr>
@@ -450,7 +449,7 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 							<td><?php echo ($PlayerInfo['Rookie'] == "False") ? "&#x2610;" : "&#x2611;"; ?></td>
 						</tr>
 						<tr>
-							<td><?php echo $TeamLang['Disponible pour echange'] ?></td>
+							<td><?php echo $TeamLang['Annee de repêchage | Rang'] ?></td>
 							<td><?php echo (($PlayerInfo['DraftYear'] == 0) ? "N/A" : $PlayerInfo['DraftYear'] . " | " . $PlayerInfo['DraftOverallPick'] . "e"); ?></td>
 						</tr>
 						<tr>
