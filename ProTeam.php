@@ -441,7 +441,7 @@ if ($LeagueOutputOption != Null) {
 </ul>
 <div style="border-radius:1px;box-shadow:-1px 1px 1px rgba(0,0,0,0.15);border-style: solid;border-color: #dedede">
 
-<div class="tabmain<?php if($SubMenu ==0){echo " active";}?>" id="tabmain0">
+<div class="tabmain<?php if($SubMenu == 0){echo " active";}?>" id="tabmain0">
 <div style="overflow-x:auto;">
 <table class="STHSPHPTeam_HomeTable"><tr><td class="STHSPHPPlayerStat_HomeMainTD">
 <?php
@@ -731,7 +731,7 @@ If ($TeamInfo <> Null){
 ?>
 </td></tr></table>
 
-<br /><br /></div>
+<br /><br /></div></div>
 <div class="tabmain<?php if ($SubMenu == 1) {
 	echo " active";
 } ?>" id="tabmain1">
