@@ -518,6 +518,7 @@ if (file_exists($DatabaseFile) == false) {
 								<li><a href="http://sths.simont.info/ManualV3_En.php#Team_Management"><?php echo $TopMenuLang['ManualLinkTitle']; ?></a></li>
 							</ul>
 						</li>
+						<li><a href="Login.php"><?php echo $TopMenuLang['Login']; ?></a></li>
 					</ul>
 				</div>
 			</td>

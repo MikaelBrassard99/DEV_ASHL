@@ -718,6 +718,7 @@ $TopMenuLang = array(
   'SearchHistory' => 'Search History',
   'AllStar' => 'All-Star Game',
   'CupWinner' => 'Stanley Cup Winner',
+  'Login' => 'Log in'
 );
 
 $EntryDraftLang = array(
