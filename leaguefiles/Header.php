@@ -33,4 +33,90 @@ if ($lang == "fr") {
 </head>
 <?php if (file_exists("STHSMain-CSSOverwrite.css") == True) {
     echo "<link href=\"STHSMain-CSSOverwrite.css\" rel=\"stylesheet\" type=\"text/css\" />";
-} ?>
+} 
+
+function getCountryAbre($Abre)
+{
+	switch ($Abre) {
+		case ('SW'):
+			return 'se';
+		case ('GE'):
+			return 'de';
+		case ('DE'):
+			return 'dk';
+		case ('SV'):
+			return 'sk';
+		case ('TC'):
+			return 'cz';
+		case ('LE'):
+			return 'lv';
+		case ('PO'):
+			return 'pl';
+		case ('JA'):
+			return 'jm';
+		default:
+			return strtolower($Abre);
+	}
+};
+
+function createPickturePlayer($name)
+{
+	switch (strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name))) {
+		case "mike-reilly":
+			return "mike-reilly-106004";
+			break;
+		case "robert-thomas":
+			return "robert-thomas-270853";
+			break;
+		case "sam-reinhart":
+			return "sam-reinhart-68137";
+			break;
+		case "zachary-werenski":
+			return "zach-werenski";
+			break;
+		case "kaapo-kähkönen":
+			return "kaapo-kahkonen";
+			break;
+		case "anthony-deangelo":
+			return "tony-deangelo";
+			break;
+		case "tyler-johnson":
+			return "tyler-johnson-40574";
+			break;
+		case "dmitri-kulikov":
+			return "dmitry-kulikov";
+			break;
+		default:
+			return strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name));
+			break;
+	}
+}
+
+function getSeasonName($name)
+{
+	switch ($name) {
+		case "ASHL9-STHS.db":
+			return "2019-2020";
+			break;
+		case "ASHL10-STHS.db":
+			return "COVID(2020-2021)";
+			break;
+		case "ASHL101-STHS.db":
+			return "2020-2021";
+			break;
+		case "ASHL11-STHS.db":
+			return "2021-2022";
+			break;
+		case "ASHL12-STHS.db":
+			return "2022-2023";
+			break;
+		case "ASHL13-STHS.db":
+			return "2023-2024";
+			break;
+		default:
+			return $name;
+			break;
+	}
+}
+
+?>

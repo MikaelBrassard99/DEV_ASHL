@@ -265,7 +265,6 @@ if ($TeamInfo <> Null) {
 <li><a href="#tabmain5"><?php echo $TeamLang['TeamStats'];?></a></li>
 <li><a href="#tabmain6"><?php echo $TeamLang['Schedule'];?></a></li>
 <li><a href="#tabmain7"><?php echo $TeamLang['Finance'];?></a></li>
-<li><a href="#tabmain14"><?php echo $TeamLang['LinesEditor']; ?></a></li>
 
 <?php
 if ($TeamCareerStatFound == true){echo "<li><a href=\"#tabmain8\">" . $TeamLang['CareerTeamStat'] . "</a></li>";}
@@ -1358,15 +1357,6 @@ If ($TeamInfo <> Null){
 															
 															<br /><br />
 															</div>
-															<div class="tabmain<?php
-																echo " active";
-															?>" id="tabmain14">
-															<br />
-															<?php
-															include "WebClientIndex.php";
-															?>
-															
-															<br /><br /></div>
 															<div class="tabmain<?php if($SubMenu ==7){echo " active";}?>" id="tabmain7">
 															<br />
 															<table class="STHSPHPTeamStat_Table"><tr><th colspan="3"><?php echo $TeamLang['ArenaCapacityTicketPriceAttendance'];?></th></tr><tr><th class="STHSW200"></th><th class="STHSW100"><?php echo $TeamLang['Level'];?> 1</th><th class="STHSW100"><?php echo $TeamLang['Level'];?> 2</th></tr>
