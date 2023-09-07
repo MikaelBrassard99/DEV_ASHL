@@ -46,39 +46,6 @@ if (file_exists($DatabaseFile) == false) {
 }
 echo "<title>" . $Title . "</title>";
 
-function createPickturePlayer($name)
-{
-	switch (strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name))) {
-		case "mike-reilly":
-			return "mike-reilly-106004";
-			break;
-		case "robert-thomas":
-			return "robert-thomas-270853";
-			break;
-		case "sam-reinhart":
-			return "sam-reinhart-68137";
-			break;
-		case "zachary-werenski":
-			return "zach-werenski";
-			break;
-		case "kaapo-kähkönen":
-			return "kaapo-kahkonen";
-			break;
-		case "anthony-deangelo":
-			return "tony-deangelo";
-			break;
-		case "tyler-johnson":
-			return "tyler-johnson-40574";
-			break;
-		case "dmitri-kulikov":
-			return "dmitry-kulikov";
-			break;
-		default:
-			return strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name));
-			break;
-	}
-}
-
 function PrintGames($Row, $TodayGamesLang)
 {
 	echo "<div class=\"container\">";

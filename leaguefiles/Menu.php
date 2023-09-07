@@ -143,7 +143,7 @@ if (file_exists($DatabaseFile) == false) {
 							echo "</tr>";
 							echo "<tr>";
 								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
-								echo "<img src=\"./images/Pro-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
+								echo "<img src=\"./images/Pro-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['HW'] + $row['HOTW'] + $row['HSOW']) . "-";
 								if ($LeagueGeneral['PointSystemSO'] == "True") {
 										echo $row['HL'] . "-" . ($row['HOTL'] + $row['HSOL']);
 									} else {
