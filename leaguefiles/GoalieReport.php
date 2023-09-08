@@ -117,88 +117,6 @@ if ($GoalieFarmStatMultipleTeamFound == true) {
 	echo "#tablesorter_colSelect5:checked ~ #tablesorter_ColumnSelector5 {display: block;}";
 }
 
-function getCountryAbre($Abre)
-{
-	switch ($Abre) {
-		case ('SW'):
-			return 'se';
-		case ('GE'):
-			return 'de';
-		case ('DE'):
-			return 'dk';
-		case ('SV'):
-			return 'sk';
-		case ('TC'):
-			return 'cz';
-		case ('LE'):
-			return 'lv';
-		case ('PO'):
-			return 'pl';
-		case ('JA'):
-			return 'jm';
-		default:
-			return strtolower($Abre);
-	}
-};
-
-function createPickturePlayer($name)
-{
-	switch (strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name))) {
-		case "mike-reilly":
-			return "mike-reilly-106004";
-			break;
-		case "robert-thomas":
-			return "robert-thomas-270853";
-			break;
-		case "sam-reinhart":
-			return "sam-reinhart-68137";
-			break;
-		case "zachary-werenski":
-			return "zach-werenski";
-			break;
-		case "kaapo-kähkönen":
-			return "kaapo-kahkonen";
-			break;
-		case "anthony-deangelo":
-			return "tony-deangelo";
-			break;
-		case "tyler-johnson":
-			return "tyler-johnson-40574";
-			break;
-		case "dmitri-kulikov":
-			return "dmitry-kulikov";
-			break;
-		default:
-			return strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name));
-			break;
-	}
-}
-
-function getSeasonName($name)
-{
-	switch ($name) {
-		case "ASHL9-STHS.db":
-			return "2019-2020";
-			break;
-		case "ASHL10-STHS.db":
-			return "COVID(2020-2021)";
-			break;
-		case "ASHL101-STHS.db":
-			return "2020-2021";
-			break;
-		case "ASHL11-STHS.db":
-			return "2021-2022";
-			break;
-		case "ASHL12-STHS.db":
-			return "2022-2023";
-		case "ASHL13-STHS.db":
-			return "2023-2024";
-		break;
-		default:
-			return $name;
-			break;
-	}
-}
 $arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12,$DatabaseFileS13, $DatabaseFile];
 $count = 0;
 //dictionnaire des donnees des joueurs selon le count (annee)
@@ -302,7 +220,9 @@ foreach ($arrayDbs as $Dbs) {
 }
 
 echo "</style>";
-echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>"; ?>
+echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
+
+?>
 </head>
 
 <body>
