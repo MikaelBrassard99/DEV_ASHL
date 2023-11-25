@@ -86,6 +86,36 @@ function createPickturePlayer($name)
 		case "dmitri-kulikov":
 			return "dmitry-kulikov";
 			break;
+		case "anton-lundell":
+			return "anton-lundell-549558";
+			break;
+		case "kandre-miller":
+			return "kandre-miller-375770";
+			break;
+		case "matty-beniers":
+			return "matty-beniers-579942";
+			break;
+		case "samuel-montembeault":
+			return "sam-montembeault";
+			break;
+		case "igor-shestyorkin":
+			return "igor-shesterkin";
+			break;
+		case "kent-johnson":
+			return "kent-johnson-579886";
+			break;		
+		case "kaapo-kakko":
+			return "kaapo-kakko-359909";
+			break;
+		case "alexander-wennberg":
+			return "alex-wennberg";
+			break;
+		case "nick-robertson":
+			return "nicholas-robertson";
+			break;
+		case "moritz-seider":
+			return "moritz-seider-360208";
+			break;
 		default:
 			return strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name));
 			break;

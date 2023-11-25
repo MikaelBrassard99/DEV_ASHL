@@ -512,7 +512,7 @@ if (empty($ScheduleNextGame) == false){while ($row = $ScheduleNextGame ->fetchAr
 	echo "<tr><td class=\"STHSPHPTeam_HomeTeamStatR\">";
 	if ($row['VGP'] > 0){echo number_Format($row['VGA'] / $row['VGP'],2);}else{echo "0";}
 	echo "</td><td class=\"STHSPHPTeam_HomeTeamStatC\">" . $TeamLang['GoalsAgainstPerGame'] ."</td><td class=\"STHSPHPTeam_HomeTeamStatL\">";
-	if ($row['HGP'] > 0){echo number_Format($row['HGF'] / $row['HGP'],2);}else{echo "0";}
+	if ($row['HGP'] > 0){echo number_Format($row['HGA'] / $row['HGP'],2);}else{echo "0";}
 	echo "</td></tr>\n";
 	echo "<tr><td class=\"STHSPHPTeam_HomeTeamStatR\">";
 	if ($row['VPPAttemp'] > 0){echo number_Format($row['VPPGoal'] / $row['VPPAttemp'] * 100,2)."%";}else{echo "0%";}

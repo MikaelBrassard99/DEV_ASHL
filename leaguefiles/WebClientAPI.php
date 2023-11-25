@@ -583,9 +583,7 @@ function load_api_pageinfo(){
 					?><div class="doesntexits">The team you are looking for does not exist.</div><?php
 				}// End if/else there is a teamid as a parameter?>
 			</div><!-- end pagewrapper -->
-		</div><!-- end id rostereditor -->
-		<?php
-		
+		</div><!-- end id rostereditor --><?php
 	}
 	function api_pageinfo_editor_lines($db,$teamid=0,$league=false,$showHeader=true,$useServerURIInTabLink=false){	
 		?><div id="lineeditor"><?php

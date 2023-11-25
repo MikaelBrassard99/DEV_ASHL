@@ -100,8 +100,8 @@ function PrintStandingTable($TypeTextTeam, $Standing, $TypeText, $StandardStandi
     while ($row = $Standing->fetchArray()) {
         $LoopCount += 1;
         PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStandingOutput, $PointSystemSO, $PointSystemW, $LoopCount, $DatabaseFile);
-        if ($LoopCount > 0 and $LoopCount == $LinesNumber) {
-            echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"" . $ColumnPerTable . "\"><hr style=\"border-top: 1px solid red;\"/></td></tr>";
+        if ($LoopCount == 8 && $LoopCount == $LinesNumber ) {
+            echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"" . $ColumnPerTable . "\"><hr style=\"border-top: 2px solid red;\"/></td></tr>";
         }
     }
     echo "</tbody></table></div>";
@@ -342,9 +342,10 @@ function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStanding
                                 echo "<h2>" . $Value . "</h2>";
                                 PrintStandingTop($TeamStatLang, $LeagueOutputOption['StandardStandingOutput'], $LeagueGeneral['PointSystemSO']);
                                 if ($LeagueSimulation['TwoConference'] == "True") {
-                                    PrintStandingTable($TypeTextTeam, $Standing, $TypeText, $LeagueOutputOption['StandardStandingOutput'], $LeagueGeneral['PointSystemSO'], $LeagueGeneral['PointSystemW'], $ColumnPerTable, $LeagueGeneral['HowManyPlayOffTeam'] / 2, $DatabaseFile);
+                                    //ajouter typetext dans le str
+                                    PrintStandingTable($TypeTextTeam, $Standing, $TypeText, $LeagueOutputOption['StandardStandingOutput'], $LeagueGeneral['PointSystemSO'], $LeagueGeneral['PointSystemW'], $ColumnPerTable, $LeagueGeneral['ProHowManyPlayOffTeam'] / 2, $DatabaseFile);
                                 } else {
-                                    PrintStandingTable($TypeTextTeam, $Standing, $TypeText, $LeagueOutputOption['StandardStandingOutput'], $LeagueGeneral['PointSystemSO'], $LeagueGeneral['PointSystemW'], $ColumnPerTable, $LeagueGeneral['HowManyPlayOffTeam'], $DatabaseFile);
+                                    PrintStandingTable($TypeTextTeam, $Standing, $TypeText, $LeagueOutputOption['StandardStandingOutput'], $LeagueGeneral['PointSystemSO'], $LeagueGeneral['PointSystemW'], $ColumnPerTable, $LeagueGeneral['ProHowManyPlayOffTeam'], $DatabaseFile);
                                 }
                             }
                         }
