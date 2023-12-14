@@ -328,6 +328,10 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
 							<td><?php echo ($GoalieInfo['NoTrade'] == "False") ? $GoalieInfo['Contract'] . "an(s) | " . $GoalieInfo['SalaryAverage'] . "$ avg" : $GoalieInfo['Contract'] . "an(s) | " . $PlayerInfo['SalaryAverage'] . "$ avg + NTC"; ?></td>
 						</tr>
 						<tr>
+							<td><?php echo $PlayersLang['SalaryRemaining'] ?></td>
+							<td><?php echo $GoalieInfo['SalaryRemaining']  . "$ " ?></td>
+						</tr>
+						<tr>
 							<td><?php echo $TeamLang['Recrue'] ?></td>
 							<td><?php echo ($GoalieInfo['Rookie'] == "False") ? "&#x2610;" : "&#x2611;"; ?></td>
 						</tr>

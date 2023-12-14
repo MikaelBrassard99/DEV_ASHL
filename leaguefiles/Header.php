@@ -1,4 +1,7 @@
-<?php
+<?php $PerformanceMonitorStart = microtime(true); require_once "STHSSetting.php"; ?>
+
+<?
+
 /* This Webpage should never modify. If you want to modify the webpage, please modify the Menu.php webpage*/
 $DatabaseFile = (string)"ASHL13-STHS.db";
 $DatabaseFileS13 = (string)"ASHL12-STHS.db";
