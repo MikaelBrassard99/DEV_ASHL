@@ -471,9 +471,9 @@ if ($LeagueSimulation != Null and $TeamFarmInfo != Null) {
 <li<?php if ($SubMenu == 10) {
 	echo " class=\"activemain\"";
 } ?>><a href="#tabmain10"><?php echo $TeamLang['TeamTransaction']; ?></a></li>
-<!-- <li<?php if ($SubMenu == 12) {
+<li<?php if ($SubMenu == 12) {
 	echo " class=\"activemain\"";
-} ?>><a href="#tabmain12"><?php echo $TeamLang['InjurySuspension']; ?></a></li> -->
+} ?>><a href="#tabmain12"><?php echo $TeamLang['InjurySuspension']; ?></a></li>
 <?php
 if ($TeamCareerStatFound == true) {
 	echo "<li><a href=\"#tabmain11\">" . $TeamLang['CareerTeamStat'] . "</a></li>\n";
@@ -1487,16 +1487,16 @@ if ($PlayerStatTeam != Null) {
 			$Query = "Select FreeAgentUseDateInsteadofDay, FreeAgentRealDate from LeagueOutputOption";
 			$LeagueOutputOption = $db->querySingle($Query, true);
 			$Query = "Select Name, RFAAge, UFAAge, LeagueYearOutput from LeagueGeneral";
-			$LeagueGeneral = $db->querySingle($Query, true);
-			$LeagueName = $LeagueGeneral['Name'];
-			$LeagueYear = (int) $LeagueGeneral['LeagueYearOutput'];
+			$LeagueGeneralStat = $db->querySingle($Query, true);
+			$LeagueName = $LeagueGeneralStat['Name'];
+			$LeagueYear = (int) $LeagueGeneralStat['LeagueYearOutput'];
 			$SalaryCap = (int) $LeagueFinance['ProSalaryCapValue'];
 
 			/* Team or All */
 			if ($Team > 0 and $Team < 100 and $LeagueFinance['SalaryCapOption'] > 0) {
 				$QueryTeam = "SELECT Name FROM TeamProInfo WHERE Number = " . $Team;
 				$TeamQuery = "Team = " . $Team;
-				$Query = "Select Number, Name, CurrentBankAccount, SpecialSalaryCapY1,SpecialSalaryCapY2,SpecialSalaryCapY3,SpecialSalaryCapY4,SpecialSalaryCapY5 from TeamProFinance WHERE Number = " . $Team;
+				$Query = "Select Number, Name, CurrentBankAccount, SpecialSalaryCapY1,SpecialSalaryCapY2,SpecialSalaryCapY3,SpecialSalaryCapY4,SpecialSalaryCapY5,SpecialSalaryCapY6,SpecialSalaryCapY7 from TeamProFinance WHERE Number = " . $Team;
 				$TeamFinanceStat = $db->querySingle($Query, true);
 				if ($LeagueFinance['SalaryCapOption'] == 2 or $LeagueFinance['SalaryCapOption'] == 5) {
 					$SalaryCap = $SalaryCap + $TeamFinanceStat['CurrentBankAccount'];
@@ -1561,10 +1561,13 @@ echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 1) . "\" class=\"S
 echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 2) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 2) . "</th>";
 echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 3) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 3) . "</th>";
 echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 4) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 4) . "</th>";
+echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 5) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 5) . "</th>";
+echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 6) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 6) . "</th>";
+
 ?>
 </tr></thead>
 <?php
-echo "<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"12\">" . $TeamLang['Forward'] . "</th></tr></tbody><tbody>";
+echo "<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"14\">" . $TeamLang['Forward'] . "</th></tr></tbody><tbody>";
 $FoundD = (boolean) False;
 $FoundG = (boolean) False;
 $AverageAge = (integer) 0;
@@ -1573,12 +1576,16 @@ $AverageCap2 = (integer) 0;
 $AverageCap3 = (integer) 0;
 $AverageCap4 = (integer) 0;
 $AverageCap5 = (integer) 0;
+$AverageCap6 = (integer) 0;
+$AverageCap7 = (integer) 0;
 $AverageCount = (integer) 0;
 $AverageTotalCap1 = (integer) 0;
 $AverageTotalCap2 = (integer) 0;
 $AverageTotalCap3 = (integer) 0;
 $AverageTotalCap4 = (integer) 0;
 $AverageTotalCap5 = (integer) 0;
+$AverageTotalCap6 = (integer) 0;
+$AverageTotalCap7 = (integer) 0;
 $AverageTotalCount = (integer) 0;
 if (empty($PlayerSalaryCap) == false) {
 	while ($Row = $PlayerSalaryCap->fetchArray()) {
@@ -1591,14 +1598,16 @@ if (empty($PlayerSalaryCap) == false) {
 				} else {
 					echo "<th>N/A</th>";
 				}
-				echo "<th>" . number_format($AverageCap1, 0) . "$</th><th>" . number_format($AverageCap2, 0) . "$</th><th>" . number_format($AverageCap3, 0) . "$</th><th>" . number_format($AverageCap4, 0) . "$</th><th>" . number_format($AverageCap5, 0) . "$</th></tr>";
+				echo "<th>" . number_format($AverageCap1, 0) . "$</th><th>" . number_format($AverageCap2, 0) . "$</th><th>" . number_format($AverageCap3, 0) . "$</th><th>" . number_format($AverageCap4, 0) . "$</th><th>" . number_format($AverageCap5, 0) . "$</th><th>" . number_format($AverageCap6, 0) . "$</th><th>" . number_format($AverageCap7, 0) . "$</th></tr>";
 			}
-			echo "</tbody>\n<tbody></tbody><tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"12\">" . $TeamLang['Defenseman'] . "</th></tr></tbody><tbody>";
+			echo "</tbody>\n<tbody></tbody><tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"14\">" . $TeamLang['Defenseman'] . "</th></tr></tbody><tbody>";
 			$AverageTotalCap1 = $AverageTotalCap1 + $AverageCap1;
 			$AverageTotalCap2 = $AverageTotalCap2 + $AverageCap2;
 			$AverageTotalCap3 = $AverageTotalCap3 + $AverageCap3;
 			$AverageTotalCap4 = $AverageTotalCap4 + $AverageCap4;
 			$AverageTotalCap5 = $AverageTotalCap5 + $AverageCap5;
+			$AverageTotalCap6 = $AverageTotalCap6 + $AverageCap6;
+			$AverageTotalCap7 = $AverageTotalCap7 + $AverageCap7;
 			$AverageTotalCount = $AverageTotalCount + $AverageCount;
 			$AverageAge = (integer) 0;
 			$AverageCap1 = (integer) 0;
@@ -1606,6 +1615,8 @@ if (empty($PlayerSalaryCap) == false) {
 			$AverageCap3 = (integer) 0;
 			$AverageCap4 = (integer) 0;
 			$AverageCap5 = (integer) 0;
+			$AverageCap6 = (integer) 0;
+			$AverageCap7 = (integer) 0;
 			$AverageCount = (integer) 0;
 			$FoundD = True;
 		}
@@ -1618,14 +1629,16 @@ if (empty($PlayerSalaryCap) == false) {
 				} else {
 					echo "<th>N/A</th>";
 				}
-				echo "<th>" . number_format($AverageCap1, 0) . "$</th><th>" . number_format($AverageCap2, 0) . "$</th><th>" . number_format($AverageCap3, 0) . "$</th><th>" . number_format($AverageCap4, 0) . "$</th><th>" . number_format($AverageCap5, 0) . "$</th></tr>";
+				echo "<th>" . number_format($AverageCap1, 0) . "$</th><th>" . number_format($AverageCap2, 0) . "$</th><th>" . number_format($AverageCap3, 0) . "$</th><th>" . number_format($AverageCap4, 0) . "$</th><th>" . number_format($AverageCap5, 0) . "$</th><th>" . number_format($AverageCap6, 0) . "$</th><th>" . number_format($AverageCap7, 0) . "$</th></tr>";
 			}
-			echo "</tbody>\n<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"12\">" . $TeamLang['Goalies'] . "</th></tr></tbody><tbody>";
+			echo "</tbody>\n<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"14\">" . $TeamLang['Goalies'] . "</th></tr></tbody><tbody>";
 			$AverageTotalCap1 = $AverageTotalCap1 + $AverageCap1;
 			$AverageTotalCap2 = $AverageTotalCap2 + $AverageCap2;
 			$AverageTotalCap3 = $AverageTotalCap3 + $AverageCap3;
 			$AverageTotalCap4 = $AverageTotalCap4 + $AverageCap4;
 			$AverageTotalCap5 = $AverageTotalCap5 + $AverageCap5;
+			$AverageTotalCap6 = $AverageTotalCap6 + $AverageCap6;
+			$AverageTotalCap7 = $AverageTotalCap7 + $AverageCap7;
 			$AverageTotalCount = $AverageTotalCount + $AverageCount;
 			$AverageAge = (integer) 0;
 			$AverageCap1 = (integer) 0;
@@ -1633,6 +1646,8 @@ if (empty($PlayerSalaryCap) == false) {
 			$AverageCap3 = (integer) 0;
 			$AverageCap4 = (integer) 0;
 			$AverageCap5 = (integer) 0;
+			$AverageCap6 = (integer) 0;
+			$AverageCap7 = (integer) 0;
 			$AverageCount = (integer) 0;
 			$FoundG = True;
 		}
@@ -1702,30 +1717,38 @@ if (empty($PlayerSalaryCap) == false) {
 		} else {
 			echo "<td>N/A</td>";
 		}
-		for ($i = 1; $i <= 5; $i = $i + 1) {
+		for ($i = 1; $i <= 7; $i = $i + 1) {
 			if ($Row['Contract'] >= $i) {
 				if ($i == 1) {
-					echo "<td>" . number_format($Row['SalaryCap'], 0) . "$</td>";
-					$AverageCap1 = $AverageCap1 + $Row['SalaryCap'];
+					echo "<td>" . number_format($Row['Salary1'], 0) . "$</td>";
+					 $AverageCap1 = $AverageCap1 + $Row['SalaryCap'];
 				} else {
-					if ($LeagueFinance['SalaryCapOption'] >= 1 and $LeagueFinance['SalaryCapOption'] <= 3) {
+					if ($LeagueFinance['SalaryCapOption'] >= 4 and $LeagueFinance['SalaryCapOption'] <= 6) {
 						if ($i == 2) {
 							echo "<td>" . number_format($Row['Salary2'], 0) . "$</td>";
-							$AverageCap2 = $AverageCap2 + $Row['Salary2'];
+							$AverageCap2 = $AverageCap2 + $Row['SalaryAverage'];
 						}
 						if ($i == 3) {
 							echo "<td>" . number_format($Row['Salary3'], 0) . "$</td>";
-							$AverageCap3 = $AverageCap3 + $Row['Salary3'];
+							$AverageCap3 = $AverageCap3 + $Row['SalaryAverage'];
 						}
 						if ($i == 4) {
 							echo "<td>" . number_format($Row['Salary4'], 0) . "$</td>";
-							$AverageCap4 = $AverageCap4 + $Row['Salary4'];
+							$AverageCap4 = $AverageCap4 + $Row['SalaryAverage'];
 						}
 						if ($i == 5) {
 							echo "<td>" . number_format($Row['Salary5'], 0) . "$</td>";
-							$AverageCap5 = $AverageCap5 + $Row['Salary5'];
+							$AverageCap5 = $AverageCap5 + $Row['SalaryAverage'];
 						}
-					} elseif ($LeagueFinance['SalaryCapOption'] >= 4 and $LeagueFinance['SalaryCapOption'] <= 6) {
+						if ($i == 6) {
+							echo "<td>" . number_format($Row['Salary6'], 0) . "$</td>";
+							$AverageCap6 = $AverageCap6 + $Row['SalaryAverage'];
+						}
+						if ($i == 7) {
+							echo "<td>" . number_format($Row['Salary7'], 0) . "$</td>";
+							$AverageCap7 = $AverageCap7 + $Row['SalaryAverage'];
+						}
+					} elseif ($LeagueFinance['SalaryCapOption'] >= 2 and $LeagueFinance['SalaryCapOption'] <= 3) {
 						echo "<td>" . number_format($Row['SalaryCap'], 0) . "$</td>";
 						if ($i == 2) {
 							$AverageCap2 = $AverageCap2 + $Row['SalaryAverage'];
@@ -1739,6 +1762,12 @@ if (empty($PlayerSalaryCap) == false) {
 						if ($i == 5) {
 							$AverageCap5 = $AverageCap5 + $Row['SalaryAverage'];
 						}
+						if ($i == 6) {
+							$AverageCap6 = $AverageCap6 + $Row['SalaryAverage'];
+						}
+						if ($i == 7) {
+							$AverageCap7 = $AverageCap7 + $Row['SalaryAverage'];
+						}
 					} else {
 						echo "<td></td>";
 					}
@@ -1749,11 +1778,11 @@ if (empty($PlayerSalaryCap) == false) {
 				} else {
 					$age = $Row['Age'];
 				}
-				if ($age + $i > $LeagueGeneral['UFAAge']) {
+				if ($age + $i > $LeagueGeneralStat['UFAAge']) {
 					echo "<td class=\"STHSTeamSalaryCapDetail_UFA\">UFA [Age: " . ($age + $i - 1) . "]</td>";
-				} elseif ($age + $i > $LeagueGeneral['RFAAge']) {
+				} elseif ($age + $i > $LeagueGeneralStat['RFAAge']) {
 					echo "<td class=\"STHSTeamSalaryCapDetail_RFA2\">RFA ( Groupe: 2 ) [Age: " . ($age + $i - 1) . "]</td>";
-				} elseif ($age + $i <= $LeagueGeneral['RFAAge']) {
+				} elseif ($age + $i <= $LeagueGeneralStat['RFAAge']) {
 					echo "<td class=\"STHSTeamSalaryCapDetail_RFA1\">RFA ( Groupe: 1 )[Age: " . ($age + $i - 1) . "]</td>";
 				}
 			} else {
@@ -1771,23 +1800,28 @@ if ($AverageCount > 0) {
 	} else {
 		echo "<th>N/A</th>";
 	}
-	echo "<th>" . number_format($AverageCap1, 0) . "$</th><th>" . number_format($AverageCap2, 0) . "$</th><th>" . number_format($AverageCap3, 0) . "$</th><th>" . number_format($AverageCap4, 0) . "$</th><th>" . number_format($AverageCap5, 0) . "$</th></tr>";
+	echo "<th>" . number_format($AverageCap1, 0) . "$</th><th>" . number_format($AverageCap2, 0) . "$</th><th>" . number_format($AverageCap3, 0) . "$</th><th>" . number_format($AverageCap4, 0) . "$</th><th>" . number_format($AverageCap5, 0) . "$</th><th>" . number_format($AverageCap6, 0) . "$</th><th>" . number_format($AverageCap7, 0) . "$</th></tr>";
 	$AverageTotalCap1 = $AverageTotalCap1 + $AverageCap1;
 	$AverageTotalCap2 = $AverageTotalCap2 + $AverageCap2;
 	$AverageTotalCap3 = $AverageTotalCap3 + $AverageCap3;
 	$AverageTotalCap4 = $AverageTotalCap4 + $AverageCap4;
 	$AverageTotalCap5 = $AverageTotalCap5 + $AverageCap5;
+	$AverageTotalCap6 = $AverageTotalCap6 + $AverageCap6;
+	$AverageTotalCap7 = $AverageTotalCap7 + $AverageCap7;
 	$AverageTotalCount = $AverageTotalCount + $AverageCount;
 }
 echo "</tbody>\n";
 if ($LeagueFinance['BonusIncludeSalaryCap'] == "True") {
 	// Add Special in Salary Cap
-	echo "<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"7\">" . $TeamLang['SpecialSalaryCapValue'] . "</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY1'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY2'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY3'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY4'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY5'], 0) . "$</th></tbody>\n";
+	echo "<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"7\">" . $TeamLang['SpecialSalaryCapValue'] . "</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY1'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY2'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY3'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY4'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY5'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY6'], 0) . "$</th><th>" . number_format($TeamFinanceStat['SpecialSalaryCapY7'], 0) . "$</th></tbody>\n";
 	$AverageTotalCap1 = $AverageTotalCap1 + $TeamFinanceStat['SpecialSalaryCapY1'];
 	$AverageTotalCap2 = $AverageTotalCap2 + $TeamFinanceStat['SpecialSalaryCapY2'];
 	$AverageTotalCap3 = $AverageTotalCap3 + $TeamFinanceStat['SpecialSalaryCapY3'];
 	$AverageTotalCap4 = $AverageTotalCap4 + $TeamFinanceStat['SpecialSalaryCapY4'];
 	$AverageTotalCap5 = $AverageTotalCap5 + $TeamFinanceStat['SpecialSalaryCapY5'];
+	$AverageTotalCap6 = $AverageTotalCap6 + $TeamFinanceStat['SpecialSalaryCapY6'];
+	$AverageTotalCap7 = $AverageTotalCap7 + $TeamFinanceStat['SpecialSalaryCapY7'];
+
 }
 echo "<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"6\">" . $TeamLang['Total'] . " (" . $AverageTotalCount . ")" . "</th>";
 if ($SalaryCap > 0) {
@@ -1803,7 +1837,7 @@ if ($SalaryCap > 0) {
 } else {
 	echo "<th>N/A</th>";
 }
-echo "<th>" . number_format($AverageTotalCap1, 0) . "$</th><th>" . number_format($AverageTotalCap2, 0) . "$</th><th>" . number_format($AverageTotalCap3, 0) . "$</th><th>" . number_format($AverageTotalCap4, 0) . "$</th><th>" . number_format($AverageTotalCap5, 0) . "$</th></tr>";
+echo "<th>" . number_format($AverageTotalCap1, 0) . "$</th><th>" . number_format($AverageTotalCap2, 0) . "$</th><th>" . number_format($AverageTotalCap3, 0) . "$</th><th>" . number_format($AverageTotalCap4, 0) . "$</th><th>" . number_format($AverageTotalCap5, 0) . "$</th><th>" . number_format($AverageTotalCap6, 0) . "$</th><th>" . number_format($AverageTotalCap7, 0) . "$</th></tr>";
 echo "</tbody></table><br />";
 echo $TeamLang['TermsLegend'] . "<br /><br />";
 echo $TeamLang['NoteContractOverviewSalaryCap'] . "<strong>" . number_format($SalaryCap, 0) . "$</strong>.<br /><br />";
@@ -3726,62 +3760,40 @@ if (empty($TeamTransaction) == false) {
 ?>
 <br /><br />
 </div>
-<div class="tabmain<?php if ($SubMenu == 11) {
-	echo " active";
-} ?>" id="tabmain12">
+
+<div class="tabmain<?php if($SubMenu ==12){echo " active";}?>" id="tabmain12">
+<?php If (isset($PerformanceMonitorStart)){echo "<script>console.log(\"STHS 12 Page PHP Performance : " . (microtime(true)-$PerformanceMonitorStart) . "\"); </script>";}?>
 <br />
-<?php
-$booFound = (bool) False;
-$sngInjury = (float) 0;
-if (empty($TeamInjurySuspension) == false) {
-	while ($Row = $TeamInjurySuspension->fetchArray()) {
-		if ($Row['ConditionDecimal'] <= 95) {
-			$booFound = True;
-			if ($Row['Status1'] >= 2) {
-				$sngInjury = (95 - $Row['ConditionDecimal']) / $LeagueGeneral['ProInjuryRecoverySpeed'];
-			} else {
-				$sngInjury = (95 - $Row['ConditionDecimal']) / $LeagueGeneral['FarmInjuryRecoverySpeed'];
-			}
-			echo $Row['Name'] . $TeamLang['OutFor'];
-			if ($Row['ConditionDecimal'] == 0) {
-				echo $TeamLang['Restoftheseason'];
-			} elseif ($sngInjury < 7) {
-				echo floor($sngInjury) . $TeamLang['Days'];
-			} elseif ($sngInjury < 13) {
-				echo $TeamLang['1Week'];
-			} elseif ($sngInjury < 19) {
-				echo "2 " . $TeamLang['Weeks'];
-			} elseif ($sngInjury < 25) {
-				echo "3 " . $TeamLang['Weeks'];
-			} elseif ($sngInjury < 46) {
-				echo $TeamLang['1Month'];
-			} elseif ($sngInjury < 74) {
-				echo "2 " . $TeamLang['Months'];
-			} else {
-				echo "2 " . $TeamLang['Months'];
-			}
-			if ($Row['Injury'] == "") {
-				echo $TeamLang['BecauseofFatigue'];
-			} else {
-				echo $TeamLang['Becauseof'] . $Row['Injury'] . ".";
-			}
-			echo "<br />\n"; /* The \n is for a new line in the HTML Code */
-		} elseif ($Row['Suspension'] > 0) {
-			$booFound = True;
-			if ($Row['Suspension'] == 99) {
-				echo $Row['Name'] . $TeamLang['SuspendedIndefinitely'];
-			} else {
-				echo $Row['Name'] . $TeamLang['SuspendedFor'] . $Row['Suspension'] . $TeamLang['MoresGames'];
-			}
-			echo "<br />\n"; /* The \n is for a new line in the HTML Code */
-		}
-	}
-	if ($booFound == False) {
-		echo $TeamLang['NoInjuryorSuspension'];
+
+<?php 
+$booFound = (bool)False;
+$sngInjury = (float)0;
+if (empty($TeamInjurySuspension) == false){while ($Row = $TeamInjurySuspension ->fetchArray()) { 
+	if ($Row['ConditionDecimal'] <= 95){
+		$booFound = True;
+		if($Row['Status1'] >= 2){$sngInjury = (95 - $Row['Condition']) / $LeagueGeneral['ProInjuryRecoverySpeed'];}else{$sngInjury = (95 - $Row['Condition']) / $LeagueGeneral['FarmInjuryRecoverySpeed'];}
+		Echo $Row['Name'] . $TeamLang['OutFor'];
+		if ($Row['ConditionDecimal'] == 0){echo $TeamLang['Restoftheseason'];}elseif
+		($sngInjury < 7){echo floor($sngInjury) . $TeamLang['Days'];}elseif
+		($sngInjury < 13){echo $TeamLang['1Week'];}elseif
+		($sngInjury < 19) {echo "2 " . $TeamLang['Weeks'];}elseif
+		($sngInjury < 25){echo "3 " . $TeamLang['Weeks'];}elseif
+		($sngInjury < 46){echo $TeamLang['1Month'];}elseif
+		($sngInjury < 74){echo "2 " . $TeamLang['Months'];}else{
+		echo "2 " . $TeamLang['Months'];}
+		if ($Row['Injury'] == ""){echo $TeamLang['BecauseofFatigue'];}else{echo $TeamLang['Becauseof'] . $Row['Injury'] . ".";}
+		echo "<br />\n"; /* The \n is for a new line in the HTML Code */
+	}elseif($Row['Suspension'] > 0){
+		$booFound = True;
+		if($Row['Suspension'] == 99){echo $Row['Name'] . $TeamLang['SuspendedIndefinitely'];}else{echo $Row['Name'] . $TeamLang['SuspendedFor'] . $Row['Suspension'] . $TeamLang['MoresGames'];}
+		echo "<br />\n"; /* The \n is for a new line in the HTML Code */
 	}
 }
+If($booFound == False){echo $TeamLang['NoInjuryorSuspension'];}
+}
 ?>
-
+<br /><br />
+</div>
 <br /><br />
 
 <div class="tabmain<?php if ($SubMenu == 11) {

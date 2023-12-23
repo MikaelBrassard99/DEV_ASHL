@@ -3,14 +3,7 @@
 <?
 
 /* This Webpage should never modify. If you want to modify the webpage, please modify the Menu.php webpage*/
-$DatabaseFile = (string)"ASHL13-STHS.db";
-$DatabaseFileS13 = (string)"ASHL12-STHS.db";
-$DatabaseFileS12 = (string)"ASHL11-STHS.db";
-$DatabaseFileS11 = (string)"ASHL101-STHS.db";
-$DatabaseFileS_C = (string)"ASHL10-STHS.db";
-$DatabaseFileS10 = (string)"ASHL9-STHS.db";
-$CareerStatDatabaseFile = (string)"ASHL101-STHSCareerStat.db";
-$NewsDatabaseFile = (string)"ASHL101-STHSNews.db";
+
 $LangOverwrite = (bool)FALSE;
 $lang = (string)"fr"; /* The $lang option must be either "en" or "fr" */
 if (isset($_GET['Lang'])) {

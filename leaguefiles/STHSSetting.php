@@ -23,7 +23,15 @@ If (file_exists("STHSSetting.ini") == True){
 	$Query = "Select * FROM STHSOptions";
 	$STHSOptions = $dbSTHSOptions->querySingle($Query,true);
 	if (isset($STHSOptions)){
+		
 		$DatabaseFile = $STHSOptions['DatabaseFile'];
+		//$DatabaseFile = (string)"ASHL13-STHS.db";
+		$DatabaseFileS13 = (string)"ASHL12-STHS.db";
+		$DatabaseFileS12 = (string)"ASHL11-STHS.db";
+		$DatabaseFileS11 = (string)"ASHL101-STHS.db";
+		$DatabaseFileS_C = (string)"ASHL10-STHS.db";
+		$DatabaseFileS10 = (string)"ASHL9-STHS.db";
+
 		$CareerStatDatabaseFile =  $STHSOptions['CareerStatDatabaseFile'];
 		$NewsDatabaseFile =  $STHSOptions['NewsDatabaseFile'];
 		$GameHTMLDatabaseFile = $STHSOptions['GameHTMLDatabaseFile'];
