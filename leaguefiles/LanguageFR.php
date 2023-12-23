@@ -547,6 +547,9 @@ $InjuryLang = array(
     'Broken Right Index Finger Injury' => 'Index droit cassé',
     'Torn Right Knee Ligaments Injury' => 'Déchirure des ligaments du genou droit',
     'Torn Left Knee Ligaments Injury' => 'Déchirure des ligaments du genou gauche',
+    'Right Eye Injury' => 'Blessure à l\'oeil droit',
+    'Left Eye Injury' => 'Blessure à l\'oeil gauche',
+
 
 );
 
