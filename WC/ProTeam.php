@@ -17,6 +17,7 @@ function toggleDiv(divId) {
 </script>
 <?php
 /*
+test
 Syntax to call this webpage should be ProTeam.php?Team=2 where only the number change and it's based on the Tean Number Field.
 SubMenu : 0 = Home / 1 = Roster / 2 = Scoring / 3 = PlayerInfo / 4 = Lines / 5 = Team Stats / 6 = Schedule / 7 =Finance / 8 = Depth / 9 =History / 10 = Last Transactions / 11 = CareerStat  / 12 = InjurySuspension / 13 = News
 */
