@@ -372,7 +372,7 @@ if (empty($ScheduleNextGame) == false){while ($row = $ScheduleNextGame ->fetchAr
 	}	
 	echo "<div class=\"STHSPHPTeam_HomePrimaryTableTeamInfoTriangle\"></div></td>\n";
 	echo "<td class=\"STHSPHPTeam_HomePrimaryTableTeamInfo\"><span class=\"STHSPHPTeam_HomePrimaryTableTeamName\">" . $row['HomeTeamName'] . "</span><br />" . ($row['HW'] + $row['HOTW'] + $row['HSOW']) . "-" .$row['HL'] . "-" . ($row['HOTL'] + $row['HSOL']). ", ".$row['HPoints']. "pts</td><td class=\"STHSPHPTeam_HomePrimaryTableTeamImag\">\n";
-	echo "<img src=\"./images/Farm-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableTeamImageSpec\" />\n";
+	echo "<img src=\"./images/Farm-team/" . $row['VisitorTeam'] . ".png\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableTeamImageSpec\" />\n";
 	echo "</td></tr></table>\n"; 
 	
 	echo "<table class=\"STHSPHPTeam_HomeTeamStatTable\" id=\"Game" . $LoopCount . "\"><tr><th colspan=\"3\">" . $TeamLang['TeamStats'] . "</th></tr>\n";
@@ -412,8 +412,7 @@ if (empty($ScheduleNextGame) == false){while ($row = $ScheduleNextGame ->fetchAr
 $ResultBound = False;
 if (empty($TeamLeaderG) == false){while ($Row = $TeamLeaderG ->fetchArray()) {
 	echo "<td class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshotTD\">";
-	If ($LeagueOutputOption['PlayersMugShotBaseURL'] != "" AND $LeagueOutputOption['PlayersMugShotFileExtension'] != "" AND $Row['NHLID'] != ""){
-		echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
+	echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
 	echo "</td><td class=\"STHSPHPTeam_HomePrimaryTableLeadersTextTD \"><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextStat\">" . $GeneralStatLang['Goals'] . "</span><br /><a class=\"STHSPHPTeam_HomePrimaryTableLeadersTextPlayer\" href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $Row['Name'] . "</a><br /><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextResult\">" . $Row['G'] . "</span></td>\n";
 	$ResultBound = True;
 }}?>
@@ -421,8 +420,7 @@ if (empty($TeamLeaderG) == false){while ($Row = $TeamLeaderG ->fetchArray()) {
 <?php
 if (empty($TeamLeaderA) == false){while ($Row = $TeamLeaderA ->fetchArray()) {
 	echo "<td class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshotTD\">";
-	If ($LeagueOutputOption['PlayersMugShotBaseURL'] != "" AND $LeagueOutputOption['PlayersMugShotFileExtension'] != "" AND $Row['NHLID'] != ""){
-		echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
+	echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
 	echo "</td><td class=\"STHSPHPTeam_HomePrimaryTableLeadersTextTD \"><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextStat\">" . $GeneralStatLang['Assists'] . "</span><br /><a class=\"STHSPHPTeam_HomePrimaryTableLeadersTextPlayer\" href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $Row['Name'] . "</a><br /><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextResult\">" . $Row['A'] . "</span></td>\n";	
 	$ResultBound = True;
 }}
@@ -434,8 +432,7 @@ If ($ResultBound == False){echo "<td></td><td></td><td></td><td></td>\n";}?>
 $ResultBound = False;
 if (empty($TeamLeaderP) == false){while ($Row = $TeamLeaderP ->fetchArray()) {
 	echo "<td class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshotTD\">";
-	If ($LeagueOutputOption['PlayersMugShotBaseURL'] != "" AND $LeagueOutputOption['PlayersMugShotFileExtension'] != "" AND $Row['NHLID'] != ""){
-		echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
+	echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
 	echo "</td><td class=\"STHSPHPTeam_HomePrimaryTableLeadersTextTD \"><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextStat\">" . $GeneralStatLang['Points'] . "</span><br /><a class=\"STHSPHPTeam_HomePrimaryTableLeadersTextPlayer\" href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $Row['Name'] . "</a><br /><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextResult\">" . $Row['P'] . "</span></td>\n";	
 	$ResultBound = True;
 }}?>
@@ -443,8 +440,7 @@ if (empty($TeamLeaderP) == false){while ($Row = $TeamLeaderP ->fetchArray()) {
 <?php
 if (empty($TeamLeaderPlusMinus) == false){while ($Row = $TeamLeaderPlusMinus ->fetchArray()) {
 	echo "<td class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshotTD\">";
-	If ($LeagueOutputOption['PlayersMugShotBaseURL'] != "" AND $LeagueOutputOption['PlayersMugShotFileExtension'] != "" AND $Row['NHLID'] != ""){
-		echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
+	echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
 	echo "</td><td class=\"STHSPHPTeam_HomePrimaryTableLeadersTextTD \"><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextStat\">" . $GeneralStatLang['PlusMinus'] . "</span><br /><a class=\"STHSPHPTeam_HomePrimaryTableLeadersTextPlayer\" href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $Row['Name'] . "</a><br /><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextResult\">" . $Row['PlusMinus'] . "</span></td>\n";	
 	$ResultBound = True;
 }}
@@ -456,8 +452,7 @@ If ($ResultBound == False){echo "<td></td><td></td><td></td><td></td>\n";}?>
 $ResultBound = False;
 if (empty($TeamLeaderGAA ) == false){while ($Row = $TeamLeaderGAA  ->fetchArray()) {
 	echo "<td class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshotTD\">";
-	If ($LeagueOutputOption['PlayersMugShotBaseURL'] != "" AND $LeagueOutputOption['PlayersMugShotFileExtension'] != "" AND $Row['NHLID'] != ""){
-		echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
+	echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
 	echo "</td><td class=\"STHSPHPTeam_HomePrimaryTableLeadersTextTD \"><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextStat\">" . $GeneralStatLang['Wins'] . "</span><br /><a class=\"STHSPHPTeam_HomePrimaryTableLeadersTextPlayer\" href=\"GoalieReport.php?Goalie=" . $Row['Number'] . "\">" . $Row['Name'] . "</a><br /><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextResult\">" . $Row['W'] . "</span></td>\n";	
 	$ResultBound = True;	
 }}?>
@@ -465,8 +460,7 @@ if (empty($TeamLeaderGAA ) == false){while ($Row = $TeamLeaderGAA  ->fetchArray(
 <?php
 if (empty($TeamLeaderSavePCT) == false){while ($Row = $TeamLeaderSavePCT ->fetchArray()) {
 	echo "<td class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshotTD\">";
-	If ($LeagueOutputOption['PlayersMugShotBaseURL'] != "" AND $LeagueOutputOption['PlayersMugShotFileExtension'] != "" AND $Row['NHLID'] != ""){
-		echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
+	echo "<img loading=\"lazy\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . createPickturePlayer($Row['Name']) . "&width=136&height=136\" alt=\"\" class=\"STHSPHPTeam_HomePrimaryTableLeadersHeadshot\"/>";
 	echo "</td><td class=\"STHSPHPTeam_HomePrimaryTableLeadersTextTD \"><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextStat\">" . $GeneralStatLang['SavePCT'] . "</span><br /><a class=\"STHSPHPTeam_HomePrimaryTableLeadersTextPlayer\" href=\"GoalieReport.php?Goalie=" . $Row['Number'] . "\">" . $Row['Name'] . "</a><br /><span class=\"STHSPHPTeam_HomePrimaryTableLeadersTextResult\">" . $Row['PCT'] . "</span></td>\n";	
 	$ResultBound = True;	
 }}
@@ -499,7 +493,7 @@ If ($TeamStat['GP'] > 0){
 If ($TeamInfo <> Null){
 	echo "<table class=\"STHSPHPTeam_HomeSecondaryTable\">";
 	echo "<tr><td colspan=\"3\" class=\"STHSPHPTeamStat_TableTitle\">" . $TeamLang['TeamInfo'] . "<br /><br /></td></tr>\n";
-	echo "<tr><td rowspan=\"";if (empty($CoachInfo) == false){echo "7";}else{echo "6";}echo "\">"; If ($TeamInfo['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $TeamInfo['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTeamStatImage\" />";};echo "</td>\n";
+	echo "<tr><td rowspan=\"";if (empty($CoachInfo) == false){echo "7";}else{echo "6";}echo "\">";echo "<img src=\"./images/Farm-team/" . $TeamInfo['UniqueID'] . ".png\" alt=\"\" class=\"STHSPHPTeamStatImage \" />";echo "</td>\n";
 	echo "<td>" . $TeamLang['GeneralManager'] . "</td><td class=\"STHSPHPTeam_HomeSecondaryTableTDStrongText\">" . $TeamProInfo['GMName'] . "</td></tr>\n";
 	if (empty($CoachInfo) == false){echo "<tr><td>" . $TeamLang['Coach'] . "</td><td class=\"STHSPHPTeam_HomeSecondaryTableTDStrongText\">" . $CoachInfo['Name'] . "</td></tr>\n";}
 	echo "<tr><td>" . $TeamLang['Division'] . "</td><td class=\"STHSPHPTeam_HomeSecondaryTableTDStrongText\">" . $TeamInfo['Division'] . "</td></tr>\n";
