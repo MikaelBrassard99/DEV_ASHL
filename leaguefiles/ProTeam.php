@@ -5,7 +5,6 @@ function toggleDiv(divId) {
 	$(document).ready(function() {
 	var table = $('#example').DataTable( {
 		lengthChange: false,
-	<!DOCTYPE html>
 	buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
 	} );
  
