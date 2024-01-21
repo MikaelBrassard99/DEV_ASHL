@@ -98,7 +98,7 @@ if (file_exists($DatabaseFile) == false) {
 		echo "<div class=\"MagicScroll\">";
 			echo "<div style=\"\">";
 				echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
-					echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">Matchs du jour</td></tr>";
+					echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">Day : " . $LeagueGeneral['ScheduleNextDay'] - 1 ."</td></tr>";
 				echo "</table>";
 		 	echo "</div>";
 			if (empty($LatestScoreProScroll) == false) {
@@ -123,7 +123,7 @@ if (file_exists($DatabaseFile) == false) {
 			}
 		echo "<div style=\"\">";
 			echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
-				echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">Prchains matchs</td></tr>";
+				echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">Day : " . $LeagueGeneral['ScheduleNextDay'] ."</td></tr>";
 			echo "</table>";
 		 echo "</div>";
 			if (empty($ScheduleProScroll) == false) {
