@@ -34,6 +34,8 @@ if ($lang == "fr") {
 function getCountryAbre($Abre)
 {
 	switch ($Abre) {
+		case ('SU'):
+			return 'ch';
 		case ('SW'):
 			return 'se';
 		case ('GE'):
@@ -111,6 +113,15 @@ function createPickturePlayer($name)
 			break;
 		case "moritz-seider":
 			return "moritz-seider-360208";
+			break;
+		case "maxime-comtois":
+			return "max-comtois";
+			break;
+		case "ilya-sorokin":
+			return "ilya-sorokin-327122";
+			break;
+		case "j.j.-moser":
+			return "jj-moser-558712";
 			break;
 		default:
 			return strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name));
