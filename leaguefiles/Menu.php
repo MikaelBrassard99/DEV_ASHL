@@ -228,7 +228,7 @@ if (file_exists($DatabaseFile) == false) {
 								} else {
 									echo "<li><a href=\"TodayGames.php\">" . $TopMenuLang['TodaysGames'] . "</a></li>";
 								} ?>
-								<li><a href="Transaction.php?SinceLast"><?php echo $TopMenuLang['TodaysTransactions']; ?></a></li>
+								<li><a href="Transaction.php?TradeLogHistory"><?php echo $TopMenuLang['TodaysTransactions']; ?></a></li>
 								<li><a href="Search.php"><?php echo $TopMenuLang['Search']; ?></a></li>
 								<li><a href="NewsManagement.php"><?php echo $TopMenuLang['LeagueNewsManagement']; ?></a></li>
 								<li><a href="Upload.php"><?php echo $TopMenuLang['UploadLine']; ?></a></li>
