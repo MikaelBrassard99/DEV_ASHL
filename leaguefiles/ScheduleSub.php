@@ -25,7 +25,13 @@ if (isset($LeagueOutputOption)){
 $TradeDeadLine = (boolean)False;
 if (isset($LeagueGeneral)){if ($LeagueGeneral['PlayOffStarted'] == "True"){$TradeDeadLine = True;}}
 $LastSimulateDay = (boolean)False;
+$LastDay = (integer)0;
+
 if (empty($Schedule) == false){while ($row = $Schedule ->fetchArray()) {
+	if($LastDay < $row['Day']){
+		echo "<tr class=\"static\"><td colspan=\"11\" class=\"STHSCenter\"><strong>" . $ScheduleLang['Day']  . ":" . $row['Day'] . "</strong></td></tr>";
+		$LastDay ++;
+	}
 	If ($TradeDeadLine == False AND ($row['Day'] > (($LeagueGeneral['TradeDeadLine'] / 100) * $LeagueGeneral['ProScheduleTotalDay']))){
 		$TradeDeadLine = True;
 		echo "<tr class=\"static\"><td colspan=\"11\" class=\"STHSCenter\"><strong>" . $ScheduleLang['TradeDeadline'] ."</strong></td></tr>";
@@ -40,11 +46,11 @@ if (empty($Schedule) == false){while ($row = $Schedule ->fetchArray()) {
 	}
 	
 	echo "<td>" . $row['GameNumber']. "</td><td>";
-	If ($row['VisitorTeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $row['VisitorTeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPScheduleTeamImage\" />";}
+	echo "<img src=\"./images/Pro-team/" . $row['VisitorTeam'] . ".png\" alt=\"\" class=\"STHSPHPTeamScheduleImage \" />";
 	echo "<span class=\"" . $TypeText . "Schedule_Team" . $row['VisitorTeam'] . "\"></span>";
 	echo "<a href=\"" . $TypeText . "Team.php?Team=" . $row['VisitorTeam'] . "\">" . $row['VisitorTeamName']. "</a></td>";
 	echo "<td>"; if ($row['Play'] == "True"){echo $row['VisitorScore'];} else { echo "-";};echo "</td><td>";
-	If ($row['HomeTeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $row['HomeTeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPScheduleTeamImage\" />";}
+	echo "<img src=\"./images/Pro-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPTeamScheduleImage \" />";
 	echo "<span class=\"" . $TypeText . "Schedule_Team" . $row['HomeTeam'] . "\"></span>";
 	echo "<a href=\"" . $TypeText . "Team.php?Team=" . $row['HomeTeam'] . "\">" . $row['HomeTeamName']. "</a></td>";	
 	echo "<td>"; if ($row['Play'] == "True"){echo $row['HomeScore'];} else { echo "-";};echo "</td>";	
