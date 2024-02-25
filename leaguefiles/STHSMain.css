@@ -3411,6 +3411,7 @@ a.STHSPHPLoginButton {
     .STHSPHPTeamHeader_TeamNameColor_28.STHSPHPTeamHeader_TeamName{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
     .STHSPHPTeamHeader_TeamNameColor_29.STHSPHPTeamHeader_TeamName{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
     .STHSPHPTeamHeader_TeamNameColor_30.STHSPHPTeamHeader_TeamName{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
+    .STHSPHPTeamHeader_TeamNameColor_31.STHSPHPTeamHeader_TeamName{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
     .STHSPHPTeamHeader_TeamNameColor_32.STHSPHPTeamHeader_TeamName{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
     .STHSPHPTeamHeader_TeamNameColor_33.STHSPHPTeamHeader_TeamName{color: #000000;text-shadow: 0px 0px 0px #041E42;}
 	.STHSPHPTeamHeader_TeamNameColor_0{color: #000000;text-shadow: 0px 0px 0px #041E42;}
@@ -3445,6 +3446,7 @@ a.STHSPHPLoginButton {
 	.STHSPHPTeamHeader_TeamNameColor_28{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
 	.STHSPHPTeamHeader_TeamNameColor_29{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
 	.STHSPHPTeamHeader_TeamNameColor_30{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
+	.STHSPHPTeamHeader_TeamNameColor_31{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
 	.STHSPHPTeamHeader_TeamNameColor_32{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
 	.STHSPHPTeamHeader_TeamNameColor_33{color: #ffffff;text-shadow: 0px 0px 0px #041E42;}
     .STHSPHPTeamBanner_1{background-image: url("images/1.png") !important}
@@ -3477,7 +3479,8 @@ a.STHSPHPLoginButton {
     .STHSPHPTeamBanner_28{background-image: url("images/28.png") !important}
     .STHSPHPTeamBanner_29{background-image: url("images/29.png") !important}
     .STHSPHPTeamBanner_30{background-image: url("images/30.png") !important}
-    .STHSPHPTeamBanner_32{background-image: url("images/32.png") !important}
+    .STHSPHPTeamBanner_30{background-image: url("images/30.png") !important}
+    .STHSPHPTeamBanner_31{background-image: url("images/31.png") !important}
     .STHSPHPTeamBanner_33{background-image: url("images/33.png") !important}
 	.STHSPHPTeamStatImage_15{background-color:#ffffff;border-radius:50%;padding-right:0px;}
 	.STHSPHPTeamStatImage_13{background-color:#ffffff;border-radius:50%;padding-right:0px;}
