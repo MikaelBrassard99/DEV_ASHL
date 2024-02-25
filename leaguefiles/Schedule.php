@@ -87,10 +87,10 @@ $(function() {
 	</div>
 
 
-
+<div style="overflow-x:auto;">
 <table class="tablesorter STHSPHPSchedule_ScheduleTable"><thead><tr>
 <?php include "ScheduleSub.php";?>
-</tbody></table>
+</tbody></table></div>
 
 <br />
 </div>
