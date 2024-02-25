@@ -442,18 +442,19 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 	<div id="STHSPHPTeamStat_SubHeader">
 		<?php
 		if ($TeamInfo <> Null) {
+			echo "<div id=\"STHSPHPTeamStat_SubHeader\" class=\"STHSPHPTeamBanner_" . $TeamInfo['UniqueID'] . "\">";
+
 			echo "<table class=\"STHSPHPTeamHeader_Table\"><tr><td rowspan=\"2\" class=\"STHSPHPTeamHeader_Logo\">";
 			echo "<img src=\"./images/Pro-team/" . $TeamInfo['UniqueID'] . ".png\" alt=\"\" class=\"STHSPHPTeamStatImage \" />";
 
 			/*if ($TeamInfo['TeamThemeID'] > 0) {
 		   echo "<img src=\"./images/pro-team/" . $TeamInfo['UniqueID'] . ".png\" alt=\"\" class=\"STHSPHPTeamStatImage \" />";
 	   }*/
-			echo "</td><td class=\"STHSPHPTeamHeader_TeamName STHSPHPTeamHeader_TeamNameColor_";
-			//echo $TeamInfo['TeamThemeID'];
+	   //echo $TeamInfo['TeamThemeID'];
 			/*if ($TeamInfo['TeamThemeID'] > 0) {
 		   echo $TeamInfo['TeamThemeID'];
 	   }*/
-			echo "\">" . $TeamName . "</td></tr><tr><td class=\"STHSPHPTeamHeader_Stat\">";
+			echo "</tr><tr><td class=\"STHSPHPTeamHeader_TeamName STHSPHPTeamHeader_TeamNameColor_" . $TeamInfo['UniqueID'] . "\">";
 			echo "GP: " . $TeamStat['GP'] . " | W: " . ($TeamStat['W'] + $TeamStat['OTW'] + $TeamStat['SOW']) . " | L: " . $TeamStat['L'];
 			if ($LeagueGeneral['PlayOffStarted'] == "False") {
 				if ($LeagueGeneral['PointSystemSO'] == "True") {
@@ -462,7 +463,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 					echo " | T: " . $TeamStat['T'] . " | P: " . $TeamStat['Points'];
 				}
 			}
-			echo "<br />" . "GF: " . $TeamStat['GF'] . " | GA: " . $TeamStat['GA'] . " | PP%: ";
+			echo "<br /><br />" . "GF: " . $TeamStat['GF'] . " | GA: " . $TeamStat['GA'] . " | PP%: ";
 			if ($TeamStat['PPAttemp'] > 0) {
 				echo number_Format($TeamStat['PPGoal'] / $TeamStat['PPAttemp'] * 100, 2) . "%";
 			} else {
@@ -474,20 +475,14 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 			} else {
 				echo "0.00%";
 			}
-			echo "<br />" . $TeamLang['GM'] . $TeamInfo['GMName'] . " | " . $TeamLang['Morale'] . $TeamInfo['Morale'] . " | " . $TeamLang['TeamOverall'] . $TeamInfo['TeamOverall'];
+			echo "<br /><br />" . $TeamLang['GM'] . $TeamInfo['GMName'];
 			if ($Team > 0 and $Team < 101) {
 				$Query = "SELECT count(*) AS count FROM SchedulePro WHERE (VisitorTeam = " . $Team . " OR HomeTeam = " . $Team . ") AND Play = 'False' ORDER BY GameNumber LIMIT 1";
 				$Result = $db->querySingle($Query, true);
 			} else {
 				$Result = Null;
 			}
-			if ($Result['count'] > 0) {
-				if ($ScheduleNext['HomeTeam'] == $Team) {
-					echo "<br />" . $TodayGamesLang['NextGames'] . " #" . $ScheduleNext['GameNumber'] . "  vs " . $ScheduleNext['VisitorTeamName'];
-				} elseif ($ScheduleNext['VisitorTeam'] == $Team) {
-					echo "<br />" . $TodayGamesLang['NextGames'] . " #" . $ScheduleNext['GameNumber'] . "  vs " . $ScheduleNext['HomeTeamName'];
-				}
-			}
+
 			echo "</td></tr></table>";
 		}
 		?>
@@ -650,11 +645,11 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 											echo "</td><td class=\"STHSPHPTeam_HomePrimaryTableTeamInfo\" style=\"text-align:right;\"><span class=\"STHSPHPTeam_HomePrimaryTableTeamName\">" . $row['VisitorTeamName'] . "</span><br />" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-" . $row['VL'] . "-" . ($row['VOTL'] + $row['VSOL']) . ", " . $row['VPoints'] . "pts</td>";
 
 											echo "<td class=\"STHSPHPTeam_HomePrimaryTableTeamMiddleNotPlay\"><div class=\"STHSPHPTeam_HomePrimaryTableTeamInfoBeforeTriangle\">";
-											if ($LeagueOutputOption['ScheduleUseDateInsteadofDay'] == TRUE) {
+											if ($LeagueOutputOption['ScheduleUseDateInsteadofDay'] == "True"){
 												$ScheduleDate = date_create($LeagueOutputOption['ScheduleRealDate']);
-												date_add($ScheduleDate, DateInterval::createFromDateString(Floor((($row['Day'] - 1) / $LeagueGeneral['DefaultSimulationPerDay'])) . " days"));
-												echo date_Format($ScheduleDate, "Y-m-d") . "</div>\n";
-											} else {
+												date_add($ScheduleDate, DateInterval::createFromDateString(Floor((($row['Day'] -1) / $LeagueGeneral['DefaultSimulationPerDay'])) . " days"));
+												echo date_Format($ScheduleDate,"Y-m-d") . "</div>\n";
+											}else{
 												echo $ScheduleLang['Day'] . " " . $row['Day'] . "</div>\n";
 											}
 											echo "<div class=\"STHSPHPTeam_HomePrimaryTableTeamInfoTriangle\"></div></td>\n";
