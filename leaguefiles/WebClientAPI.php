@@ -105,7 +105,8 @@ function load_api_fields(){
 	}
 	function api_fields_input_values_player_stats($row){
 		$column = "Name|";
-		$column .= "PositionString|";
+		$column .= "POS|";
+		$column .= "COND|";
 		$column .= "CK|";
 		$column .= "FG|";
 		$column .= "DI|";
@@ -124,6 +125,7 @@ function load_api_fields(){
 		$column .= "PO";
 		$value = $row["Name"] ."|";
 		$value .= $row["PositionString"] ."|";
+		$value .= $row["Condition"] ."|";
 		$value .= $row["CK"] ."|";
 		$value .= $row["FG"]."|";
 		$value .= $row["DI"] ."|";
@@ -144,7 +146,8 @@ function load_api_fields(){
 	}
 	function api_fields_input_values_goalie_stats($row){
 		$column = "Name|";
-		$column .= "PositionString|";
+		$column .= "POS|";
+		$column .= "COND|";
 		$column .= "SK|";
 		$column .= "DU|";
 		$column .= "EN|";
@@ -161,6 +164,7 @@ function load_api_fields(){
 		$column .= "PO";
 		$value = $row["Name"] ."|";
 		$value .= $row["PositionString"] ."|";
+		$value .= $row["Condition"] ."|";
 		$value .= $row["SK"] ."|";
 		$value .= $row["DU"]."|";
 		$value .= $row["EN"] ."|";
