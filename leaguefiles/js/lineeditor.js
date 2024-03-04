@@ -365,6 +365,28 @@ function findPlayerInRoster(selected,type,league){
 
 	return foundIt;
 }
+
+function onClickEventPlayer(name){
+	var input = document.getElementById('playerSelect');
+	input.innerHTML = ''
+	var explode = name.split("|");
+	if(explode.includes("G")){
+
+	}else{
+		explode.forEach(function(item) {
+			// Create a new paragraph element
+			var td = document.createElement('td');
+			
+			// Set the text content of the paragraph element to the array element
+			td.textContent = item;
+	
+			// Append the paragraph element to the container
+			input.appendChild(td);
+		});
+	}
+
+}
+
 function ChangePlayer(id,league,BlockPlayerFromPlayingLines12,BlockPlayerFromPlayingLines123,BlockPlayerFromPlayingLines12inPPPK,ProForceGameStrategiesTo,ProForceGameStrategiesAt5,FarmForceGameStrategiesTo,FarmForceGameStrategiesAt5,PullGoalerMinGoal,PullGoalerMinGoalEnforce,PullGoalerMinPct,PullGoalerRemoveGoaliesSecond,PullGoalerMax,customOT){
 	var selected = document.querySelector('input[name="sltPlayerList"]:checked').value;
 	var explode = selected.split("|");

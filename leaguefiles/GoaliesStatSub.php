@@ -49,7 +49,7 @@ if ($CareerLeaderSubPrintOut == 1) {
 			/*if ($Row['TeamThemeID'] > 0) {
 				echo "<img src=\"./images/pro-team/" . $Row['TeamThemeID'] . ".png\" alt=\"\" class=\"STHSPHPPlayersStatsTeamImage\" />";
 			}*/
-			echo "<img src=\"./images/" . $TypeText . "-team/" . $Row['Team'] . ".png\" alt=\"\" class=\"STHSPHPPlayersStatsTeamImage\" />";
+			echo "<img src=\"./images/Pro-team/" . $Row['Team'] . ".png\" alt=\"\" class=\"STHSPHPPlayersStatsTeamImage\" />";
 			echo $Row['TeamName'] . "</td>";
 			if ($CareerLeaderSubPrintOut == 1) {
 				echo "<td>" . $Row['Year'] . "</td><td>" . $Row['Rookie'] . "</td>";

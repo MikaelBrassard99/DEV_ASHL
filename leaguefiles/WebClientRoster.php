@@ -40,6 +40,9 @@
 		
 		if ($CookieTeamNumber == 102){$DoNotRequiredLoginDynamicWebsite = TRUE;} // Commish is allow to upload anything so we are using the code from the 'Do Not Required Login Dynamic Website' to achieve this goal.
 		
+		// a enlever apres les test
+		if($t > 0){api_pageinfo_editor_roster($db,$t);}
+
 		if ($LeagueOutputOption['ShowWebClientInDymanicWebsite'] == "False"){
 			echo "<div class=\"STHSDivInformationMessage\">" . $ThisPageNotAvailable . "<br /><br /></div>";
 		}elseif(($CookieTeamNumber == $t OR $DoNotRequiredLoginDynamicWebsite == TRUE) AND $t > 0 AND $t <= 100){

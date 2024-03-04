@@ -45,6 +45,9 @@
 
 		If ($CookieTeamNumber == 102){$DoNotRequiredLoginDynamicWebsite = TRUE;} // Commish is allow to edit any Teams so we are using the code from the 'Do Not Required Login Dynamic Website' to achieve this goal.
 		
+		// a enlever apres les tests
+		if($t > 0){api_pageinfo_editor_lines($db,$t,$l);}
+
 		if ($LeagueOutputOption['ShowWebClientInDymanicWebsite'] == "False"){
 			echo "<div class=\"STHSDivInformationMessage\">" . $ThisPageNotAvailable . "<br /><br /></div>";
 		}elseif(($CookieTeamNumber == $t OR $DoNotRequiredLoginDynamicWebsite == TRUE) AND $t > 0 AND $t <= 100){

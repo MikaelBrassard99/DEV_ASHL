@@ -103,6 +103,27 @@ function load_api_fields(){
 		$value .= strtolower($row["WaiverPossible"]);
 		return $value;
 	}
+	function api_fields_input_values_stats($row){
+		$value = $row["Name"] ."|";
+		$value .= $row["PositionString"] ."|";
+		$value .= $row["CK"] ."|";
+		$value .= $row["FG"]."|";
+		$value .= $row["DI"] ."|";
+		$value .= $row["SK"] . "|";
+		$value .= $row["ST"] . "|";
+		$value .= $row["EN"] . "|";
+		$value .= $row["DU"] . "|";
+		$value .= $row["PH"] . "|";
+		$value .= $row["FO"] . "|";
+		$value .= $row["PA"] . "|";
+		$value .= $row["SC"] . "|";
+		$value .= $row["DF"] . "|";
+		$value .= $row["PS"] . "|";
+		$value .= $row["EX"] . "|";
+		$value .= $row["LD"] . "|";
+		$value .= $row["PO"] . "|";
+		return $value;
+	}
 }
 
 function load_api_html(){
@@ -196,7 +217,6 @@ function load_api_jquery(){
 	        	connectWith: ".connectedSortable",
 	        	update: function(event, ui) {<?= $jsfunction ?>}
 		    }).disableSelection();
-		    
 		    $(".playerrow").disableSelection();
 		    $('#sortable').draggable();
 		});
@@ -765,6 +785,34 @@ function load_api_pageinfo(){
 								?>
 								
 								<?php  // Start the tabs for pages of lines.?>
+								<br>
+								<div style="overflow-x:auto;">
+									<table style="width: 90%; text-align: center; border-collapse: collapse;">
+										<tr>
+											<th>Name</th>
+											<th>POS</th>
+											<th>CK</th>
+											<th>FG</th>
+											<th>DI</th>
+											<th>SK</th>
+											<th>ST</th>
+											<th>EN</th>
+											<th>DU</th>
+											<th>PH</th>
+											<th>FO</th>
+											<th>PA</th>
+											<th>SC</th>
+											<th>DF</th>
+											<th>PS</th>
+											<th>EX</th>
+											<th>LD</th>
+											<th>PO</th>
+										</tr>
+										<tr id="playerSelect">
+										</tr>
+									</table>
+								</div>
+								<br>
 								<div class="linetabs">
 									<div id="tabs">
 										<ul class="positiontabs">
@@ -782,6 +830,7 @@ function load_api_pageinfo(){
 												}
 											}?>	
 										</ul>
+										
 										<?php $count = 0;?>
 										<?php 
 											// Loop through the tabs info making the lines pages.
@@ -982,9 +1031,10 @@ function load_api_pageinfo(){
 										if($first){$s = " checked";$first = false;}else{$s = "";}
 										// Separate Name and number with a pipe '|' to split in the javascript.
 										$values = api_fields_input_values($row);
+										$stats = api_fields_input_values_stats($row);
 										?>
 										<li id="line1_<?= api_MakeCSSClass($row["Name"])?>" class="option">
-											<input name="sltPlayerList" type="radio" id="a<?= api_MakeCSSClass($row["Name"]); ?>" <?= $s;?> value="<?= $values; ?>">
+											<input onclick="onClickEventPlayer('<?= $stats; ?>')" name="sltPlayerList" type="radio" id="a<?= api_MakeCSSClass($row["Name"]); ?>" <?= $s;?> value="<?= $values; ?>">
 											<label for="a<?= api_MakeCSSClass($row["Name"]); ?>"><?= $row["Name"];?> - <?= $row["PositionString"];?> <span class="smalllist">(<?= $row["Overall"]; ?>OV)</span></label>
 										</li><?php 
 									}?>
@@ -1000,7 +1050,8 @@ function load_api_pageinfo(){
 						?><div class="doesntexits">The team you are looking for does not exist.</div><?php
 					} ?>
 				</div><!-- end pagewrapper-->
-			</div><!-- end id lineeditor--><?php 
+			</div><!-- end id lineeditor-->
+			<?php 
 	}
 	function api_make_blocks($row,$blocks,$positions,$strategy,$i,$availableplayers,$cpfields,$league){
 		$bcount = 0;
@@ -1537,6 +1588,10 @@ function load_api_sql(){
 		$sql = rtrim($sql,"UNION ") . " ";
 		$sql .= "ORDER BY Name ASC, Overall DESC";
 		return $sql;
+	}
+
+	function myFunction($params){
+		?><script>console.log(<?php echo json_encode($params); ?>);</script><?php
 	}
 }
 if(isset($_GET['PHPINFO'])){phpinfo();}
