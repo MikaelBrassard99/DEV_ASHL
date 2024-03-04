@@ -103,7 +103,25 @@ function load_api_fields(){
 		$value .= strtolower($row["WaiverPossible"]);
 		return $value;
 	}
-	function api_fields_input_values_stats($row){
+	function api_fields_input_values_player_stats($row){
+		$column = "Name|";
+		$column .= "PositionString|";
+		$column .= "CK|";
+		$column .= "FG|";
+		$column .= "DI|";
+		$column .= "SK|";
+		$column .= "ST|";
+		$column .= "EN|";
+		$column .= "DU|";
+		$column .= "PH|";
+		$column .= "FO|";
+		$column .= "PA|";
+		$column .= "SC|";
+		$column .= "DF|";
+		$column .= "PS|";
+		$column .= "EX|";
+		$column .= "LD|";
+		$column .= "PO";
 		$value = $row["Name"] ."|";
 		$value .= $row["PositionString"] ."|";
 		$value .= $row["CK"] ."|";
@@ -121,8 +139,43 @@ function load_api_fields(){
 		$value .= $row["PS"] . "|";
 		$value .= $row["EX"] . "|";
 		$value .= $row["LD"] . "|";
-		$value .= $row["PO"] . "|";
-		return $value;
+		$value .= $row["PO"];
+		return [$column,$value];
+	}
+	function api_fields_input_values_goalie_stats($row){
+		$column = "Name|";
+		$column .= "PositionString|";
+		$column .= "SK|";
+		$column .= "DU|";
+		$column .= "EN|";
+		$column .= "SZ|";
+		$column .= "AG|";
+		$column .= "RB|";
+		$column .= "SC|";
+		$column .= "HS|";
+		$column .= "RT|";
+		$column .= "PH|";
+		$column .= "PS|";
+		$column .= "EX|";
+		$column .= "LD|";
+		$column .= "PO";
+		$value = $row["Name"] ."|";
+		$value .= $row["PositionString"] ."|";
+		$value .= $row["SK"] ."|";
+		$value .= $row["DU"]."|";
+		$value .= $row["EN"] ."|";
+		$value .= $row["SZ"] . "|";
+		$value .= $row["AG"] . "|";
+		$value .= $row["RB"] . "|";
+		$value .= $row["SC"] . "|";
+		$value .= $row["HS"] . "|";
+		$value .= $row["RT"] . "|";
+		$value .= $row["PH"] . "|";
+		$value .= $row["PS"] . "|";
+		$value .= $row["EX"] . "|";
+		$value .= $row["LD"] . "|";
+		$value .= $row["PO"];
+		return [$column,$value];
 	}
 }
 
@@ -787,29 +840,7 @@ function load_api_pageinfo(){
 								<?php  // Start the tabs for pages of lines.?>
 								<br>
 								<div style="overflow-x:auto;">
-									<table style="width: 90%; text-align: center; border-collapse: collapse;">
-										<tr>
-											<th>Name</th>
-											<th>POS</th>
-											<th>CK</th>
-											<th>FG</th>
-											<th>DI</th>
-											<th>SK</th>
-											<th>ST</th>
-											<th>EN</th>
-											<th>DU</th>
-											<th>PH</th>
-											<th>FO</th>
-											<th>PA</th>
-											<th>SC</th>
-											<th>DF</th>
-											<th>PS</th>
-											<th>EX</th>
-											<th>LD</th>
-											<th>PO</th>
-										</tr>
-										<tr id="playerSelect">
-										</tr>
+									<table id="playerSelectF" style="width: 90%; text-align: center; border-collapse: collapse;">
 									</table>
 								</div>
 								<br>
@@ -1031,10 +1062,14 @@ function load_api_pageinfo(){
 										if($first){$s = " checked";$first = false;}else{$s = "";}
 										// Separate Name and number with a pipe '|' to split in the javascript.
 										$values = api_fields_input_values($row);
-										$stats = api_fields_input_values_stats($row);
+										if($row["PositionString"] == "G"){
+											$stats = api_fields_input_values_goalie_stats($row);
+										}else{
+											$stats = api_fields_input_values_player_stats($row);
+										}
 										?>
 										<li id="line1_<?= api_MakeCSSClass($row["Name"])?>" class="option">
-											<input onclick="onClickEventPlayer('<?= $stats; ?>')" name="sltPlayerList" type="radio" id="a<?= api_MakeCSSClass($row["Name"]); ?>" <?= $s;?> value="<?= $values; ?>">
+											<input onclick="onClickEventPlayer('<?= $stats[0]; ?>', '<?= $stats[1]; ?>')" name="sltPlayerList" type="radio" id="a<?= api_MakeCSSClass($row["Name"]); ?>" <?= $s;?> value="<?= $values; ?>">
 											<label for="a<?= api_MakeCSSClass($row["Name"]); ?>"><?= $row["Name"];?> - <?= $row["PositionString"];?> <span class="smalllist">(<?= $row["Overall"]; ?>OV)</span></label>
 										</li><?php 
 									}?>
