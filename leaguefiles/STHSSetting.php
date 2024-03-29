@@ -25,7 +25,7 @@ If (file_exists("STHSSetting.ini") == True){
 	if (isset($STHSOptions)){
 		
 		$DatabaseFile = $STHSOptions['DatabaseFile'];
-		//$DatabaseFile = (string)"ASHL13-STHS.db";
+		$DatabaseFile = (string)"ASHL12-STHS.db";
 		$DatabaseFileS13 = (string)"ASHL12-STHS.db";
 		$DatabaseFileS12 = (string)"ASHL11-STHS.db";
 		$DatabaseFileS11 = (string)"ASHL101-STHS.db";

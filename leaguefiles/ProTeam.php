@@ -438,7 +438,223 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 <body>
 	<?php include "Menu.php"; ?>
 	<br />
+	<script>
+		$(function() {
+			$.tablesorter.addWidget({
+				id: "numbering",
+				format: function(table) {
+					var c = table.config;
+					$("tr:visible", table.tBodies[0]).each(function(i) {
+						$(this).find('td').eq(0).text(i + 1);
+					});
+				}
+			});
+			$(".STHSPHPTeam_PlayersRosterTable").tablesorter({
+				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
+				widgetOptions: {
+					columnSelector_container: $('#tablesorter_ColumnSelector1P'),
+					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
+					columnSelector_name: 'title',
+					columnSelector_mediaquery: true,
+					columnSelector_mediaqueryName: 'Automatic',
+					columnSelector_mediaqueryState: true,
+					columnSelector_mediaqueryHidden: true,
+					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
+					filter_columnFilters: true,
+					filter_placeholder: {
+						search: '<?php echo $TableSorterLang['Search']; ?>'
+					},
+					filter_searchDelay: 1000,
+					filter_reset: '.tablesorter_Reset'
+				}
+			});
+			$(".STHSPHPTeam_GoaliesRosterTable").tablesorter({
+				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
+				widgetOptions: {
+					columnSelector_container: $('#tablesorter_ColumnSelector1G'),
+					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
+					columnSelector_name: 'title',
+					columnSelector_mediaquery: true,
+					columnSelector_mediaqueryName: 'Automatic',
+					columnSelector_mediaqueryState: true,
+					columnSelector_mediaqueryHidden: true,
+					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
+					filter_columnFilters: true,
+					filter_placeholder: {
+						search: '<?php echo $TableSorterLang['Search']; ?>'
+					},
+					filter_searchDelay: 1000,
+					filter_reset: '.tablesorter_Reset'
+				}
+			});
+			$(".STHSPHPTeam_PlayerInfoTable").tablesorter({
+				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
+				widgetOptions: {
+					columnSelector_container: $('#tablesorter_ColumnSelector3'),
+					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
+					columnSelector_name: 'title',
+					columnSelector_mediaquery: true,
+					columnSelector_mediaqueryName: 'Automatic',
+					columnSelector_mediaqueryState: true,
+					columnSelector_mediaqueryHidden: true,
+					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
+					filter_columnFilters: true,
+					filter_placeholder: {
+						search: '<?php echo $TableSorterLang['Search']; ?>'
+					},
+					filter_searchDelay: 1000,
+					filter_reset: '.tablesorter_Reset'
+				}
+			});
+			$(".STHSPHPTeam_ScheduleTable").tablesorter({
+				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
+				widgetOptions: {
+					columnSelector_container: $('#tablesorter_ColumnSelector6'),
+					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
+					columnSelector_name: 'title',
+					columnSelector_mediaquery: true,
+					columnSelector_mediaqueryName: 'Automatic',
+					columnSelector_mediaqueryState: true,
+					columnSelector_mediaqueryHidden: true,
+					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
+					filter_columnFilters: true,
+					filter_placeholder: {
+						search: '<?php echo $TableSorterLang['Search']; ?>'
+					},
+					filter_searchDelay: 1000,
+					filter_reset: '.tablesorter_Reset'
+				}
+			});
+			$(".STHSPHPTeam_PlayersScoringTable").tablesorter({
+				widgets: ['numbering', 'columnSelector', 'stickyHeaders', 'filter'],
+				widgetOptions: {
+					columnSelector_container: $('#tablesorter_ColumnSelector2P'),
+					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
+					columnSelector_name: 'title',
+					columnSelector_mediaquery: true,
+					columnSelector_mediaqueryName: 'Automatic',
+					columnSelector_mediaqueryState: true,
+					columnSelector_mediaqueryHidden: true,
+					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
+					filter_columnFilters: true,
+					filter_placeholder: {
+						search: '<?php echo $TableSorterLang['Search']; ?>'
+					},
+					filter_searchDelay: 1000,
+					filter_reset: '.tablesorter_Reset'
+				}
+			});
+			$(".STHSPHPTeam_GoaliesScoringTable").tablesorter({
+				widgets: ['numbering', 'columnSelector', 'stickyHeaders', 'filter'],
+				widgetOptions: {
+					columnSelector_container: $('#tablesorter_ColumnSelector2G'),
+					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
+					columnSelector_name: 'title',
+					columnSelector_mediaquery: true,
+					columnSelector_mediaqueryName: 'Automatic',
+					columnSelector_mediaqueryState: true,
+					columnSelector_mediaqueryHidden: true,
+					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
+					filter_columnFilters: true,
+					filter_placeholder: {
+						search: '<?php echo $TableSorterLang['Search']; ?>'
+					},
+					filter_searchDelay: 1000,
+					filter_reset: '.tablesorter_Reset'
+				}
+			});
+			$(".STHSPHPTeamsStatSub_Table").tablesorter({
+				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
+				widgetOptions: {
+					columnSelector_container: $('#tablesorter_ColumnSelector5'),
+					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
+					columnSelector_name: 'title',
+					columnSelector_mediaquery: true,
+					columnSelector_mediaqueryName: 'Automatic',
+					columnSelector_mediaqueryState: true,
+					columnSelector_mediaqueryHidden: true,
+					columnSelector_breakpoints: ['20em', '40em', '70em', '80em', '90em', '95em'],
+					filter_columnFilters: true,
+					filter_placeholder: {
+						search: '<?php echo $TableSorterLang['Search']; ?>'
+					},
+					filter_searchDelay: 500,
+					filter_reset: '.tablesorter_Reset'
+				}
+			});
+			$(".STHSPHPTeam_ProspectsTable").tablesorter({
+				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
+				widgetOptions: {
+					columnSelector_container: $('#tablesorter_ColumnSelector8P'),
+					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
+					columnSelector_name: 'title',
+					columnSelector_mediaquery: true,
+					columnSelector_mediaqueryName: 'Automatic',
+					columnSelector_mediaqueryState: true,
+					columnSelector_mediaqueryHidden: true,
+					columnSelector_breakpoints: ['10em', '20em', '30em', '40em', '50em', '60em'],
+					filter_columnFilters: true,
+					filter_placeholder: {
+						search: '<?php echo $TableSorterLang['Search']; ?>'
+					},
+					filter_searchDelay: 1000,
+					filter_reset: '.tablesorter_Reset'
+				}
+			});
+			<?php if ($TeamCareerStatFound == true) {
+				echo "\$(\".STHSPHPTeam_TeamCareerStat\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
+				echo "\$(\".STHSPHPTeam_TeamCareerPlayersSeasonTop5\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11SeasonP'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
+				echo "\$(\".STHSPHPTeam_TeamCareerGoaliesSeasonTop5\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11SeasonG'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
+				echo "\$(\".STHSPHPTeam_TeamCareerPlayersPlayoffTop5\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11PlayoffP'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
+				echo "\$(\".STHSPHPTeam_TeamCareerGoaliesPlayoffTop5\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11PlayoffG'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
+			} ?>
+		});
 
+		function Game1() {
+			var x = document.getElementById('Game1');
+			if (x.style.display === 'none') {
+				x.style.display = 'table';
+			} else {
+				x.style.display = 'none';
+			}
+		}
+
+		function Game2() {
+			var x = document.getElementById('Game2');
+			if (x.style.display === 'none') {
+				x.style.display = 'table';
+			} else {
+				x.style.display = 'none';
+			}
+		}
+
+		function Game3() {
+			var x = document.getElementById('Game3');
+			if (x.style.display === 'none') {
+				x.style.display = 'table';
+			} else {
+				x.style.display = 'none';
+			}
+		}
+
+		function Game4() {
+			var x = document.getElementById('Game4');
+			if (x.style.display === 'none') {
+				x.style.display = 'table';
+			} else {
+				x.style.display = 'none';
+			}
+		}
+
+		function Game5() {
+			var x = document.getElementById('Game5');
+			if (x.style.display === 'none') {
+				x.style.display = 'table';
+			} else {
+				x.style.display = 'none';
+			}
+		}
+	</script>
 	<div id="STHSPHPTeamStat_SubHeader">
 		<?php
 		if ($TeamInfo <> Null) {
@@ -4768,223 +4984,5 @@ if ($TeamFinance != Null) {
 			</div>
 		</div>
 	</div>
-
-	<script>
-		$(function() {
-			$.tablesorter.addWidget({
-				id: "numbering",
-				format: function(table) {
-					var c = table.config;
-					$("tr:visible", table.tBodies[0]).each(function(i) {
-						$(this).find('td').eq(0).text(i + 1);
-					});
-				}
-			});
-			$(".STHSPHPTeam_PlayersRosterTable").tablesorter({
-				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
-				widgetOptions: {
-					columnSelector_container: $('#tablesorter_ColumnSelector1P'),
-					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
-					columnSelector_name: 'title',
-					columnSelector_mediaquery: true,
-					columnSelector_mediaqueryName: 'Automatic',
-					columnSelector_mediaqueryState: true,
-					columnSelector_mediaqueryHidden: true,
-					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
-					filter_columnFilters: true,
-					filter_placeholder: {
-						search: '<?php echo $TableSorterLang['Search']; ?>'
-					},
-					filter_searchDelay: 1000,
-					filter_reset: '.tablesorter_Reset'
-				}
-			});
-			$(".STHSPHPTeam_GoaliesRosterTable").tablesorter({
-				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
-				widgetOptions: {
-					columnSelector_container: $('#tablesorter_ColumnSelector1G'),
-					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
-					columnSelector_name: 'title',
-					columnSelector_mediaquery: true,
-					columnSelector_mediaqueryName: 'Automatic',
-					columnSelector_mediaqueryState: true,
-					columnSelector_mediaqueryHidden: true,
-					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
-					filter_columnFilters: true,
-					filter_placeholder: {
-						search: '<?php echo $TableSorterLang['Search']; ?>'
-					},
-					filter_searchDelay: 1000,
-					filter_reset: '.tablesorter_Reset'
-				}
-			});
-			$(".STHSPHPTeam_PlayerInfoTable").tablesorter({
-				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
-				widgetOptions: {
-					columnSelector_container: $('#tablesorter_ColumnSelector3'),
-					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
-					columnSelector_name: 'title',
-					columnSelector_mediaquery: true,
-					columnSelector_mediaqueryName: 'Automatic',
-					columnSelector_mediaqueryState: true,
-					columnSelector_mediaqueryHidden: true,
-					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
-					filter_columnFilters: true,
-					filter_placeholder: {
-						search: '<?php echo $TableSorterLang['Search']; ?>'
-					},
-					filter_searchDelay: 1000,
-					filter_reset: '.tablesorter_Reset'
-				}
-			});
-			$(".STHSPHPTeam_ScheduleTable").tablesorter({
-				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
-				widgetOptions: {
-					columnSelector_container: $('#tablesorter_ColumnSelector6'),
-					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
-					columnSelector_name: 'title',
-					columnSelector_mediaquery: true,
-					columnSelector_mediaqueryName: 'Automatic',
-					columnSelector_mediaqueryState: true,
-					columnSelector_mediaqueryHidden: true,
-					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
-					filter_columnFilters: true,
-					filter_placeholder: {
-						search: '<?php echo $TableSorterLang['Search']; ?>'
-					},
-					filter_searchDelay: 1000,
-					filter_reset: '.tablesorter_Reset'
-				}
-			});
-			$(".STHSPHPTeam_PlayersScoringTable").tablesorter({
-				widgets: ['numbering', 'columnSelector', 'stickyHeaders', 'filter'],
-				widgetOptions: {
-					columnSelector_container: $('#tablesorter_ColumnSelector2P'),
-					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
-					columnSelector_name: 'title',
-					columnSelector_mediaquery: true,
-					columnSelector_mediaqueryName: 'Automatic',
-					columnSelector_mediaqueryState: true,
-					columnSelector_mediaqueryHidden: true,
-					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
-					filter_columnFilters: true,
-					filter_placeholder: {
-						search: '<?php echo $TableSorterLang['Search']; ?>'
-					},
-					filter_searchDelay: 1000,
-					filter_reset: '.tablesorter_Reset'
-				}
-			});
-			$(".STHSPHPTeam_GoaliesScoringTable").tablesorter({
-				widgets: ['numbering', 'columnSelector', 'stickyHeaders', 'filter'],
-				widgetOptions: {
-					columnSelector_container: $('#tablesorter_ColumnSelector2G'),
-					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
-					columnSelector_name: 'title',
-					columnSelector_mediaquery: true,
-					columnSelector_mediaqueryName: 'Automatic',
-					columnSelector_mediaqueryState: true,
-					columnSelector_mediaqueryHidden: true,
-					columnSelector_breakpoints: ['20em', '40em', '60em', '80em', '90em', '95em'],
-					filter_columnFilters: true,
-					filter_placeholder: {
-						search: '<?php echo $TableSorterLang['Search']; ?>'
-					},
-					filter_searchDelay: 1000,
-					filter_reset: '.tablesorter_Reset'
-				}
-			});
-			$(".STHSPHPTeamsStatSub_Table").tablesorter({
-				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
-				widgetOptions: {
-					columnSelector_container: $('#tablesorter_ColumnSelector5'),
-					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
-					columnSelector_name: 'title',
-					columnSelector_mediaquery: true,
-					columnSelector_mediaqueryName: 'Automatic',
-					columnSelector_mediaqueryState: true,
-					columnSelector_mediaqueryHidden: true,
-					columnSelector_breakpoints: ['20em', '40em', '70em', '80em', '90em', '95em'],
-					filter_columnFilters: true,
-					filter_placeholder: {
-						search: '<?php echo $TableSorterLang['Search']; ?>'
-					},
-					filter_searchDelay: 500,
-					filter_reset: '.tablesorter_Reset'
-				}
-			});
-			$(".STHSPHPTeam_ProspectsTable").tablesorter({
-				widgets: ['columnSelector', 'stickyHeaders', 'filter'],
-				widgetOptions: {
-					columnSelector_container: $('#tablesorter_ColumnSelector8P'),
-					columnSelector_layout: '<label><input type="checkbox">{name}</label>',
-					columnSelector_name: 'title',
-					columnSelector_mediaquery: true,
-					columnSelector_mediaqueryName: 'Automatic',
-					columnSelector_mediaqueryState: true,
-					columnSelector_mediaqueryHidden: true,
-					columnSelector_breakpoints: ['10em', '20em', '30em', '40em', '50em', '60em'],
-					filter_columnFilters: true,
-					filter_placeholder: {
-						search: '<?php echo $TableSorterLang['Search']; ?>'
-					},
-					filter_searchDelay: 1000,
-					filter_reset: '.tablesorter_Reset'
-				}
-			});
-			<?php if ($TeamCareerStatFound == true) {
-				echo "\$(\".STHSPHPTeam_TeamCareerStat\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
-				echo "\$(\".STHSPHPTeam_TeamCareerPlayersSeasonTop5\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11SeasonP'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
-				echo "\$(\".STHSPHPTeam_TeamCareerGoaliesSeasonTop5\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11SeasonG'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
-				echo "\$(\".STHSPHPTeam_TeamCareerPlayersPlayoffTop5\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11PlayoffP'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
-				echo "\$(\".STHSPHPTeam_TeamCareerGoaliesPlayoffTop5\").tablesorter({widgets: ['staticRow', 'columnSelector','filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector11PlayoffG'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: false,}});";
-			} ?>
-		});
-
-		function Game1() {
-			var x = document.getElementById('Game1');
-			if (x.style.display === 'none') {
-				x.style.display = 'table';
-			} else {
-				x.style.display = 'none';
-			}
-		}
-
-		function Game2() {
-			var x = document.getElementById('Game2');
-			if (x.style.display === 'none') {
-				x.style.display = 'table';
-			} else {
-				x.style.display = 'none';
-			}
-		}
-
-		function Game3() {
-			var x = document.getElementById('Game3');
-			if (x.style.display === 'none') {
-				x.style.display = 'table';
-			} else {
-				x.style.display = 'none';
-			}
-		}
-
-		function Game4() {
-			var x = document.getElementById('Game4');
-			if (x.style.display === 'none') {
-				x.style.display = 'table';
-			} else {
-				x.style.display = 'none';
-			}
-		}
-
-		function Game5() {
-			var x = document.getElementById('Game5');
-			if (x.style.display === 'none') {
-				x.style.display = 'table';
-			} else {
-				x.style.display = 'none';
-			}
-		}
-	</script>
 
 	<?php include "Footer.php"; ?>

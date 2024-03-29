@@ -137,7 +137,7 @@ function PrintGames($Row, $TodayGamesLang)
 	<br />
 
 
-	<div style="width:100%;margin:auto;">
+	<div style="width:100%;margin:auto; overflow-x:auto">
 		<table class="STHSTableFullW">
 			<tr>
 				<td>
@@ -145,6 +145,9 @@ function PrintGames($Row, $TodayGamesLang)
 				</td>
 				<td class="STHSHeaderDate"><?php echo $TodayGamesLang['LastUpdate'] . $LeagueGeneralMenu['DatabaseCreationDate'] ?></td>
 			</tr>
+			<div>
+				
+			</div>
 			<table class="STHSTodayGame_MainTable">
 				<?php
 				$LoopCount = (int)0;
@@ -179,8 +182,8 @@ function PrintGames($Row, $TodayGamesLang)
 				<br />
 
 				<h1><?php echo $TodayGamesLang['NextGames']; ?></h1>
-
-				<table class="tablesorter STHSPHPSchedule_ScheduleTable">
+<div style="overflow-x: auto;">
+<table class="tablesorter STHSPHPSchedule_ScheduleTable">
 					<thead>
 						<tr>
 							<th title="Day" class="STHSW45"><?php echo $ScheduleLang['Day']; ?></th>
@@ -231,6 +234,8 @@ function PrintGames($Row, $TodayGamesLang)
 						?>
 					</tbody>
 				</table>
+</div>
+				
 	</div>
 </body>
 <?php include "Footer.php"; ?>
