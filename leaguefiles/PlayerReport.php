@@ -1086,7 +1086,7 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 
 								if ($PlayerProCareerSumSeasonOnly['SumOfGP'] > 0) {
 									/* Show ProCareer Total for Season */
-									echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"2\"><strong>" . $PlayersLang['Total'] . " " . $PlayersLang['RegularSeason'] . "</strong></td>";
+									echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"2\"><strong> Séries éliminatoires</strong></td>";
 									echo "<td class=\"staticTD\">" . $PlayerProCareerSumSeasonOnly['SumOfGP'] . "</td>";
 									echo "<td class=\"staticTD\">" . $PlayerProCareerSumSeasonOnly['SumOfG'] . "</td>";
 									echo "<td class=\"staticTD\">" . $PlayerProCareerSumSeasonOnly['SumOfA'] . "</td>";
