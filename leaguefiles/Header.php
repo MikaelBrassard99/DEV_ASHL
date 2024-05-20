@@ -131,6 +131,9 @@ function getSeasonName($name)
 		case "ASHL13-STHS.db":
 			return "2023-2024";
 			break;
+		case "ASHL14-STHS.db":
+			return "2024-2025";
+			break;
 		default:
 			return $name;
 			break;

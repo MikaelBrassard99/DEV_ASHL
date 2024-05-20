@@ -119,7 +119,7 @@ if ($PlayerFarmStatMultipleTeamFound == true) {
 
 
 
-$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12, $DatabaseFileS13, $DatabaseFile];
+$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12, $DatabaseFileS13, $DatabaseFileS14, $DatabaseFile];
 $count = 0;
 //dictionnaire des donnees des joueurs selon le count (annee)
 $dictLeagueGeneral[[]];
