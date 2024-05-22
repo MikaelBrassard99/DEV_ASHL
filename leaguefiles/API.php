@@ -1,3 +1,4 @@
+<!-- test -->
 <?php
 require_once "STHSSetting.php";
 $EmptyReturn = (string)"<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><head><title>API</title></head><body><h1><div style=\"text-align:center\"><a href=\"https://sths.simont.info/WebAPI.php\">STHS API Documentation</a></h1></div></body></html>";
