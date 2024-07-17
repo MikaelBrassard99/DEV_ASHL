@@ -1212,7 +1212,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 							<thead>
 								<tr>
 									<th data-priority="3" title="Order Number" class="STHSW10">#</th>
-									<th data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName']; ?></th>
+									<th class="sticky-col first-col" data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName']; ?></th>
 									<?php if ($LeagueOutputOption != Null) {
 										if ($LeagueOutputOption['JerseyNumberInWebsite'] == "True") {
 											echo "<th data-priority=\"6\" title=\"Jesery\" class=\"STHSW10\">#</th>";
@@ -1300,7 +1300,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 													if ($TeamInfo['Assistant2'] == $Row['Number']) {
 														$strTemp = $strTemp . " (A)";
 													}
-													echo "<td><a href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $strTemp . "</a></td>";
+													echo "<td class=\"sticky-col first-col\"><a href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $strTemp . "</a></td>";
 													if ($LeagueOutputOption['JerseyNumberInWebsite'] == "True") {
 														echo "<td>" . $Row['Jersey'] . "</th>";
 													}
@@ -1813,7 +1813,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 						<table class="tablesorter STHSPHPTeamSalaryCapDetail_Table">
 							<thead>
 								<tr>
-									<th data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName']; ?></th>
+									<th class="sticky-col first-col" data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName']; ?></th>
 									<th data-priority="2" title="Position" class="STHSW45">POS</th>
 									<th data-priority="1" title="Age" class="STHSW25"><?php echo $PlayersLang['Age']; ?></th>
 									<th data-priority="4" title="Birthday" class="STHSW45"><?php echo $PlayersLang['Birthday']; ?></th>
@@ -1918,7 +1918,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 										$FoundG = True;
 									}
 									$AverageCount = $AverageCount + 1;
-									echo "<tr><td>";
+									echo "<tr><td class=\"sticky-col first-col\">";
 									if ($Row['PosG'] == "True") {
 										echo "<a href=\"GoalieReport.php?Goalie=" . ($Row['Number'] - 10000) . "\">";
 									} else {

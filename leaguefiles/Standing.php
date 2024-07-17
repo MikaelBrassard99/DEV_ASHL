@@ -61,7 +61,7 @@ function PrintStandingTop($TeamStatLang, $StandardStandingOutput, $PointSystemSO
     echo "<div style=\"overflow-x:auto;\">";
     echo "<table class=\"tablesorter STHSPHPStanding_Table\"><thead><tr>";
     echo "<th title=\"Position\" class=\"STHSW35\">PO</th>";
-    echo "<th title=\"Team Name\" class=\"STHSW200\">" . $TeamStatLang['TeamName'] . "</th>";
+    echo "<th class=\"sticky-col first-col\" title=\"Team Name\" class=\"STHSW200\">" . $TeamStatLang['TeamName'] . "</th>";
     echo "<th title=\"Games Played\" class=\"STHSW30\">GP</th>";
     if ($StandardStandingOutput == "True") {
         echo "<th title=\"Wins\" class=\"STHSW30\">W</th>";
@@ -110,7 +110,7 @@ function PrintStandingTable($TypeTextTeam, $Standing, $TypeText, $StandardStandi
 function PrintStandingTableRow($TypeTextTeam, $row, $TypeText, $StandardStandingOutput, $PointSystemSO, $PointSystemW, $LoopCount, $DatabaseFile)
 {
     echo "<tr><td>" . $LoopCount . "</td>";
-    echo "<td style=\"\"><span class=\"" . $TypeText . "Standing_Team" . $row['Number'] . "\"></span>";
+    echo "<td class=\"sticky-col first-col\" style=\"\"><span class=\"" . $TypeText . "Standing_Team" . $row['Number'] . "\"></span>";
     echo "<img src=\"./images/" . $TypeTextTeam . "-team/" . $row['UniqueID'] . ".png\" alt=\"\" class=\"STHSPHPStandingTeamImage\" />";
 
     /*if ($row['TeamThemeID'] > 0) {
