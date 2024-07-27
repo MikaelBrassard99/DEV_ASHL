@@ -111,6 +111,16 @@ if (file_exists($DatabaseFile) == false) {
 					echo "</div>";
 				}
 			}
+			if (empty($LatestScoreFarmScroll) == false) {
+				while ($row = $LatestScoreFarmScroll->fetchArray()) {
+					echo "<div style=\"\">";
+						echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
+							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\"><img src=\"./images/Farm-team/" . $row['VisitorTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " " . $row['VisitorTeamAbbre']. " - " . $row['VisitorScore'] . "</td></tr>";
+							echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\"><img src=\"./images/Farm-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " " . $row['HomeTeamAbbre']. " - " . $row['HomeScore'] . "</td></tr>";
+						echo "</table>";
+					echo "</div>";
+				}
+			}
 		echo "<div style=\"\">";
 			echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
 				echo "<tr><td class=\"STHSIndex_GamesResultScrollBox_TeamName\">Next day</td></tr>";
@@ -134,6 +144,36 @@ if (file_exists($DatabaseFile) == false) {
 							echo "<tr>";
 								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
 								echo "<img src=\"./images/Pro-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
+								if ($LeagueGeneral['PointSystemSO'] == "True") {
+										echo $row['HL'] . "-" . ($row['HOTL'] + $row['HSOL']);
+									} else {
+										echo ($row['HL'] + $row['HOTL'] + $row['HSOL']) . "-" . $row['HT'];
+									}
+									echo ") - " . $row['HStreak'];							
+								echo "</td>";
+							echo "</tr>";
+						echo "</table>";
+					echo "</div>";
+				}
+			}
+			if (empty($ScheduleFarmScroll) == false) {
+				while ($row = $ScheduleFarmScroll->fetchArray()) {
+					echo "<div style=\"\">";
+						echo "<table class=\"STHSIndex_GamesResultScrollBox\">";
+							echo "<tr>";
+								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
+								echo "<img src=\"./images/Farm-team/" . $row['VisitorTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
+								if ($LeagueGeneral['PointSystemSO'] == "True") {
+										echo $row['VL'] . "-" . ($row['VOTL'] + $row['VSOL']);
+									} else {
+										echo ($row['VL'] + $row['VOTL'] + $row['VSOL']) . "-" . $row['VT'];
+									}
+									echo ") - " . $row['VStreak'];
+								echo "</td>";
+							echo "</tr>";
+							echo "<tr>";
+								echo "<td class=\"STHSIndex_GamesResultScrollBox_TeamName\">";
+								echo "<img src=\"./images/Farm-team/" . $row['HomeTeam'] . ".png\" alt=\"\" class=\"STHSPHPMenuDivTeamImage\" />" . " (" . ($row['VW'] + $row['VOTW'] + $row['VSOW']) . "-";
 								if ($LeagueGeneral['PointSystemSO'] == "True") {
 										echo $row['HL'] . "-" . ($row['HOTL'] + $row['HSOL']);
 									} else {
@@ -276,17 +316,49 @@ if (file_exists($DatabaseFile) == false) {
 											echo "<li><a href=\"#\">" . $LeagueGeneralMenu['FarmConferenceName1'], "</a><ul>\n";
 											$Query = "Select Number, Name, Abbre from TeamFarmInfo Where Conference = '" . $LeagueGeneralMenu['FarmConferenceName1'] . "' ORDER BY Name";
 											$TeamFarmMenu1 = $dbMenu->query($Query);
+											if (empty($TeamFarmMenu1) == false) {
+												while ($Row = $TeamFarmMenu1->fetchArray()) {
+													echo "<li><a href=\"FarmTeam.php?Team=" . $Row['Number'] . "\">";
+													echo "<img src=\"./images/Farm-team/" . $Row['Number'] . ".png\" alt=\"\" class=\"STHSPHPMenuTeamImage\" />";
+
+													/*if ($Row['TeamThemeID'] > 0) {
+									echo "<img src=\"./images/pro-team/" . $Row['TeamThemeID'] . ".png\" alt=\"\" class=\"STHSPHPMenuTeamImage\" />";
+								}*/
+													echo $Row['Name'] . "</a></li>\n";
+												}
+											}
 											echo "</ul></li>\n";
 
 											echo "<li><a href=\"#\">" . $LeagueGeneralMenu['FarmConferenceName2'], "</a><ul>\n";
 											$Query = "Select Number, Name, Abbre from TeamFarmInfo Where Conference = '" . $LeagueGeneralMenu['FarmConferenceName2'] . "' ORDER BY Name";
 											$TeamFarmMenu2 = $dbMenu->query($Query);
+											if (empty($TeamFarmMenu2) == false) {
+												while ($Row = $TeamFarmMenu2->fetchArray()) {
+													echo "<li><a href=\"FarmTeam.php?Team=" . $Row['Number'] . "\">";
+													echo "<img src=\"./images/Farm-team/" . $Row['Number'] . ".png\" alt=\"\" class=\"STHSPHPMenuTeamImage\" />";
+
+													/*if ($Row['TeamThemeID'] > 0) {
+									echo "<img src=\"./images/Farm-team/" . $Row['Number'] . ".png\" alt=\"\" class=\"STHSPHPMenuTeamImage\" />";
+								}*/
+													echo $Row['Name'] . "</a></li>\n";
+												}
+											}
 											echo "</ul></li>\n";
 										} else {
 											/* 1 Conference Only */
 											$Query = "Select Number, Name, Abbre from TeamFarmInfo ORDER BY Name";
 											$TeamFarmMenu = $dbMenu->query($Query);
-											
+											if (empty($TeamFarmMenu) == false) {
+												while ($Row = $TeamFarmMenu->fetchArray()) {
+													echo "<li><a href=\"FarmTeam.php?Team=" . $Row['Number'] . "\">";
+													echo "<img src=\"./images/Farm-team/" . $Row['Number'] . ".png\" alt=\"\" class=\"STHSPHPMenuTeamImage\" />";
+
+													/*if ($Row['TeamThemeID'] > 0) {
+									echo "<img src=\"./images/pro-team/" . $Row['TeamThemeID'] . ".png\" alt=\"\" class=\"STHSPHPMenuTeamImage\" />";
+								}*/
+													echo $Row['Name'] . "</a></li>\n";
+												}
+											}
 										}
 
 										echo "</ul></li>\n";
@@ -446,6 +518,7 @@ if (file_exists($DatabaseFile) == false) {
 								<li><a href="http://sths.simont.info/ManualV3_En.php#Team_Management"><?php echo $TopMenuLang['ManualLinkTitle']; ?></a></li>
 							</ul>
 						</li>
+						<li><a href="Login.php"><?php echo $TopMenuLang['Login']; ?></a></li>
 					</ul>
 				</div>
 			</td>

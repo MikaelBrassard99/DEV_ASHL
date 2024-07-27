@@ -50,8 +50,8 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 12</td>
-<td>9 juillet 2023 at 14:53</td>
-<td>1</td>
+<td>22 août 2023 at 17:34</td>
+<td>16</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -63,8 +63,8 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 10</td>
-<td></td>
-<td>0</td>
+<td>22 août 2023 at 21:39</td>
+<td>11</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -76,9 +76,9 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 7</td>
-<td></td>
-<td>0</td>
-<td>0</td>
+<td>21 août 2023 at 19:55</td>
+<td>5</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td></tr>
@@ -89,8 +89,8 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 3</td>
-<td></td>
-<td>0</td>
+<td>11 août 2023 at 21:44</td>
+<td>5</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -105,7 +105,7 @@ include "Menu.php";}?>
 <td></td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
+<td>1</td>
 <td>0</td>
 <td>0</td></tr>
 <tr><td>RUSSIE</td>
@@ -115,8 +115,8 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 9</td>
-<td></td>
-<td>0</td>
+<td>21 août 2023 at 06:56</td>
+<td>8</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -124,13 +124,13 @@ include "Menu.php";}?>
 <tr><td>SLOVAQUIE</td>
 <td>J-P Vandal</td>
 <td></td>
-<td><a href="mailto:"></a></td>
+<td><a href="mailto:on veux gagner une game svp!">on veux gagner une game svp!</a></td>
 <td></td>
 <td></td>
 <td>Farm Team 6</td>
-<td></td>
-<td>0</td>
-<td>0</td>
+<td>26 juillet 2023 at 17:22</td>
+<td>1</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td></tr>
@@ -141,9 +141,9 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 1</td>
-<td></td>
-<td>0</td>
-<td>0</td>
+<td>18 août 2023 at 12:48</td>
+<td>6</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td></tr>
@@ -154,9 +154,9 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 5</td>
-<td></td>
-<td>0</td>
-<td>0</td>
+<td>6 août 2023 at 07:07</td>
+<td>2</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td></tr>
@@ -167,9 +167,9 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 4</td>
-<td></td>
-<td>0</td>
-<td>0</td>
+<td>21 août 2023 at 06:56</td>
+<td>6</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td></tr>
@@ -180,9 +180,9 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 2</td>
-<td></td>
-<td>0</td>
-<td>0</td>
+<td>18 août 2023 at 20:44</td>
+<td>8</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td></tr>
@@ -193,11 +193,12 @@ include "Menu.php";}?>
 <td></td>
 <td></td>
 <td>Farm Team 11</td>
-<td></td>
-<td>0</td>
+<td>22 août 2023 at 21:39</td>
+<td>7</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td></tr>
 </tbody></table><br />
+<a href="mailto:on veux gagner une game svp!">Email all General Manager</a>
 <?php include "Footer.php";?>

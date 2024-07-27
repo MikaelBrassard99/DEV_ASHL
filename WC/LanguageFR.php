@@ -713,7 +713,7 @@ $TopMenuLang = array(
     'PreviousStanding' => 'Classement année précédent',
     'SearchHistory' => 'Recherche dans l’historique',
     'AllStar' => 'Match des Étoiles',
-    'CupWinner' => 'Gagnants de la Coupe Stanley'
+    'CupWinner' => 'Gagnants de la Coupe Stanley',
 );
 
 $EntryDraftLang = array(

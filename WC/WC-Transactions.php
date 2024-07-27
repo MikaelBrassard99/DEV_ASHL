@@ -13,6 +13,1079 @@
 require_once "STHSSetting.php";
 $db = new SQLite3($DatabaseFile);
 include "Menu.php";}?>
+[2023-08-23 06:34:21] - Website Output Manually<br />
+[2023-08-23 06:33:01] - Website Output Automatically<br />
+[2023-08-23 06:33:01] - New Record for Team's Most Hits (25) in 1 Game for FINLANDE!<br />
+[2023-08-23 06:33:01] - New Record for Team's Most Shots (33) in 1 Game for SLOVAQUIE!<br />
+[2023-08-23 06:32:56] - Auto Lines Function has been run for SLOVAQUIE.<br />
+[2023-08-23 06:32:56] - Auto Roster Partial Function has been run for SLOVAQUIE.<br />
+[2023-08-22 21:39:44] - Successfully loaded WORLD lines done with STHS Client - 3.3.5.5<br />
+[2023-08-22 21:39:31] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-22 17:34:53] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.9.9<br />
+[2023-08-22 06:50:29] - Website Output Manually<br />
+[2023-08-22 06:50:01] - Website Output Automatically<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Penalties Minutes (14) in 1 Game for WORLD!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Shots (36) in 1 Game for WORLD!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Shots Blocked (19) in 1 Game for SUÈDE!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Points (14) in 1 Game for SUÈDE!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Assists (9) in 1 Game for SUÈDE!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Goals (5) in 1 Game for SUÈDE!<br />
+[2023-08-22 06:50:01] - Pro Game #62 - Filip Forsberg from SUÈDE has scored a Hat Trick!<br />
+[2023-08-21 19:55:17] - Successfully loaded DANEMARK lines done with STHS Client - 3.3.8.8<br />
+[2023-08-21 19:55:05] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.9.9<br />
+[2023-08-21 06:57:41] - Website Output Manually<br />
+[2023-08-21 06:57:30] - Website Output Automatically<br />
+[2023-08-21 06:57:30] - New Record for Team's Most Shots (42) in 1 Game for USA!<br />
+[2023-08-21 06:57:30] - New Record for Team's Most Shots (42) in 1 Game for USA!<br />
+[2023-08-21 06:57:30] - New Record for Most Hits (56) in a game!<br />
+[2023-08-21 06:57:30] - New Record for Team's Most Hits (31) in 1 Game for ALLEMAGNE!<br />
+[2023-08-21 06:57:30] - New Record for Team's Most Hits (31) in 1 Game for ALLEMAGNE!<br />
+[2023-08-21 06:56:53] - Successfully loaded TCHÉQUIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-21 06:56:38] - Successfully loaded RUSSIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-20 07:23:23] - Website Output Manually<br />
+[2023-08-20 07:22:47] - Website Output Automatically<br />
+[2023-08-20 07:22:47] - Martin Reway from SLOVAQUIE is back from Exhaustion.<br />
+[2023-08-19 11:46:09] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-19 06:48:43] - Website Output Manually<br />
+[2023-08-19 06:48:32] - Website Output Manually<br />
+[2023-08-19 06:24:15] - 10 000 000 $ was added to WORLD bank account.<br />
+[2023-08-19 06:24:12] - Current fund for WORLD is under 0 $.<br />
+[2023-08-19 06:24:08] - 10 000 000 $ was added to SUISSE bank account.<br />
+[2023-08-19 06:24:05] - Current fund for SUISSE is under 0 $.<br />
+[2023-08-19 06:24:01] - 10 000 000 $ was added to DANEMARK bank account.<br />
+[2023-08-19 06:23:53] - 10 000 000 $ was added to SUÈDE bank account.<br />
+[2023-08-19 06:23:50] - Current fund for SUÈDE is under 0 $.<br />
+[2023-08-19 06:23:45] - 10 000 000 $ was added to RUSSIE bank account.<br />
+[2023-08-19 06:23:41] - Current fund for RUSSIE is under 0 $.<br />
+[2023-08-19 06:23:37] - 10 000 000 $ was added to FINLANDE bank account.<br />
+[2023-08-19 06:23:34] - Current fund for FINLANDE is under 0 $.<br />
+[2023-08-19 06:23:31] - 10 000 000 $ was added to SLOVAQUIE bank account.<br />
+[2023-08-19 06:23:28] - Current fund for SLOVAQUIE is under 0 $.<br />
+[2023-08-19 06:23:24] - 10 000 000 $ was added to LETTONIE bank account.<br />
+[2023-08-19 06:23:21] - Current fund for LETTONIE is under 0 $.<br />
+[2023-08-19 06:23:17] - 10 000 000 $ was added to ALLEMAGNE bank account.<br />
+[2023-08-19 06:23:15] - Current fund for ALLEMAGNE is under 0 $.<br />
+[2023-08-19 06:23:09] - 10 000 000 $ was added to USA bank account.<br />
+[2023-08-19 06:23:06] - Current fund for USA is under 0 $.<br />
+[2023-08-19 06:23:01] - 10 000 000 $ was added to TCHÉQUIE bank account.<br />
+[2023-08-19 06:22:58] - Current fund for TCHÉQUIE is under 0 $.<br />
+[2023-08-19 06:22:53] - 10 000 000 $ was added to CANADA bank account.<br />
+[2023-08-19 06:22:45] - Current fund for CANADA is under 0 $.<br />
+[2023-08-19 06:22:23] - Current fund for ALLEMAGNE is under 0 $.<br />
+[2023-08-19 06:22:23] - Current fund for WORLD is under 0 $.<br />
+[2023-08-19 06:22:22] - Current fund for CANADA is under 0 $.<br />
+[2023-08-19 06:22:22] - Current fund for RUSSIE is under 0 $.<br />
+[2023-08-19 06:22:21] - Current fund for LETTONIE is under 0 $.<br />
+[2023-08-19 06:22:20] - Current fund for SLOVAQUIE is under 0 $.<br />
+[2023-08-19 06:22:20] - Current fund for SUISSE is under 0 $.<br />
+[2023-08-19 06:22:19] - Current fund for TCHÉQUIE is under 0 $.<br />
+[2023-08-19 06:22:19] - Current fund for FINLANDE is under 0 $.<br />
+[2023-08-19 06:22:18] - Current fund for USA is under 0 $.<br />
+[2023-08-19 06:22:18] - Current fund for SUÈDE is under 0 $.<br />
+[2023-08-19 06:21:50] - Website Output Automatically<br />
+[2023-08-19 06:21:50] - Last 7 Days Pro Star : 1 - Connor McDavid of CANADA (5-2-7) / 2 - Tomas Hertl of TCHÉQUIE (3-4-7) / 3 - David Pastrnak of TCHÉQUIE (4-3-7)<br />
+[2023-08-19 06:21:50] - New Record for Player (Oliver Lauridsen) Most Penalties Minutes (8) in 1 Game!<br />
+[2023-08-19 06:21:50] - Pro Game #56 - Tim Stützle from ALLEMAGNE has scored a Hat Trick!<br />
+[2023-08-19 06:21:50] - New Record for Team's Most Shots Blocked (16) in 1 Game for USA!<br />
+[2023-08-19 06:21:50] - Martin Reway from SLOVAQUIE is injured from Exhaustion.<br />
+[2023-08-19 06:21:50] - New Record for Team's Most Points (22) in 1 Game for RUSSIE!<br />
+[2023-08-19 06:21:50] - New Record for Team's Most Assists (14) in 1 Game for RUSSIE!<br />
+[2023-08-19 06:21:50] - New Record for Team's Most Goals (8) in 1 Game for RUSSIE!<br />
+[2023-08-19 06:21:50] - New Record for Team's Most Shots Blocked (15) in 1 Game for CANADA!<br />
+[2023-08-18 20:44:28] - Successfully loaded USA lines done with STHS Client - 3.3.8.8<br />
+[2023-08-18 13:56:32] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-18 12:48:23] - Successfully loaded SUÈDE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-18 12:23:23] - Auto Lines Function has been run for SLOVAQUIE.<br />
+[2023-08-18 12:23:23] - Auto Roster Partial Function has been run for SLOVAQUIE.<br />
+[2023-08-18 07:12:37] - Website Output Manually<br />
+[2023-08-18 07:12:16] - Website Output Automatically<br />
+[2023-08-18 07:12:16] - Martin Reway from SLOVAQUIE is back from Exhaustion.<br />
+[2023-08-18 07:10:41] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-17 06:30:38] - Website Output Manually<br />
+[2023-08-17 06:30:00] - Website Output Automatically<br />
+[2023-08-17 06:30:00] - Leon Gawanke from ALLEMAGNE is back from Torn Left Knee Ligaments Injury.<br />
+[2023-08-17 06:30:00] - Martin Reway from SLOVAQUIE is injured from Exhaustion.<br />
+[2023-08-17 06:30:00] - New Record for Team's Most Shots (41) in 1 Game for RUSSIE!<br />
+[2023-08-17 06:30:00] - New Record for Team's Most Points (18) in 1 Game for RUSSIE!<br />
+[2023-08-17 06:30:00] - New Record for Team's Most Assists (12) in 1 Game for RUSSIE!<br />
+[2023-08-17 06:30:00] - New Record for Team's Most Penalties Minutes (12) in 1 Game for ALLEMAGNE!<br />
+[2023-08-16 06:00:05] - Website Output Manually<br />
+[2023-08-16 05:59:37] - Website Output Automatically<br />
+[2023-08-16 05:59:37] - New Record for Most Penalties Minutes (26) in a game!<br />
+[2023-08-16 05:59:37] - New Record for Player (Erik Cernak) Most Ice Time (30:08) in 1 Game!<br />
+[2023-08-16 05:59:37] - New Record for Team's Most Shots Blocked (15) in 1 Game for USA!<br />
+[2023-08-16 05:59:30] - Auto Lines Function has been run for SLOVAQUIE.<br />
+[2023-08-16 05:59:30] - Auto Roster Partial Function has been run for SLOVAQUIE.<br />
+[2023-08-16 05:59:10] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-15 17:41:17] - Website Output Manually<br />
+[2023-08-15 17:40:30] - Website Output Automatically<br />
+[2023-08-15 17:40:30] - Hampus Lindholm from SUÈDE is back from Torn Left ACL Injury.<br />
+[2023-08-15 17:40:30] - New Record for Team's Most Shots Blocked (13) in 1 Game for ALLEMAGNE!<br />
+[2023-08-15 17:40:30] - New Record for Team's Most Penalties Minutes (14) in 1 Game for LETTONIE!<br />
+[2023-08-15 17:40:30] - Pro Game #45 - Timo Meier from SUISSE has scored a Hat Trick!<br />
+[2023-08-15 17:40:11] - Auto Lines Function has been run for DANEMARK.<br />
+[2023-08-15 17:40:11] - Auto Roster Partial Function has been run for DANEMARK.<br />
+[2023-08-15 07:24:51] - Successfully loaded WORLD lines done with STHS Client - 3.3.5.5<br />
+[2023-08-15 07:24:39] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-15 07:24:28] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-14 05:47:33] - Website Output Manually<br />
+[2023-08-14 05:46:59] - Website Output Automatically<br />
+[2023-08-14 05:46:59] - Mads Søgaard from DANEMARK is back from Exhaustion.<br />
+[2023-08-14 05:46:59] - Martin Reway from SLOVAQUIE is back from Right Leg Injury.<br />
+[2023-08-14 05:46:59] - Ivan Provorov from RUSSIE is back from Strained Right Elbow Injury.<br />
+[2023-08-14 05:46:59] - New Record for Team's Most Shots Blocked (13) in 1 Game for CANADA!<br />
+[2023-08-14 05:46:58] - New Record for Team's Most Shots Blocked (18) in 1 Game for RUSSIE!<br />
+[2023-08-14 05:46:58] - New Record for Team's Most Shots (41) in 1 Game for TCHÉQUIE!<br />
+[2023-08-14 05:46:37] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-14 05:46:23] - Successfully loaded RUSSIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-13 07:30:48] - Website Output Manually<br />
+[2023-08-13 07:30:33] - Website Output Automatically<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Hits (24) in 1 Game for DANEMARK!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Shots Blocked (19) in 1 Game for DANEMARK!<br />
+[2023-08-13 07:30:33] - Mads Søgaard from DANEMARK injured  (Exhaustion)<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Shots (31) in 1 Game for SLOVAQUIE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Points (18) in 1 Game for SLOVAQUIE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Assists (12) in 1 Game for SLOVAQUIE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Goals (6) in 1 Game for SLOVAQUIE!<br />
+[2023-08-13 07:30:33] - Game 41 - Martin Reway from SLOVAQUIE is injured  (Right Leg) and is out for 3 days.<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Hits (26) in 1 Game for WORLD!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Shots Blocked (19) in 1 Game for WORLD!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Shots Blocked (19) in 1 Game for WORLD!<br />
+[2023-08-13 07:30:33] - New Record for Player (Jordan Spence) Worse Plus/Minus (-4) in 1 Game!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Points (11) in 1 Game for SUÈDE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Assists (7) in 1 Game for SUÈDE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Goals (4) in 1 Game for SUÈDE!<br />
+[2023-08-12 15:59:54] - Successfully loaded SUÈDE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-12 06:06:33] - Website Output Manually<br />
+[2023-08-12 06:06:17] - Website Output Automatically<br />
+[2023-08-12 06:06:17] - Last 7 Days Pro Star : 1 - Leon Draisaitl of ALLEMAGNE (4-3-7) / 2 - Nico Hischier of SUISSE (4-3-7) / 3 - Tim Stützle of ALLEMAGNE (2-4-6)<br />
+[2023-08-12 06:06:17] - New Record for Team's Most Points (15) in 1 Game for LETTONIE!<br />
+[2023-08-12 06:06:17] - New Record for Team's Most Assists (10) in 1 Game for LETTONIE!<br />
+[2023-08-12 06:06:17] - New Record for Team's Most Shots (38) in 1 Game for RUSSIE!<br />
+[2023-08-12 06:06:17] - New Record for Team's Most Hits (27) in 1 Game for CANADA!<br />
+[2023-08-12 06:06:16] - Game 37 - Ivan Provorov from RUSSIE is injured  (Strained Right Elbow) and is out for 1 week.<br />
+[2023-08-11 21:44:45] - Successfully loaded RUSSIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-11 21:44:32] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-11 21:44:21] - Successfully loaded FINLANDE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-11 06:23:12] - Website Output Manually<br />
+[2023-08-11 06:22:37] - Website Output Automatically<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Points (14) in 1 Game for SUISSE!<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Assists (8) in 1 Game for SUISSE!<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Goals (6) in 1 Game for SUISSE!<br />
+[2023-08-11 06:22:37] - New Record for Most Penalties Minutes (24) in a game!<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Shots (36) in 1 Game for CANADA!<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Penalties Minutes (16) in 1 Game for USA!<br />
+[2023-08-10 17:58:26] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-10 17:58:15] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-10 05:50:19] - Website Output Manually<br />
+[2023-08-10 05:50:06] - Website Output Automatically<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots (41) in 1 Game for LETTONIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots (41) in 1 Game for LETTONIE!<br />
+[2023-08-10 05:50:06] - New Record for Player (Zemgus Girgensons) Most Shots (10) in 1 Game!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots Blocked (17) in 1 Game for SLOVAQUIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Goals (3) in 1 Game for SLOVAQUIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots Blocked (17) in 1 Game for SLOVAQUIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Points (8) in 1 Game for WORLD!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Assists (5) in 1 Game for WORLD!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Goals (3) in 1 Game for WORLD!<br />
+[2023-08-10 05:50:06] - New Record for Player (Andrey Pedan) Most Shots Blocked (6) in 1 Game!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots (34) in 1 Game for DANEMARK!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Points (6) in 1 Game for DANEMARK!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Assists (4) in 1 Game for DANEMARK!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Goals (2) in 1 Game for DANEMARK!<br />
+[2023-08-10 05:49:19] - Successfully loaded RUSSIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-10 05:49:04] - Successfully loaded FINLANDE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-10 05:48:48] - Successfully loaded WORLD lines done with STHS Client - 3.3.5.5<br />
+[2023-08-10 05:48:35] - Successfully loaded USA lines done with STHS Client - 3.3.8.8<br />
+[2023-08-09 05:57:19] - Website Output Manually<br />
+[2023-08-09 05:56:42] - Website Output Automatically<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Penalties Minutes (16) in 1 Game for DANEMARK!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Shots (36) in 1 Game for USA!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Hits (29) in 1 Game for RUSSIE!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Shots (36) in 1 Game for RUSSIE!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Penalties Minutes (10) in 1 Game for FINLANDE!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Shots (34) in 1 Game for FINLANDE!<br />
+[2023-08-09 05:56:29] - Successfully loaded FINLANDE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-09 05:56:16] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-08 07:13:10] - Website Output Manually<br />
+[2023-08-08 07:10:05] - Website Output Automatically<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Hits (24) in 1 Game for WORLD!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Hits (25) in 1 Game for CANADA!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Shots Blocked (13) in 1 Game for LETTONIE!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Points (12) in 1 Game for ALLEMAGNE!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Assists (8) in 1 Game for ALLEMAGNE!<br />
+[2023-08-08 07:09:22] - Successfully loaded WORLD lines done with STHS Client - 3.3.5.5<br />
+[2023-08-08 07:09:11] - Successfully loaded DANEMARK lines done with STHS Client - 3.3.8.8<br />
+[2023-08-08 07:09:01] - Successfully loaded TCHÉQUIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-08 07:08:50] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-07 06:25:22] - Website Output Manually<br />
+[2023-08-07 06:25:09] - Website Output Automatically<br />
+[2023-08-06 18:27:20] - Successfully loaded FINLANDE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-06 18:27:07] - Successfully loaded RUSSIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-06 18:26:38] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-06 18:26:26] - Successfully loaded USA lines done with STHS Client - 3.3.8.8<br />
+[2023-08-06 07:08:48] - Website Output Manually<br />
+[2023-08-06 07:08:17] - Website Output Automatically<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Penalties Minutes (14) in 1 Game for USA!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Shots Blocked (13) in 1 Game for USA!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Hits (29) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Shots (37) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Points (11) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Assists (7) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Goals (4) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Hits (29) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Penalties Minutes (16) in 1 Game for SLOVAQUIE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Hits (25) in 1 Game for ALLEMAGNE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Points (11) in 1 Game for ALLEMAGNE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Assists (7) in 1 Game for ALLEMAGNE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Goals (4) in 1 Game for ALLEMAGNE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Hits (23) in 1 Game for FINLANDE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Penalties Minutes (12) in 1 Game for WORLD!<br />
+[2023-08-06 07:08:06] - Successfully loaded USA lines done with STHS Client - 3.3.8.8<br />
+[2023-08-06 07:07:54] - Successfully loaded SUISSE lines done with STHS Client - 3.3.8.8<br />
+[2023-08-06 07:07:54] - Maxime Montandon of SUISSE was sent to pro.<br />
+[2023-08-05 07:45:32] - Website Output Manually<br />
+[2023-08-05 07:45:15] - Website Output Automatically<br />
+[2023-08-05 07:45:15] - Roman Josi from SUISSE is back from Sprained Right Ankle Injury.<br />
+[2023-08-05 07:45:15] - Last 7 Days Pro Star : 1 - Auston Matthews of USA (6-4-10) / 2 - Nathan MacKinnon of CANADA (4-6-10) / 3 - Brock Boeser of USA (4-6-10)<br />
+[2023-08-05 07:45:14] - New Record for Most Points (30) in a game!<br />
+[2023-08-05 07:45:14] - New Record for Most Assists (20) in a game!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Shots Blocked (12) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Points (24) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Assists (16) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Goals (8) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Points (24) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Assists (16) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Goals (8) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Player (Jeff Skinner) Best Plus/Minus (5) in 1 Game!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Hits (23) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Shots Blocked (12) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Shots (35) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Points (16) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Assists (10) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Goals (6) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Player (Andrei Svechnikov) Most Goals (3) in 1 Game!<br />
+[2023-08-05 07:45:14] - Pro Game #19 - Andrei Svechnikov from RUSSIE has scored a Hat Trick!<br />
+[2023-08-05 07:44:26] - Successfully loaded TCHÉQUIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-05 07:44:13] - Successfully loaded RUSSIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-04 20:20:31] - Website Output Manually<br />
+[2023-08-04 20:19:21] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-04 20:19:09] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-04 20:18:55] - Maxime Montandon signed with SUISSE for 500 000 $ for 1 year(s).<br />
+[2023-08-04 20:18:55] - Maxime Montandon average salary was modified from 0 $ to 500 000 $.<br />
+[2023-08-04 20:18:55] - Maxime Montandon was added to SUISSE.<br />
+[2023-08-04 20:18:40] - Maxime Montandon was created.<br />
+[2023-08-04 07:00:52] - There's not enough Defense players to make a roster for SUISSE.
+<br />
+[2023-08-04 07:00:50] - Website Output Manually<br />
+[2023-08-04 06:50:14] - There's not enough Defense players to make a roster for SUISSE.
+<br />
+[2023-08-04 06:48:55] - Website Output Manually<br />
+[2023-08-04 06:48:21] - There's not enough Defense players to make a roster for SUISSE.
+<br />
+[2023-08-04 06:48:19] - Website Output Automatically<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Shots Blocked (13) in 1 Game for SUISSE!<br />
+[2023-08-04 06:48:19] - Game 18 - Ramon Untersander from SUISSE is injured  (Left Hip) and is out for 1 month.<br />
+[2023-08-04 06:48:19] - New Record for Most Hits (49) in a game!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Hits (22) in 1 Game for ALLEMAGNE!<br />
+[2023-08-04 06:48:19] - New Record for Player (Moritz Seider) Most Ice Time (29:24) in 1 Game!<br />
+[2023-08-04 06:48:19] - Game 17 - Leon Gawanke from ALLEMAGNE is injured  (Torn Left Knee Ligaments) and is out for 2 weeks.<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Penalties Minutes (14) in 1 Game for RUSSIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Points (13) in 1 Game for RUSSIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Assists (8) in 1 Game for RUSSIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Goals (5) in 1 Game for RUSSIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Shots Blocked (15) in 1 Game for WORLD!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Shots (34) in 1 Game for WORLD!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Shots Blocked (11) in 1 Game for USA!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Penalties Minutes (10) in 1 Game for LETTONIE!<br />
+[2023-08-04 06:48:13] - Auto Lines Function has been run for SUISSE.<br />
+[2023-08-04 06:48:13] - Auto Roster Partial Function has been run for SUISSE.<br />
+[2023-08-03 18:53:44] - Successfully loaded SUÈDE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-03 18:53:33] - Successfully loaded WORLD lines done with STHS Client - 3.3.5.5<br />
+[2023-08-03 06:07:02] - Website Output Manually<br />
+[2023-08-03 06:06:32] - Website Output Automatically<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Shots Blocked (15) in 1 Game for SUÈDE!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Points (9) in 1 Game for SUÈDE!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Assists (6) in 1 Game for SUÈDE!<br />
+[2023-08-03 06:06:32] - New Record for Player (Elias Lindholm) Most Hits (7) in 1 Game!<br />
+[2023-08-03 06:06:32] - New Record for Most Hits (45) in a game!<br />
+[2023-08-03 06:06:32] - New Record for Most Penalties Minutes (22) in a game!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Hits (26) in 1 Game for LETTONIE!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Penalties Minutes (16) in 1 Game for CANADA!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Penalties Minutes (16) in 1 Game for CANADA!<br />
+[2023-08-03 06:06:31] - New Record for Team's Most Hits (22) in 1 Game for SLOVAQUIE!<br />
+[2023-08-03 06:06:31] - New Record for Team's Most Shots (29) in 1 Game for SLOVAQUIE!<br />
+[2023-08-03 06:06:31] - New Record for Player (Martin Fehervary) Most Ice Time (28:35) in 1 Game!<br />
+[2023-08-03 06:06:31] - New Record for Team's Most Hits (20) in 1 Game for FINLANDE!<br />
+[2023-08-03 06:06:31] - New Record for Team's Most Shots (33) in 1 Game for FINLANDE!<br />
+[2023-08-03 06:06:31] - New Record for Player (Rasmus Ristolainen) Most Ice Time (27:50) in 1 Game!<br />
+[2023-08-02 17:55:43] - Successfully loaded USA lines done with STHS Client - 3.3.8.8<br />
+[2023-08-02 17:55:24] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-08-02 17:55:06] - Successfully loaded SUÈDE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-02 17:54:53] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-02 06:15:39] - Website Output Manually<br />
+[2023-08-02 06:15:09] - Website Output Automatically<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Hits (22) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Penalties Minutes (6) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Shots Blocked (7) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Shots (30) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Points (8) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Assists (5) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Goals (3) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Shots (30) in 1 Game for DANEMARK!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Shots Blocked (10) in 1 Game for USA!<br />
+[2023-08-02 06:15:09] - New Record for Player (Brock Boeser) Most Points (5) in 1 Game!<br />
+[2023-08-02 06:15:09] - New Record for Player (Auston Matthews) Best Plus/Minus (4) in 1 Game!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Penalties Minutes (8) in 1 Game for ALLEMAGNE!<br />
+[2023-08-02 06:14:30] - Successfully loaded RUSSIE lines done with STHS Client - 3.3.5.5<br />
+[2023-08-01 06:52:38] - Successfully loaded USA lines done with STHS Client - 3.3.8.8<br />
+[2023-08-01 05:59:03] - Website Output Manually<br />
+[2023-08-01 05:58:50] - Website Output Automatically<br />
+[2023-08-01 05:58:50] - New Record for Most Hits (43) in a game!<br />
+[2023-08-01 05:58:50] - New Record for Team's Most Hits (17) in 1 Game for FINLANDE!<br />
+[2023-08-01 05:58:50] - New Record for Team's Most Hits (26) in 1 Game for SUÈDE!<br />
+[2023-08-01 05:58:50] - New Record for Team's Most Penalties Minutes (14) in 1 Game for SUÈDE!<br />
+[2023-08-01 05:58:50] - New Record for Player (Andre Burakovsky) Most Hits (6) in 1 Game!<br />
+[2023-08-01 05:58:50] - Game 9 - Hampus Lindholm from SUÈDE is injured  (Torn Left ACL) and is out for 2 weeks.<br />
+[2023-08-01 05:58:27] - Successfully loaded WORLD lines done with STHS Client - 3.3.5.5<br />
+[2023-08-01 05:58:14] - Successfully loaded TCHÉQUIE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-31 19:27:36] - Successfully loaded SUÈDE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-31 19:27:17] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-31 19:26:44] - Successfully loaded DANEMARK lines done with STHS Client - 3.3.8.8<br />
+[2023-07-31 06:14:21] - Website Output Manually<br />
+[2023-07-31 06:14:09] - Website Output Automatically<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Hits (16) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Penalties Minutes (8) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (11) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots (29) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Points (6) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Assists (4) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Goals (2) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Hits (20) in 1 Game for SLOVAQUIE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Penalties Minutes (12) in 1 Game for SLOVAQUIE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (16) in 1 Game for SLOVAQUIE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (16) in 1 Game for SLOVAQUIE!<br />
+[2023-07-31 06:14:09] - New Record for Most Hits (42) in a game!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (9) in 1 Game for DANEMARK!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Hits (26) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Penalties Minutes (14) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (8) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots (23) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Points (6) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Assists (4) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Goals (2) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:08] - Game 7 - Roman Josi from SUISSE is injured  (Sprained Right Ankle) and is out for 1 week.<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Hits (24) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Penalties Minutes (12) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots (35) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Points (20) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Assists (13) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Goals (7) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Points (20) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Assists (13) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Player (Dominik Kubalik) Most Shots (9) in 1 Game!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Hits (20) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Penalties Minutes (2) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots Blocked (12) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots (37) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Points (6) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Assists (4) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Goals (2) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Player (JJ Peterka) Most Shots (7) in 1 Game!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots Blocked (11) in 1 Game for CANADA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots (30) in 1 Game for CANADA!<br />
+[2023-07-31 06:14:08] - New Record for Player (Alex Pietrangelo) Most Shots Blocked (5) in 1 Game!<br />
+[2023-07-31 06:12:53] - Successfully loaded DANEMARK lines done with STHS Client - 3.3.8.8<br />
+[2023-07-30 19:30:54] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-30 19:17:55] - Successfully loaded TCHÉQUIE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-30 19:17:41] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-07-30 19:17:04] - Successfully loaded USA lines done with STHS Client - 3.3.8.8<br />
+[2023-07-30 08:02:25] - Website Output Manually<br />
+[2023-07-30 08:02:10] - Website Output Automatically<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (13) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (10) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (7) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (31) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (13) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (8) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (5) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (11) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (8) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (13) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (36) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (8) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (5) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (3) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Player (Victor Hedman) Most Penalties Minutes (6) in 1 Game!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (22) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (10) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (6) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (29) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (3) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (2) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (1) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Player (Oliver Lauridsen) Most Hits (5) in 1 Game!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (16) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (8) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (15) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (26) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (17) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (11) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (6) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (15) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Player (Teuvo Teravainen) Most Shots (6) in 1 Game!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (21) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (6) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (8) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (26) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (18) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (11) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (7) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (18) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (11) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (7) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Player (Alex Pietrangelo) Best Plus/Minus (3) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (17) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (8) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (4) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (26) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (5) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Assists (3) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (2) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Player (Martin Fehervary) Most Ice Time (27:37) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Christian Jaros) Worse Plus/Minus (-3) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Most Hits (39) in a game!<br />
+[2023-07-30 08:02:09] - New Record for Most Penalties Minutes (20) in a game!<br />
+[2023-07-30 08:02:09] - New Record for Most Shots (72) in a game!<br />
+[2023-07-30 08:02:09] - New Record for Most Points (29) in a game!<br />
+[2023-07-30 08:02:09] - New Record for Most Assists (18) in a game!<br />
+[2023-07-30 08:02:09] - New Record for Most Goals (11) in a game!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (27) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (14) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (14) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (37) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (15) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Assists (9) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (6) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (27) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (14) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (14) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (37) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (15) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (6) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Player (Stanislav Svozil) Most Penalties Minutes (4) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (David Musil) Most Shots Blocked (4) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Filip Hronek) Most Hits (4) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (12) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (6) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (11) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (35) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (14) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Assists (9) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (5) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (12) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (6) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (11) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (35) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (14) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Assists (9) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (5) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Player (Ralfs Freibergs) Most Penalties Minutes (2) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Theodor Blueger) Worse Plus/Minus (-1) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Zemgus Girgensons) Most Shots Blocked (3) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Zemgus Girgensons) Most Shots (5) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Karlis Cukste) Most Hits (3) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Karlis Cukste) Most Shots Blocked (1) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Karlis Cukste) Most Ice Time (27:23) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Rudolfs Balcers) Most Shots (4) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Rudolfs Balcers) Most Goals (2) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Martins Dzierkals) Best Plus/Minus (2) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Martins Dzierkals) Most Shots (3) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Martins Dzierkals) Most Points (4) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Martins Dzierkals) Most Assists (4) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Martins Dzierkals) Most Ice Time (23:27) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Rodrigo Abols) Most Hits (1) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Rodrigo Abols) Most Shots (2) in 1 Game!<br />
+[2023-07-30 08:02:09] - New Record for Player (Rodrigo Abols) Most Ice Time (13:55) in 1 Game!<br />
+[2023-07-30 01:59:35] - Successfully loaded WORLD lines done with STHS Client - 3.3.5.5<br />
+[2023-07-29 20:11:03] - Successfully loaded SUÈDE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-29 17:28:53] - Successfully loaded USA lines done with STHS Client - 3.3.8.8<br />
+[2023-07-29 17:28:53] - Cam Fowler of USA was sent to pro.<br />
+[2023-07-29 17:26:45] - Successfully loaded TCHÉQUIE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-29 13:16:14] - Pro Game Option - PP Value Modified to 18<br />
+[2023-07-29 13:16:14] - Pro Game Option - PP Value Modified to 19<br />
+[2023-07-29 13:16:14] - Pro Game Option - PP Value Modified to 19<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 20<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 20<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 21<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 21<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 22<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 23<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 24<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 25<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 26<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 27<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 28<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 29<br />
+[2023-07-29 13:16:13] - Pro Game Option - PP Value Modified to 30<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 31<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 32<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 33<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 34<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 35<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 36<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 37<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 38<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 39<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 40<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 41<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 42<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 43<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 44<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 45<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 46<br />
+[2023-07-29 13:16:12] - Pro Game Option - PP Value Modified to 47<br />
+[2023-07-29 13:16:11] - Pro Game Option - PP Value Modified to 48<br />
+[2023-07-29 13:16:11] - Pro Game Option - PP Value Modified to 49<br />
+[2023-07-29 13:16:11] - Pro Game Option - PP Value Modified to 50<br />
+[2023-07-29 13:16:08] - Pro Game Option - Shots Value Modified to 35<br />
+[2023-07-29 13:16:08] - Pro Game Option - Shots Value Modified to 36<br />
+[2023-07-29 13:16:08] - Pro Game Option - Shots Value Modified to 36<br />
+[2023-07-29 13:16:08] - Pro Game Option - Shots Value Modified to 37<br />
+[2023-07-29 13:16:07] - Pro Game Option - Shots Value Modified to 37<br />
+[2023-07-29 13:16:07] - Pro Game Option - Shots Value Modified to 38<br />
+[2023-07-29 13:16:07] - Pro Game Option - Shots Value Modified to 39<br />
+[2023-07-29 13:16:07] - Pro Game Option - Shots Value Modified to 40<br />
+[2023-07-29 13:16:07] - Pro Game Option - Shots Value Modified to 41<br />
+[2023-07-29 13:16:07] - Pro Game Option - Shots Value Modified to 42<br />
+[2023-07-29 13:16:07] - Pro Game Option - Shots Value Modified to 43<br />
+[2023-07-29 13:16:07] - Pro Game Option - Shots Value Modified to 44<br />
+[2023-07-29 13:16:06] - Pro Game Option - Shots Value Modified to 45<br />
+[2023-07-29 13:16:05] - Pro Game Option - Penalties Value Modified to 25<br />
+[2023-07-29 13:16:05] - Pro Game Option - Penalties Value Modified to 24<br />
+[2023-07-29 13:16:04] - Pro Game Option - Penalties Value Modified to 24<br />
+[2023-07-29 13:16:04] - Pro Game Option - Penalties Value Modified to 25<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 25<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 26<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 26<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 27<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 27<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 28<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 28<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 29<br />
+[2023-07-29 13:16:03] - Pro Game Option - Penalties Value Modified to 29<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 30<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 30<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 31<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 31<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 32<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 33<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 34<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 35<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 36<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 37<br />
+[2023-07-29 13:16:02] - Pro Game Option - Penalties Value Modified to 38<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 39<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 40<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 41<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 42<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 43<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 44<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 45<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 46<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 47<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 48<br />
+[2023-07-29 13:16:01] - Pro Game Option - Penalties Value Modified to 49<br />
+[2023-07-29 13:16:00] - Pro Game Option - Penalties Value Modified to 50<br />
+[2023-07-29 13:15:58] - Pro Game Option - Morale Value Modified to 2<br />
+[2023-07-29 13:15:58] - Pro Game Option - Morale Value Modified to 1<br />
+[2023-07-29 13:15:58] - Pro Game Option - Morale Value Modified to 1<br />
+[2023-07-29 13:15:58] - Pro Game Option - Morale Value Modified to 1<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 2<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 3<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 4<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 5<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 6<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 7<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 8<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 9<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 10<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 11<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 12<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 13<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 14<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 15<br />
+[2023-07-29 13:15:57] - Pro Game Option - Morale Value Modified to 16<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 17<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 18<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 19<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 20<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 21<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 22<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 23<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 24<br />
+[2023-07-29 13:15:56] - Pro Game Option - Morale Value Modified to 25<br />
+[2023-07-29 13:15:53] - Pro Game Option - Injuries Value Modified to 33<br />
+[2023-07-29 13:15:53] - Pro Game Option - Injuries Value Modified to 32<br />
+[2023-07-29 13:15:53] - Pro Game Option - Injuries Value Modified to 32<br />
+[2023-07-29 13:15:53] - Pro Game Option - Injuries Value Modified to 31<br />
+[2023-07-29 13:15:53] - Pro Game Option - Injuries Value Modified to 31<br />
+[2023-07-29 13:15:53] - Pro Game Option - Injuries Value Modified to 30<br />
+[2023-07-29 13:15:50] - Pro Game Option - Goals Value Modified to 22<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 23<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 23<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 24<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 25<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 26<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 27<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 28<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 29<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 30<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 31<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 32<br />
+[2023-07-29 13:15:49] - Pro Game Option - Goals Value Modified to 33<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 34<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 35<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 36<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 37<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 38<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 39<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 40<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 41<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 42<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 43<br />
+[2023-07-29 13:15:48] - Pro Game Option - Goals Value Modified to 44<br />
+[2023-07-29 13:15:47] - Pro Game Option - Goals Value Modified to 45<br />
+[2023-07-29 13:15:44] - Pro Game Option - Fights Value Modified to 10<br />
+[2023-07-29 13:15:44] - Pro Game Option - Fights Value Modified to 11<br />
+[2023-07-29 13:15:44] - Pro Game Option - Fights Value Modified to 11<br />
+[2023-07-29 13:15:44] - Pro Game Option - Fights Value Modified to 12<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 12<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 13<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 13<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 14<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 14<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 15<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 16<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 17<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 18<br />
+[2023-07-29 13:15:43] - Pro Game Option - Fights Value Modified to 19<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 20<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 21<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 22<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 23<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 24<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 25<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 26<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 27<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 28<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 29<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 30<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 31<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 32<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 33<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 34<br />
+[2023-07-29 13:15:42] - Pro Game Option - Fights Value Modified to 35<br />
+[2023-07-29 13:15:41] - Pro Game Option - Fights Value Modified to 36<br />
+[2023-07-29 13:15:41] - Pro Game Option - Fights Value Modified to 37<br />
+[2023-07-29 13:15:41] - Pro Game Option - Fights Value Modified to 38<br />
+[2023-07-29 13:15:41] - Pro Game Option - Fights Value Modified to 39<br />
+[2023-07-29 13:15:41] - Pro Game Option - Fights Value Modified to 40<br />
+[2023-07-29 13:15:39] - Pro Game Option - Coaches Value Modified to 40<br />
+[2023-07-29 13:15:39] - Pro Game Option - Coaches Value Modified to 41<br />
+[2023-07-29 13:15:39] - Pro Game Option - Coaches Value Modified to 41<br />
+[2023-07-29 13:15:39] - Pro Game Option - Coaches Value Modified to 42<br />
+[2023-07-29 13:15:39] - Pro Game Option - Coaches Value Modified to 42<br />
+[2023-07-29 13:15:39] - Pro Game Option - Coaches Value Modified to 43<br />
+[2023-07-29 13:15:38] - Pro Game Option - Coaches Value Modified to 43<br />
+[2023-07-29 13:15:38] - Pro Game Option - Coaches Value Modified to 44<br />
+[2023-07-29 13:15:38] - Pro Game Option - Coaches Value Modified to 45<br />
+[2023-07-29 13:15:38] - Pro Game Option - Coaches Value Modified to 46<br />
+[2023-07-29 13:15:38] - Pro Game Option - Coaches Value Modified to 47<br />
+[2023-07-29 13:15:38] - Pro Game Option - Coaches Value Modified to 48<br />
+[2023-07-29 13:15:38] - Pro Game Option - Coaches Value Modified to 49<br />
+[2023-07-29 13:15:38] - Pro Game Option - Coaches Value Modified to 50<br />
+[2023-07-29 10:32:04] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-29 10:31:42] - Successfully loaded RUSSIE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-29 09:59:37] - Website Output Manually<br />
+[2023-07-29 09:59:30] - SUISSE hired Reto von Arx for 500 000 $ for 1 year(s).<br />
+[2023-07-29 09:59:22] - Reto von Arx was created.<br />
+[2023-07-29 09:54:16] - SLOVAQUIE hired Peter Stastny for 500 000 $ for 1 year(s).<br />
+[2023-07-29 09:54:06] - Peter Stastny was created.<br />
+[2023-07-29 08:36:38] - Website Output Manually<br />
+[2023-07-29 08:33:32] - Auto Lines Function has been run for LETTONIE.<br />
+[2023-07-29 08:33:30] - Auto Lines Function has been run for TCHÉQUIE.<br />
+[2023-07-29 08:33:30] - Auto Roster Partial Function has been run for TCHÉQUIE.<br />
+[2023-07-29 08:33:30] - Auto Lines Function has been run for USA.<br />
+[2023-07-29 08:33:30] - Auto Roster Partial Function has been run for USA.<br />
+[2023-07-29 08:33:30] - Auto Lines Function has been run for SUÈDE.<br />
+[2023-07-29 08:33:30] - Auto Roster Partial Function has been run for SUÈDE.<br />
+[2023-07-29 07:31:54] - Website Output Manually<br />
+[2023-07-28 15:48:35] - Successfully loaded FINLANDE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-28 15:48:16] - DANEMARK hired Barry Trotz for 500 000 $ for 1 year(s).<br />
+[2023-07-28 15:48:05] - Successfully loaded DANEMARK lines done with STHS Client - 3.3.8.8<br />
+[2023-07-28 15:48:05] - Frederik Dichow of DANEMARK was sent to farm.<br />
+[2023-07-28 15:48:05] - Anders Koch of DANEMARK was sent down to farm.<br />
+[2023-07-28 15:47:46] - Successfully loaded CANADA lines done with STHS Client - 3.3.7.7<br />
+[2023-07-28 15:47:46] - Carter Hart of CANADA was sent to pro.<br />
+[2023-07-28 15:47:46] - Samuel Girard of CANADA was sent to pro.<br />
+[2023-07-28 15:47:46] - Danton Heinen of CANADA was sent to pro.<br />
+[2023-07-28 15:47:46] - Travis Konecny of CANADA was sent to pro.<br />
+[2023-07-26 17:22:58] - Successfully loaded SLOVAQUIE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-26 17:22:58] - SLOVAQUIE Email Address was changed to on veux gagner une game svp!.<br />
+[2023-07-26 17:22:34] - Successfully loaded ALLEMAGNE lines done with STHS Client - 3.3.5.5<br />
+[2023-07-26 07:11:56] - Cam Fowler signed with USA for 500 000 $ for 1 year(s).<br />
+[2023-07-26 07:11:56] - Cam Fowler average salary was modified from 7 500 000 $ to 500 000 $.<br />
+[2023-07-26 07:11:56] - Cam Fowler was added to USA.<br />
+[2023-07-26 07:11:44] - Tyler Myers was released by USA.<br />
+[2023-07-26 07:11:44] - USA paid 0 $ to release Tyler Myers.<br />
+[2023-07-26 07:11:40] - USA roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 21:32:47] - Successfully loaded SUISSE lines done with STHS Client - 3.3.8.8<br />
+[2023-07-25 12:35:16] - Website Output Manually<br />
+[2023-07-25 12:35:08] - Yusaku Ando of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Vadim Vasjonkin of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Reinhard Venter of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Raman Hrabarenka of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Nick Cicek of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Marco Scandella of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Marco Rossi of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Marco Kasper of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Luca Sbisa of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Liam Kirk of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Jordan Spence of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Jermaine Loewen of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Hafthor Sigrunarson of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Demid Yeremeyev of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - David Reinbacher of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Daniel Sprong of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Arthur Kaliyev of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Anze Kopitar of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Angelo Miceli of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Andrey Pedan of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Aliaksei Protas of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Alexandre Texier of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Alexandar Georgiyev of WORLD was sent to pro.<br />
+[2023-07-25 12:35:08] - Ahmad Al Saegh of WORLD was sent to pro.<br />
+[2023-07-25 12:35:06] - Farm Team 11 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:35:06] - WORLD roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:35:03] - Tyler Moy of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Timo Meier of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Tim Berni of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Sven Andrighetto of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Sandro Aeschlimann of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Roman Josi of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Ramon Untersander of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Pius Suter of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Nino Niederreiter of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Nico Hischier of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Marco Müller of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Lino Martschini of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Lian Bichsel of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Leonardo Genoni of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Kevin Fiala of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Jonas Siegenthaler of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - J.J. Moser of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Inti Pestoni of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Grégory Hofmann of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Enzo Corvi of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Denis Malgin of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Dean Kukan of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Dario Bürgler of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:03] - Akira Schmid of SUISSE was sent to pro.<br />
+[2023-07-25 12:35:01] - Farm Team 5 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:35:01] - SUISSE roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:58] - Philip Larsen of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Patrick Russell of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Patrick Bjorkstrand of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Oscar Fisker Mølgaard of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Oliver Lauridsen of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Oliver Joakim Larsen of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Oliver Bjorkstrand of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Nikolaj Ehlers of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Nicklas Jensen of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Mikkel Bødker of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Matias Lassen of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Mathias From of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Markus Lauridsen of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Mads Søgaard of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Mads Eller of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Lars Eller of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Jonas Røndbjerg of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Joachim Blichfeld of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Jesper Jensen Aabo of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Frederik Dichow of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Frederik Andersen of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Frans Nielsen of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Anders Koch of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:58] - Alexander True of DANEMARK was sent to pro.<br />
+[2023-07-25 12:34:55] - Farm Team 7 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:55] - DANEMARK roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:52] - William Nylander of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - William Karlsson of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Viktor Arvidsson of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Victor Hedman of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Robin Lehner of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Rasmus Dahlin of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Oskar Lindblom of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Oscar Klefbom of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Mika Zibanejad of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Lucas Raymond of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Jonas Brodin of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - John Klingberg of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Jesper Bratt of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Jacob Markstrom of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Jacob De La Rose of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Hampus Lindholm of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Gabriel Landeskog of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Filip Gustavsson of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Filip Forsberg of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Erik Karlsson of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Elias Pettersson of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Elias Lindholm of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:52] - Alexander Wennberg of SUÈDE was sent to pro.<br />
+[2023-07-25 12:34:50] - Farm Team 1 roster errors : Not enough Players available in Pro Team! 1 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:50] - SUÈDE roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:46] - Vyacheslav Voynov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Vladislav Kamenev of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Vladimir Tarasenko of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Valeri Nichushkin of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Sergei Bobrovsky of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Pavel Buchnevich of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Nikita Zadorov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Nikita Nesterov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Nikita Kucherov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Mikhail Sergachev of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Mikhail Grigorenko of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Kirill Kaprizov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Ivan Provorov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Ilya Mikheyev of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Igor Shestyorkin of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - German Rubtsov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Dmitri Orlov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Dmitri Kulikov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Denis Guryanov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Andrey Vasilevskiy of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Andrey Kuzmenko of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Andrei Svechnikov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Alexander Burmistrov of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:46] - Alex Ovechkin of RUSSIE was sent to pro.<br />
+[2023-07-25 12:34:44] - Farm Team 9 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:44] - RUSSIE roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:41] - Ville Pokka of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Teuvo Teravainen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Sebastian Aho of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Rasmus Ristolainen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Patrik Laine of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Olli Maatta of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Miro Heiskanen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Mikko Rantanen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Mikko Koskinen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Mikael Granlund of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Miikka Salomäki of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:41] - Markus Nutivaara of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Kaapo Kähkönen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Juuse Saros of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Julius Honka of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Julis Nättinen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Juho Lammikko of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Joel Kiviranta of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Jesse Puljujarvi of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Esa Lindell of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Eetu Luostarinen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Antti Suomela of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Aleksander Barkov of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:40] - Ahti Oksanen of FINLANDE was sent to pro.<br />
+[2023-07-25 12:34:38] - Farm Team 3 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:38] - FINLANDE roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:35] - Tomas Tatar of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Simon Nemec of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Samuel Knazko of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Peter Cehlarik of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Pavol Regenda of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Milos Kelemen of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Michal Ivan of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Martin Reway of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Martin Pospisil of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Martin Marincin of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Martin Fehervary of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Martin Chromiak of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Marko Dano of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Marian Studenic of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Juraj Slafkovský of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Jaroslav Janus of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Jaroslav Halak of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Filip Mesar of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Erik Cernak of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Dalibor Dvorský of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Christian Jaros of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Adam Sýkora of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Adam Ruzicka of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:35] - Adam Húska of SLOVAQUIE was sent to pro.<br />
+[2023-07-25 12:34:32] - Farm Team 6 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:32] - SLOVAQUIE roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:23] - Zachary Werenski of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Tyler Myers of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Seth Jones of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Quinn Hughes of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Noah Hanifin of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Matthew Tkachuk of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Kyle Connor of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Joel Farabee of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Jeremy Swayman of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Jake Guentzel of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Jacob Trouba of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Jack Hughes of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Jack Eichel of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Jack Campbell of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Dylan Larkin of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Connor Hellebuyck of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Cole Caufield of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Clayton Keller of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Charlie McAvoy of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Brock Boeser of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Brady Tkachuk of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Auston Matthews of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Alex Galchenyuk of USA was sent to pro.<br />
+[2023-07-25 12:34:23] - Adam Erne of USA was sent to pro.<br />
+[2023-07-25 12:34:20] - Farm Team 2 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:20] - USA roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:17] - Tomas Nosek of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Tomas Hertl of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Stanislav Svozil of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Radim Simek of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Radek Faksa of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Pavel Zacha of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Ondrej Pavelec of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Ondrej Kase of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Michal Neuvirth of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Martin Necas of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Karel Vejmelka of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Jiri Kulich of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Jakub Zboril of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Jakub Vrana of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Jakub Voracek of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Filip Zadina of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Filip Hronek of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Filip Chytil of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Dominik Masin of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - Dominik Kubalik of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - David Pastrnak of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - David Musil of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - David Kampf of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:17] - David Jiricek of TCHÉQUIE was sent to pro.<br />
+[2023-07-25 12:34:15] - Farm Team 4 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:34:15] - TCHÉQUIE roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:33:08] - Website Output Manually<br />
+[2023-07-25 12:32:48] - Farm Team 2 roster errors : Not enough Players available in Pro Team! 0 Dressed. 20 Required.
+Some errors will be automatically fixed.
+<br />
+[2023-07-25 12:32:48] - USA roster errors : Not enough Centers available in Pro Team! 0 Dressed. 3 Required.
+Not enough Left Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Right Wings available in Pro Team! 0 Dressed. 3 Required.
+Not enough Forward available in Pro Team! 0 Dressed. 6 Required.
+Not enough Defenseman available in Pro Team! 0 Dressed. 6 Required.
+Not enough Goalie available in Pro Team! 0 Dressed. 2 Required.
+Not enough Players available in Pro Team! 0 Dressed. 18 Required.
+Some errors will be automatically fixed.
+<br />
 [2023-07-24 23:02:35] - Website Output Manually<br />
 [2023-07-24 23:02:27] - Season #2023 has started!<br />
 [2023-07-24 23:02:15] - Liam Kirk signed with WORLD for 500 000 $ for 1 year(s).<br />

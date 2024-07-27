@@ -17,6 +17,7 @@ include "Menu.php";}?>
 <script>jQuery(function($,undefined) {$.basictablesorter.addParser({id: 'thousands',is: function(s) {return false;}, format: function(s) { return s.replace('$','').replace(/,/g,'');}, type: 'numeric' }); $("table").basictablesorter({headers:{11:{sorter:'thousands'}}});});</script>
 <table class="basictablesorter"><thead><tr><th class="STHSW200"><b>Coaches Name</b></th>
 <th class="STHSW25">PH</th><th class="STHSW25">DF</th><th class="STHSW25">OF</th><th class="STHSW25">PD</th><th class="STHSW25">EX</th><th class="STHSW25">LD</th><th class="STHSW25">PO</th><th class="STHSW35">CNT</th><th class="STHSW35">Age</th><th class="STHSW25">Contract</th><th class="STHSW100">Salary</th></tr></thead>
+<tr><td>Barry Trotz (DAN)</td><td>86</td><td>93</td><td>85</td><td>95</td><td>93</td><td>90</td><td>70</td><td>CAN</td><td>61</td><td>1 years</td><td>500 000 $</td></tr>
 <tr><td>Bob Hartley (WLD)</td><td>82</td><td>82</td><td>86</td><td>85</td><td>90</td><td>90</td><td>70</td><td>CAN</td><td>63</td><td>1 years</td><td>500 000 $</td></tr>
 <tr><td>Gilles Bouchard (LET)</td><td>76</td><td>76</td><td>78</td><td>77</td><td>73</td><td>78</td><td>70</td><td>CAN</td><td>53</td><td>1 years</td><td>500 000 $</td></tr>
 <tr><td>Igor Larionov (RUS)</td><td>71</td><td>81</td><td>81</td><td>85</td><td>85</td><td>84</td><td>70</td><td>RUS</td><td>63</td><td>1 years</td><td>500 000 $</td></tr>
@@ -25,6 +26,8 @@ include "Menu.php";}?>
 <tr><td>Jon Cooper (CAN)</td><td>84</td><td>92</td><td>93</td><td>90</td><td>90</td><td>94</td><td>70</td><td>CAN</td><td>56</td><td>1 years</td><td>500 000 $</td></tr>
 <tr><td>Jukka Jalonen (FIN)</td><td>78</td><td>81</td><td>80</td><td>81</td><td>82</td><td>82</td><td>70</td><td>FIN</td><td>61</td><td>1 years</td><td>500 000 $</td></tr>
 <tr><td>Martin St-Louis (CZE)</td><td>76</td><td>78</td><td>85</td><td>80</td><td>70</td><td>85</td><td>70</td><td>CAN</td><td>49</td><td>1 years</td><td>500 000 $</td></tr>
+<tr><td>Peter Stastny (SVK)</td><td>72</td><td>72</td><td>82</td><td>75</td><td>82</td><td>81</td><td>70</td><td>SVK</td><td>66</td><td>1 years</td><td>500 000 $</td></tr>
+<tr><td>Reto von Arx (SWI)</td><td>70</td><td>75</td><td>78</td><td>83</td><td>70</td><td>76</td><td>70</td><td>SWI</td><td>46</td><td>1 years</td><td>500 000 $</td></tr>
 <tr><td>Uwe Krupp (GER)</td><td>81</td><td>83</td><td>76</td><td>78</td><td>82</td><td>84</td><td>70</td><td>GER</td><td>58</td><td>1 years</td><td>500 000 $</td></tr>
 </table>
 <h1 class="STHSCoaches_FarmCoaches">Farm Coaches</h1>
@@ -38,7 +41,6 @@ include "Menu.php";}?>
 <tr><td>Alain Vigneault</td><td>87</td><td>87</td><td>86</td><td>86</td><td>88</td><td>90</td><td>70</td><td>CAN</td><td>63</td><td>2 years</td><td>2 500 000 $</td></tr>
 <tr><td>Alexandre Burrows</td><td>81</td><td>74</td><td>72</td><td>68</td><td>67</td><td>75</td><td>70</td><td>CAN</td><td>43</td><td>1 years</td><td>1 000 000 $</td></tr>
 <tr><td>Andrew Brunette</td><td>82</td><td>84</td><td>84</td><td>83</td><td>80</td><td>84</td><td>70</td><td>CAN</td><td>51</td><td>1 years</td><td>1 500 000 $</td></tr>
-<tr><td>Barry Trotz</td><td>86</td><td>93</td><td>85</td><td>95</td><td>93</td><td>90</td><td>70</td><td>CAN</td><td>61</td><td>2 years</td><td>4 000 000 $</td></tr>
 <tr><td>Benoit Groulx</td><td>77</td><td>78</td><td>78</td><td>79</td><td>78</td><td>80</td><td>70</td><td>CAN</td><td>56</td><td>0 year</td><td>950 000 $</td></tr>
 <tr><td>Brent Sutter</td><td>82</td><td>83</td><td>79</td><td>85</td><td>83</td><td>77</td><td>70</td><td>CAN</td><td>62</td><td>0 year</td><td>2 300 000 $</td></tr>
 <tr><td>Bruce Boudreau</td><td>86</td><td>83</td><td>85</td><td>83</td><td>88</td><td>82</td><td>70</td><td>CAN</td><td>69</td><td>2 years</td><td>2 500 000 $</td></tr>

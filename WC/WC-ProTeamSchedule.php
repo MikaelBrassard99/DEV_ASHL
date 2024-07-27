@@ -36,17 +36,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_ALLEMAGNE" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>2</td><td>5</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>4</td><td>10</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>6</td><td>17</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>8</td><td>22</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10</td><td>27</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12</td><td>33</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>17</td><td>46</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>19</td><td>49</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>21</td><td>56</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>23</td><td>59</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>24</td><td>63</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td>5</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>2</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-5.php">Game Direct Link</a></td></tr>
+<tr><td>4</td><td>10</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-10.php">Game Direct Link</a></td></tr>
+<tr><td>6</td><td>17</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>3</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-17.php">Game Direct Link</a></td></tr>
+<tr><td>8</td><td>22</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>4</td><td>W</td><td></td><td></td><td></td><td><a href="WC-22.php">Game Direct Link</a></td></tr>
+<tr><td>10</td><td>27</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>4</td><td>W</td><td></td><td></td><td></td><td><a href="WC-27.php">Game Direct Link</a></td></tr>
+<tr><td>12</td><td>33</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>2</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-33.php">Game Direct Link</a></td></tr>
+<tr><td>17</td><td>46</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-46.php">Game Direct Link</a></td></tr>
+<tr><td>19</td><td>49</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>6</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-49.php">Game Direct Link</a></td></tr>
+<tr><td>21</td><td>56</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>0</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>4</td><td>W</td><td></td><td></td><td></td><td><a href="WC-56.php">Game Direct Link</a></td></tr>
+<tr><td>23</td><td>59</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-59.php">Game Direct Link</a></td></tr>
+<tr><td>24</td><td>63</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>2</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td>L</td><td></td><td>*</td><td></td><td><a href="WC-63.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_CAN"><a id="CANADA">CANADA</a></h1>
 <div class="STHSTeamLink">
@@ -68,17 +68,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_CANADA" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>1</td><td>2</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>2</td><td>5</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>5</td><td>13</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>7</td><td>20</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10</td><td>28</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>13</td><td>35</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>14</td><td>37</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>16</td><td>43</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>17</td><td>44</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>21</td><td>53</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>25</td><td>64</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>2</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>7</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-2.php">Game Direct Link</a></td></tr>
+<tr><td>2</td><td>5</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>2</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-5.php">Game Direct Link</a></td></tr>
+<tr><td>5</td><td>13</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-13.php">Game Direct Link</a></td></tr>
+<tr><td>7</td><td>20</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>8</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-20.php">Game Direct Link</a></td></tr>
+<tr><td>10</td><td>28</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-28.php">Game Direct Link</a></td></tr>
+<tr><td>13</td><td>35</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>5</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-35.php">Game Direct Link</a></td></tr>
+<tr><td>14</td><td>37</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>4</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-37.php">Game Direct Link</a></td></tr>
+<tr><td>16</td><td>43</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>7</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-43.php">Game Direct Link</a></td></tr>
+<tr><td>17</td><td>44</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>0</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>8</td><td>W</td><td></td><td></td><td></td><td><a href="WC-44.php">Game Direct Link</a></td></tr>
+<tr><td>21</td><td>53</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-53.php">Game Direct Link</a></td></tr>
+<tr><td>25</td><td>64</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>1</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-64.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_DAN"><a id="DANEMARK">DANEMARK</a></h1>
 <div class="STHSTeamLink">
@@ -100,17 +100,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_DANEMARK" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>1</td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>2</td><td>7</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>4</td><td>11</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>5</td><td>14</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>11</td><td>30</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12</td><td>31</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>14</td><td>38</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>15</td><td>41</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>17</td><td>44</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>20</td><td>52</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>21</td><td>56</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>6</td><td>L</td><td></td><td></td><td></td><td><a href="WC-3.php">Game Direct Link</a></td></tr>
+<tr><td>2</td><td>7</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-7.php">Game Direct Link</a></td></tr>
+<tr><td>4</td><td>11</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-11.php">Game Direct Link</a></td></tr>
+<tr><td>5</td><td>14</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-14.php">Game Direct Link</a></td></tr>
+<tr><td>11</td><td>30</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td>L</td><td></td><td></td><td></td><td><a href="WC-30.php">Game Direct Link</a></td></tr>
+<tr><td>12</td><td>31</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>2</td><td>L</td><td>*</td><td></td><td></td><td><a href="WC-31.php">Game Direct Link</a></td></tr>
+<tr><td>14</td><td>38</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>2</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>5</td><td>L</td><td></td><td></td><td></td><td><a href="WC-38.php">Game Direct Link</a></td></tr>
+<tr><td>15</td><td>41</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>6</td><td>L</td><td></td><td></td><td></td><td><a href="WC-41.php">Game Direct Link</a></td></tr>
+<tr><td>17</td><td>44</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>0</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>8</td><td>L</td><td></td><td></td><td></td><td><a href="WC-44.php">Game Direct Link</a></td></tr>
+<tr><td>20</td><td>52</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>4</td><td>L</td><td></td><td></td><td></td><td><a href="WC-52.php">Game Direct Link</a></td></tr>
+<tr><td>21</td><td>56</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>0</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>4</td><td>L</td><td></td><td></td><td></td><td><a href="WC-56.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_FIN"><a id="FINLANDE">FINLANDE</a></h1>
 <div class="STHSTeamLink">
@@ -132,17 +132,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_FINLANDE" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>1</td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>3</td><td>9</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>5</td><td>12</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>8</td><td>21</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>9</td><td>24</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>11</td><td>29</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12</td><td>33</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>14</td><td>39</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>16</td><td>43</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>22</td><td>58</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>25</td><td>66</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>6</td><td>W</td><td></td><td></td><td></td><td><a href="WC-3.php">Game Direct Link</a></td></tr>
+<tr><td>3</td><td>9</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>3</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>2</td><td>W</td><td>*</td><td></td><td></td><td><a href="WC-9.php">Game Direct Link</a></td></tr>
+<tr><td>5</td><td>12</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>2</td><td>W</td><td></td><td>*</td><td></td><td><a href="WC-12.php">Game Direct Link</a></td></tr>
+<tr><td>8</td><td>21</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>3</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-21.php">Game Direct Link</a></td></tr>
+<tr><td>9</td><td>24</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>3</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>6</td><td>W</td><td></td><td></td><td></td><td><a href="WC-24.php">Game Direct Link</a></td></tr>
+<tr><td>11</td><td>29</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>2</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>1</td><td>L</td><td></td><td>*</td><td></td><td><a href="WC-29.php">Game Direct Link</a></td></tr>
+<tr><td>12</td><td>33</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>2</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-33.php">Game Direct Link</a></td></tr>
+<tr><td>14</td><td>39</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-39.php">Game Direct Link</a></td></tr>
+<tr><td>16</td><td>43</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>7</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-43.php">Game Direct Link</a></td></tr>
+<tr><td>22</td><td>58</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>1</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-58.php">Game Direct Link</a></td></tr>
+<tr><td>25</td><td>66</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>3</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-66.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_LET"><a id="LETTONIE">LETTONIE</a></h1>
 <div class="STHSTeamLink">
@@ -164,17 +164,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_LETTONIE" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>1</td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>5</td><td>13</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>6</td><td>15</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>7</td><td>19</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10</td><td>27</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12</td><td>32</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>14</td><td>38</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>17</td><td>45</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>19</td><td>51</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>22</td><td>58</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>24</td><td>62</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>6</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>5</td><td>L</td><td></td><td>*</td><td></td><td><a href="WC-1.php">Game Direct Link</a></td></tr>
+<tr><td>5</td><td>13</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-13.php">Game Direct Link</a></td></tr>
+<tr><td>6</td><td>15</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-15.php">Game Direct Link</a></td></tr>
+<tr><td>7</td><td>19</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>6</td><td>L</td><td></td><td></td><td></td><td><a href="WC-19.php">Game Direct Link</a></td></tr>
+<tr><td>10</td><td>27</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>4</td><td>L</td><td></td><td></td><td></td><td><a href="WC-27.php">Game Direct Link</a></td></tr>
+<tr><td>12</td><td>32</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>2</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>3</td><td>L</td><td></td><td>*</td><td></td><td><a href="WC-32.php">Game Direct Link</a></td></tr>
+<tr><td>14</td><td>38</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>2</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>5</td><td>W</td><td></td><td></td><td></td><td><a href="WC-38.php">Game Direct Link</a></td></tr>
+<tr><td>17</td><td>45</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>2</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>5</td><td>L</td><td></td><td></td><td></td><td><a href="WC-45.php">Game Direct Link</a></td></tr>
+<tr><td>19</td><td>51</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-51.php">Game Direct Link</a></td></tr>
+<tr><td>22</td><td>58</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>1</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-58.php">Game Direct Link</a></td></tr>
+<tr><td>24</td><td>62</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>5</td><td>L</td><td></td><td></td><td></td><td><a href="WC-62.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_RUS"><a id="RUSSIE">RUSSIE</a></h1>
 <div class="STHSTeamLink">
@@ -196,17 +196,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_RUSSIE" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>4</td><td>11</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>6</td><td>16</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>7</td><td>19</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>9</td><td>25</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>11</td><td>29</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12</td><td>34</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>14</td><td>37</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>16</td><td>42</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>19</td><td>49</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>21</td><td>54</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>23</td><td>61</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td>11</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-11.php">Game Direct Link</a></td></tr>
+<tr><td>6</td><td>16</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>5</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-16.php">Game Direct Link</a></td></tr>
+<tr><td>7</td><td>19</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>6</td><td>W</td><td></td><td></td><td></td><td><a href="WC-19.php">Game Direct Link</a></td></tr>
+<tr><td>9</td><td>25</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>1</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-25.php">Game Direct Link</a></td></tr>
+<tr><td>11</td><td>29</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>2</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>1</td><td>W</td><td></td><td>*</td><td></td><td><a href="WC-29.php">Game Direct Link</a></td></tr>
+<tr><td>12</td><td>34</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>2</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>1</td><td>W</td><td>*</td><td></td><td></td><td><a href="WC-34.php">Game Direct Link</a></td></tr>
+<tr><td>14</td><td>37</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>4</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-37.php">Game Direct Link</a></td></tr>
+<tr><td>16</td><td>42</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>4</td><td>L</td><td></td><td></td><td></td><td><a href="WC-42.php">Game Direct Link</a></td></tr>
+<tr><td>19</td><td>49</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>6</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-49.php">Game Direct Link</a></td></tr>
+<tr><td>21</td><td>54</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>8</td><td>W</td><td></td><td></td><td></td><td><a href="WC-54.php">Game Direct Link</a></td></tr>
+<tr><td>23</td><td>61</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>4</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-61.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_SVK"><a id="SLOVAQUIE">SLOVAQUIE</a></h1>
 <div class="STHSTeamLink">
@@ -228,17 +228,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_SLOVAQUIE" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>1</td><td>2</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>2</td><td>8</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>5</td><td>12</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>8</td><td>22</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10</td><td>26</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12</td><td>32</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>15</td><td>41</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>18</td><td>48</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>19</td><td>50</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>21</td><td>54</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>25</td><td>65</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>2</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>7</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-2.php">Game Direct Link</a></td></tr>
+<tr><td>2</td><td>8</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>2</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-8.php">Game Direct Link</a></td></tr>
+<tr><td>5</td><td>12</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>2</td><td>L</td><td></td><td>*</td><td></td><td><a href="WC-12.php">Game Direct Link</a></td></tr>
+<tr><td>8</td><td>22</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>4</td><td>L</td><td></td><td></td><td></td><td><a href="WC-22.php">Game Direct Link</a></td></tr>
+<tr><td>10</td><td>26</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-26.php">Game Direct Link</a></td></tr>
+<tr><td>12</td><td>32</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>2</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>3</td><td>W</td><td></td><td>*</td><td></td><td><a href="WC-32.php">Game Direct Link</a></td></tr>
+<tr><td>15</td><td>41</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>6</td><td>W</td><td></td><td></td><td></td><td><a href="WC-41.php">Game Direct Link</a></td></tr>
+<tr><td>18</td><td>48</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>2</td><td>L</td><td></td><td>*</td><td></td><td><a href="WC-48.php">Game Direct Link</a></td></tr>
+<tr><td>19</td><td>50</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>2</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td>L</td><td>*</td><td></td><td></td><td><a href="WC-50.php">Game Direct Link</a></td></tr>
+<tr><td>21</td><td>54</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>8</td><td>L</td><td></td><td></td><td></td><td><a href="WC-54.php">Game Direct Link</a></td></tr>
+<tr><td>25</td><td>65</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-65.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_SWE"><a id="SUÈDE">SUÈDE</a></h1>
 <div class="STHSTeamLink">
@@ -260,17 +260,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_SUÈDE" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>1</td><td>4</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>3</td><td>9</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>5</td><td>14</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>6</td><td>18</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>9</td><td>25</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>15</td><td>40</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>17</td><td>46</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>18</td><td>47</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>21</td><td>53</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>24</td><td>62</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>25</td><td>65</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>4</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-4.php">Game Direct Link</a></td></tr>
+<tr><td>3</td><td>9</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>3</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>2</td><td>L</td><td>*</td><td></td><td></td><td><a href="WC-9.php">Game Direct Link</a></td></tr>
+<tr><td>5</td><td>14</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-14.php">Game Direct Link</a></td></tr>
+<tr><td>6</td><td>18</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>2</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-18.php">Game Direct Link</a></td></tr>
+<tr><td>9</td><td>25</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>1</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-25.php">Game Direct Link</a></td></tr>
+<tr><td>15</td><td>40</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>2</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>4</td><td>W</td><td></td><td></td><td></td><td><a href="WC-40.php">Game Direct Link</a></td></tr>
+<tr><td>17</td><td>46</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-46.php">Game Direct Link</a></td></tr>
+<tr><td>18</td><td>47</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>4</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-47.php">Game Direct Link</a></td></tr>
+<tr><td>21</td><td>53</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-53.php">Game Direct Link</a></td></tr>
+<tr><td>24</td><td>62</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>5</td><td>W</td><td></td><td></td><td></td><td><a href="WC-62.php">Game Direct Link</a></td></tr>
+<tr><td>25</td><td>65</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-65.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_SWI"><a id="SUISSE">SUISSE</a></h1>
 <div class="STHSTeamLink">
@@ -292,17 +292,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_SUISSE" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>2</td><td>7</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>6</td><td>18</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>8</td><td>23</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>9</td><td>24</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12</td><td>34</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>13</td><td>36</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>17</td><td>45</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>19</td><td>50</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>22</td><td>57</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>23</td><td>59</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>25</td><td>64</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td>7</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-7.php">Game Direct Link</a></td></tr>
+<tr><td>6</td><td>18</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>2</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-18.php">Game Direct Link</a></td></tr>
+<tr><td>8</td><td>23</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>4</td><td>L</td><td></td><td>*</td><td></td><td><a href="WC-23.php">Game Direct Link</a></td></tr>
+<tr><td>9</td><td>24</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>3</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>6</td><td>L</td><td></td><td></td><td></td><td><a href="WC-24.php">Game Direct Link</a></td></tr>
+<tr><td>12</td><td>34</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>2</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>1</td><td>L</td><td>*</td><td></td><td></td><td><a href="WC-34.php">Game Direct Link</a></td></tr>
+<tr><td>13</td><td>36</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>6</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-36.php">Game Direct Link</a></td></tr>
+<tr><td>17</td><td>45</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>2</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>5</td><td>W</td><td></td><td></td><td></td><td><a href="WC-45.php">Game Direct Link</a></td></tr>
+<tr><td>19</td><td>50</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>2</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td>W</td><td>*</td><td></td><td></td><td><a href="WC-50.php">Game Direct Link</a></td></tr>
+<tr><td>22</td><td>57</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>4</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-57.php">Game Direct Link</a></td></tr>
+<tr><td>23</td><td>59</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-59.php">Game Direct Link</a></td></tr>
+<tr><td>25</td><td>64</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>1</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-64.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_CZE"><a id="TCHÉQUIE">TCHÉQUIE</a></h1>
 <div class="STHSTeamLink">
@@ -324,17 +324,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_TCHÉQUIE" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>1</td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>2</td><td>6</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>6</td><td>17</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>7</td><td>20</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10</td><td>26</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>14</td><td>39</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>16</td><td>42</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>18</td><td>47</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>20</td><td>52</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>22</td><td>57</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>23</td><td>60</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>6</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>5</td><td>W</td><td></td><td>*</td><td></td><td><a href="WC-1.php">Game Direct Link</a></td></tr>
+<tr><td>2</td><td>6</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>7</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-6.php">Game Direct Link</a></td></tr>
+<tr><td>6</td><td>17</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>3</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-17.php">Game Direct Link</a></td></tr>
+<tr><td>7</td><td>20</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>8</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-20.php">Game Direct Link</a></td></tr>
+<tr><td>10</td><td>26</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-26.php">Game Direct Link</a></td></tr>
+<tr><td>14</td><td>39</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-39.php">Game Direct Link</a></td></tr>
+<tr><td>16</td><td>42</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>4</td><td>W</td><td></td><td></td><td></td><td><a href="WC-42.php">Game Direct Link</a></td></tr>
+<tr><td>18</td><td>47</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>4</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-47.php">Game Direct Link</a></td></tr>
+<tr><td>20</td><td>52</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>4</td><td>W</td><td></td><td></td><td></td><td><a href="WC-52.php">Game Direct Link</a></td></tr>
+<tr><td>22</td><td>57</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>4</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-57.php">Game Direct Link</a></td></tr>
+<tr><td>23</td><td>60</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-60.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_USA"><a id="USA">USA</a></h1>
 <div class="STHSTeamLink">
@@ -356,17 +356,17 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_USA" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>1</td><td>4</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>2</td><td>6</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>4</td><td>10</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>6</td><td>15</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>8</td><td>23</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>11</td><td>30</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>13</td><td>35</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>18</td><td>48</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>21</td><td>55</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>23</td><td>61</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>25</td><td>66</td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td>4</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-4.php">Game Direct Link</a></td></tr>
+<tr><td>2</td><td>6</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>7</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>3</td><td>W</td><td></td><td></td><td></td><td><a href="WC-6.php">Game Direct Link</a></td></tr>
+<tr><td>4</td><td>10</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-10.php">Game Direct Link</a></td></tr>
+<tr><td>6</td><td>15</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-15.php">Game Direct Link</a></td></tr>
+<tr><td>8</td><td>23</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>4</td><td>W</td><td></td><td>*</td><td></td><td><a href="WC-23.php">Game Direct Link</a></td></tr>
+<tr><td>11</td><td>30</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>1</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>5</td><td>W</td><td></td><td></td><td></td><td><a href="WC-30.php">Game Direct Link</a></td></tr>
+<tr><td>13</td><td>35</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>5</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-35.php">Game Direct Link</a></td></tr>
+<tr><td>18</td><td>48</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>2</td><td>W</td><td></td><td>*</td><td></td><td><a href="WC-48.php">Game Direct Link</a></td></tr>
+<tr><td>21</td><td>55</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>7</td><td>W</td><td></td><td></td><td></td><td><a href="WC-55.php">Game Direct Link</a></td></tr>
+<tr><td>23</td><td>61</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>4</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>2</td><td>W</td><td></td><td></td><td></td><td><a href="WC-61.php">Game Direct Link</a></td></tr>
+<tr><td>25</td><td>66</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>3</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-66.php">Game Direct Link</a></td></tr>
 </table></div>
 <h1 class="TeamSchedulePro_WLD"><a id="WORLD">WORLD</a></h1>
 <div class="STHSTeamLink">
@@ -388,16 +388,16 @@ include "Menu.php";}?>
 </div><div id="STHS_JS_Team_WORLD" style="display: block;">
 <table class="basictablesorter"><thead><tr>
 <th class="STHSW35">Day</th><th class="STHSW35">Game</th><th class="STHSW200">Visitor Team</th><th class="STHSW35">Score</th><th class="STHSW200">Home Team</th><th class="STHSW35">Score</th><th class="STHSW35">ST</th><th class="STHSW35">OT</th><th class="STHSW35">SO</th><th class="STHSW35">RI</th><th class="STHSW200">Link</th></tr></thead>
-<tr><td>2</td><td>8</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>6</td><td>16</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td></td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>8</td><td>21</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td></td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10</td><td>28</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>12</td><td>31</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>13</td><td>36</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td></td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>15</td><td>40</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>19</td><td>51</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>21</td><td>55</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=2>USA</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>23</td><td>60</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>24</td><td>63</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td></td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td>8</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>2</td><td><a href=ProTeam.php?Team=6>SLOVAQUIE</a></td><td>1</td><td>W</td><td></td><td></td><td></td><td><a href="WC-8.php">Game Direct Link</a></td></tr>
+<tr><td>6</td><td>16</td><td><a href=ProTeam.php?Team=9>RUSSIE</a></td><td>5</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-16.php">Game Direct Link</a></td></tr>
+<tr><td>8</td><td>21</td><td><a href=ProTeam.php?Team=3>FINLANDE</a></td><td>3</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-21.php">Game Direct Link</a></td></tr>
+<tr><td>10</td><td>28</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td><a href=ProTeam.php?Team=10>CANADA</a></td><td>2</td><td>L</td><td></td><td></td><td></td><td><a href="WC-28.php">Game Direct Link</a></td></tr>
+<tr><td>12</td><td>31</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>3</td><td><a href=ProTeam.php?Team=7>DANEMARK</a></td><td>2</td><td>W</td><td>*</td><td></td><td></td><td><a href="WC-31.php">Game Direct Link</a></td></tr>
+<tr><td>13</td><td>36</td><td><a href=ProTeam.php?Team=5>SUISSE</a></td><td>6</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td>L</td><td></td><td></td><td></td><td><a href="WC-36.php">Game Direct Link</a></td></tr>
+<tr><td>15</td><td>40</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>2</td><td><a href=ProTeam.php?Team=1>SUÈDE</a></td><td>4</td><td>L</td><td></td><td></td><td></td><td><a href="WC-40.php">Game Direct Link</a></td></tr>
+<tr><td>19</td><td>51</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td><a href=ProTeam.php?Team=8>LETTONIE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-51.php">Game Direct Link</a></td></tr>
+<tr><td>21</td><td>55</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td><a href=ProTeam.php?Team=2>USA</a></td><td>7</td><td>L</td><td></td><td></td><td></td><td><a href="WC-55.php">Game Direct Link</a></td></tr>
+<tr><td>23</td><td>60</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>1</td><td><a href=ProTeam.php?Team=4>TCHÉQUIE</a></td><td>3</td><td>L</td><td></td><td></td><td></td><td><a href="WC-60.php">Game Direct Link</a></td></tr>
+<tr><td>24</td><td>63</td><td><a href=ProTeam.php?Team=11>WORLD</a></td><td>2</td><td><a href=ProTeam.php?Team=12>ALLEMAGNE</a></td><td>1</td><td>W</td><td></td><td>*</td><td></td><td><a href="WC-63.php">Game Direct Link</a></td></tr>
 </table></div>
 <?php include "Footer.php";?>

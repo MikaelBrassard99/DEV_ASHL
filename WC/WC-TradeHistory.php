@@ -13,6 +13,8 @@
 require_once "STHSSetting.php";
 $db = new SQLite3($DatabaseFile);
 include "Menu.php";}?>
+[2023-08-04 20:18:55] - Maxime Montandon was added to SUISSE.<br />
+[2023-07-26 07:11:56] - Cam Fowler was added to USA.<br />
 [2023-07-24 23:02:15] - Liam Kirk was added to WORLD.<br />
 [2023-07-24 21:16:26] - Adam Húska was added to SLOVAQUIE.<br />
 [2023-07-24 21:16:17] - Michal Ivan was added to SLOVAQUIE.<br />

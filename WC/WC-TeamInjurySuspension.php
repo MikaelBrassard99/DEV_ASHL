@@ -202,7 +202,7 @@ No Injury or Suspension.
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_SUISSE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_SUISSE" style="display: block;">
 <br />
-No Injury or Suspension.
+Ramon Untersander is out for 1 week because of a Left Hip Injury.<br />
 </div>
 <h1 class="TeamInjurySuspension_CZE"><a id="TCHÉQUIE">TCHÉQUIE</a></h1>
 <div class="STHSTeamLink">

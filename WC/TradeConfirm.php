@@ -1,5 +1,5 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
+If ($lang == "fr"){include 'LanguageFR-Main.php';}else{include 'LanguageEN-Main.php';}
 $Title = (string)"";
 $Team1 = (integer)0;
 $Team2 = (integer)0;
@@ -13,22 +13,21 @@ $Team1DraftPickCon = Null;
 $Team2DraftPickCon = Null;
 $Team1Money = (integer)0;
 $Team2Money = (integer)0;
-$Team1SalaryCap = (integer)0;
-$Team2SalaryCap = (integer)0;
+$Team1SalaryCapY1 = (integer)0;
+$Team2SalaryCapY1 = (integer)0;
+$Team1SalaryCapY2 = (integer)0;
+$Team2SalaryCapY2 = (integer)0;
 $Boofound = (boolean)False;
 $Team1Info = "";
 $Team2Info = "";
+$MessageWhy = (string)"";
 
 $Confirm = False;	
 $InformationMessage = (string)"";
 
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	$LeagueOutputOption = Null;
-	echo "<title>" . $DatabaseNotFound . "</title>";
-	$Title = $DatabaseNotFound;
-	echo "<style>#Trade{display:none}</style>";
-}else{
+	Goto STHSErrorTradeConfirm;
+}else{try{
 	$db = new SQLite3($DatabaseFile);
 	$db->enableExceptions(true);
 	$LeagueName = (string)"";
@@ -46,9 +45,12 @@ If (file_exists($DatabaseFile) == false){
 			if(isset($_POST['Team2DraftPickCon'])){$Team2DraftPickCon = json_decode($_POST['Team2DraftPickCon']);}			
 			if(isset($_POST['Team1Money'])){$Team1Money = filter_var($_POST['Team1Money'], FILTER_SANITIZE_NUMBER_INT);} 
 			if(isset($_POST['Team2Money'])){$Team2Money = filter_var($_POST['Team2Money'], FILTER_SANITIZE_NUMBER_INT);} 
-			if(isset($_POST['Team1SalaryCap'])){$Team1SalaryCap = filter_var($_POST['Team1SalaryCap'], FILTER_SANITIZE_NUMBER_INT);} 
-			if(isset($_POST['Team2SalaryCap'])){$Team2SalaryCap = filter_var($_POST['Team2SalaryCap'], FILTER_SANITIZE_NUMBER_INT);} 		
-			If ($Team1 == $CookieTeamNumber AND $CookieTeamNumber > 0){$Confirm = True;}else{$InformationMessage = $News['IllegalAction'];;}			
+			if(isset($_POST['Team1SalaryCapY1'])){$Team1SalaryCapY1 = filter_var($_POST['Team1SalaryCapY1'], FILTER_SANITIZE_NUMBER_INT);} 
+			if(isset($_POST['Team2SalaryCapY1'])){$Team2SalaryCapY1 = filter_var($_POST['Team2SalaryCapY1'], FILTER_SANITIZE_NUMBER_INT);} 
+			if(isset($_POST['Team1SalaryCapY2'])){$Team1SalaryCapY2 = filter_var($_POST['Team1SalaryCapY2'], FILTER_SANITIZE_NUMBER_INT);} 
+			if(isset($_POST['Team2SalaryCapY2'])){$Team2SalaryCapY2 = filter_var($_POST['Team2SalaryCapY2'], FILTER_SANITIZE_NUMBER_INT);} 	
+			if(isset($_POST['MessageWhy'])){$MessageWhy = filter_var($_POST['MessageWhy'], FILTER_UNSAFE_RAW, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);}
+			If ($Team1 == $CookieTeamNumber AND $CookieTeamNumber > 0){$Confirm = True;}else{$InformationMessage = $TradeLang['IllegalAction'];;}			
 		}else{
 			if(isset($_POST['Team1Player'])){$Team1Player = $_POST['Team1Player'];}
 			if(isset($_POST['Team2Player'])){$Team2Player = $_POST['Team2Player'];}
@@ -60,32 +62,49 @@ If (file_exists($DatabaseFile) == false){
 			if(isset($_POST['Team2DraftPickCon'])){$Team2DraftPickCon = $_POST['Team2DraftPickCon'];}			
 			if(isset($_POST['Team1Money'])){$Team1Money = filter_var($_POST['Team1Money'], FILTER_SANITIZE_NUMBER_INT);} 
 			if(isset($_POST['Team2Money'])){$Team2Money = filter_var($_POST['Team2Money'], FILTER_SANITIZE_NUMBER_INT);} 
-			if(isset($_POST['Team1SalaryCap'])){$Team1SalaryCap = filter_var($_POST['Team1SalaryCap'], FILTER_SANITIZE_NUMBER_INT);} 
-			if(isset($_POST['Team2SalaryCap'])){$Team2SalaryCap = filter_var($_POST['Team2SalaryCap'], FILTER_SANITIZE_NUMBER_INT);} 
-			if(isset($_POST['Team1Money'])){$Team1Money = filter_var($_POST['Team1Money'], FILTER_SANITIZE_NUMBER_INT);} 
-			if(isset($_POST['Team2Money'])){$Team2Money = filter_var($_POST['Team2Money'], FILTER_SANITIZE_NUMBER_INT);} 
-			if(isset($_POST['Team1SalaryCap'])){$Team1SalaryCap = filter_var($_POST['Team1SalaryCap'], FILTER_SANITIZE_NUMBER_INT);} 
-			if(isset($_POST['Team2SalaryCap'])){$Team2SalaryCap = filter_var($_POST['Team2SalaryCap'], FILTER_SANITIZE_NUMBER_INT);} 
+			if(isset($_POST['Team1SalaryCapY1'])){$Team1SalaryCapY1 = filter_var($_POST['Team1SalaryCapY1'], FILTER_SANITIZE_NUMBER_INT);} 
+			if(isset($_POST['Team2SalaryCapY1'])){$Team2SalaryCapY1 = filter_var($_POST['Team2SalaryCapY1'], FILTER_SANITIZE_NUMBER_INT);} 
+			if(isset($_POST['Team1SalaryCapY2'])){$Team1SalaryCapY2 = filter_var($_POST['Team1SalaryCapY2'], FILTER_SANITIZE_NUMBER_INT);} 
+			if(isset($_POST['Team2SalaryCapY2'])){$Team2SalaryCapY2 = filter_var($_POST['Team2SalaryCapY2'], FILTER_SANITIZE_NUMBER_INT);} 	
+			if(isset($_POST['MessageWhy'])){$MessageWhy = filter_var($_POST['MessageWhy'], FILTER_UNSAFE_RAW, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);}
+		}
+		If (empty($Team1Player)==true AND empty($Team1Prospect)==true AND empty($Team1DraftPick)==true AND empty($Team1DraftPickCon)==true AND $Team1Money == 0 AND $Team1SalaryCapY1 == 0 AND $Team1SalaryCapY2 == 0 AND empty($Team2Player)==true AND empty($Team2Prospect)==true AND empty($Team2DraftPick)==true AND empty($Team2DraftPickCon)==true AND $Team2Money == 0 AND $Team2SalaryCapY1 == 0 AND $Team2SalaryCapY2 == 0){
+			// echo "<style>#Trade{display:none}</style>";
+			$InformationMessage = $TradeLang['Error'];
 		}
 	}
-	
-	$Query = "Select Name, TradeDeadLine from LeagueGeneral";
+		
+	$Query = "Select Name, TradeDeadLinePass from LeagueGeneral";
 	$LeagueGeneral = $db->querySingle($Query,true);		
 	$LeagueName = $LeagueGeneral['Name'];
 	$Title = $TradeLang['Trade'];
 	
-	If ($Team1 == 0 or $Team2 == 0 or $Team1 == $Team2){
+	$Query = "Select AllowTradefromWebsite from LeagueWebClient";
+	$LeagueWebClient = $db->querySingle($Query,true);	
+	
+	
+	If ($LeagueWebClient['AllowTradefromWebsite'] == "False"){
 		echo "<style>#Trade{display:none}</style>";
+		$InformationMessage = $ThisPageNotAvailable;
+	}elseif ($Team1 == 0 OR $Team2 == 0 OR $Team1 == $Team2 OR $LeagueGeneral['TradeDeadLinePass'] == "True"){
+		echo "<style>#Trade{display:none}</style>";
+		If ($LeagueGeneral['TradeDeadLinePass'] == "True"){$InformationMessage = $TradeLang['TradeDeadline'];}
 	}else{
 		$Query = "SELECT Number, Name, TeamThemeID FROM TeamProInfo Where Number = " . $Team1;
 		$Team1Info =  $db->querySingle($Query,true);	
 		$Query = "SELECT Number, Name, TeamThemeID FROM TeamProInfo Where Number = " . $Team2;
 		$Team2Info =  $db->querySingle($Query,true);	
-		
 	}
 
 	echo "<title>" . $LeagueName . " - " . $TradeLang['Trade']  . "</title>";
-}?>
+} catch (Exception $e) {
+STHSErrorTradeConfirm:
+	$LeagueName = $DatabaseNotFound;
+	$LeagueOutputOption = Null;
+	echo "<title>" . $DatabaseNotFound . "</title>";
+	$Title = $DatabaseNotFound;
+	echo "<style>#Trade{display:none}</style>";
+}}?>
 </head><body>
 <?php include "Menu.php";?>
 
@@ -93,15 +112,15 @@ If (file_exists($DatabaseFile) == false){
 
 <div style="width:99%;margin:auto;">
 <?php echo "<h1>" . $Title . "</h1>"; 
-if ($InformationMessage != ""){echo "<div style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $InformationMessage . "<br /><br /></div>";}?>
+if ($InformationMessage != ""){echo "<div class=\"STHSDivInformationMessage\">" . $InformationMessage . "<br /><br /></div>";}?>
 <form id="Trade" name="Trade" method="post" action="TradeConfirm.php<?php If ($lang == "fr" ){echo "?Lang=fr";}?>">
 	<input type="hidden" id="Team1" name="Team1" value="<?php echo $Team1;?>">
 	<input type="hidden" id="Team2" name="Team2" value="<?php echo $Team2;?>">
 	<input type="hidden" id="Confirm" name="Confirm" value="YES">
 	<table class="STHSTableFullW">
 	<tr>
-		<td class="STHSPHPTradeTeamName"><?php if($Team1Info != Null){If ($Team1Info['TeamThemeID'] > 0){echo "<img src=\"./images/" . $Team1Info['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}echo $Team1Info['Name'];}?></td>
-		<td class="STHSPHPTradeTeamName"><?php if($Team2Info != Null){If ($Team2Info['TeamThemeID'] > 0){echo "<img src=\"./images/" . $Team2Info['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}echo $Team2Info['Name'];}?></td>
+		<td class="STHSPHPTradeTeamName"><?php if($Team1Info != Null){If ($Team1Info['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $Team1Info['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}echo $Team1Info['Name'];}?></td>
+		<td class="STHSPHPTradeTeamName"><?php if($Team2Info != Null){If ($Team2Info['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $Team2Info['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}echo $Team2Info['Name'];}?></td>
 	</tr>
 	
 	
@@ -204,9 +223,19 @@ if ($InformationMessage != ""){echo "<div style=\"color:#FF0000; font-weight: bo
 	}	
 	echo "<br />";
 	If ($Team1Money  > 0){echo $TradeLang['Money'] . " : " . number_format($Team1Money,0) . "$<input type=\"hidden\" name=\"Team1Money\" value=\"" . $Team1Money . "\"><br />";}
-	If ($Team1SalaryCap > 0){echo $TradeLang['SalaryCap'] . " : " . number_format($Team1SalaryCap,0) . "$<input type=\"hidden\" name=\"Team1SalaryCap\" value=\"" . $Team1SalaryCap . "\"><br />";}
+	If ($Team1SalaryCapY1 > 0){echo $TradeLang['SalaryCapY1'] . " : " . number_format($Team1SalaryCapY1,0) . "$<input type=\"hidden\" name=\"Team1SalaryCapY1\" value=\"" . $Team1SalaryCapY1 . "\"><br />";}
+	If ($Team1SalaryCapY2 > 0){echo $TradeLang['SalaryCapY2'] . " : " . number_format($Team1SalaryCapY2,0) . "$<input type=\"hidden\" name=\"Team1SalaryCapY2\" value=\"" . $Team1SalaryCapY2 . "\"><br />";}
 	If ($Confirm == True){
-		$Query = "INSERT INTO Trade (FromTeam,ToTeam,Money,SalaryCap,ConfirmFrom,ConfirmTo) VALUES('" . $Team1 . "','" . $Team2 . "','" . $Team1Money . "','" . $Team1SalaryCap . "','True','False')";
+		$Query = "INSERT INTO Trade (FromTeam,ToTeam,Money,SalaryCapY1,SalaryCapY2,ConfirmFrom,ConfirmTo) VALUES('" . $Team1 . "','" . $Team2 . "','" . $Team1Money . "','" . $Team1SalaryCapY1. "','" . $Team1SalaryCapY2 . "','True','False')";
+		try {
+			$db->exec($Query);
+		} catch (Exception $e) {
+			echo $TradeLang['Fail'];
+		}
+	}
+	If ($MessageWhy != ""){echo $TradeLang['MessageWhy'] . " : " . $MessageWhy . "<input type=\"hidden\" name=\"MessageWhy\" value=\"" . $MessageWhy . "\"><br />";}
+	If ($Confirm == True){
+		$Query = "INSERT INTO Trade (FromTeam,ToTeam,MessageWhy,ConfirmFrom,ConfirmTo) VALUES('" . $Team1 . "','" . $Team2 . "','" . str_replace("'","''",$MessageWhy) . "','True','False')";
 		try {
 			$db->exec($Query);
 		} catch (Exception $e) {
@@ -314,9 +343,10 @@ if ($InformationMessage != ""){echo "<div style=\"color:#FF0000; font-weight: bo
 	}	
 	echo "<br />";
 	If ($Team2Money  > 0){echo $TradeLang['Money'] . " : " . number_format($Team2Money,0) . "$<input type=\"hidden\" name=\"Team2Money\" value=\"" . $Team2Money . "\"><br />";}
-	If ($Team2SalaryCap > 0 ){echo $TradeLang['SalaryCap'] . " : " . number_format($Team2SalaryCap,0) . "$<input type=\"hidden\" name=\"Team2SalaryCap\" value=\"" . $Team2SalaryCap . "\"><br />";}
+	If ($Team2SalaryCapY1 > 0 ){echo $TradeLang['SalaryCapY1'] . " : " . number_format($Team2SalaryCapY1,0) . "$<input type=\"hidden\" name=\"Team2SalaryCapY1\" value=\"" . $Team2SalaryCapY1 . "\"><br />";}
+	If ($Team2SalaryCapY2 > 0 ){echo $TradeLang['SalaryCapY2'] . " : " . number_format($Team2SalaryCapY2,0) . "$<input type=\"hidden\" name=\"Team2SalaryCapY2\" value=\"" . $Team2SalaryCapY2 . "\"><br />";}
 	If ($Confirm == True){
-		$Query = "INSERT INTO Trade (FromTeam,ToTeam,Money,SalaryCap,ConfirmFrom,ConfirmTo) VALUES('" . $Team2 . "','" . $Team1 . "','" . $Team2Money . "','" . $Team2SalaryCap . "','False','True')";
+		$Query = "INSERT INTO Trade (FromTeam,ToTeam,Money,SalaryCapY1,SalaryCapY2,ConfirmFrom,ConfirmTo) VALUES('" . $Team2 . "','" . $Team1 . "','" . $Team2Money . "','" . $Team2SalaryCapY1. "','" . $Team2SalaryCapY2 . "','False','True')";
 		try {
 			$db->exec($Query);
 		} catch (Exception $e) {
@@ -345,7 +375,7 @@ if ($InformationMessage != ""){echo "<div style=\"color:#FF0000; font-weight: bo
 
 
 <?php 
-If ($Team1 == 0 or $Team2 == 0 or $Team1 == $Team2){echo "<div class=\"STHSCenter\">" . $TradeLang['Error'] . "</div>";}
+If (($Team1 == 0 or $Team2 == 0 or $Team1 == $Team2) AND $LeagueGeneral['TradeDeadLinePass'] == "False" AND $LeagueWebClient['AllowTradefromWebsite'] == "True"){echo "<div class=\"STHSDivInformationMessage\">" . $TradeLang['Error'] . "</div>";}
 ?>
 </div>
 

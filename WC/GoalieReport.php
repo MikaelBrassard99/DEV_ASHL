@@ -117,89 +117,7 @@ if ($GoalieFarmStatMultipleTeamFound == true) {
 	echo "#tablesorter_colSelect5:checked ~ #tablesorter_ColumnSelector5 {display: block;}";
 }
 
-function getCountryAbre($Abre)
-{
-	switch ($Abre) {
-		case ('SW'):
-			return 'se';
-		case ('GE'):
-			return 'de';
-		case ('DE'):
-			return 'dk';
-		case ('SV'):
-			return 'sk';
-		case ('TC'):
-			return 'cz';
-		case ('LE'):
-			return 'lv';
-		case ('PO'):
-			return 'pl';
-		case ('JA'):
-			return 'jm';
-		default:
-			return strtolower($Abre);
-	}
-};
-
-function createPickturePlayer($name)
-{
-	switch (strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name))) {
-		case "mike-reilly":
-			return "mike-reilly-106004";
-			break;
-		case "robert-thomas":
-			return "robert-thomas-270853";
-			break;
-		case "sam-reinhart":
-			return "sam-reinhart-68137";
-			break;
-		case "zachary-werenski":
-			return "zach-werenski";
-			break;
-		case "kaapo-kähkönen":
-			return "kaapo-kahkonen";
-			break;
-		case "anthony-deangelo":
-			return "tony-deangelo";
-			break;
-		case "tyler-johnson":
-			return "tyler-johnson-40574";
-			break;
-		case "dmitri-kulikov":
-			return "dmitry-kulikov";
-			break;
-		default:
-			return strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name));
-			break;
-	}
-}
-
-function getSeasonName($name)
-{
-	switch ($name) {
-		case "ASHL9-STHS.db":
-			return "2019-2020";
-			break;
-		case "ASHL10-STHS.db":
-			return "COVID(2020-2021)";
-			break;
-		case "ASHL101-STHS.db":
-			return "2020-2021";
-			break;
-		case "ASHL11-STHS.db":
-			return "2021-2022";
-			break;
-		case "ASHL12-STHS.db":
-			return "2022-2023";
-		case "ASHL13-STHS.db":
-			return "2023-2024";
-		break;
-		default:
-			return $name;
-			break;
-	}
-}
-$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12,$DatabaseFileS13, $DatabaseFile];
+$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12,$DatabaseFileS13, $DatabaseFileS14, $DatabaseFile];
 $count = 0;
 //dictionnaire des donnees des joueurs selon le count (annee)
 $dictLeagueGeneral[[]];
@@ -302,7 +220,9 @@ foreach ($arrayDbs as $Dbs) {
 }
 
 echo "</style>";
-echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>"; ?>
+echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
+
+?>
 </head>
 
 <body>
@@ -408,6 +328,10 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>"; ?>
 							<td><?php echo ($GoalieInfo['NoTrade'] == "False") ? $GoalieInfo['Contract'] . "an(s) | " . $GoalieInfo['SalaryAverage'] . "$ avg" : $GoalieInfo['Contract'] . "an(s) | " . $PlayerInfo['SalaryAverage'] . "$ avg + NTC"; ?></td>
 						</tr>
 						<tr>
+							<td><?php echo $PlayersLang['SalaryRemaining'] ?></td>
+							<td><?php echo $GoalieInfo['SalaryRemaining']  . "$ " ?></td>
+						</tr>
+						<tr>
 							<td><?php echo $TeamLang['Recrue'] ?></td>
 							<td><?php echo ($GoalieInfo['Rookie'] == "False") ? "&#x2610;" : "&#x2611;"; ?></td>
 						</tr>
@@ -481,16 +405,17 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>"; ?>
 					<?php
 					if ($GoalieProStatMultipleTeamFound == TRUE) {
 						echo "<h2>" . $PlayersLang['ProStat'] . "</h2>";
-						echo "<div style=\"width:99%;margin:auto;\"><div class=\"tablesorter_ColumnSelectorWrapper\"><input id=\"tablesorter_colSelect4\" type=\"checkbox\" class=\"hidden\"><label class=\"tablesorter_ColumnSelectorButton\" for=\"tablesorter_colSelect4\">" . $TableSorterLang['ShoworHideColumn'] . "</label><div id=\"tablesorter_ColumnSelector4\" class=\"tablesorter_ColumnSelector\"></div>";
+						echo "<div style=\"overflow-x:auto;\"><div class=\"tablesorter_ColumnSelectorWrapper\"><input id=\"tablesorter_colSelect4\" type=\"checkbox\" class=\"hidden\"><label class=\"tablesorter_ColumnSelectorButton\" for=\"tablesorter_colSelect4\">" . $TableSorterLang['ShoworHideColumn'] . "</label><div id=\"tablesorter_ColumnSelector4\" class=\"tablesorter_ColumnSelector\"></div>";
 						include "FilterTip.php";
 						echo "</div></div>";
 
 						$Query = "SELECT GoalerProStatMultipleTeam.*, ROUND((CAST(GoalerProStatMultipleTeam.GA AS REAL) / (GoalerProStatMultipleTeam.SecondPlay / 60))*60,3) AS GAA, ROUND((CAST(GoalerProStatMultipleTeam.SA - GoalerProStatMultipleTeam.GA AS REAL) / (GoalerProStatMultipleTeam.SA)),3) AS PCT, ROUND((CAST(GoalerProStatMultipleTeam.PenalityShotsShots - GoalerProStatMultipleTeam.PenalityShotsGoals AS REAL) / (GoalerProStatMultipleTeam.PenalityShotsShots)),3) AS PenalityShotsPCT, 0 as Star1, 0 as Star2, 0 As Star3 FROM  GoalerProStatMultipleTeam WHERE Number = " . $Goalie;
 						$GoalieStat = $db->query($Query);
 						$Team = (int)-1;
+						echo "<div style=\"overflow-x:auto;\">";
 						echo "<table class=\"tablesorter STHSPHPProGoalieStatPerTeam_Table\"><thead><tr>";
 						include "GoaliesStatSub.php";
-						echo "</tbody></table>";
+						echo "</tbody></table></div>";
 					}
 
 					if ($GoalieProStatMultipleTeamFound == TRUE and $GoalieFarmStatMultipleTeamFound == TRUE) {
@@ -499,16 +424,17 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>"; ?>
 
 					if ($GoalieFarmStatMultipleTeamFound == TRUE) {
 						echo "<h2>" . $PlayersLang['FarmStat'] . "</h2>";
-						echo "<div style=\"width:99%;margin:auto;\"><div class=\"tablesorter_ColumnSelectorWrapper\"><input id=\"tablesorter_colSelect5\" type=\"checkbox\" class=\"hidden\"><label class=\"tablesorter_ColumnSelectorButton\" for=\"tablesorter_colSelect5\">" . $TableSorterLang['ShoworHideColumn'] . "</label><div id=\"tablesorter_ColumnSelector5\" class=\"tablesorter_ColumnSelector\"></div>";
+						echo "<div style=\"overflow-x:auto;\"><div class=\"tablesorter_ColumnSelectorWrapper\"><input id=\"tablesorter_colSelect5\" type=\"checkbox\" class=\"hidden\"><label class=\"tablesorter_ColumnSelectorButton\" for=\"tablesorter_colSelect5\">" . $TableSorterLang['ShoworHideColumn'] . "</label><div id=\"tablesorter_ColumnSelector5\" class=\"tablesorter_ColumnSelector\"></div>";
 						include "FilterTip.php";
 						echo "</div></div>";
 
 						$Query = "SELECT GoalerFarmStatMultipleTeam.*, ROUND((CAST(GoalerFarmStatMultipleTeam.GA AS REAL) / (GoalerFarmStatMultipleTeam.SecondPlay / 60))*60,3) AS GAA, ROUND((CAST(GoalerFarmStatMultipleTeam.SA - GoalerFarmStatMultipleTeam.GA AS REAL) / (GoalerFarmStatMultipleTeam.SA)),3) AS PCT, ROUND((CAST(GoalerFarmStatMultipleTeam.PenalityShotsShots - GoalerFarmStatMultipleTeam.PenalityShotsGoals AS REAL) / (GoalerFarmStatMultipleTeam.PenalityShotsShots)),3) AS PenalityShotsPCT, 0 as Star1, 0 as Star2, 0 As Star3 FROM  GoalerFarmStatMultipleTeam WHERE Number = " . $Goalie;
 						$GoalieStat = $db->query($Query);
 						$Team = (int)-1;
+						echo "<div style=\"overflow-x:auto;\">";
 						echo "<table class=\"tablesorter STHSPHPFarmGoaliesStatPerTeam_Table\"><thead><tr>";
 						include "GoaliesStatSub.php";
-						echo "</tbody></table>";
+						echo "</tbody></table></div>";
 					}
 					?>
 

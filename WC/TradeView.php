@@ -1,5 +1,5 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
+If ($lang == "fr"){include 'LanguageFR-Main.php';}else{include 'LanguageEN-Main.php';}
 $Title = (string)"";
 $Team = (integer)0;
 $LeagueName = (string)"";
@@ -13,24 +13,34 @@ for($Temp1 = 0; $Temp1 <= 100; $Temp1++){
 }
 
 If (file_exists($DatabaseFile) == false){
+	Goto STHSErrorTradeView;
+}else{try{
+	$db = new SQLite3($DatabaseFile);
+	
+	$Query = "Select AllowTradefromWebsite from LeagueWebClient";
+	$LeagueWebClient = $db->querySingle($Query,true);
+	
+	$Query = "Select Name, TradeDeadLinePass from LeagueGeneral";
+	$LeagueGeneral = $db->querySingle($Query,true);		
+	$LeagueName = $LeagueGeneral['Name'];
+	$Title = $TradeLang['ConfirmTrade'];
+	
+	If($LeagueGeneral['TradeDeadLinePass'] == "False" AND $LeagueWebClient['AllowTradefromWebsite'] == "True"){
+		$Query = "Select FromTeam, ToTeam FROM TRADE WHERE (ConfirmFrom = 'True' AND ConfirmTo = 'True') GROUP BY FromTeam ";
+		$TradeFromTeam = $db->query($Query);	
+	}else{
+		$TradeFromTeam = Null;
+	}
+	
+	echo "<title>" . $LeagueName . " - " . $Title  . "</title>";
+} catch (Exception $e) {
+STHSErrorTradeView:
 	$LeagueName = $DatabaseNotFound;
 	$LeagueOutputOption = Null;
 	echo "<title>" . $DatabaseNotFound . "</title>";
 	$Title = $DatabaseNotFound;
 	$TradeFromTeam = Null;
-}else{
-	$db = new SQLite3($DatabaseFile);
-
-	$Query = "Select FromTeam, ToTeam FROM TRADE WHERE (ConfirmFrom = 'True' AND ConfirmTo = 'True') GROUP BY FromTeam ";
-	$TradeFromTeam = $db->query($Query);	
-	
-	$Query = "Select Name from LeagueGeneral";
-	$LeagueGeneral = $db->querySingle($Query,true);		
-	$LeagueName = $LeagueGeneral['Name'];
-	$Title = $TradeLang['ConfirmTrade'];
-	
-	echo "<title>" . $LeagueName . " - " . $Title  . "</title>";
-}?>
+}}?>
 </head><body>
 <?php include "Menu.php";?>
 <div style="width:99%;margin:auto;">
@@ -57,7 +67,7 @@ if (empty($TradeFromTeam) == false){while ($Row = $TradeFromTeam ->fetchArray())
 	$TeamTo =  $db->querySingle($Query,true);
 	
 	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'];
-	If ($TeamFrom['TeamThemeID'] > 0){echo "<img src=\"./images/" . $TeamFrom['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}
+	If ($TeamFrom['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $TeamFrom['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}
     echo $TeamFrom['Name'] . "</div><br />";
 		
 	$Query = "Select * From Trade WHERE FromTeam = " . $Team . " AND ToTeam = " . $ToTeam  . " AND Player > 0 AND (ConfirmFrom = 'True' AND ConfirmTo = 'True') ORDER BY Player";
@@ -105,15 +115,16 @@ if (empty($TradeFromTeam) == false){while ($Row = $TradeFromTeam ->fetchArray())
 	}}
 	echo "<br />";
 	
-	$Query = "Select Sum(Money) as SumofMoney, Sum(SalaryCap) as SumofSalaryCap From Trade WHERE FromTeam = "  . $Team . " AND ToTeam = " . $ToTeam  . " AND (ConfirmFrom = 'True' AND ConfirmTo = 'True')";
+	$Query = "Select Sum(Money) as SumofMoney, Sum(SalaryCapY1) as SumofSalaryCapY1, Sum(SalaryCapY2) as SumofSalaryCapY2 From Trade WHERE FromTeam = "  . $Team . " AND ToTeam = " . $ToTeam  . " AND (ConfirmFrom = 'True' AND ConfirmTo = 'True')";
 	$Trade =  $db->querySingle($Query,true);	
 	
 	If ($Trade['SumofMoney'] > 0){echo $TradeLang['Money'] . " : "  . number_format($Trade['SumofMoney'],0) . "$<br />";}
-	If ($Trade['SumofSalaryCap'] > 0){	echo $TradeLang['SalaryCap'] . " : " . number_format($Trade['SumofSalaryCap'] ,0) . "$<br />";}
+	If ($Trade['SumofSalaryCapY1'] > 0){	echo $TradeLang['SalaryCapY1'] . " : " . number_format($Trade['SumofSalaryCapY1'] ,0) . "$<br />";}
+	If ($Trade['SumofSalaryCapY2'] > 0){	echo $TradeLang['SalaryCapY2'] . " : " . number_format($Trade['SumofSalaryCapY2'] ,0) . "$<br />";}
 	
 	echo "</td><td style=\"vertical-align:top\">";
 	echo "<div class=\"STHSPHPTradeTeamName\">" .  $TradeLang['From'];
-	If ($TeamTo['TeamThemeID'] > 0){echo "<img src=\"./images/" . $TeamTo['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}
+	If ($TeamTo['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $TeamTo['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeTeamImage \" />";}
 	echo $TeamTo['Name'] . "</div><br />";
 		
 	$Query = "Select * From Trade WHERE ToTeam = " . $Team . " AND FromTeam = " . $ToTeam . " AND Player > 0 AND (ConfirmFrom = 'True' AND ConfirmTo = 'True') ORDER BY Player";
@@ -161,17 +172,18 @@ if (empty($TradeFromTeam) == false){while ($Row = $TradeFromTeam ->fetchArray())
 	}}
 	echo "<br />";
 	
-	$Query = "Select Sum(Money) as SumofMoney, Sum(SalaryCap) as SumofSalaryCap From Trade WHERE ToTeam = "  . $Team . " AND FromTeam = " . $ToTeam . " AND (ConfirmFrom = 'True' AND ConfirmTo = 'True')";
+	$Query = "Select Sum(Money) as SumofMoney, Sum(SalaryCapY1) as SumofSalaryCapY1, Sum(SalaryCapY2) as SumofSalaryCapY2 From Trade WHERE ToTeam = "  . $Team . " AND FromTeam = " . $ToTeam . " AND (ConfirmFrom = 'True' AND ConfirmTo = 'True')";
 	$Trade =  $db->querySingle($Query,true);	
 		
 	If ($Trade['SumofMoney'] > 0){echo $TradeLang['Money'] . " : "  . number_format($Trade['SumofMoney'],0) . "$<br />";}
-	If ($Trade['SumofSalaryCap'] > 0){	echo $TradeLang['SalaryCap'] . " : " . number_format($Trade['SumofSalaryCap'] ,0) . "$<br />";}	
+	If ($Trade['SumofSalaryCapY1'] > 0){	echo $TradeLang['SalaryCapY1'] . " : " . number_format($Trade['SumofSalaryCapY1'] ,0) . "$<br />";}	
+	If ($Trade['SumofSalaryCapY2'] > 0){	echo $TradeLang['SalaryCapY2'] . " : " . number_format($Trade['SumofSalaryCapY2'] ,0) . "$<br />";}	
 	echo "</td></tr>";
 	echo "<tr><td colspan=\"2\" class=\"STHSPHPTradeType\"><hr /><?php ?></td></tr>";
 	}
 }}
 
-if ($TradeFound == False){echo "<tr><td colspan=\"2\" class=\"STHSPHPTradeType\"><div style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $TradeLang['ViewConfirmTradeNotFound'] . "</div></td></tr>";}	
+if ($TradeFound == False){echo "<tr><td colspan=\"2\" class=\"STHSPHPTradeType\"><div class=\"STHSDivInformationMessage\">" . $TradeLang['ViewConfirmTradeNotFound'] . "</div></td></tr>";}	
 ?>
 	
 </table>

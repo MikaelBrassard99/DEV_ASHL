@@ -97,9 +97,9 @@ if($TradeLogHistory == True){
 	if (empty($Transaction) == false){while ($row = $Transaction ->fetchArray()) {
 		If ($TradeLogHistoryCurrentDate != $row['DateTxt']){echo "<tr><th colspan=\"4\" class=\"STHSCenter\">" . $row['DateTxt'] . "</th></tr>";$TradeLogHistoryCurrentDate = $row['DateTxt'];}
 		echo "<tr><td>";
-		If ($row['SendingTeamThemeID'] > 0){echo "<img src=\"./images/" . $row['SendingTeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeLogHistoryTeamImage\" />";}else{echo $row['SendingTeamName'];}
+		echo "<img src=\"./images/Pro-team/" . $row['SendingTeamNumber'] .".png\" alt=\"\" class=\"STHSPHPTradeLogHistoryTeamImage\" />";
 		echo "</td><td><img src=\"./images/TradeArrow.png\" alt=\"Trade Arrow\" width=\"25\" height=\"25\"></td><td>";
-		If ($row['ReceivingTeamThemeID'] > 0){echo "<img src=\"./images/" . $row['ReceivingTeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTradeLogHistoryTeamImage\" />";}else{echo $row['ReceivingTeamName'];}
+		echo "<img src=\"./images/Pro-team/" . $row['ReceivingTeamNumber'] .".png\" alt=\"\" class=\"STHSPHPTradeLogHistoryTeamImage\" />";
 		echo "</td><td style=\"text-align:left;padding-left:20px;\">" . $row['ReceivingTeamText'] . "</td></tr>";
 	}}
 	echo "</table>";

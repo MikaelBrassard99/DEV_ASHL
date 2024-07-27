@@ -23,9 +23,17 @@ include "Menu.php";}?>
 </tbody></table>
 <br />
 <h1 class="STHSWaivers_WaiverOrder">Waiver Order</h1>
-6 - RUSSIE<br />
-9 - CANADA<br />
-10 - ALLEMAGNE<br />
-11 - DANEMARK<br />
+1 - DANEMARK<br />
+2 - WORLD<br />
+3 - SLOVAQUIE<br />
+4 - LETTONIE<br />
+5 - ALLEMAGNE<br />
+6 - SUISSE<br />
+7 - FINLANDE<br />
+8 - SUÈDE<br />
+9 - TCHÉQUIE<br />
+10 - RUSSIE<br />
+11 - USA<br />
+12 - CANADA<br />
 14 - FINLANDE<br />
 <?php include "Footer.php";?>

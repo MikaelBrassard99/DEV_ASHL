@@ -36,9 +36,9 @@ echo "<title>" . $LeagueName . " - " . $WaiverLang['Title'] . "</title>";
 <?php
 if (empty($Waiver) == false){while ($Row = $Waiver ->fetchArray()) {
 	If ($Row['Player'] > 10000){
-		echo "<tr><td><a href=\"GoalieReport.php?Goalie=" . ($Row['Player'] - 10000) . "\"</a>" . $Row['PlayerNameOV'] . "</td>";
+		echo "<tr><td><a href=\"GoalieReport.php?Goalie=" . ($Row['Player'] - 10000) . "\"</a>" . substr($Row['PlayerNameOV'], 0, -4) . "</td>";
 	}else{
-		echo "<tr><td><a href=\"PlayerReport.php?Player=" . $Row['Player'] . "\"</a>" . $Row['PlayerNameOV'] . "</td>";
+		echo "<tr><td><a href=\"PlayerReport.php?Player=" . $Row['Player'] . "\"</a>" . substr($Row['PlayerNameOV'], 0, -4) . "</td>";
 	}
 	echo "<td>";
 	If ($Row['FromTeamThemeID'] > 0){echo "<img src=\"./images/" . $Row['FromTeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTeamStatsTeamImage\" />";}		

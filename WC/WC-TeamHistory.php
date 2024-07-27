@@ -34,6 +34,25 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_ALLEMAGNE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_ALLEMAGNE" style="display: block;">
 <br /><br />
+[2023-08-21 06:57:30] - New Record for Team's Most Hits (31) in 1 Game for ALLEMAGNE!<br />
+[2023-08-21 06:57:30] - New Record for Team's Most Hits (31) in 1 Game for ALLEMAGNE!<br />
+[2023-08-17 06:30:00] - New Record for Team's Most Penalties Minutes (12) in 1 Game for ALLEMAGNE!<br />
+[2023-08-15 17:40:30] - New Record for Team's Most Shots Blocked (13) in 1 Game for ALLEMAGNE!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Points (12) in 1 Game for ALLEMAGNE!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Assists (8) in 1 Game for ALLEMAGNE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Hits (25) in 1 Game for ALLEMAGNE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Points (11) in 1 Game for ALLEMAGNE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Assists (7) in 1 Game for ALLEMAGNE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Goals (4) in 1 Game for ALLEMAGNE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Hits (22) in 1 Game for ALLEMAGNE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Penalties Minutes (8) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Hits (20) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Penalties Minutes (2) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots Blocked (12) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots (37) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Points (6) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Assists (4) in 1 Game for ALLEMAGNE!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Goals (2) in 1 Game for ALLEMAGNE!<br />
 [2023-07-09 08:07:01] - ALLEMAGNE hired Uwe Krupp for 500 000 $ for 1 year(s).<br />
 [2023-07-09 07:59:05] - Dustin Strahlmeier signed with ALLEMAGNE for 500 000 $ for 1 year(s).<br />
 [2023-07-09 07:59:05] - Dustin Strahlmeier was added to ALLEMAGNE.<br />
@@ -105,6 +124,42 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_CANADA');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_CANADA" style="display: block;">
 <br /><br />
+[2023-08-19 06:21:50] - New Record for Team's Most Shots Blocked (15) in 1 Game for CANADA!<br />
+[2023-08-14 05:46:59] - New Record for Team's Most Shots Blocked (13) in 1 Game for CANADA!<br />
+[2023-08-12 06:06:17] - New Record for Team's Most Hits (27) in 1 Game for CANADA!<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Shots (36) in 1 Game for CANADA!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Hits (25) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Shots Blocked (12) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Points (24) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Assists (16) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Goals (8) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Points (24) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Assists (16) in 1 Game for CANADA!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Goals (8) in 1 Game for CANADA!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Penalties Minutes (16) in 1 Game for CANADA!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Penalties Minutes (16) in 1 Game for CANADA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots Blocked (11) in 1 Game for CANADA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots (30) in 1 Game for CANADA!<br />
+[2023-07-30 19:17:41] - Connor McDavid has been selected as assistant for CANADA.<br />
+[2023-07-30 19:17:41] - Sidney Crosby is no longer as assistant for CANADA.<br />
+[2023-07-30 19:17:41] - Sidney Crosby has been selected as captain for CANADA.<br />
+[2023-07-30 19:17:41] - Connor McDavid is no longer captain for CANADA.<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (21) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (6) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (8) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (26) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (18) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (11) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (7) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (18) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (11) in 1 Game for CANADA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (7) in 1 Game for CANADA!<br />
+[2023-07-28 15:47:46] - Sidney Crosby has been selected as assistant for CANADA.<br />
+[2023-07-28 15:47:46] - Unknown Player is no longer as assistant for CANADA.<br />
+[2023-07-28 15:47:46] - Alex Pietrangelo has been selected as assistant for CANADA.<br />
+[2023-07-28 15:47:46] - Unknown Player is no longer as assistant for CANADA.<br />
+[2023-07-28 15:47:46] - Connor McDavid has been selected as captain for CANADA.<br />
+[2023-07-28 15:47:46] - Unknown Player is no longer captain for CANADA.<br />
 [2023-07-07 20:18:11] - CANADA hired Jon Cooper for 500 000 $ for 1 year(s).<br />
 [2023-07-07 12:55:06] - Kris Letang signed with CANADA for 5 000 000 $ for 1 year(s).<br />
 [2023-07-07 12:55:06] - Kris Letang was added to CANADA.<br />
@@ -176,6 +231,29 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_DANEMARK');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_DANEMARK" style="display: block;">
 <br /><br />
+[2023-08-13 07:30:33] - New Record for Team's Most Hits (24) in 1 Game for DANEMARK!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Shots Blocked (19) in 1 Game for DANEMARK!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots (34) in 1 Game for DANEMARK!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Points (6) in 1 Game for DANEMARK!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Assists (4) in 1 Game for DANEMARK!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Goals (2) in 1 Game for DANEMARK!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Penalties Minutes (16) in 1 Game for DANEMARK!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Shots (30) in 1 Game for DANEMARK!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (9) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (22) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (10) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (6) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (29) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (3) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (2) in 1 Game for DANEMARK!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (1) in 1 Game for DANEMARK!<br />
+[2023-07-28 15:48:16] - DANEMARK hired Barry Trotz for 500 000 $ for 1 year(s).<br />
+[2023-07-28 15:48:05] - Philip Larsen has been selected as assistant for DANEMARK.<br />
+[2023-07-28 15:48:05] - Unknown Player is no longer as assistant for DANEMARK.<br />
+[2023-07-28 15:48:05] - Oliver Bjorkstrand has been selected as assistant for DANEMARK.<br />
+[2023-07-28 15:48:05] - Unknown Player is no longer as assistant for DANEMARK.<br />
+[2023-07-28 15:48:05] - Nikolaj Ehlers has been selected as captain for DANEMARK.<br />
+[2023-07-28 15:48:05] - Unknown Player is no longer captain for DANEMARK.<br />
 [2023-07-16 10:29:07] - Oscar Fisker Mølgaard signed with DANEMARK for 500 000 $ for 1 year(s).<br />
 [2023-07-16 10:29:07] - Oscar Fisker Mølgaard was added to DANEMARK.<br />
 [2023-07-16 10:28:58] - Mikkel Bødker signed with DANEMARK for 500 000 $ for 1 year(s).<br />
@@ -246,6 +324,21 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_FINLANDE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_FINLANDE" style="display: block;">
 <br /><br />
+[2023-08-23 06:33:01] - New Record for Team's Most Hits (25) in 1 Game for FINLANDE!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Penalties Minutes (10) in 1 Game for FINLANDE!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Shots (34) in 1 Game for FINLANDE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Hits (23) in 1 Game for FINLANDE!<br />
+[2023-08-03 06:06:31] - New Record for Team's Most Hits (20) in 1 Game for FINLANDE!<br />
+[2023-08-03 06:06:31] - New Record for Team's Most Shots (33) in 1 Game for FINLANDE!<br />
+[2023-08-01 05:58:50] - New Record for Team's Most Hits (17) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (16) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (8) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (15) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (26) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (17) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (11) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (6) in 1 Game for FINLANDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (15) in 1 Game for FINLANDE!<br />
 [2023-07-07 21:04:58] - FINLANDE hired Jukka Jalonen for 500 000 $ for 1 year(s).<br />
 [2023-07-07 10:37:01] - Kaapo Kähkönen signed with FINLANDE for 500 000 $ for 1 year(s).<br />
 [2023-07-07 10:37:01] - Kaapo Kähkönen was added to FINLANDE.<br />
@@ -317,6 +410,34 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_LETTONIE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_LETTONIE" style="display: block;">
 <br /><br />
+[2023-08-15 17:40:30] - New Record for Team's Most Penalties Minutes (14) in 1 Game for LETTONIE!<br />
+[2023-08-12 06:06:17] - New Record for Team's Most Points (15) in 1 Game for LETTONIE!<br />
+[2023-08-12 06:06:17] - New Record for Team's Most Assists (10) in 1 Game for LETTONIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots (41) in 1 Game for LETTONIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots (41) in 1 Game for LETTONIE!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Shots Blocked (13) in 1 Game for LETTONIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Penalties Minutes (10) in 1 Game for LETTONIE!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Hits (26) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (12) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (6) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (11) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (35) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (14) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Assists (9) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (5) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (12) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (6) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (11) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (35) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (14) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Assists (9) in 1 Game for LETTONIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (5) in 1 Game for LETTONIE!<br />
+[2023-07-29 13:19:05] - Theodor Blueger has been selected as assistant for LETTONIE.<br />
+[2023-07-29 13:19:04] - Unknown Player is no longer as assistant for LETTONIE.<br />
+[2023-07-29 13:19:00] - Karlis Cukste has been selected as assistant for LETTONIE.<br />
+[2023-07-29 13:19:00] - Unknown Player is no longer as assistant for LETTONIE.<br />
+[2023-07-29 13:18:52] - Zemgus Girgensons has been selected as the team Captain for the LETTONIE.<br />
+[2023-07-29 13:18:51] - Unknown Player is no longer captain for LETTONIE.<br />
 [2023-07-08 08:54:19] - Gustavs Davis Grigals signed with LETTONIE for 500 000 $ for 1 year(s).<br />
 [2023-07-08 08:54:19] - Gustavs Davis Grigals was added to LETTONIE.<br />
 [2023-07-08 08:44:32] - Ralfs Bergmanis signed with LETTONIE for 500 000 $ for 1 year(s).<br />
@@ -388,6 +509,39 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_RUSSIE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_RUSSIE" style="display: block;">
 <br /><br />
+[2023-08-19 06:21:50] - New Record for Team's Most Points (22) in 1 Game for RUSSIE!<br />
+[2023-08-19 06:21:50] - New Record for Team's Most Assists (14) in 1 Game for RUSSIE!<br />
+[2023-08-19 06:21:50] - New Record for Team's Most Goals (8) in 1 Game for RUSSIE!<br />
+[2023-08-17 06:30:00] - New Record for Team's Most Shots (41) in 1 Game for RUSSIE!<br />
+[2023-08-17 06:30:00] - New Record for Team's Most Points (18) in 1 Game for RUSSIE!<br />
+[2023-08-17 06:30:00] - New Record for Team's Most Assists (12) in 1 Game for RUSSIE!<br />
+[2023-08-14 05:46:58] - New Record for Team's Most Shots Blocked (18) in 1 Game for RUSSIE!<br />
+[2023-08-12 06:06:17] - New Record for Team's Most Shots (38) in 1 Game for RUSSIE!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Hits (29) in 1 Game for RUSSIE!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Shots (36) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Hits (23) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Shots Blocked (12) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Shots (35) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Points (16) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Assists (10) in 1 Game for RUSSIE!<br />
+[2023-08-05 07:45:14] - New Record for Team's Most Goals (6) in 1 Game for RUSSIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Penalties Minutes (14) in 1 Game for RUSSIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Points (13) in 1 Game for RUSSIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Assists (8) in 1 Game for RUSSIE!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Goals (5) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Hits (22) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Penalties Minutes (6) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Shots Blocked (7) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Shots (30) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Points (8) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Assists (5) in 1 Game for RUSSIE!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Goals (3) in 1 Game for RUSSIE!<br />
+[2023-07-29 10:31:42] - Vyacheslav Voynov has been selected as assistant for RUSSIE.<br />
+[2023-07-29 10:31:42] - Unknown Player is no longer as assistant for RUSSIE.<br />
+[2023-07-29 10:31:42] - Nikita Kucherov has been selected as assistant for RUSSIE.<br />
+[2023-07-29 10:31:42] - Unknown Player is no longer as assistant for RUSSIE.<br />
+[2023-07-29 10:31:42] - Alex Ovechkin has been selected as captain for RUSSIE.<br />
+[2023-07-29 10:31:42] - Unknown Player is no longer captain for RUSSIE.<br />
 [2023-07-09 08:51:15] - Sergei Bobrovsky signed with RUSSIE for 500 000 $ for 1 year(s).<br />
 [2023-07-09 08:51:15] - Sergei Bobrovsky was added to RUSSIE.<br />
 [2023-07-09 08:51:08] - Igor Shestyorkin signed with RUSSIE for 500 000 $ for 1 year(s).<br />
@@ -459,6 +613,29 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_SLOVAQUIE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_SLOVAQUIE" style="display: block;">
 <br /><br />
+[2023-08-23 06:33:01] - New Record for Team's Most Shots (33) in 1 Game for SLOVAQUIE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Shots (31) in 1 Game for SLOVAQUIE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Points (18) in 1 Game for SLOVAQUIE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Assists (12) in 1 Game for SLOVAQUIE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Goals (6) in 1 Game for SLOVAQUIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots Blocked (17) in 1 Game for SLOVAQUIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Goals (3) in 1 Game for SLOVAQUIE!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Shots Blocked (17) in 1 Game for SLOVAQUIE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Penalties Minutes (16) in 1 Game for SLOVAQUIE!<br />
+[2023-08-03 06:06:31] - New Record for Team's Most Hits (22) in 1 Game for SLOVAQUIE!<br />
+[2023-08-03 06:06:31] - New Record for Team's Most Shots (29) in 1 Game for SLOVAQUIE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Hits (20) in 1 Game for SLOVAQUIE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Penalties Minutes (12) in 1 Game for SLOVAQUIE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (16) in 1 Game for SLOVAQUIE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (16) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (17) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (8) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (4) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (26) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (5) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Assists (3) in 1 Game for SLOVAQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (2) in 1 Game for SLOVAQUIE!<br />
+[2023-07-29 09:54:16] - SLOVAQUIE hired Peter Stastny for 500 000 $ for 1 year(s).<br />
 [2023-07-24 21:16:26] - Adam Húska signed with SLOVAQUIE for 500 000 $ for 1 year(s).<br />
 [2023-07-24 21:16:26] - Adam Húska was added to SLOVAQUIE.<br />
 [2023-07-24 21:16:17] - Michal Ivan signed with SLOVAQUIE for 500 000 $ for 1 year(s).<br />
@@ -529,6 +706,31 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_SUÈDE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_SUÈDE" style="display: block;">
 <br /><br />
+[2023-08-22 06:50:01] - New Record for Team's Most Shots Blocked (19) in 1 Game for SUÈDE!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Points (14) in 1 Game for SUÈDE!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Assists (9) in 1 Game for SUÈDE!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Goals (5) in 1 Game for SUÈDE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Points (11) in 1 Game for SUÈDE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Assists (7) in 1 Game for SUÈDE!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Goals (4) in 1 Game for SUÈDE!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Shots Blocked (15) in 1 Game for SUÈDE!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Points (9) in 1 Game for SUÈDE!<br />
+[2023-08-03 06:06:32] - New Record for Team's Most Assists (6) in 1 Game for SUÈDE!<br />
+[2023-08-01 05:58:50] - New Record for Team's Most Hits (26) in 1 Game for SUÈDE!<br />
+[2023-08-01 05:58:50] - New Record for Team's Most Penalties Minutes (14) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (11) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (8) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (13) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (36) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (8) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (5) in 1 Game for SUÈDE!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (3) in 1 Game for SUÈDE!<br />
+[2023-07-29 20:11:03] - Erik Karlsson has been selected as assistant for SUÈDE.<br />
+[2023-07-29 20:11:03] - Unknown Player is no longer as assistant for SUÈDE.<br />
+[2023-07-29 20:11:03] - Filip Forsberg has been selected as assistant for SUÈDE.<br />
+[2023-07-29 20:11:03] - Unknown Player is no longer as assistant for SUÈDE.<br />
+[2023-07-29 20:11:03] - Gabriel Landeskog has been selected as captain for SUÈDE.<br />
+[2023-07-29 20:11:03] - Unknown Player is no longer captain for SUÈDE.<br />
 [2023-07-16 14:51:57] - Lucas Raymond signed with SUÈDE for 500 000 $ for 1 year(s).<br />
 [2023-07-16 14:51:57] - Lucas Raymond was added to SUÈDE.<br />
 [2023-07-16 14:32:19] - Filip Gustavsson signed with SUÈDE for 500 000 $ for 1 year(s).<br />
@@ -601,6 +803,32 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_SUISSE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_SUISSE" style="display: block;">
 <br /><br />
+[2023-08-11 06:22:37] - New Record for Team's Most Points (14) in 1 Game for SUISSE!<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Assists (8) in 1 Game for SUISSE!<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Goals (6) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Hits (29) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Shots (37) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Points (11) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Assists (7) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Goals (4) in 1 Game for SUISSE!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Hits (29) in 1 Game for SUISSE!<br />
+[2023-08-04 20:18:55] - Maxime Montandon signed with SUISSE for 500 000 $ for 1 year(s).<br />
+[2023-08-04 20:18:55] - Maxime Montandon was added to SUISSE.<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Shots Blocked (13) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Hits (26) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Penalties Minutes (14) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (8) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots (23) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Points (6) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Assists (4) in 1 Game for SUISSE!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Goals (2) in 1 Game for SUISSE!<br />
+[2023-07-29 09:59:30] - SUISSE hired Reto von Arx for 500 000 $ for 1 year(s).<br />
+[2023-07-25 21:32:47] - Sven Andrighetto has been selected as assistant for SUISSE.<br />
+[2023-07-25 21:32:47] - Unknown Player is no longer as assistant for SUISSE.<br />
+[2023-07-25 21:32:47] - Nino Niederreiter has been selected as assistant for SUISSE.<br />
+[2023-07-25 21:32:47] - Unknown Player is no longer as assistant for SUISSE.<br />
+[2023-07-25 21:32:47] - Roman Josi has been selected as captain for SUISSE.<br />
+[2023-07-25 21:32:47] - Unknown Player is no longer captain for SUISSE.<br />
 [2023-07-11 20:00:03] - Sven Andrighetto signed with SUISSE for 500 000 $ for 1 year(s).<br />
 [2023-07-11 20:00:03] - Sven Andrighetto was added to SUISSE.<br />
 [2023-07-11 19:59:48] - Philipp Kurashev was released.<br />
@@ -675,6 +903,20 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_TCHÉQUIE');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_TCHÉQUIE" style="display: block;">
 <br /><br />
+[2023-08-14 05:46:58] - New Record for Team's Most Shots (41) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (27) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (14) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (14) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (37) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (15) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Assists (9) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (6) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Hits (27) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Penalties Minutes (14) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots Blocked (14) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Shots (37) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Points (15) in 1 Game for TCHÉQUIE!<br />
+[2023-07-30 08:02:09] - New Record for Team's Most Goals (6) in 1 Game for TCHÉQUIE!<br />
 [2023-07-09 08:30:46] - Stanislav Svozil signed with TCHÉQUIE for 500 000 $ for 1 year(s).<br />
 [2023-07-09 08:30:46] - Stanislav Svozil was added to TCHÉQUIE.<br />
 [2023-07-09 08:30:39] - David Jiricek signed with TCHÉQUIE for 500 000 $ for 1 year(s).<br />
@@ -746,6 +988,35 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_USA');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_USA" style="display: block;">
 <br /><br />
+[2023-08-21 06:57:30] - New Record for Team's Most Shots (42) in 1 Game for USA!<br />
+[2023-08-21 06:57:30] - New Record for Team's Most Shots (42) in 1 Game for USA!<br />
+[2023-08-19 06:21:50] - New Record for Team's Most Shots Blocked (16) in 1 Game for USA!<br />
+[2023-08-16 05:59:37] - New Record for Team's Most Shots Blocked (15) in 1 Game for USA!<br />
+[2023-08-11 06:22:37] - New Record for Team's Most Penalties Minutes (16) in 1 Game for USA!<br />
+[2023-08-09 05:56:42] - New Record for Team's Most Shots (36) in 1 Game for USA!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Penalties Minutes (14) in 1 Game for USA!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Shots Blocked (13) in 1 Game for USA!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Shots Blocked (11) in 1 Game for USA!<br />
+[2023-08-02 06:15:09] - New Record for Team's Most Shots Blocked (10) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Hits (24) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Penalties Minutes (12) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Shots (35) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Points (20) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Assists (13) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Goals (7) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Points (20) in 1 Game for USA!<br />
+[2023-07-31 06:14:08] - New Record for Team's Most Assists (13) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Hits (13) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Penalties Minutes (10) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots Blocked (7) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Shots (31) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Points (13) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Assists (8) in 1 Game for USA!<br />
+[2023-07-30 08:02:10] - New Record for Team's Most Goals (5) in 1 Game for USA!<br />
+[2023-07-26 07:11:56] - Cam Fowler signed with USA for 500 000 $ for 1 year(s).<br />
+[2023-07-26 07:11:56] - Cam Fowler was added to USA.<br />
+[2023-07-26 07:11:44] - Tyler Myers was released.<br />
+[2023-07-26 07:11:44] - USA paid 0 $ to release Tyler Myers.<br />
 [2023-07-09 08:41:19] - USA hired John Tortorella for 500 000 $ for 1 year(s).<br />
 [2023-07-09 08:36:07] - Cole Caufield signed with USA for 500 000 $ for 1 year(s).<br />
 [2023-07-09 08:36:07] - Cole Caufield was added to USA.<br />
@@ -817,6 +1088,32 @@ include "Menu.php";}?>
 [ <a href="javascript:STHS_JS_ToggleTeam('STHS_JS_Team_WORLD');"><b>Close / Open Team View</b></a> ]
 </div><div id="STHS_JS_Team_WORLD" style="display: block;">
 <br /><br />
+[2023-08-22 06:50:01] - New Record for Team's Most Penalties Minutes (14) in 1 Game for WORLD!<br />
+[2023-08-22 06:50:01] - New Record for Team's Most Shots (36) in 1 Game for WORLD!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Hits (26) in 1 Game for WORLD!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Shots Blocked (19) in 1 Game for WORLD!<br />
+[2023-08-13 07:30:33] - New Record for Team's Most Shots Blocked (19) in 1 Game for WORLD!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Points (8) in 1 Game for WORLD!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Assists (5) in 1 Game for WORLD!<br />
+[2023-08-10 05:50:06] - New Record for Team's Most Goals (3) in 1 Game for WORLD!<br />
+[2023-08-08 07:10:05] - New Record for Team's Most Hits (24) in 1 Game for WORLD!<br />
+[2023-08-06 07:08:17] - New Record for Team's Most Penalties Minutes (12) in 1 Game for WORLD!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Shots Blocked (15) in 1 Game for WORLD!<br />
+[2023-08-04 06:48:19] - New Record for Team's Most Shots (34) in 1 Game for WORLD!<br />
+[2023-08-01 05:58:27] - Luca Sbisa has been selected as assistant for WORLD.<br />
+[2023-08-01 05:58:27] - Unknown Player is no longer as assistant for WORLD.<br />
+[2023-08-01 05:58:27] - Hafthor Sigrunarson has been selected as assistant for WORLD.<br />
+[2023-08-01 05:58:27] - Unknown Player is no longer as assistant for WORLD.<br />
+[2023-08-01 05:58:27] - Anze Kopitar has been selected as captain for WORLD.<br />
+[2023-08-01 05:58:27] - Unknown Player is no longer captain for WORLD.<br />
+[2023-08-01 05:58:24] - Team Name Change : Farm Team 11 changed name to Farm Team 11<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Hits (16) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Penalties Minutes (8) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots Blocked (11) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Shots (29) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Points (6) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Assists (4) in 1 Game for WORLD!<br />
+[2023-07-31 06:14:09] - New Record for Team's Most Goals (2) in 1 Game for WORLD!<br />
 [2023-07-24 23:02:15] - Liam Kirk signed with WORLD for 500 000 $ for 1 year(s).<br />
 [2023-07-24 23:02:15] - Liam Kirk was added to WORLD.<br />
 [2023-07-14 17:54:01] - Andre Burakovsky was released.<br />

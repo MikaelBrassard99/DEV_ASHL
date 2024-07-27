@@ -1,10 +1,10 @@
-<th data-priority="3" title="Order Number" class="STHSW10 sorter-false">#</th>
+<th data-priority="3" title="Order Number" class="STHSW10 sorter-false">jjjj#</th>
 <th data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName']; ?></th>
 <?php
 if ($Team >= 0) {
 	echo "<th class=\"columnSelector-false STHSW140Min\" data-priority=\"6\" title=\"Team Name\">" . $PlayersLang['TeamName'] . "</th>";
 } else {
-	echo "<th data-priority=\"2\" title=\"Team Name\" class=\"STHSW140Min\">" . $PlayersLang['TeamName'] . "</th>";
+	echo "<th data-priority=\"2\" title=\"Team Name\" class=\"x\">" . $PlayersLang['TeamName'] . "</th>";
 }
 if ($CareerLeaderSubPrintOut == 0 or $CareerLeaderSubPrintOut == 2) {
 	echo "<th data-priority=\"2\" title=\"Position\" class=\"STHSW25\">POS</th>";

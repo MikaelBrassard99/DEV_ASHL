@@ -117,76 +117,9 @@ if ($PlayerFarmStatMultipleTeamFound == true) {
 	echo "#tablesorter_colSelect5:checked ~ #tablesorter_ColumnSelector5 {display: block;}";
 }
 
-function getCountryAbre($Abre)
-{
-	switch ($Abre) {
-		case ('SW'):
-			return 'se';
-		case ('GE'):
-			return 'de';
-		case ('DE'):
-			return 'dk';
-		case ('SV'):
-			return 'sk';
-		case ('TC'):
-			return 'cz';
-		case ('LE'):
-			return 'lv';
-		case ('PO'):
-			return 'pl';
-		case ('JA'):
-			return 'jm';
-		default:
-			return strtolower($Abre);
-	}
-};
 
-function createPickturePlayer($name)
-{
-	switch (strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name))) {
-		case "mike-reilly":
-			return "mike-reilly-106004";
-			break;
-		case "robert-thomas":
-			return "robert-thomas-270853";
-			break;
-		case "sam-reinhart":
-			return "sam-reinhart-68137";
-			break;
-		case "zachary-werenski":
-			return "zach-werenski";
-			break;
-		case "kaapo-kähkönen":
-			return "kaapo-kahkonen";
-			break;
-		case "anthony-deangelo":
-			return "tony-deangelo";
-			break;
-		case "tyler-johnson":
-			return "tyler-johnson-40574";
-			break;
-		case "dmitri-kulikov":
-			return "dmitry-kulikov";
-			break;
-		default:
-			return strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name));
-			break;
-	}
-}
 
-function getSeasonName($name)
-{
-	switch ($name) {
-		case "WC-STHS.bin":
-			return "WC : 2023";
-			break;
-		default:
-			return $name;
-			break;
-	}
-}
-
-$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12, $DatabaseFileS13, $DatabaseFile];
+$arrayDbs = [$DatabaseFileS10, $DatabaseFileS_C, $DatabaseFileS11, $DatabaseFileS12, $DatabaseFileS13, $DatabaseFileS14, $DatabaseFile];
 $count = 0;
 //dictionnaire des donnees des joueurs selon le count (annee)
 $dictLeagueGeneral[[]];
@@ -428,6 +361,10 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 						<tr>
 							<td><?php echo $TeamLang['Annee de contrat | Salaire'] ?></td>
 							<td><?php echo ($PlayerInfo['NoTrade'] == "False") ? $PlayerInfo['Contract'] . "an(s) | " . $PlayerInfo['SalaryAverage'] . "$ avg" : $PlayerInfo['Contract'] . "an(s) | " . $PlayerInfo['SalaryAverage'] . "$ avg + NTC"; ?></td>
+						</tr>
+						<tr>
+							<td><?php echo $PlayersLang['SalaryRemaining'] ?></td>
+							<td><?php echo $PlayerInfo['SalaryRemaining']  . "$ " ?></td>
 						</tr>
 						<tr>
 							<td><?php echo $TeamLang['Recrue'] ?></td>
@@ -902,16 +839,17 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 					<?php
 					if ($PlayerProStatMultipleTeamFound == TRUE) {
 						echo "<h2>" . $PlayersLang['ProStat'] . "</h2>";
-						echo "<div style=\"width:99%;margin:auto;\"><div class=\"tablesorter_ColumnSelectorWrapper\"><input id=\"tablesorter_colSelect4\" type=\"checkbox\" class=\"hidden\"><label class=\"tablesorter_ColumnSelectorButton\" for=\"tablesorter_colSelect4\">" . $TableSorterLang['ShoworHideColumn'] . "</label><div id=\"tablesorter_ColumnSelector4\" class=\"tablesorter_ColumnSelector\"></div>";
+						echo "<div style=\"overflow-x:auto;\"><div class=\"tablesorter_ColumnSelectorWrapper\"><input id=\"tablesorter_colSelect4\" type=\"checkbox\" class=\"hidden\"><label class=\"tablesorter_ColumnSelectorButton\" for=\"tablesorter_colSelect4\">" . $TableSorterLang['ShoworHideColumn'] . "</label><div id=\"tablesorter_ColumnSelector4\" class=\"tablesorter_ColumnSelector\"></div>";
 						include "FilterTip.php";
 						echo "</div></div>";
 
 						$Query = "SELECT PlayerProStatMultipleTeam.*, PlayerInfo.PosC, PlayerInfo.PosLW, PlayerInfo.PosRW, PlayerInfo.PosD, ROUND((CAST(PlayerProStatMultipleTeam.G AS REAL) / (PlayerProStatMultipleTeam.Shots))*100,2) AS ShotsPCT, ROUND((CAST(PlayerProStatMultipleTeam.SecondPlay AS REAL) / 60 / (PlayerProStatMultipleTeam.GP)),2) AS AMG,ROUND((CAST(PlayerProStatMultipleTeam.FaceOffWon AS REAL) / (PlayerProStatMultipleTeam.FaceOffTotal))*100,2) as FaceoffPCT,ROUND((CAST(PlayerProStatMultipleTeam.P AS REAL) / (PlayerProStatMultipleTeam.SecondPlay) * 60 * 20),2) AS P20, 0 as Star1, 0 as Star2, 0 As Star3 FROM PlayerInfo INNER JOIN PlayerProStatMultipleTeam ON PlayerInfo.Number = PlayerProStatMultipleTeam.Number WHERE PlayerProStatMultipleTeam.Number = " . $Player;
 						$PlayerStat = $db->query($Query);
 						$Team = (int)-1;
+						echo "<div style=\"overflow-x:auto;\">";
 						echo "<table class=\"tablesorter \"><thead><tr>";
 						include "PlayersStatSub.php";
-						echo "</tbody></table>";
+						echo "</tbody></table></div>";
 					}
 
 					if ($PlayerProStatMultipleTeamFound == TRUE and $PlayerFarmStatMultipleTeamFound == TRUE) {
@@ -920,16 +858,17 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 
 					if ($PlayerFarmStatMultipleTeamFound == TRUE) {
 						echo "<h2>" . $PlayersLang['FarmStat'] . "</h2>";
-						echo "<div style=\"width:99%;margin:auto;\"><div class=\"tablesorter_ColumnSelectorWrapper\"><input id=\"tablesorter_colSelect5\" type=\"checkbox\" class=\"hidden\"><label class=\"tablesorter_ColumnSelectorButton\" for=\"tablesorter_colSelect5\">" . $TableSorterLang['ShoworHideColumn'] . "</label><div id=\"tablesorter_ColumnSelector5\" class=\"tablesorter_ColumnSelector\"></div>";
+						echo "<div style=\"overflow-x:auto;\"><div class=\"tablesorter_ColumnSelectorWrapper\"><input id=\"tablesorter_colSelect5\" type=\"checkbox\" class=\"hidden\"><label class=\"tablesorter_ColumnSelectorButton\" for=\"tablesorter_colSelect5\">" . $TableSorterLang['ShoworHideColumn'] . "</label><div id=\"tablesorter_ColumnSelector5\" class=\"tablesorter_ColumnSelector\"></div>";
 						include "FilterTip.php";
 						echo "</div></div>";
 
 						$Query = "SELECT PlayerFarmStatMultipleTeam.*, PlayerInfo.PosC, PlayerInfo.PosLW, PlayerInfo.PosRW, PlayerInfo.PosD, ROUND((CAST(PlayerFarmStatMultipleTeam.G AS REAL) / (PlayerFarmStatMultipleTeam.Shots))*100,2) AS ShotsPCT, ROUND((CAST(PlayerFarmStatMultipleTeam.SecondPlay AS REAL) / 60 / (PlayerFarmStatMultipleTeam.GP)),2) AS AMG,ROUND((CAST(PlayerFarmStatMultipleTeam.FaceOffWon AS REAL) / (PlayerFarmStatMultipleTeam.FaceOffTotal))*100,2) as FaceoffPCT,ROUND((CAST(PlayerFarmStatMultipleTeam.P AS REAL) / (PlayerFarmStatMultipleTeam.SecondPlay) * 60 * 20),2) AS P20, 0 as Star1, 0 as Star2, 0 As Star3 FROM PlayerInfo INNER JOIN PlayerFarmStatMultipleTeam ON PlayerInfo.Number = PlayerFarmStatMultipleTeam.Number WHERE PlayerFarmStatMultipleTeam.Number = " . $Player;
 						$PlayerStat = $db->query($Query);
 						$Team = (int)-1;
+						echo "<div style=\"overflow-x:auto;\">";
 						echo "<table class=\"tablesorter STHSPHPFarmPlayerStatPerTeam_Table\"><thead><tr>";
 						include "PlayersStatSub.php";
-						echo "</tbody></table>";
+						echo "</tbody></table></div>";
 					}
 					?>
 
@@ -1147,7 +1086,7 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 
 								if ($PlayerProCareerSumSeasonOnly['SumOfGP'] > 0) {
 									/* Show ProCareer Total for Season */
-									echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"2\"><strong>" . $PlayersLang['Total'] . " " . $PlayersLang['RegularSeason'] . "</strong></td>";
+									echo "<tr class=\"static\"><td class=\"staticTD\" colspan=\"2\"><strong> Séries éliminatoires</strong></td>";
 									echo "<td class=\"staticTD\">" . $PlayerProCareerSumSeasonOnly['SumOfGP'] . "</td>";
 									echo "<td class=\"staticTD\">" . $PlayerProCareerSumSeasonOnly['SumOfG'] . "</td>";
 									echo "<td class=\"staticTD\">" . $PlayerProCareerSumSeasonOnly['SumOfA'] . "</td>";

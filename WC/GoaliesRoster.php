@@ -1,10 +1,9 @@
+<!DOCTYPE html>
 <?php include "Header.php";?>
 <?php
 $Title = (string)"";
+$Active = 4; /* Show Webpage Top Menu */
 $Team = (integer)-1; /* -1 All Team */
-$Search = (boolean)False;
-$HistoryOutput = (boolean)False;
-include "SearchPossibleOrderField.php";
 If (file_exists($DatabaseFile) == false){
 	$LeagueName = $DatabaseNotFound;
 	$GoalieRoster = Null;
@@ -30,15 +29,36 @@ If (file_exists($DatabaseFile) == false){
 	if(isset($_GET['Type'])){$Type = filter_var($_GET['Type'], FILTER_SANITIZE_NUMBER_INT);} 
 	if(isset($_GET['ACS'])){$ACSQuery = TRUE;}
 	if(isset($_GET['Max'])){$MaximumResult = filter_var($_GET['Max'], FILTER_SANITIZE_NUMBER_INT);} 
-	if(isset($_GET['Order'])){$OrderByInput  = filter_var($_GET['Order'], FILTER_UNSAFE_RAW, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);} 
+	if(isset($_GET['Order'])){$OrderByInput  = filter_var($_GET['Order'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);} 
 	if(isset($_GET['Team'])){$Team = filter_var($_GET['Team'], FILTER_SANITIZE_NUMBER_INT);} 
-	if(isset($_GET['Title'])){$TitleOverwrite = filter_var($_GET['Title'], FILTER_UNSAFE_RAW, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);} 
-	if(isset($_GET['FreeAgent'])){$FreeAgentYear = filter_var($_GET['FreeAgent'], FILTER_SANITIZE_NUMBER_INT);If ($FreeAgentYear == null){$FreeAgentYear = (integer)0;}} 
+	if(isset($_GET['Title'])){$TitleOverwrite = filter_var($_GET['Title'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW || FILTER_FLAG_STRIP_HIGH || FILTER_FLAG_NO_ENCODE_QUOTES || FILTER_FLAG_STRIP_BACKTICK);} 
+	if(isset($_GET['FreeAgent'])){$FreeAgentYear = filter_var($_GET['FreeAgent'], FILTER_SANITIZE_NUMBER_INT);} 
 	if(isset($_GET['Expansion'])){$Expansion = TRUE;} 
 	if(isset($_GET['AvailableForTrade'])){$AvailableForTrade = TRUE;} 	
 	if(isset($_GET['Injury'])){$Injury = TRUE;} 
 	if(isset($_GET['Retire'])){$Retire = "'True'";$FreeAgentYear=-1;}  /* Retire Overwrite Everything including FreeAgent */
 
+	$GoaliesRosterPossibleOrderField = array(
+	array("Name","Goalie Name"),
+	array("Team","Team Number"),	
+	array("ConditionDecimal","Condition"),
+	array("SK","Skating"),
+	array("DU","Durability"),
+	array("EN","Endurance"),
+	array("SZ","Size"),
+	array("AG","Agility"),
+	array("RB","Rebound Control"),
+	array("SC","Style Control"),
+	array("HS","Hand Speed"),
+	array("RT","Reaction Time"),
+	array("PH","Puck Handling"),
+	array("PS","Penalty Shot"),
+	array("EX","Experience"),
+	array("LD","Leadership"),
+	array("PO","Potential"),
+	array("MO","Morale"),
+	array("Overall","Overall"),
+	);
 	foreach ($GoaliesRosterPossibleOrderField as $Value) {
 		If (strtoupper($Value[0]) == strtoupper($OrderByInput)){
 			$OrderByField = $Value[0];
@@ -47,184 +67,88 @@ If (file_exists($DatabaseFile) == false){
 		}
 	}
 	
-	$Playoff = (boolean)False;
-	$PlayoffString = (string)"False";
-	$Year = (integer)0;	
-	if(isset($_GET['Playoff'])){$Playoff=True;$PlayoffString="True";}
-	if(isset($_GET['Year'])){$Year = filter_var($_GET['Year'], FILTER_SANITIZE_NUMBER_INT);} 
-
-	If($Year > 0 AND file_exists($CareerStatDatabaseFile) == true){  /* CareerStat */
-		$db = new SQLite3($CareerStatDatabaseFile);
-		$CareerDBFormatV2CheckCheck = $db->querySingle("SELECT Count(name) AS CountName FROM sqlite_master WHERE type='table' AND name='LeagueGeneral'",true);
-		If ($CareerDBFormatV2CheckCheck['CountName'] == 1){
-			$HistoryOutput = True;
-			
-			/* Reset Variable Ignore in History Mode */
-			$FreeAgentYear = (integer)-1; /* -1 = No Input  */
-			$Expansion = (boolean)FALSE;
-			
-			$Query = "Select Name, RFAAge, UFAAge from LeagueGeneral WHERE Year = " . $Year . " And Playoff = '" . $PlayoffString. "'";
-			$LeagueGeneral = $db->querySingle($Query,true);		
-
-			//Confirm Valid Data Found
-			$CareerDBFormatV2CheckCheck = $db->querySingle("Select Count(Name) As CountName from LeagueGeneral  WHERE Year = " . $Year . " And Playoff = '" . $PlayoffString. "'",true);
-			If ($CareerDBFormatV2CheckCheck['CountName'] == 1){$LeagueName = $LeagueGeneral['Name'];}else{$Year = (integer)0;$HistoryOutput = (boolean)False;Goto RegularSeason;}			
-			
-			$Query = "Select SalaryCapOption from LeagueFinance WHERE Year = " . $Year . " And Playoff = '" . $PlayoffString. "'";
-			$LeagueFinance = $db->querySingle($Query,true);		
-			$Query = "Select MergeRosterPlayerInfo, FreeAgentUseDateInsteadofDay, FreeAgentRealDate from LeagueOutputOption WHERE Year = " . $Year . " And Playoff = '" . $PlayoffString. "'";
-			$LeagueOutputOption = $db->querySingle($Query,true);
-				
-			$Query = "SELECT *, '0' As TeamThemeID FROM GoalerInfoHistory WHERE Retire = " . $Retire . " AND Year = " . $Year . " And Playoff = '" . $PlayoffString. "'";		
-
-			If($AvailableForTrade == TRUE){$Title = $DynamicTitleLang['AvailableForTrade'];}
-			If($Retire == "'True'"){$Title = $DynamicTitleLang['Retire'];}	
-			
-			/* Team or All */
-			if($Team >= 0 And $Retire == "'False'"){
-				if($Team > 0){
-					$QueryTeam = "SELECT Name FROM TeamProInfoHistory WHERE Number = " . $Team . " AND Year = " . $Year . " And Playoff = '" . $PlayoffString. "'";			
-					$TeamName = $db->querySingle($QueryTeam,true);	
-					$Title = $Title . $TeamName['Name'];
-				}else{
-					$Title = $DynamicTitleLang['Unassigned'];
-				}
-				$Query = $Query . " AND GoalerInfoHistory .Team = " . $Team;
-			}else{
-				if($Type == 1 Or $Type == 2 ){$Query = $Query . " AND GoalerInfoHistory .Number > 0";}
-			}
-			
-			If($MaximumResult == 0){$Title = $Title . $DynamicTitleLang['All'];}else{$Title = $Title . $DynamicTitleLang['Top'] .$MaximumResult;}
-			
-			/* Pro Only or Farm  */ 
-			if($Type == 1){
-				$Query = $Query . " AND GoalerInfoHistory .Status1 >= 2";
-				$Title = $Title . $DynamicTitleLang['Pro'];
-			}elseif($Type == 2){
-				$Query = $Query . " AND GoalerInfoHistory .Status1 <= 1";
-				$Title = $Title . $DynamicTitleLang['Farm'];
-			}
-			
-			/* Option */
-			If ($Retire == "'False'"){
-				if($AvailableForTrade == TRUE){
-					if($Type == 0 AND $Team == -1){$Query = $Query . " AND GoalerInfoHistory .Team > 0";}
-					$Query = $Query . " AND GoalerInfoHistory .AvailableForTrade = 'True'";	
-				}elseif($Injury == TRUE){
-					if($Type == 0 AND $Team == -1){$Query = $Query . " AND GoalerInfo.Team > 0";}
-					$Query = $Query . " AND (GoalerInfoHistory .Condition < '95' OR GoalerInfoHistory .Suspension > '1')";			
-				}
-			}
-
-			$Title = $Title . $DynamicTitleLang['GoaliesRoster'] . " - " . $Year;
-			If ($Playoff == True){$Title = $Title . $TopMenuLang['Playoff'];}	
-			
-			/* Order by and Limit */
-			$Query = $Query . " ORDER BY " . $OrderByField;
-			If ($ACSQuery == TRUE){
-				$Query = $Query . " ASC";
-				$Title = $Title . $DynamicTitleLang['InAscendingOrderBy'] . $OrderByFieldText;
-			}else{
-				$Query = $Query . " DESC";
-				$Title = $Title . $DynamicTitleLang['InDecendingOrderBy'] . $OrderByFieldText;
-			}
-			If ($MaximumResult > 0){$Query = $Query . " LIMIT " . $MaximumResult;}
-			
-			/* Ran Query */	
-			$GoalieRoster = $db->query($Query);
-
-			echo "<title>" . $LeagueName . " - " . $Title . "</title>";		
-			
-		}else{
-			Goto RegularSeason;
-		}
+	$db = new SQLite3($DatabaseFile);
+	$Query = "Select Name, RFAAge, UFAAge from LeagueGeneral";
+	$LeagueGeneral = $db->querySingle($Query,true);		
+	$LeagueName = $LeagueGeneral['Name'];
+	$Query = "Select SalaryCapOption from LeagueFinance";
+	$LeagueFinance = $db->querySingle($Query,true);		
+	$Query = "Select MergeRosterPlayerInfo, FreeAgentUseDateInsteadofDay, FreeAgentRealDate from LeagueOutputOption";
+	$LeagueOutputOption = $db->querySingle($Query,true);
+	$Query = "Select AllowFreeAgentSalaryRequestInSTHSClient from LeagueWebClient";
+	$LeagueWebClient = $db->querySingle($Query,true);	
+		
+	If ($FreeAgentYear == 1){
+		$Query = "SELECT GoalerInfo.*, NextYearFreeAgent.PlayerType AS NextYearFreeAgentPlayerType FROM GoalerInfo LEFT JOIN NextYearFreeAgent ON GoalerInfo.Number = NextYearFreeAgent.Number WHERE Retire = 'False'";
 	}else{
-		/* Regular Season */
-		RegularSeason:					
-	
-		$db = new SQLite3($DatabaseFile);
-		$Query = "Select Name, RFAAge, UFAAge from LeagueGeneral";
-		$LeagueGeneral = $db->querySingle($Query,true);		
-		$LeagueName = $LeagueGeneral['Name'];
-		$Query = "Select SalaryCapOption from LeagueFinance";
-		$LeagueFinance = $db->querySingle($Query,true);		
-		$Query = "Select MergeRosterPlayerInfo, FreeAgentUseDateInsteadofDay, FreeAgentRealDate from LeagueOutputOption";
-		$LeagueOutputOption = $db->querySingle($Query,true);
-		$Query = "Select AllowFreeAgentSalaryRequestInSTHSClient from LeagueWebClient";
-		$LeagueWebClient = $db->querySingle($Query,true);	
-			
-		If ($FreeAgentYear == 1){
-			$Query = "SELECT GoalerInfo.*, NextYearFreeAgent.PlayerType AS NextYearFreeAgentPlayerType FROM GoalerInfo LEFT JOIN NextYearFreeAgent ON GoalerInfo.Number = NextYearFreeAgent.Number WHERE Retire = 'False'";
-		}else{
-			$Query = "SELECT * FROM GoalerInfo WHERE Retire = " . $Retire;
-		}
-		
-		If($Expansion == TRUE){$Title = $DynamicTitleLang['ExpansionDraft'];}
-		If($AvailableForTrade == TRUE){$Title = $DynamicTitleLang['AvailableForTrade'];}
-		If($Retire == "'True'"){$Title = $DynamicTitleLang['Retire'];}	
-		
-		/* Team or All */
-		if($Team >= 0 And $Retire == "'False'"){
-			if($Team > 0){
-				$QueryTeam = "SELECT Name FROM TeamProInfo WHERE Number = " . $Team;
-				$TeamName = $db->querySingle($QueryTeam,true);	
-				$Title = $Title . $TeamName['Name'];
-			}else{
-				$Title = $DynamicTitleLang['Unassigned'];
-			}
-			$Query = $Query . " AND GoalerInfo.Team = " . $Team;
-		}else{
-			if($Type == 1 Or $Type == 2 ){$Query = $Query . " AND GoalerInfo.Number > 0";}
-		}
-		
-		If($MaximumResult == 0){$Title = $Title . $DynamicTitleLang['All'];}else{$Title = $Title . $DynamicTitleLang['Top'] .$MaximumResult;}
-		
-		/* Pro Only or Farm  */ 
-		if($Type == 1){
-			$Query = $Query . " AND GoalerInfo.Status1 >= 2";
-			$Title = $Title . $DynamicTitleLang['Pro'];
-		}elseif($Type == 2){
-			$Query = $Query . " AND GoalerInfo.Status1 <= 1";
-			$Title = $Title . $DynamicTitleLang['Farm'];
-		}
-		
-		/* Option */
-		If ($Retire == "'False'"){
-			If ($FreeAgentYear >= 0){
-				if($Type == 0 AND $Team == -1){$Query = $Query . " AND GoalerInfo.Team > 0";}
-				$Query = $Query . " AND GoalerInfo.Contract = " . $FreeAgentYear; /* Free Agent Query */ 
-				If ($FreeAgentYear == 0){$Title = $Title . $DynamicTitleLang['ThisYearFreeAgents'];}elseIf ($FreeAgentYear == 1){$Title = $Title . $DynamicTitleLang['NextYearFreeAgents'];}else{$Title = $Title . " " . $FreeAgentYear . $DynamicTitleLang['YearsFreeAgents'];}
-			}elseif($Expansion == TRUE){
-				$Query = $Query . " AND GoalerInfo.PProtected = 'False'";
-			}elseif($AvailableForTrade == TRUE){
-				if($Type == 0 AND $Team == -1){$Query = $Query . " AND GoalerInfo.Team > 0";}
-				$Query = $Query . " AND GoalerInfo.AvailableForTrade = 'True'";	
-			}elseif($Injury == TRUE){
-				if($Type == 0 AND $Team == -1){$Query = $Query . " AND GoalerInfo.Team > 0";}
-				$Query = $Query . " AND (GoalerInfo.Condition < '95' OR GoalerInfo.Suspension > '1')";			
-			}
-		}
-
-		$Title = $Title . $DynamicTitleLang['GoaliesRoster'];	
-		
-		/* Order by and Limit */
-		$Query = $Query . " ORDER BY " . $OrderByField;
-		If ($ACSQuery == TRUE){
-			$Query = $Query . " ASC";
-			$Title = $Title . $DynamicTitleLang['InAscendingOrderBy'] . $OrderByFieldText;
-		}else{
-			$Query = $Query . " DESC";
-			$Title = $Title . $DynamicTitleLang['InDecendingOrderBy'] . $OrderByFieldText;
-		}
-		If ($MaximumResult > 0){$Query = $Query . " LIMIT " . $MaximumResult;}
-		
-		/* Ran Query */	
-		$GoalieRoster = $db->query($Query);
-
-		/* OverWrite Title if information is get from PHP GET */
-		if($TitleOverwrite <> ""){$Title = $TitleOverwrite;}
-		echo "<title>" . $LeagueName . " - " . $Title . "</title>";
+		$Query = "SELECT * FROM GoalerInfo WHERE Retire = " . $Retire;
 	}
+	
+	If($Expansion == TRUE){$Title = $DynamicTitleLang['ExpansionDraft'];}
+	If($AvailableForTrade == TRUE){$Title = $DynamicTitleLang['AvailableForTrade'];}
+	If($Retire == "'True'"){$Title = $DynamicTitleLang['Retire'];}	
+	
+	/* Team or All */
+	if($Team >= 0 And $Retire == "'False'"){
+		if($Team > 0){
+			$QueryTeam = "SELECT Name FROM TeamProInfo WHERE Number = " . $Team;
+			$TeamName = $db->querySingle($QueryTeam,true);	
+			$Title = $Title . $TeamName['Name'];
+		}else{
+			$Title = $DynamicTitleLang['Unassigned'];
+		}
+		$Query = $Query . " AND GoalerInfo.Team = " . $Team;
+	}else{
+		if($Type == 1 Or $Type == 2 ){$Query = $Query . " AND GoalerInfo.Number > 0";}
+	}
+	
+	If($MaximumResult == 0){$Title = $Title . $DynamicTitleLang['All'];}else{$Title = $Title . $DynamicTitleLang['Top'] .$MaximumResult;}
+	
+	/* Pro Only or Farm  */ 
+	if($Type == 1){
+		$Query = $Query . " AND GoalerInfo.Status1 >= 2";
+		$Title = $Title . $DynamicTitleLang['Pro'];
+	}elseif($Type == 2){
+		$Query = $Query . " AND GoalerInfo.Status1 <= 1";
+		$Title = $Title . $DynamicTitleLang['Farm'];
+	}
+	
+	/* Option */
+	If ($Retire == "'False'"){
+		If ($FreeAgentYear >= 0){
+			if($Type == 0 AND $Team == -1){$Query = $Query . " AND GoalerInfo.Team > 0";}
+			$Query = $Query . " AND GoalerInfo.Contract = " . $FreeAgentYear; /* Free Agent Query */ 
+			If ($FreeAgentYear == 0){$Title = $Title . $DynamicTitleLang['ThisYearFreeAgents'];}elseIf ($FreeAgentYear == 1){$Title = $Title . $DynamicTitleLang['NextYearFreeAgents'];}else{$Title = $Title . " " . $FreeAgentYear . $DynamicTitleLang['YearsFreeAgents'];}
+		}elseif($Expansion == TRUE){
+			$Query = $Query . " AND GoalerInfo.PProtected = 'False'";
+		}elseif($AvailableForTrade == TRUE){
+			if($Type == 0 AND $Team == -1){$Query = $Query . " AND GoalerInfo.Team > 0";}
+			$Query = $Query . " AND GoalerInfo.AvailableForTrade = 'True'";	
+		}elseif($Injury == TRUE){
+			if($Type == 0 AND $Team == -1){$Query = $Query . " AND GoalerInfo.Team > 0";}
+			$Query = $Query . " AND (GoalerInfo.Condition < '95' OR GoalerInfo.Suspension > '1')";			
+		}
+	}
+
+	$Title = $Title . $DynamicTitleLang['GoaliesRoster'];	
+	
+	/* Order by and Limit */
+	$Query = $Query . " ORDER BY " . $OrderByField;
+	If ($ACSQuery == TRUE){
+		$Query = $Query . " ASC";
+		$Title = $Title . $DynamicTitleLang['InAscendingOrderBy'] . $OrderByFieldText;
+	}else{
+		$Query = $Query . " DESC";
+		$Title = $Title . $DynamicTitleLang['InDecendingOrderBy'] . $OrderByFieldText;
+	}
+	If ($MaximumResult > 0){$Query = $Query . " LIMIT " . $MaximumResult;}
+	
+	/* Ran Query */	
+	$GoalieRoster = $db->query($Query);
+
+	/* OverWrite Title if information is get from PHP GET */
+	if($TitleOverwrite <> ""){$Title = $TitleOverwrite;}
+	echo "<title>" . $LeagueName . " - " . $Title . "</title>";
 }?>
 </head><body>
 <?php include "Menu.php";?>
@@ -260,17 +184,8 @@ $(function() {
 </script>
 
 <div style="width:99%;margin:auto;">
-<div id="ReQueryDiv" style="display:none;">
-<?php If($HistoryOutput == False){
-	include "SearchGoalierRoster.php";
-}else{
-	include "SearchHistorySub.php";
-	include "SearchHistoryGoalierRoster.php";
-	$Team = (integer)-1;
-}?>
-</div>
+
 <div class="tablesorter_ColumnSelectorWrapper">
-	<button class="tablesorter_Output" id="ReQuery"><?php echo $SearchLang['ChangeSearch'];?></button>
     <input id="tablesorter_colSelect1" type="checkbox" class="hidden">
     <label class="tablesorter_ColumnSelectorButton" for="tablesorter_colSelect1"><?php echo $TableSorterLang['ShoworHideColumn'];?></label>
 	<button class="tablesorter_Output download" type="button">Output</button>
@@ -299,7 +214,7 @@ $(function() {
 <th data-priority="3" title="Potential" class="STHSW25">PO</th>
 <th <?php if($FreeAgentYear == -1){echo " data-priority=\"3\" class=\"STHSW25\"";}else{echo "data-priority=\"5\" class=\"columnSelector-false STHSW25\"";}?> title="Morale">MO</th>
 <th data-priority="critical" title="Overall" class="STHSW25">OV</th>
-<?php if ($GoalieRoster != Null){
+<?php
 	if ($FreeAgentYear == -1){
 		echo "<th data-priority=\"5\" class=\"columnSelector-false STHSW25\" title=\"Trade Available\">TA</th>";
 	}else{
@@ -318,7 +233,7 @@ $(function() {
 	}else{
 		echo "<th data-priority=\"5\" title=\"Star Power\" class=\"STHSW25\">SP</th>";	
 	}
-}?>
+?>
 <th data-priority="5" title="Hyperlink" class="STHSW65"><?php echo $PlayersLang['Link'];?></th>
 </tr></thead><tbody>
 <?php
@@ -329,12 +244,10 @@ if (empty($GoalieRoster) == false){while ($Row = $GoalieRoster ->fetchArray()) {
 	if ($Row['Retire']== "True"){
 		echo "<td>" . $PlayersLang['Retire'] . "</td>";	
 	}else{
-		echo "<td>";
-		If ($Row['TeamThemeID'] > 0){echo "<img src=\"./images/" . $Row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPGoaliesRosterTeamImage\" />";}			
 		if ($FreeAgentYear == -1){
-			echo $Row['TeamName'] . "</td>";	
+			echo "<td>" . $Row['TeamName'] . "</td>";	
 		}else{
-			echo $Row['ProTeamName'] . "</td>";	
+			echo "<td>" . $Row['ProTeamName'] . "</td>";	
 		}
 	}
 	echo "<td>";if  ($Row <> Null){
@@ -373,23 +286,15 @@ if (empty($GoalieRoster) == false){while ($Row = $GoalieRoster ->fetchArray()) {
 		}
 		if ($LeagueWebClient['AllowFreeAgentSalaryRequestInSTHSClient'] == "True"){echo "<td>" . number_format($Row['FreeAgentSalaryRequest'],0) . "$ / " . $Row['FreeAgentContratRequest'] . "</td>";}
 	}
-	if ($LeagueOutputOption['MergeRosterPlayerInfo'] == "True"){ 
-		echo "<td>" . $Row['StarPower'] . "</td>"; 	
+	echo "<td>" . $Row['StarPower'] . "</td>"; 	
+	if ($LeagueOutputOption['MergeRosterPlayerInfo'] == "True"){ 	
 		echo "<td>" . $Row['Age'] . "</td>";
 		echo "<td>" . $Row['Contract'] . "</td>";
 		if ($LeagueFinance['SalaryCapOption'] == 4 OR $LeagueFinance['SalaryCapOption'] == 5 OR $LeagueFinance['SalaryCapOption'] == 6){
-			if ($FreeAgentYear == 0){
-				echo "<td>" . number_format($Row['LastYearSalaryAverage'],0) . "$</td>";
-			}else{
-				echo "<td>" . number_format($Row['SalaryAverage'],0) . "$</td>";
-			}
+			echo "<td>" . number_format($Row['SalaryAverage'],0) . "$</td>";
 		}else{
-			if ($FreeAgentYear == 0){
-				echo "<td>" . number_format($Row['LastYearSalary'],0) . "$</td>";
-			}else{
-				echo "<td>" . number_format($Row['Salary1'],0) . "$</td>";
-			}
-		}			
+			echo "<td>" . number_format($Row['Salary1'],0) . "$</td>";
+		}		
 	}
 	echo "<td>";
 	if ($Row['URLLink'] != ""){echo "<a href=" . $Row['URLLink'] . " target=\"new\">" . $PlayersLang['Link'] . "</a>";}
@@ -401,7 +306,7 @@ if (empty($GoalieRoster) == false){while ($Row = $GoalieRoster ->fetchArray()) {
 ?>
 </tbody></table>
 <?php 
-if ($FreeAgentYear >= 0 AND $GoalieRoster != Null){
+if ($FreeAgentYear >= 0){
 	echo "<em>"  . $DynamicTitleLang['FreeAgentStatus'];
 	if ($LeagueOutputOption['FreeAgentUseDateInsteadofDay'] == "True" AND $FreeAgentYear == 1){
 		echo date_Format(date_create($LeagueOutputOption['FreeAgentRealDate']),"Y-m-d") . "</em>";

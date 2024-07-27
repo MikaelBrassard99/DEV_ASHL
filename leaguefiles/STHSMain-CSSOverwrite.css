@@ -5441,15 +5441,15 @@ body.mcs-dragging button.mcs-button.mcs-horizontal.mcs-button-arrow {
 }
 
 .first-col {
-  width: 100px;
+  width: 300px;
   min-width: 100px;
-  max-width: 100px;
+  max-width: 200px;
   left: 0px;
 }
 
 .second-col {
-  width: 150px;
-  min-width: 150px;
-  max-width: 150px;
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
   left: 100px;
 }

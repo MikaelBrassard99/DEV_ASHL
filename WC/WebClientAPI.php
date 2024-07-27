@@ -14,8 +14,14 @@ function load_apis($exempt=array()){
 
 function load_api(){
 	function api_sqlite_connect($filename="STHS.db"){
-		$db = new SQLite3($filename);
-		return $db;
+		try{
+			If (file_exists($filename) == true){
+				$db = new SQLite3($filename);
+				return $db;
+			}else{return null;}
+		} catch (Exception $e) {
+			return null;
+		}
 	}
 	// Helper function to take strings and turn them
 	// into CSS Classes or IDs removing spaces and symbols.
@@ -93,8 +99,87 @@ function load_api_fields(){
 		$value .= $row["Contract"]. "|";
 		$value .= $row["Salary1"]. "|";
 		$value .= strtolower($row["CanPlayPro"]). "|";
-		$value .= strtolower($row["CanPlayFarm"]);
+		$value .= strtolower($row["CanPlayFarm"]). "|";
+		$value .= strtolower($row["WaiverPossible"]);
 		return $value;
+	}
+	function api_fields_input_values_player_stats($row){
+		$column = "Name|";
+		$column .= "POS|";
+		$column .= "COND|";
+		$column .= "CK|";
+		$column .= "FG|";
+		$column .= "DI|";
+		$column .= "SK|";
+		$column .= "ST|";
+		$column .= "EN|";
+		$column .= "DU|";
+		$column .= "PH|";
+		$column .= "FO|";
+		$column .= "PA|";
+		$column .= "SC|";
+		$column .= "DF|";
+		$column .= "PS|";
+		$column .= "EX|";
+		$column .= "LD|";
+		$column .= "PO";
+		$value = $row["Name"] ."|";
+		$value .= $row["PositionString"] ."|";
+		$value .= $row["Condition"] ."|";
+		$value .= $row["CK"] ."|";
+		$value .= $row["FG"]."|";
+		$value .= $row["DI"] ."|";
+		$value .= $row["SK"] . "|";
+		$value .= $row["ST"] . "|";
+		$value .= $row["EN"] . "|";
+		$value .= $row["DU"] . "|";
+		$value .= $row["PH"] . "|";
+		$value .= $row["FO"] . "|";
+		$value .= $row["PA"] . "|";
+		$value .= $row["SC"] . "|";
+		$value .= $row["DF"] . "|";
+		$value .= $row["PS"] . "|";
+		$value .= $row["EX"] . "|";
+		$value .= $row["LD"] . "|";
+		$value .= $row["PO"];
+		return [$column,$value];
+	}
+	function api_fields_input_values_goalie_stats($row){
+		$column = "Name|";
+		$column .= "POS|";
+		$column .= "COND|";
+		$column .= "SK|";
+		$column .= "DU|";
+		$column .= "EN|";
+		$column .= "SZ|";
+		$column .= "AG|";
+		$column .= "RB|";
+		$column .= "SC|";
+		$column .= "HS|";
+		$column .= "RT|";
+		$column .= "PH|";
+		$column .= "PS|";
+		$column .= "EX|";
+		$column .= "LD|";
+		$column .= "PO";
+		$value = $row["Name"] ."|";
+		$value .= $row["PositionString"] ."|";
+		$value .= $row["Condition"] ."|";
+		$value .= $row["SK"] ."|";
+		$value .= $row["DU"]."|";
+		$value .= $row["EN"] ."|";
+		$value .= $row["SZ"] . "|";
+		$value .= $row["AG"] . "|";
+		$value .= $row["RB"] . "|";
+		$value .= $row["SC"] . "|";
+		$value .= $row["HS"] . "|";
+		$value .= $row["RT"] . "|";
+		$value .= $row["PH"] . "|";
+		$value .= $row["PS"] . "|";
+		$value .= $row["EX"] . "|";
+		$value .= $row["LD"] . "|";
+		$value .= $row["PO"];
+		return [$column,$value];
 	}
 }
 
@@ -126,7 +211,7 @@ function load_api_html(){
 		</form>
 		<?php
 	}
-	function api_html_checkboxes_positionlist($elementName,$byName="true",$display="inline"){
+	function api_html_checkboxes_positionlist($elementName,$byName="true",$display="inline",$FullFarmEnableGlobal,$FullFarmEnableLocal){
 		?>
 		<div class="positionlist">
 			<label><input onchange="update_position_list('<?= $elementName; ?>',<?= $byName; ?>,'<?= $display; ?>');" type="checkbox" id="posC" name="position" class="position" checked>C</label>
@@ -134,6 +219,9 @@ function load_api_html(){
 			<label><input onchange="update_position_list('<?= $elementName; ?>',<?= $byName; ?>,'<?= $display; ?>');" type="checkbox" id="posRW" name="position" class="position" checked>RW</label>
 			<label><input onchange="update_position_list('<?= $elementName; ?>',<?= $byName; ?>,'<?= $display; ?>');" type="checkbox" id="posD" name="position" class="position" checked>D</label>
 			<label><input onchange="update_position_list('<?= $elementName; ?>',<?= $byName; ?>,'<?= $display; ?>');" type="checkbox" id="posG" name="position" class="position" checked>G</label>
+			<?php if (!( $FullFarmEnableGlobal === null && $FullFarmEnableLocal === null )) { ?>
+					<label><input onchange="toggleFullFarm();" type="checkbox" id="cbFullFarm" name="FullFarm" class="position" <?php if($FullFarmEnableGlobal || $FullFarmEnableLocal) {echo "checked";} ?> >FullFarm</label>
+			<?php }	?>
 		</div>
 		<?php
 	}
@@ -186,7 +274,6 @@ function load_api_jquery(){
 	        	connectWith: ".connectedSortable",
 	        	update: function(event, ui) {<?= $jsfunction ?>}
 		    }).disableSelection();
-		    
 		    $(".playerrow").disableSelection();
 		    $('#sortable').draggable();
 		});
@@ -337,7 +424,10 @@ function load_api_layout(){
 }
 
 function load_api_pageinfo(){
-	function api_pageinfo_editor_roster($db,$teamid,$showHeader=true){?>
+	function api_pageinfo_editor_roster($db,$teamid,$showHeader=true){
+		$FullFarmEnableGlobal = false;
+		$FullFarmEnableLocal = false; ?>
+		
 		<div id="rostereditor">
 			<div class="pagewrapper pagewrapperrostereditor"><?php 
 				// $db = sqlite DB
@@ -369,7 +459,7 @@ function load_api_pageinfo(){
 					// $_POST["txtRoster"][$game][$status]
 					// $game = int 1-10
 					// $status = int 0-3
-
+					//var_dump($_POST);
 					foreach($_POST["txtRoster"] AS $statuses=>$status){
 						foreach($status AS $s){
 							$explodeValue = explode("|",$s);
@@ -405,9 +495,11 @@ function load_api_pageinfo(){
 									}
 								}
 								$sql .= "WebClientModify = 'True' ";
+								$sql .= ", WebClientIP = '" . $_SERVER['REMOTE_ADDR'] . "' ";
 								$sql .= "WHERE Number = " . $number . ";";
 							} // End foreach $player
 						}// End foreach $arrSort
+						$sql.= "Update TeamFarmInfo SET FullFarm = '". (($_POST['FullFarmEnableLocal'] == "true") ? 'True' : 'False') ."' WHERE Number = " . $teamid . ";";
 						//Update the database and save the lines.
 						$db->busyTimeout(5000);
 						$db->exec("pragma journal_mode=memory;");
@@ -459,6 +551,7 @@ function load_api_pageinfo(){
 								$status[$s][$row["Status".$s]][$row["Number"]]["Salary1"] = $row["Salary1"];
 								$status[$s][$row["Status".$s]][$row["Number"]]["CanPlayPro"] = $row["CanPlayPro"];
 								$status[$s][$row["Status".$s]][$row["Number"]]["CanPlayFarm"] = $row["CanPlayFarm"];
+								$status[$s][$row["Status".$s]][$row["Number"]]["WaiverPossible"] = $row["WaiverPossible"];
 							} // End for loop for statuses
 						} // End while loop for players in result.
 
@@ -470,8 +563,15 @@ function load_api_pageinfo(){
 							<?php 
 								foreach(api_dbresult_roster_editor_fields($db,$teamid) AS $k=>$f){
 									if(!is_numeric($k)){
-										?><input type="hidden" id="<?= $k ?>" value="<?=strtolower($f); ?>"><?php 
+										?><input type="hidden" class="rvField" id="<?= $k ?>" name="<?= $k ?>" value="<?=strtolower($f); ?>"><?php 
 										echo "\n";
+										
+										if ($k === "FullFarmEnableGlobal") {
+											if (strtolower($f)== "true") {$FullFarmEnableGlobal = true;}
+										}
+										elseif ($k === "FullFarmEnableLocal") {
+											if (strtolower($f)== "true") {$FullFarmEnableLocal = true;}
+										}
 									}
 								}
 							?>
@@ -497,7 +597,7 @@ function load_api_pageinfo(){
 										<?php echo $confirmbanner; ?>
 										<div id="errors rostererror<?= $nextgame ?>" class="rostererror">
 										</div>
-										<?php api_html_checkboxes_positionlist("rosterline1","false","list-item"); ?>
+										<?php api_html_checkboxes_positionlist("rosterline1","false","list-item",$FullFarmEnableGlobal,$FullFarmEnableLocal); ?>
 										<div class="columnwrapper"><?php 
 											for($x=3;$x>=0;$x--){
 												if($x == 3){
@@ -549,9 +649,15 @@ function load_api_pageinfo(){
 																			<?php if($s["Condition"] < 100){?>
 																				<div class="rowcondition"><?= $s["Condition"]; ?> CD</div>
 																			<?php } ?>
-																			<?php if($s["Suspension"] > 0){?>
+																			<?php if($s["Suspension"] > 0 and $s["Suspension"] != 99){?>
 																				<div class="rowsuspension"><?= $s["Suspension"]; ?> S</div>
+																			<?php } ?>
+																			<?php if($s["Suspension"] == 99){?>
+																				<div class="rowsuspension99">HO</div>
 																			<?php } ?>																			
+																			<?php if($s["WaiverPossible"] == "True" and $s["Suspension"] == 0){?>
+																				<div class="rowwaiver">Waiver</div>
+																			<?php } ?>
 																		</div>
 																	</li>
 																<?php }
@@ -652,7 +758,7 @@ function load_api_pageinfo(){
 							$valno  = api_sqlite_escape($arrFM[$i]);
 						}else{
 							$val    = "'" . api_sqlite_escape($arrFM[$i]) . "'";
-							if ($val == "''"){$valno = 0;}else{$valno  = $availableplayers[api_MakeCSSClass($arrFM[$i])]["id"];}
+							if ($val == "''" || !isset($availableplayers[api_MakeCSSClass($arrFM[$i])])){$valno = 0;}else{$valno  = $availableplayers[api_MakeCSSClass($arrFM[$i])]["id"];}
 						}
 						$sql   .= $f . " = " . $val . ", ";
 						$sqlno .= $f . " = " . $valno . ", ";
@@ -662,6 +768,7 @@ function load_api_pageinfo(){
 				
 				$sql = rtrim($sql,", ");
 				$sqlno .= " WebClientModify = 'True' ";
+				$sqlno .= ", WebClientIP = '" . $_SERVER['REMOTE_ADDR'] . "' ";
 
 				$sql .= " WHERE TeamNumber = " . $teamid . ";";
 				$sqlno .= " WHERE TeamNumber = " . $teamid . ";";
@@ -735,6 +842,12 @@ function load_api_pageinfo(){
 								?>
 								
 								<?php  // Start the tabs for pages of lines.?>
+								<br>
+								<div style="overflow-x:auto;">
+									<table id="playerSelectF" style="width: 90%; text-align: center; border-collapse: collapse;">
+									</table>
+								</div>
+								<br>
 								<div class="linetabs">
 									<div id="tabs">
 										<ul class="positiontabs">
@@ -752,6 +865,7 @@ function load_api_pageinfo(){
 												}
 											}?>	
 										</ul>
+										
 										<?php $count = 0;?>
 										<?php 
 											// Loop through the tabs info making the lines pages.
@@ -941,7 +1055,7 @@ function load_api_pageinfo(){
 							?>
 							
 							<div class="playerlist">
-								<?php api_html_checkboxes_positionlist("sltPlayerList","true","list-item"); ?>
+								<?php api_html_checkboxes_positionlist("sltPlayerList","true","list-item",null,null); ?>
 								<form name="frmPlayerList">
 									<ul class="playerselect">
 									<?php 	// Loop through the players and add to the select list.
@@ -952,9 +1066,14 @@ function load_api_pageinfo(){
 										if($first){$s = " checked";$first = false;}else{$s = "";}
 										// Separate Name and number with a pipe '|' to split in the javascript.
 										$values = api_fields_input_values($row);
+										if($row["PositionString"] == "G"){
+											$stats = api_fields_input_values_goalie_stats($row);
+										}else{
+											$stats = api_fields_input_values_player_stats($row);
+										}
 										?>
 										<li id="line1_<?= api_MakeCSSClass($row["Name"])?>" class="option">
-											<input name="sltPlayerList" type="radio" id="a<?= api_MakeCSSClass($row["Name"]); ?>" <?= $s;?> value="<?= $values; ?>">
+											<input onclick="onClickEventPlayer('<?= $stats[0]; ?>', '<?= $stats[1]; ?>')" name="sltPlayerList" type="radio" id="a<?= api_MakeCSSClass($row["Name"]); ?>" <?= $s;?> value="<?= $values; ?>">
 											<label for="a<?= api_MakeCSSClass($row["Name"]); ?>"><?= $row["Name"];?> - <?= $row["PositionString"];?> <span class="smalllist">(<?= $row["Overall"]; ?>OV)</span></label>
 										</li><?php 
 									}?>
@@ -970,7 +1089,8 @@ function load_api_pageinfo(){
 						?><div class="doesntexits">The team you are looking for does not exist.</div><?php
 					} ?>
 				</div><!-- end pagewrapper-->
-			</div><!-- end id lineeditor--><?php 
+			</div><!-- end id lineeditor-->
+			<?php 
 	}
 	function api_make_blocks($row,$blocks,$positions,$strategy,$i,$availableplayers,$cpfields,$league){
 		$bcount = 0;
@@ -1305,7 +1425,7 @@ function load_api_sql(){
 		$sql .= "" . api_sql_position($type,$type . "Info") ." AS Position, ". api_sql_position_number($type,$type . "Info") ." AS PositionNumber, ". api_sql_position_string($type,$type . "Info") ." AS PositionString, ". api_sql_position_all($type,$type . "Info") .", ";
 		$sql .= "" . $t ."Country AS Country, " . $t ."Team AS Team, " . $t ."Age AS Age, " . $t ."AgeDate AS AgeDate, " . $t ."Weight AS Weight, " . $t ."Height AS Height, ";
 		$sql .= "" . $t ."Contract AS Contract, " . $t ."Rookie AS Rookie, " . $t ."Injury AS Injury, " . $t ."NumberOfInjury AS NumberOfInjury, ";
-		$sql .= "" . $t ."ForceWaiver AS ForceWaiver, ". $t ."CanPlayPro AS CanPlayPro, ". $t ."CanPlayFarm AS CanPlayFarm, ";
+		$sql .= "" . $t ."ForceWaiver AS ForceWaiver, ". $t ."WaiverPossible AS WaiverPossible, ". $t ."CanPlayPro AS CanPlayPro, ". $t ."CanPlayFarm AS CanPlayFarm, ";
 		$sql .= "" . $t ."Condition AS Condition, " . $t ."Suspension AS Suspension, " . $t ."Jersey AS Jersey, " . $t ."ProSalaryinFarm AS ProSalaryinFarm, " . api_sql_currentSalary($type . "Info") . " AS CurrentSalary, ";
 		$sql .= "" . $t ."Salary1 AS Salary1, " . $t ."Salary2 AS Salary2, " . $t ."Salary3 AS Salary3, " . $t ."Salary4 AS Salary4, " . $t ."Salary5 AS Salary5, ";
 		$sql .= "" . $t ."Salary6 AS Salary6, " . $t ."Salary7 AS Salary7, " . $t ."Salary8 AS Salary8, " . $t ."Salary9 AS Salary9, " . $t ."Salary10 AS Salary10, ";
@@ -1507,6 +1627,10 @@ function load_api_sql(){
 		$sql = rtrim($sql,"UNION ") . " ";
 		$sql .= "ORDER BY Name ASC, Overall DESC";
 		return $sql;
+	}
+
+	function myFunction($params){
+		?><script>console.log(<?php echo json_encode($params); ?>);</script><?php
 	}
 }
 if(isset($_GET['PHPINFO'])){phpinfo();}

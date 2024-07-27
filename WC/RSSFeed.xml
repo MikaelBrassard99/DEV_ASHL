@@ -1,17 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-<title>ASHL - RSS Feed</title>
-<link>http://www.ashligue.com/site/</link>
-<description>ASHL - RSS Feed</description>
-<pubDate>16 mai 2022 at 22:32 EST</pubDate>
+<title>WORLD CUP 2023 - RSS Feed</title>
+<link>http://</link>
+<description>WORLD CUP 2023 - RSS Feed</description>
+<pubDate>30 août 2023 at 17:23 EST</pubDate>
 <item>
-<title>Farm Game #105 - Wilkes-Barre/Scranton Penguins vs Mercer Island Hafgufa</title>
-<link>http://www.ashligue.com/site//ASHL11-PLF-Farm-105.php</link>
-<guid>http://www.ashligue.com/site//ASHL11-PLF-Farm-105.php</guid>
+<title>Professional Game #5 - TCHÉQUIE vs USA</title>
+<link>http:///WC-PLF-5.php</link>
+<guid>http:///WC-PLF-5.php</guid>
 <description>
-Wilkes-Barre/Scranton Penguins (1
-) vs Mercer Island Hafgufa (3)
+TCHÉQUIE (3
+) vs USA (7)
+</description>
+</item>
+<item>
+<title>Professional Game #6 - RUSSIE vs CANADA</title>
+<link>http:///WC-PLF-6.php</link>
+<guid>http:///WC-PLF-6.php</guid>
+<description>
+RUSSIE (2
+) vs CANADA (9)
 </description>
 </item>
 </channel>
