@@ -1,15 +1,11 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
+If ($lang == "fr"){include 'LanguageFR-Stat.php';}else{include 'LanguageEN-Stat.php';}
 $Title = (string)"";
 $Search = (boolean)False;
 $CareerLeaderSubPrintOut = (int)1;
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	$TeamStat = Null;
-	echo "<title>" . $DatabaseNotFound . "</title>";
-	$Title = $DatabaseNotFound;
-	$Team = 0;
-}else{
+	Goto CareerStatTeamsStatByYear;
+}else{try{
 	$ACSQuery = (boolean)FALSE;/* The SQL Query must be Ascending Order and not Descending */
 	$Playoff = (string)"False";
 	$TypeText = (string)"Pro";$TitleType = $DynamicTitleLang['Pro'];
@@ -45,7 +41,7 @@ If (file_exists($DatabaseFile) == false){
 	If($Year > 0){$Query = $Query ." AND YEAR = '" . $Year . "'";}
 	$Query = $Query . " ORDER BY ". $OrderByField;
 	
-	If ($Playoff=="True"){$Title = $PlayersLang['Playoff'] .  " ";}
+	If ($Playoff=="True"){$Title = $SearchLang['Playoff'] .  " ";}
 	$Title = $Title . $DynamicTitleLang['CareerStatByYear'];
 	If ($Year > 0){$Title = $Title . $Year . " - ";}
 	$Title = $Title . $DynamicTitleLang['TeamStat'] . " " . $TitleType;
@@ -66,8 +62,14 @@ If (file_exists($DatabaseFile) == false){
 		$TeamStatSub = $CareerStatdb->query($Query);
 		include "SearchCareerSub.php";	
 	}	
-	
-}
+} catch (Exception $e) {
+CareerStatTeamsStatByYear:
+	$LeagueName = $DatabaseNotFound;
+	$TeamStat = Null;
+	echo "<title>" . $DatabaseNotFound . "</title>";
+	$Title = $DatabaseNotFound;
+	$Team = 0;	
+}}
 ?>
 
 </head><body>
@@ -85,7 +87,7 @@ $(function() {
       columnSelector_mediaqueryName: 'Automatic',
       columnSelector_mediaqueryState: true,
       columnSelector_mediaqueryHidden: true,
-      columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],
+      columnSelector_breakpoints : [ '20em', '60em', '85em', '92em', '98em', '99em' ],
 	  filter_columnFilters: true,
       filter_placeholder: { search : '<?php echo $TableSorterLang['Search'];?>' },
 	  filter_searchDelay : 500,	  
@@ -106,7 +108,7 @@ $(function() {
 <div style="width:99%;margin:auto;">
 <?php echo "<h1>" . $Title . "</h1>";?>
 <div id="ReQueryDiv" style="display:none;">
-<?php include "SearchCareerStatTeamsStatByYear.php";?>
+<?php  if($LeagueName != $DatabaseNotFound){include "SearchCareerStatTeamsStatByYear.php";}?>
 </div>
 <div class="tablesorter_ColumnSelectorWrapper">
 	<button class="tablesorter_Output" id="ReQuery"><?php echo $SearchLang['ChangeSearch'];?></button>

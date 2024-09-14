@@ -1,16 +1,12 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
 $Team = (integer)-1; /* -1 All Team */
 $Title = (string)"";
 $Search = (boolean)False;
 $UpdateCareerStatDBV1 = (boolean)false;
 $CareerLeaderSubPrintOut = (int)1;
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	$PlayerStat = Null;
-	echo "<title>" . $DatabaseNotFound . "</title>";
-	$Title = $DatabaseNotFound;
-}else{
+	Goto CareerStatPlayersStatByYear;
+}else{try{
 	$TypeText = (string)"Pro";$TitleType = $DynamicTitleLang['Pro'];
 	$ACSQuery = (boolean)FALSE;/* The SQL Query must be Ascending Order and not Descending */
 	$Rookie = (boolean)FALSE; $PosC = (boolean)FALSE; $PosLW = (boolean)FALSE; $PosRW = (boolean)FALSE; $PosD = (boolean)FALSE;
@@ -53,13 +49,13 @@ If (file_exists($DatabaseFile) == false){
 	$LeagueGeneral = $db->querySingle($Query,true);		
 	$LeagueName = $LeagueGeneral['Name'];
 	
-	If ($Playoff=="True"){$Title = $PlayersLang['Playoff'] .  " ";}
+	If ($Playoff=="True"){$Title = $SearchLang['Playoff'] .  " ";}
 	$Title = $Title . $DynamicTitleLang['CareerStatByYear'];
-	If($Rookie == True){$Title = $Title . $GeneralStatLang['Rookie'] . " - ";}
-	If($PosC == True){$Title = $Title . $TeamLang['Center'] . " - ";}
-	If($PosLW == True){$Title = $Title . $TeamLang['LeftWing'] . " - ";}
-	If($PosRW == True){$Title = $Title . $TeamLang['RightWing'] . " - ";}
-	If($PosD == True){$Title = $Title . $TeamLang['Defenseman'] . " - ";}	
+	If($Rookie == True){$Title = $Title . $PlayersLang['Rookie'] . " - ";}
+	If($PosC == True){$Title = $Title . $PlayersLang['Center'] . " - ";}
+	If($PosLW == True){$Title = $Title . $PlayersLang['LeftWing'] . " - ";}
+	If($PosRW == True){$Title = $Title . $PlayersLang['RightWing'] . " - ";}
+	If($PosD == True){$Title = $Title . $PlayersLang['Defenseman'] . " - ";}	
 	If ($TeamName != ""){$Title = $Title . $TeamName . " - ";}
 	If ($Year > 0){$Title = $Title . $Year . " - ";}
 	If($MaximumResult == 0){$Title = $Title . $DynamicTitleLang['All'];}else{$Title = $Title . $DynamicTitleLang['Top'] . $MaximumResult . " ";}
@@ -99,7 +95,14 @@ If (file_exists($DatabaseFile) == false){
 	/* OverWrite Title if information is get from PHP GET */
 	if($TitleOverwrite <> ""){$Title = $TitleOverwrite;}
 	echo "<title>" . $LeagueName . " - " . $Title . "</title>";
-}?>
+} catch (Exception $e) {
+CareerStatPlayersStatByYear:
+	$LeagueName = $DatabaseNotFound;
+	$PlayerStat = Null;
+	echo "<title>" . $DatabaseNotFound . "</title>";
+	$Title = $DatabaseNotFound;
+}}
+?>
 </head><body>
 <?php include "Menu.php";?>
 <?php echo "<h1>" . $Title . "</h1>";?>
@@ -136,7 +139,7 @@ $(function() {
 
 <div style="width:99%;margin:auto;">
 <div id="ReQueryDiv" style="display:none;">
-<?php include "SearchCareerStatPlayersStatByYear.php";?>
+<?php if($LeagueName != $DatabaseNotFound){include "SearchCareerStatPlayersStatByYear.php";}?>
 </div>
 <div class="tablesorter_ColumnSelectorWrapper">
 	<button class="tablesorter_Output" id="ReQuery"><?php echo $SearchLang['ChangeSearch'];?></button>

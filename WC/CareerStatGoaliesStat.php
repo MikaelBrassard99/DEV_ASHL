@@ -1,17 +1,12 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
 $Team = (integer)-1; /* -1 All Team */
 $Title = (string)"";
 $Search = (boolean)False;
 $MimimumData = (integer)10;
 $UpdateCareerStatDBV1 = (boolean)false;
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	$CareerStatGoalie = Null;
-	echo "<title>" . $DatabaseNotFound . "</title>";
-	$Title = $DatabaseNotFound;
-	$TeamName = Null;
-}else{
+	Goto CareerStatGoaliesStat;
+}else{try{
 	$TypeText = (string)"Pro";$TitleType = $DynamicTitleLang['Pro'];
 	$ACSQuery = (boolean)FALSE;/* The SQL Query must be Ascending Order and not Descending */
 	$Playoff = (string)"False";
@@ -50,7 +45,7 @@ If (file_exists($DatabaseFile) == false){
 		$CareerStatdb = new SQLite3($CareerStatDatabaseFile);
 		$CareerStatdb->query("ATTACH DATABASE '".realpath($DatabaseFile)."' AS CurrentDB");
 		
-		If ($Playoff=="True"){$Title = $PlayersLang['Playoff'] .  " ";}
+		If ($Playoff=="True"){$Title = $SearchLang['Playoff'] .  " ";}
 		$Title = $Title . $DynamicTitleLang['CareerStat'];
 		If ($TeamName != ""){$Title = $Title . $TeamName . " - ";}
 		If ($Year > 0){$Title = $Title . $Year . " - ";}
@@ -95,7 +90,14 @@ If (file_exists($DatabaseFile) == false){
 	/* OverWrite Title if information is get from PHP GET */
 	if($TitleOverwrite <> ""){$Title = $TitleOverwrite;}	
 	echo "<title>" . $LeagueName . " - " . $Title . "</title>";
-}?>
+} catch (Exception $e) {
+CareerStatGoaliesStat:
+	$LeagueName = $DatabaseNotFound;
+	$CareerStatGoalie = Null;
+	echo "<title>" . $DatabaseNotFound . "</title>";
+	$Title = $DatabaseNotFound;
+	$TeamName = Null;
+}}?>
 </head><body>
 <?php include "Menu.php";?>
 <script>
@@ -132,7 +134,7 @@ $(function() {
 <div style="width:99%;margin:auto;">
 <?php echo "<h1>" . $Title . "</h1>"; ?>
 <div id="ReQueryDiv" style="display:none;">
-<?php include "SearchCareerStatGoaliesStat.php";?>
+<?php  if($LeagueName != $DatabaseNotFound){include "SearchCareerStatGoaliesStat.php";}?>
 </div>
 <div class="tablesorter_ColumnSelectorWrapper">
 	<button class="tablesorter_Output" id="ReQuery"><?php echo $SearchLang['ChangeSearch'];?></button>
@@ -185,8 +187,8 @@ if (empty($CareerStatGoalie) == false){while ($Row = $CareerStatGoalie ->fetchAr
 		echo "<td>" . ($Row['SumOfW'] + $Row['W']) . "</td>";
 		echo "<td>" . ($Row['SumOfL'] + $Row['L']) . "</td>";
 		echo "<td>" . ($Row['SumOfOTL'] + $Row['OTL']) . "</td>";
-		If ($Row['TotalPCT'] == Null){echo "<td>0.00%</td>";}else{echo "<td>" . number_Format($Row['TotalPCT'],3) . "</td>";}
-		If ($Row['TotalGAA'] == Null){echo "<td>0.00%</td>";}else{echo "<td>" . number_Format($Row['TotalGAA'],2) . "</td>";}
+		If ($Row['TotalPCT'] == Null){echo "<td>0.00</td>";}else{echo "<td>" . number_Format($Row['TotalPCT'],3) . "</td>";}
+		If ($Row['TotalGAA'] == Null){echo "<td>0.00</td>";}else{echo "<td>" . number_Format($Row['TotalGAA'],2) . "</td>";}
 		echo "<td>";if ($Row <> Null){echo Floor(($Row['SumOfSecondPlay'] + $Row['SecondPlay']) /60);}; echo "</td>";
 		echo "<td>" . ($Row['SumOfPim'] + $Row['Pim']) . "</td>";
 		echo "<td>" . ($Row['SumOfShootout'] + $Row['Shootout']) . "</td>";
@@ -195,7 +197,7 @@ if (empty($CareerStatGoalie) == false){while ($Row = $CareerStatGoalie ->fetchAr
 		echo "<td>" . ($Row['SumOfSARebound'] + $Row['SARebound']) . "</td>";
 		echo "<td>" . ($Row['SumOfA'] + $Row['A']) . "</td>";
 		echo "<td>" . ($Row['SumOfEmptyNetGoal'] + $Row['EmptyNetGoal']) . "</td>";			
-		If ($Row['TotalPenalityShotsPCT'] == Null){echo "<td>0.00%</td>";}else{echo "<td>" . number_Format($Row['TotalPenalityShotsPCT'],3) . "</td>";}
+		If ($Row['TotalPenalityShotsPCT'] == Null){echo "<td>0</td>";}else{echo "<td>" . number_Format($Row['TotalPenalityShotsPCT'],3) . "</td>";}
 		echo "<td>" . ($Row['SumOfPenalityShotsShots'] + $Row['PenalityShotsShots']) . "</td>";
 		echo "<td>" . ($Row['SumOfStartGoaler'] + $Row['StartGoaler']) . "</td>";
 		echo "<td>" . ($Row['SumOfBackupGoaler'] + $Row['BackupGoaler']) . "</td>";
@@ -208,8 +210,8 @@ if (empty($CareerStatGoalie) == false){while ($Row = $CareerStatGoalie ->fetchAr
 		echo "<td>" . $Row['SumOfW'] . "</td>";
 		echo "<td>" . $Row['SumOfL'] . "</td>";
 		echo "<td>" . $Row['SumOfOTL'] . "</td>";
-		If ($Row['SumOfPCT'] == Null){echo "<td>0.00%</td>";}else{echo "<td>" . number_Format($Row['SumOfPCT'],3) . "</td>";}
-		If ($Row['SumOfGAA'] == Null){echo "<td>0.00%</td>";}else{echo "<td>" . number_Format($Row['SumOfGAA'],2) . "</td>";}
+		If ($Row['SumOfPCT'] == Null){echo "<td>0</td>";}else{echo "<td>" . number_Format($Row['SumOfPCT'],3) . "</td>";}
+		If ($Row['SumOfGAA'] == Null){echo "<td>0</td>";}else{echo "<td>" . number_Format($Row['SumOfGAA'],2) . "</td>";}
 		echo "<td>";if ($Row <> Null){echo Floor($Row['SumOfSecondPlay']/60);}; echo "</td>";
 		echo "<td>" . $Row['SumOfPim'] . "</td>";
 		echo "<td>" . $Row['SumOfShootout'] . "</td>";
@@ -218,7 +220,7 @@ if (empty($CareerStatGoalie) == false){while ($Row = $CareerStatGoalie ->fetchAr
 		echo "<td>" . $Row['SumOfSARebound'] . "</td>";
 		echo "<td>" . $Row['SumOfA'] . "</td>";
 		echo "<td>" . $Row['SumOfEmptyNetGoal'] . "</td>";			
-		If ($Row['SumOfPenalityShotsPCT'] == Null){echo "<td>0.00%</td>";}else{echo "<td>" . number_Format($Row['SumOfPenalityShotsPCT'],3) . "</td>";}
+		If ($Row['SumOfPenalityShotsPCT'] == Null){echo "<td>0</td>";}else{echo "<td>" . number_Format($Row['SumOfPenalityShotsPCT'],3) . "</td>";}
 		echo "<td>" . $Row['SumOfPenalityShotsShots'] . "</td>";
 		echo "<td>" . $Row['SumOfStartGoaler'] . "</td>";
 		echo "<td>" . $Row['SumOfBackupGoaler'] . "</td>";

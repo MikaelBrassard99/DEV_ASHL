@@ -1,5 +1,5 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
+If ($lang == "fr"){include 'LanguageFR-Stat.php';}else{include 'LanguageEN-Stat.php';}
 $Title = (string)"";
 $TypeText = (string)"Pro";$TitleType = $DynamicTitleLang['Pro'];
 if(isset($_GET['Farm'])){$TypeText = "Farm";$TitleType = $DynamicTitleLang['Farm'];}
@@ -9,11 +9,8 @@ $Playoff = (string)"False";
 if(isset($_GET['Playoff'])){$Playoff="True";$MimimumData=1;}
 
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	echo "<title>" . $DatabaseNotFound . "</title>";
-	$Title = $DatabaseNotFound;
-	$LeagueGeneral = Null;
-}else{
+	Goto CareerStatIndividualLeaders;
+}else{try{
 	if(isset($_GET['Max'])){$MaximumResult = filter_var($_GET['Max'], FILTER_SANITIZE_NUMBER_INT);} 
 	$LeagueName = (string)"";
 	$db = new SQLite3($DatabaseFile);
@@ -23,25 +20,37 @@ If (file_exists($DatabaseFile) == false){
 	$Query = "Select ProMinimumGamePlayerLeader, FarmMinimumGamePlayerLeader from LeagueOutputOption";
 	$LeagueOutputOption = $db->querySingle($Query,true);		
 	
-	If ($Playoff=="True"){$Title = $PlayersLang['Playoff'] .  " ";}
+	If ($Playoff=="True"){$Title = $SearchLang['Playoff'] .  " ";}
 	$Title = $Title . $TopMenuLang['CareerStatsIndividualLeaders'] . " " . $TitleType ;
 	
 	If (file_exists($CareerStatDatabaseFile) == true){ /* CareerStat */
 		$CareerStatdb = new SQLite3($CareerStatDatabaseFile);
-		$CareerStatdb->query("ATTACH DATABASE '".realpath($DatabaseFile)."' AS CurrentDB");
+		$CareerDBFormatV2CheckCheck = $CareerStatdb->querySingle("SELECT Count(name) AS CountName FROM sqlite_master WHERE type='table' AND name='LeagueGeneral'",true);
+		If ($CareerDBFormatV2CheckCheck['CountName'] == 1){		
+			$CareerStatdb->query("ATTACH DATABASE '".realpath($DatabaseFile)."' AS CurrentDB");
+		}else{
+			$CareerPlayerStat = Null;
+			$Title = $CareeratabaseNotFound;	
+		}
 	}else{
 		$CareerPlayerStat = Null;
 		$Title = $CareeratabaseNotFound;
 	}
 	
 	echo "<title>" . $LeagueName . " - " . $Title ."</title>";
-}?>
+} catch (Exception $e) {
+CareerStatIndividualLeaders:
+	$LeagueName = $DatabaseNotFound;
+	echo "<title>" . $DatabaseNotFound . "</title>";
+	$Title = $DatabaseNotFound;
+	$LeagueGeneral = Null;
+}}?>
 </head><body>
 <?php include "Menu.php";?>
 <div style="width:99%;margin:auto;">
 <?php echo "<h1>" . $Title . "</h1>"; ?>
 <table class="STHSTableFullW">
-<tr><td colspan="3"><h2 class="STHSIndividualLeader_Players STHSCenter"><?php echo $TeamLang['Players'];?></h2></td></tr>
+<tr><td colspan="3"><h2 class="STHSIndividualLeader_Players STHSCenter"><?php echo $DynamicTitleLang['Players'];?></h2></td></tr>
 
 
 <tr>
@@ -650,7 +659,7 @@ If ($LoopCount > 1){
 }else{
 	echo "<tr><td colspan=\"4\" class=\"STHSCenter\">No Result</td></tr></table></td></tr>";
 }?>
-<tr><td colspan="3"><h2 class="STHSProIndividualLeader_Players STHSCenter"><?php echo $TeamLang['Goalies'];?></h2></td></tr>
+<tr><td colspan="3"><h2 class="STHSProIndividualLeader_Players STHSCenter"><?php echo $DynamicTitleLang['Goalies'];?></h2></td></tr>
 
 <tr>
 <td class="STHSWP49"><table class="tablesorter STHSIndividualLeader_Table"><thead><tr><th colspan="4" class="sorter-false"><span class="STHSIndividualLeadersTitle"><?php echo $GeneralStatLang['SavePCT'];?>

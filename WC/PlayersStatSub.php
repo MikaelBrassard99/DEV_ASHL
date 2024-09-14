@@ -1,18 +1,11 @@
-<th data-priority="3" title="Order Number" class="STHSW10 sorter-false">jjjj#</th>
-<th data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName']; ?></th>
-<?php
-if ($Team >= 0) {
-	echo "<th class=\"columnSelector-false STHSW140Min\" data-priority=\"6\" title=\"Team Name\">" . $PlayersLang['TeamName'] . "</th>";
-} else {
-	echo "<th data-priority=\"2\" title=\"Team Name\" class=\"x\">" . $PlayersLang['TeamName'] . "</th>";
-}
-if ($CareerLeaderSubPrintOut == 0 or $CareerLeaderSubPrintOut == 2) {
-	echo "<th data-priority=\"2\" title=\"Position\" class=\"STHSW25\">POS</th>";
-}
-if ($CareerLeaderSubPrintOut == 1 or $CareerLeaderSubPrintOut == 2) {
-	echo "<th data-priority=\"2\" title=\"Year\" class=\"STHSW25\">" . $SearchLang['Year'] . "</th><th data-priority=\"5\" title=\"Rookie\" class=\"STHSW25\">" . $PlayersLang['Rookie'] . "</th>";
-}
-?>
+<th data-priority="3" title="Order Number" class="STHSW10 sorter-false">#</th>
+<th data-priority="critical" title="Player Name" class="STHSW140Min"><?php If (isset($PlayersLang) == True){echo $PlayersLang['PlayerName'];}?></th>
+<?php If (isset($PlayersLang) == True){
+if($Team >= 0){echo "<th class=\"columnSelector-false STHSW140Min\" data-priority=\"6\" title=\"Team Name\">" . $PlayersLang['TeamName'] . "</th>";}else{echo "<th data-priority=\"2\" title=\"Team Name\" class=\"STHSW140Min\">" . $PlayersLang['TeamName'] ."</th>";}
+/* $CareerLeaderSubPrintOut /  0 = Normal Regular Season (Position) / 1 = CareerStat with Rookie Info / 2 = Position, Year, Rookie Info / 3 = No Position, No Year, no Rookie Info */ 
+If ($CareerLeaderSubPrintOut == 0 OR $CareerLeaderSubPrintOut == 2){echo "<th data-priority=\"2\" title=\"Position\" class=\"STHSW25\">POS</th>";}
+If ($CareerLeaderSubPrintOut == 1 OR $CareerLeaderSubPrintOut == 2){echo "<th data-priority=\"2\" title=\"Year\" class=\"STHSW25\">" . $SearchLang['Year'] . "</th><th data-priority=\"5\" title=\"Rookie\" class=\"STHSW25\">" . $PlayersLang['Rookie'] . "</th>";}
+}?>
 <th data-priority="1" title="Games Played" class="STHSW25">GP</th>
 <th data-priority="1" title="Goals" class="STHSW25">G</th>
 <th data-priority="1" title="Assists" class="STHSW25">A</th>
@@ -56,109 +49,75 @@ if ($CareerLeaderSubPrintOut == 1 or $CareerLeaderSubPrintOut == 2) {
 <th class="columnSelector-false STHSW25" data-priority="6" title="Number of time players was star #1 in a game">S1</th>
 <th class="columnSelector-false STHSW25" data-priority="6" title="Number of time players was star #2 in a game">S2</th>
 <th class="columnSelector-false STHSW25" data-priority="6" title="Number of time players was star #3 in a game">S3</th>
-</tr>
-</thead>
-<tbody>
-	<?php
-	if (isset($_GET['Farm'])) {
-		$TypeText = "Farm";
-	} else {
-		$TypeText = "Pro";
+</tr></thead><tbody>
+<?php 
+$Order = 0;
+if (empty($PlayerStat) == false){while ($Row = $PlayerStat ->fetchArray()) {
+	$Order +=1;
+	echo "<tr><td>" . $Order ."</td>";
+	If ($Row['Number'] != Null){
+		echo "<td><a href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $Row['Name'] . "</a></td>";
+	}else{
+		echo "<td>" . $Row['Name'] . "</td>";
+	}	
+	echo "<td>";
+	If ($Row['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $Row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPPlayersStatsTeamImage\" />";}			
+	echo $Row['TeamName'] . "</td>";
+	If ($CareerLeaderSubPrintOut == 0 OR $CareerLeaderSubPrintOut == 2){
+		echo "<td>" .$Position = (string)"";
+		if ($Row['PosC']== "True"){if ($Position == ""){$Position = "C";}else{$Position = $Position . "/C";}}
+		if ($Row['PosLW']== "True"){if ($Position == ""){$Position = "LW";}else{$Position = $Position . "/LW";}}
+		if ($Row['PosRW']== "True"){if ($Position == ""){$Position = "RW";}else{$Position = $Position . "/RW";}}
+		if ($Row['PosD']== "True"){if ($Position == ""){$Position = "D";}else{$Position = $Position . "/D";}}
+		echo $Position . "</td>";
 	}
-	$Order = 0;
-
-	if (empty($PlayerStat) == false) {
-		while ($Row = $PlayerStat->fetchArray()) {
-			$Order += 1;
-			echo "<tr><td>" . $Order . "</td>";
-			if ($Row['Number'] != Null) {
-				echo "<td><a href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $Row['Name'] . "</a></td>";
-			} else {
-				echo "<td>" . $Row['Name'] . "</td>";
-			}
-			echo "<td>";
-			echo "<img src=\"./images/" . $TypeText . "-team/" . $Row['Team'] . ".png\" alt=\"\" class=\"STHSPHPPlayersStatsTeamImage\" />";
-			echo $Row['TeamName'] . "</td>";
-			if ($CareerLeaderSubPrintOut == 0 or $CareerLeaderSubPrintOut == 2) {
-				echo "<td>" . $Position = (string)"";
-				if ($Row['PosC'] == "True") {
-					if ($Position == "") {
-						$Position = "C";
-					} else {
-						$Position = $Position . "/C";
-					}
-				}
-				if ($Row['PosLW'] == "True") {
-					if ($Position == "") {
-						$Position = "LW";
-					} else {
-						$Position = $Position . "/LW";
-					}
-				}
-				if ($Row['PosRW'] == "True") {
-					if ($Position == "") {
-						$Position = "RW";
-					} else {
-						$Position = $Position . "/RW";
-					}
-				}
-				if ($Row['PosD'] == "True") {
-					if ($Position == "") {
-						$Position = "D";
-					} else {
-						$Position = $Position . "/D";
-					}
-				}
-				echo $Position . "</td>";
-			}
-			if ($CareerLeaderSubPrintOut == 1 or $CareerLeaderSubPrintOut == 2) {
-				echo "<td>" . $Row['Year'] . "</td>";
-				echo "<td>" . $Row['Rookie'] . "</td>";
-			}
-			echo "<td>" . $Row['GP'] . "</td>";
-			echo "<td>" . $Row['G'] . "</td>";
-			echo "<td>" . $Row['A'] . "</td>";
-			echo "<td>" . $Row['P'] . "</td>";
-			echo "<td>" . $Row['PlusMinus'] . "</td>";
-			echo "<td>" . $Row['Pim'] . "</td>";
-			echo "<td>" . $Row['Pim5'] . "</td>";
-			echo "<td>" . $Row['Hits'] . "</td>";
-			echo "<td>" . $Row['HitsTook'] . "</td>";
-			echo "<td>" . $Row['Shots'] . "</td>";
-			echo "<td>" . $Row['OwnShotsBlock'] . "</td>";
-			echo "<td>" . $Row['OwnShotsMissGoal'] . "</td>";
-			echo "<td>" . number_Format($Row['ShotsPCT'], 2) . "%</td>";
-			echo "<td>" . $Row['ShotsBlock'] . "</td>";
-			echo "<td>" . Floor($Row['SecondPlay'] / 60) . "</td>";
-			echo "<td>" . number_Format($Row['AMG'], 2) . "</td>";
-			echo "<td>" . $Row['PPG'] . "</td>";
-			echo "<td>" . $Row['PPA'] . "</td>";
-			echo "<td>" . $Row['PPP'] . "</td>";
-			echo "<td>" . $Row['PPShots'] . "</td>";
-			echo "<td>" . Floor($Row['PPSecondPlay'] / 60) . "</td>";
-			echo "<td>" . $Row['PKG'] . "</td>";
-			echo "<td>" . $Row['PKA'] . "</td>";
-			echo "<td>" . $Row['PKP'] . "</td>";
-			echo "<td>" . $Row['PKShots'] . "</td>";
-			echo "<td>" . Floor($Row['PKSecondPlay'] / 60) . "</td>";
-			echo "<td>" . $Row['GW'] . "</td>";
-			echo "<td>" . $Row['GT'] . "</td>";
-			echo "<td>" . number_Format($Row['FaceoffPCT'], 2) . "%</td>";
-			echo "<td>" . $Row['FaceOffTotal'] . "</td>";
-			echo "<td>" . $Row['GiveAway'] . "</td>";
-			echo "<td>" . $Row['TakeAway'] . "</td>";
-			echo "<td>" . $Row['EmptyNetGoal'] . "</td>";
-			echo "<td>" . $Row['HatTrick'] . "</td>";
-			echo "<td>" . number_Format($Row['P20'], 2) . "</td>";
-			echo "<td>" . $Row['PenalityShotsScore'] . "</td>";
-			echo "<td>" . $Row['PenalityShotsTotal'] . "</td>";
-			echo "<td>" . $Row['FightW'] . "</td>";
-			echo "<td>" . $Row['FightL'] . "</td>";
-			echo "<td>" . $Row['FightT'] . "</td>";
-			echo "<td>" . $Row['Star1'] . "</td>";
-			echo "<td>" . $Row['Star2'] . "</td>";
-			echo "<td>" . $Row['Star3'] . "</td>";
-			echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
-		}
-	}
-	?>
+	If ($CareerLeaderSubPrintOut == 1 OR $CareerLeaderSubPrintOut == 2){
+		echo "<td>" . $Row['Year'] . "</td>";
+		echo "<td>" . $Row['Rookie'] . "</td>";
+	}			
+	echo "<td>" . $Row['GP'] . "</td>";
+	echo "<td>" . $Row['G'] . "</td>";
+	echo "<td>" . $Row['A'] . "</td>";
+	echo "<td>" . $Row['P'] . "</td>";
+	echo "<td>" . $Row['PlusMinus'] . "</td>";
+	echo "<td>" . $Row['Pim'] . "</td>";
+	echo "<td>" . $Row['Pim5'] . "</td>";
+	echo "<td>" . $Row['Hits'] . "</td>";	
+	echo "<td>" . $Row['HitsTook'] . "</td>";		
+	echo "<td>" . $Row['Shots'] . "</td>";
+	echo "<td>" . $Row['OwnShotsBlock'] . "</td>";
+	echo "<td>" . $Row['OwnShotsMissGoal'] . "</td>";
+	If ($Row['ShotsPCT'] == Null){echo "<td>0%</td>";}else{If ($Row['ShotsPCT'] == Null){echo "<td>0%</td>";}else{echo "<td>" . number_Format($Row['ShotsPCT'],2) . "%</td>";}}
+	echo "<td>" . $Row['ShotsBlock'] . "</td>";	
+	echo "<td>" . Floor($Row['SecondPlay']/60) . "</td>";
+	If ($Row['AMG'] == Null){echo "<td>0</td>";}else{If ($Row['AMG'] == Null){echo "<td>0</td>";}else{echo "<td>" . number_Format($Row['AMG'],2) . "</td>";};}
+	echo "<td>" . $Row['PPG'] . "</td>";
+	echo "<td>" . $Row['PPA'] . "</td>";
+	echo "<td>" . $Row['PPP'] . "</td>";
+	echo "<td>" . $Row['PPShots'] . "</td>";
+	echo "<td>" . Floor($Row['PPSecondPlay']/60) . "</td>";	
+	echo "<td>" . $Row['PKG'] . "</td>";
+	echo "<td>" . $Row['PKA'] . "</td>";
+	echo "<td>" . $Row['PKP'] . "</td>";
+	echo "<td>" . $Row['PKShots'] . "</td>";
+	echo "<td>" . Floor($Row['PKSecondPlay']/60) . "</td>";	
+	echo "<td>" . $Row['GW'] . "</td>";
+	echo "<td>" . $Row['GT'] . "</td>";
+	If ($Row['FaceoffPCT'] == Null){echo "<td>0%</td>";}else{If ($Row['FaceoffPCT'] == Null){echo "<td>0%</td>";}else{echo "<td>" . number_Format($Row['FaceoffPCT'],2) . "%</td>";}}
+	echo "<td>" . $Row['FaceOffTotal'] . "</td>";
+	echo "<td>" . $Row['GiveAway'] . "</td>";
+	echo "<td>" . $Row['TakeAway'] . "</td>";
+	echo "<td>" . $Row['EmptyNetGoal'] . "</td>";
+	echo "<td>" . $Row['HatTrick'] . "</td>";	
+	If ($Row['P20'] == Null){echo "<td>0</td>";}else{echo "<td>" . number_Format($Row['P20'],2) . "</td>";}
+	echo "<td>" . $Row['PenalityShotsScore'] . "</td>";
+	echo "<td>" . $Row['PenalityShotsTotal'] . "</td>";
+	echo "<td>" . $Row['FightW'] . "</td>";
+	echo "<td>" . $Row['FightL'] . "</td>";
+	echo "<td>" . $Row['FightT'] . "</td>";
+	echo "<td>" . $Row['Star1'] . "</td>";
+	echo "<td>" . $Row['Star2'] . "</td>";
+	echo "<td>" . $Row['Star3'] . "</td>";
+	echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
+}}
+?>

@@ -1,16 +1,12 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
 $Team = (integer)-1; /* -1 All Team */
 $Title = (string)"";
 $Search = (boolean)False;
 $UpdateCareerStatDBV1 = (boolean)false;
 $CareerLeaderSubPrintOut = (int)1;
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	$GoalieStat = Null;
-	echo "<title>" . $DatabaseNotFound . "</title>";
-	$Title = $DatabaseNotFound;
-}else{
+	Goto CareerStatGoaliesStatByYear;
+}else{try{
 	$TypeText = (string)"Pro";$TitleType = $DynamicTitleLang['Pro'];
 	$ACSQuery = (boolean)FALSE;/* The SQL Query must be Ascending Order and not Descending */
 	$Rookie = (boolean)FALSE;
@@ -49,9 +45,9 @@ If (file_exists($DatabaseFile) == false){
 	$LeagueGeneral = $db->querySingle($Query,true);		
 	$LeagueName = $LeagueGeneral['Name'];
 		
-	If ($Playoff=="True"){$Title = $PlayersLang['Playoff'] .  " ";}
+	If ($Playoff=="True"){$Title = $SearchLang['Playoff'] .  " ";}
 	$Title = $Title . $DynamicTitleLang['CareerStatByYear'];
-	If($Rookie == True){$Title = $Title . $GeneralStatLang['Rookie'] . " - ";}
+	If($Rookie == True){$Title = $Title . $PlayersLang['Rookie'] . " - ";}
 	If ($TeamName != ""){$Title = $Title . $TeamName . " - ";}
 	If ($Year > 0){$Title = $Title . $Year . " - ";}
 	If($MaximumResult == 0){$Title = $Title . $DynamicTitleLang['All'];}else{$Title = $Title . $DynamicTitleLang['Top'] . $MaximumResult . " ";}
@@ -86,7 +82,14 @@ If (file_exists($DatabaseFile) == false){
 	/* OverWrite Title if information is get from PHP GET */
 	if($TitleOverwrite <> ""){$Title = $TitleOverwrite;}	
 	echo "<title>" . $LeagueName . " - " . $Title . "</title>";
-}?>
+} catch (Exception $e) {
+CareerStatGoaliesStatByYear:
+	$LeagueName = $DatabaseNotFound;
+	$GoalieStat = Null;
+	echo "<title>" . $DatabaseNotFound . "</title>";
+	$Title = $DatabaseNotFound;
+}}
+?>
 </head><body>
 <?php include "Menu.php";?>
 <script>
@@ -123,7 +126,7 @@ $(function() {
 <div style="width:99%;margin:auto;">
 <?php echo "<h1>" . $Title . "</h1>";?>
 <div id="ReQueryDiv" style="display:none;">
-<?php include "SearchCareerStatGoaliesStatByYear.php";?>
+<?php  if($LeagueName != $DatabaseNotFound){include "SearchCareerStatGoaliesStatByYear.php";}?>
 </div>
 <div class="tablesorter_ColumnSelectorWrapper">
 	<button class="tablesorter_Output" id="ReQuery"><?php echo $SearchLang['ChangeSearch'];?></button>

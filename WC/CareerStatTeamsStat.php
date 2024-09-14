@@ -1,14 +1,9 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
 $Title = (string)"";
 $Search = (boolean)False;
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	$CareerTeamStat = Null;
-	echo "<title>" . $DatabaseNotFound . "</title>";
-	$Title = $DatabaseNotFound;
-	$Team = (integer)0;
-}else{
+	Goto CareerStatTeamsStat;
+}else{try{
 	$DESCQuery = (boolean)FALSE;/* The SQL Query must be Descending Order and not Ascending*/
 	$Playoff = (string)"False";
 	$TypeText = (string)"Pro";$TitleType = $DynamicTitleLang['Pro'];
@@ -77,7 +72,7 @@ If (file_exists($DatabaseFile) == false){
 			}			
 		}
 		
-		If ($Playoff=="True"){$Title = $PlayersLang['Playoff'] .  " ";}
+		If ($Playoff=="True"){$Title = $SearchLang['Playoff'] .  " ";}
 		$Title = $Title . $DynamicTitleLang['CareerStat'];
 		If ($Team > 0){
 			$Title = $Title . $DynamicTitleLang['TeamStatVS'] . " " . $TitleType;
@@ -102,8 +97,14 @@ If (file_exists($DatabaseFile) == false){
 	}
 	
 	echo "<title>" . $LeagueName . " - " . $Title . "</title>";
-	
-}
+} catch (Exception $e) {
+	CareerStatTeamsStat:
+	$LeagueName = $DatabaseNotFound;
+	$CareerTeamStat = Null;
+	echo "<title>" . $DatabaseNotFound . "</title>";
+	$Title = $DatabaseNotFound;
+	$Team = (integer)0;	
+}}
 ?>
 
 </head><body>
@@ -142,7 +143,7 @@ $(function() {
 <div style="width:99%;margin:auto;">
 <?php echo "<h1>" . $Title . "</h1>"; ?>
 <div id="ReQueryDiv" style="display:none;">
-<?php include "SearchCareerStatTeamsStat.php";?>
+<?php  if($LeagueName != $DatabaseNotFound){include "SearchCareerStatTeamsStat.php";}?>
 </div>
 <div class="tablesorter_ColumnSelectorWrapper">
 	<button class="tablesorter_Output" id="ReQuery"><?php echo $SearchLang['ChangeSearch'];?></button>
@@ -311,20 +312,20 @@ if (empty($CareerTeamStat) == false){while ($Row = $CareerTeamStat ->fetchArray(
 		echo "<td>" . ($Row['SumOfHits'] + $Row['Hits']) . "</td>";	
 		echo "<td>" . ($Row['SumOfPPAttemp'] + $Row['PPAttemp']) . "</td>";
 		echo "<td>" . ($Row['SumOfPPGoal'] + $Row['PPGoal']) . "</td>";
-		echo "<td>";if (($Row['PPAttemp']+ $Row['SumOfPPAttemp']) > 0){echo number_Format(($Row['SumOfPPGoal']+$Row['PPGoal']) / ($Row['PPAttemp']+ $Row['SumOfPPAttemp']) * 100,2) . "%";} else { echo "0.00%";} echo "</td>";		
+		echo "<td>";if (($Row['PPAttemp']+ $Row['SumOfPPAttemp']) > 0){echo number_Format(($Row['SumOfPPGoal']+$Row['PPGoal']) / ($Row['PPAttemp']+ $Row['SumOfPPAttemp']) * 100,2) . "%";} else { echo "0%";} echo "</td>";		
 		echo "<td>" . ($Row['SumOfPKAttemp'] + $Row['PKAttemp']) . "</td>";
 		echo "<td>" . ($Row['SumOfPKGoalGA'] + $Row['PKGoalGA']) . "</td>";
-		echo "<td>";if (($Row['SumOfPKAttemp'] + $Row['PKAttemp']) > 0){echo number_Format(( ($Row['SumOfPKAttemp'] + $Row['PKAttemp']) - ($Row['SumOfPKGoalGA'] + $Row['PKGoalGA'])) / ($Row['SumOfPKAttemp'] + $Row['PKAttemp']) * 100,2) . "%";} else {echo "0.00%";} echo "</td>";
+		echo "<td>";if (($Row['SumOfPKAttemp'] + $Row['PKAttemp']) > 0){echo number_Format(( ($Row['SumOfPKAttemp'] + $Row['PKAttemp']) - ($Row['SumOfPKGoalGA'] + $Row['PKGoalGA'])) / ($Row['SumOfPKAttemp'] + $Row['PKAttemp']) * 100,2) . "%";} else {echo "0%";} echo "</td>";
 		echo "<td>" . ($Row['SumOfPKGoalGF'] + $Row['PKGoalGF']) . "</td>";	
 		echo "<td>" . ($Row['SumOfFaceOffWonOffensifZone'] + $Row['FaceOffWonOffensifZone']) . "</td>";
 		echo "<td>" . ($Row['SumOfFaceOffTotalOffensifZone'] + $Row['FaceOffTotalOffensifZone']) . "</td>";		
-		echo "<td>";if (($Row['SumOfFaceOffWonOffensifZone'] + $Row['FaceOffWonOffensifZone']) > 0){echo number_Format(($Row['SumOfFaceOffWonOffensifZone'] + $Row['FaceOffWonOffensifZone']) / ($Row['SumOfFaceOffTotalOffensifZone'] + $Row['FaceOffTotalOffensifZone']) * 100,2) . "%" ;} else { echo "0.00%";} echo "</td>";	
+		echo "<td>";if (($Row['SumOfFaceOffWonOffensifZone'] + $Row['FaceOffWonOffensifZone']) > 0){echo number_Format(($Row['SumOfFaceOffWonOffensifZone'] + $Row['FaceOffWonOffensifZone']) / ($Row['SumOfFaceOffTotalOffensifZone'] + $Row['FaceOffTotalOffensifZone']) * 100,2) . "%" ;} else { echo "0%";} echo "</td>";	
 		echo "<td>" . ($Row['SumOfFaceOffWonDefensifZone'] + $Row['FaceOffWonDefensifZone']) . "</td>";
 		echo "<td>" . ($Row['SumOfFaceOffTotalDefensifZone'] + $Row['FaceOffTotalDefensifZone']) . "</td>";
-		echo "<td>";if (($Row['SumOfFaceOffWonDefensifZone']+ $Row['FaceOffWonDefensifZone']) > 0){echo number_Format(($Row['SumOfFaceOffWonDefensifZone']+ $Row['FaceOffWonDefensifZone']) / ($Row['SumOfFaceOffTotalDefensifZone'] + $Row['FaceOffTotalDefensifZone']) * 100,2) . "%" ;} else { echo "0.00%";} echo "</td>";	
+		echo "<td>";if (($Row['SumOfFaceOffWonDefensifZone']+ $Row['FaceOffWonDefensifZone']) > 0){echo number_Format(($Row['SumOfFaceOffWonDefensifZone']+ $Row['FaceOffWonDefensifZone']) / ($Row['SumOfFaceOffTotalDefensifZone'] + $Row['FaceOffTotalDefensifZone']) * 100,2) . "%" ;} else { echo "0%";} echo "</td>";	
 		echo "<td>" . ($Row['SumOfFaceOffWonNeutralZone'] + $Row['FaceOffWonNeutralZone']) . "</td>";	
 		echo "<td>" . ($Row['SumOfFaceOffTotalNeutralZone'] + $Row['FaceOffTotalNeutralZone']) . "</td>";	
-		echo "<td>";if (($Row['SumOfFaceOffWonNeutralZone'] + $Row['FaceOffWonNeutralZone']) > 0){echo number_Format(($Row['SumOfFaceOffWonNeutralZone'] + $Row['FaceOffWonNeutralZone']) / ($Row['SumOfFaceOffTotalNeutralZone'] + $Row['FaceOffTotalNeutralZone']) * 100,2) . "%" ;} else { echo "0.00%";} echo "</td>";	
+		echo "<td>";if (($Row['SumOfFaceOffWonNeutralZone'] + $Row['FaceOffWonNeutralZone']) > 0){echo number_Format(($Row['SumOfFaceOffWonNeutralZone'] + $Row['FaceOffWonNeutralZone']) / ($Row['SumOfFaceOffTotalNeutralZone'] + $Row['FaceOffTotalNeutralZone']) * 100,2) . "%" ;} else { echo "0%";} echo "</td>";	
 		echo "<td>" . Floor(($Row['SumOfPuckTimeInZoneOF'] + $Row['PuckTimeInZoneOF']) / 60). "</td>";
 		echo "<td>" . Floor(($Row['SumOfPuckTimeControlinZoneOF'] + $Row['PuckTimeControlinZoneOF']) / 60). "</td>";
 		echo "<td>" . Floor(($Row['SumOfPuckTimeInZoneDF'] + $Row['PuckTimeInZoneDF']) / 60). "</td>";
@@ -388,20 +389,20 @@ if (empty($CareerTeamStat) == false){while ($Row = $CareerTeamStat ->fetchArray(
 		echo "<td>" . $Row['SumOfHits']. "</td>";	
 		echo "<td>" . $Row['SumOfPPAttemp']. "</td>";
 		echo "<td>" . $Row['SumOfPPGoal']. "</td>";
-		echo "<td>";if ($Row['SumOfPPAttemp'] > 0){echo number_Format($Row['SumOfPPGoal'] / $Row['SumOfPPAttemp'] * 100,2) . "%";} else { echo "0.00%";} echo "</td>";		
+		echo "<td>";if ($Row['SumOfPPAttemp'] > 0){echo number_Format($Row['SumOfPPGoal'] / $Row['SumOfPPAttemp'] * 100,2) . "%";} else { echo "0%";} echo "</td>";		
 		echo "<td>" . $Row['SumOfPKAttemp']. "</td>";
 		echo "<td>" . $Row['SumOfPKGoalGA']. "</td>";
-		echo "<td>";if ($Row['SumOfPKAttemp'] > 0){echo number_Format(($Row['SumOfPKAttemp'] - $Row['SumOfPKGoalGA']) / $Row['SumOfPKAttemp'] * 100,2) . "%";} else {echo "0.00%";} echo "</td>";
+		echo "<td>";if ($Row['SumOfPKAttemp'] > 0){echo number_Format(($Row['SumOfPKAttemp'] - $Row['SumOfPKGoalGA']) / $Row['SumOfPKAttemp'] * 100,2) . "%";} else {echo "0%";} echo "</td>";
 		echo "<td>" .  $Row['SumOfPKGoalGF']. "</td>";	
 		echo "<td>" . $Row['SumOfFaceOffWonOffensifZone']. "</td>";
 		echo "<td>" . $Row['SumOfFaceOffTotalOffensifZone']. "</td>";		
-		echo "<td>";if ($Row['SumOfFaceOffTotalOffensifZone'] > 0){echo number_Format($Row['SumOfFaceOffWonOffensifZone'] / $Row['SumOfFaceOffTotalOffensifZone'] * 100,2) . "%" ;} else { echo "0.00%";} echo "</td>";	
+		echo "<td>";if ($Row['SumOfFaceOffTotalOffensifZone'] > 0){echo number_Format($Row['SumOfFaceOffWonOffensifZone'] / $Row['SumOfFaceOffTotalOffensifZone'] * 100,2) . "%" ;} else { echo "0%";} echo "</td>";	
 		echo "<td>" . $Row['SumOfFaceOffWonDefensifZone']. "</td>";
 		echo "<td>" . $Row['SumOfFaceOffTotalDefensifZone']. "</td>";
-		echo "<td>";if ($Row['SumOfFaceOffTotalDefensifZone'] > 0){echo number_Format($Row['SumOfFaceOffWonDefensifZone'] / $Row['SumOfFaceOffTotalDefensifZone'] * 100,2) . "%" ;} else { echo "0.00%";} echo "</td>";	
+		echo "<td>";if ($Row['SumOfFaceOffTotalDefensifZone'] > 0){echo number_Format($Row['SumOfFaceOffWonDefensifZone'] / $Row['SumOfFaceOffTotalDefensifZone'] * 100,2) . "%" ;} else { echo "0%";} echo "</td>";	
 		echo "<td>" . $Row['SumOfFaceOffWonNeutralZone']. "</td>";	
 		echo "<td>" . $Row['SumOfFaceOffTotalNeutralZone']. "</td>";	
-		echo "<td>";if ($Row['SumOfFaceOffTotalNeutralZone'] > 0){echo number_Format($Row['SumOfFaceOffWonNeutralZone'] / $Row['SumOfFaceOffTotalNeutralZone'] * 100,2) . "%" ;} else { echo "0.00%";} echo "</td>";	
+		echo "<td>";if ($Row['SumOfFaceOffTotalNeutralZone'] > 0){echo number_Format($Row['SumOfFaceOffWonNeutralZone'] / $Row['SumOfFaceOffTotalNeutralZone'] * 100,2) . "%" ;} else { echo "0%";} echo "</td>";	
 		echo "<td>" . Floor($Row['SumOfPuckTimeInZoneOF']/60). "</td>";
 		echo "<td>" . Floor($Row['SumOfPuckTimeControlinZoneOF']/60). "</td>";
 		echo "<td>" . Floor($Row['SumOfPuckTimeInZoneDF']/60). "</td>";

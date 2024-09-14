@@ -51,63 +51,63 @@ function valChange(field,type,sid,updown,BlockPlayerFromPlayingLines12,BlockPlay
 		if(sid == 'Line15vs5Forward' || sid == 'Line25vs5Forward' || sid == 'Line35vs5Forward' || sid == 'Line45vs5Forward'){
 			for(x=1;x<=4;x++){
 				val = (sid == 'Line'+ x +'5vs5Forward') ? curvalue : parseInt(document.getElementById('Line'+ x +'5vs5ForwardTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
 		}else if(sid == 'Line15vs5Defense' || sid == 'Line25vs5Defense' || sid == 'Line35vs5Defense' || sid == 'Line45vs5Defense'){
 			for(x=1;x<=4;x++){
 				val = (sid == 'Line'+ x +'5vs5Defense') ? curvalue : parseInt(document.getElementById('Line'+ x +'5vs5DefenseTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
 		}else if(sid == 'Line1PPForward' || sid == 'Line2PPForward'){
 			for(x=1;x<=2;x++){
 				val = (sid == 'Line'+ x +'PPForward') ? curvalue : parseInt(document.getElementById('Line'+ x +'PPForwardTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
 		}else if(sid == 'Line1PPDefense' || sid == 'Line2PPDefense'){
 			for(x=1;x<=2;x++){
 				val = (sid == 'Line'+ x +'PPDefense') ? curvalue : parseInt(document.getElementById('Line'+ x +'PPDefenseTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
 		}if(sid == 'Line14VS4Forward' || sid == 'Line24VS4Forward'){
 			for(x=1;x<=2;x++){
 				val = (sid == 'Line'+ x +'4VS4Forward') ? curvalue : parseInt(document.getElementById('Line'+ x +'4VS4ForwardTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
 		}else if(sid == 'Line14VS4Defense' || sid == 'Line24VS4Defense'){
 			for(x=1;x<=2;x++){
 				val = (sid == 'Line'+ x +'4VS4Defense') ? curvalue : parseInt(document.getElementById('Line'+ x +'4VS4DefenseTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
 		}else if(sid == 'Line1PK4Forward' || sid == 'Line2PK4Forward'){
 			for(x=1;x<=2;x++){
 				val = (sid == 'Line'+ x +'PK4Forward') ? curvalue : parseInt(document.getElementById('Line'+ x +'PK4ForwardTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
 		}else if(sid == 'Line1PK4Defense' || sid == 'Line2PK4Defense'){
 			for(x=1;x<=2;x++){
 				val = (sid == 'Line'+ x +'PK4Defense') ? curvalue : parseInt(document.getElementById('Line'+ x +'PK4DefenseTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
 		}else if(sid == 'Line1PK3Forward' || sid == 'Line2PK3Forward'){
 			for(x=1;x<=2;x++){
 				val = (sid == 'Line'+ x +'PK3Forward') ? curvalue : parseInt(document.getElementById('Line'+ x +'PK3ForwardTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
@@ -115,7 +115,7 @@ function valChange(field,type,sid,updown,BlockPlayerFromPlayingLines12,BlockPlay
 			switchValues('Line1PK3DefenseTime', 'Line2PK3DefenseTime');
 			for(x=1;x<=2;x++){
 				val = (sid == 'Line'+ x +'PK3Defense') ? curvalue : parseInt(document.getElementById('Line'+ x +'PK3DefenseTime').value);
-				if(val > vallast){flag = true;break;}
+				if(val > vallast || val == 100 ){flag = true;break;}
 				curtotal += val;
 				vallast = val;
 			}
@@ -432,11 +432,12 @@ function verifyBlockPlayerFromPlaying(Lines12,Lines123,Lines12inPPPK){
 		if(Lines123){
 			ss[0].push('Line35vs5Forward');
 			ss[1].push('Line35vs5Defense');
+			var baseText = 'Duplicate Player Lines 1,2,3';
 			duplicateText += ',3';
 		}
 
 		for(var x=0;x<2;x++){
-			check = [];
+			/* check = []; Remove in STHS 3.2.9 -  Fix an issue where when variable is reset, it allow player to play on same or different line between forward once and defenseman the once.*/
 			ssuse = ss[x];
 			ppuse = pp[x];
 			duplicateText = (x==0) ? "Forward " + baseText : "Defense " + baseText;
@@ -456,6 +457,180 @@ function verifyBlockPlayerFromPlaying(Lines12,Lines123,Lines12inPPPK){
 			}
 		}		
 	}
+	
+	if(Lines12inPPPK){
+		/* PP */
+		var ss = [];
+		var pp = [];
+		var check = [];
+		var ssuse = [];
+		var ppuse = [];
+
+		ss[0] = ['Line1PPForward','Line2PPForward'];
+		ss[1] = ['Line1PPDefense','Line2PPDefense'];
+		
+		pp[0] = ['Center','LeftWing','RightWing'];
+		pp[1] = ['Defense1','Defense2'];
+		
+		check[0] = [];
+		check[1] = [];
+
+		var player = '';
+		var lineid = '';
+		var baseText = 'Duplicate Player PP Lines 1,2';
+		var duplicateText = '';
+
+		for(var x=0;x<2;x++){
+			ssuse = ss[x];
+			ppuse = pp[x];
+			duplicateText = (x==0) ? "Forward " + baseText : "Defense " + baseText;
+
+			for(var s=0;s<ssuse.length;s++){
+				for(p=0;p<ppuse.length;p++){
+					lineid = ssuse[s] + ppuse[p];
+					player = document.getElementById(lineid).value;
+					
+					if(inArray(player,check)){
+						errortext += '<div class="erroritem">'+ duplicateText +'</div>';
+						break;
+					}else{
+						check.push(player);
+					}	
+				}
+			}
+		}		
+	}
+	
+	if(Lines12inPPPK){
+		/* 4 vs 4 */
+		var ss = [];
+		var pp = [];
+		var check = [];
+		var ssuse = [];
+		var ppuse = [];
+
+		ss[0] = ['Line14VS4Forward','Line24VS4Forward'];
+		ss[1] = ['Line14VS4Defense','Line24VS4Defense'];
+		
+		pp[0] = ['Center','Wing'];
+		pp[1] = ['Defense1','Defense2'];
+		
+		check[0] = [];
+		check[1] = [];
+
+		var player = '';
+		var lineid = '';
+		var baseText = 'Duplicate Player 4 vs 4 Lines 1,2';
+		var duplicateText = '';
+
+		for(var x=0;x<2;x++){
+			ssuse = ss[x];
+			ppuse = pp[x];
+			duplicateText = (x==0) ? "Forward " + baseText : "Defense " + baseText;
+
+			for(var s=0;s<ssuse.length;s++){
+				for(p=0;p<ppuse.length;p++){
+					lineid = ssuse[s] + ppuse[p];
+					player = document.getElementById(lineid).value;
+					
+					if(inArray(player,check)){
+						errortext += '<div class="erroritem">'+ duplicateText +'</div>';
+						break;
+					}else{
+						check.push(player);
+					}	
+				}
+			}
+		}		
+	}
+
+	if(Lines12inPPPK){
+		/* PK4 */
+		var ss = [];
+		var pp = [];
+		var check = [];
+		var ssuse = [];
+		var ppuse = [];
+
+		ss[0] = ['Line1PK4Forward','Line2PK4Forward'];
+		ss[1] = ['Line1PK4Defense','Line2PK4Defense'];
+		
+		pp[0] = ['Center','Wing'];
+		pp[1] = ['Defense1','Defense2'];
+		
+		check[0] = [];
+		check[1] = [];
+
+		var player = '';
+		var lineid = '';
+		var baseText = 'Duplicate Player PK4 Lines 1,2';
+		var duplicateText = '';
+
+		for(var x=0;x<2;x++){
+			ssuse = ss[x];
+			ppuse = pp[x];
+			duplicateText = (x==0) ? "Forward " + baseText : "Defense " + baseText;
+
+			for(var s=0;s<ssuse.length;s++){
+				for(p=0;p<ppuse.length;p++){
+					lineid = ssuse[s] + ppuse[p];
+					player = document.getElementById(lineid).value;
+					
+					if(inArray(player,check)){
+						errortext += '<div class="erroritem">'+ duplicateText +'</div>';
+						break;
+					}else{
+						check.push(player);
+					}	
+				}
+			}
+		}		
+	}	
+	
+	if(Lines12inPPPK){
+		/* PK3 */
+		var ss = [];
+		var pp = [];
+		var check = [];
+		var ssuse = [];
+		var ppuse = [];
+
+		ss[0] = ['Line1PK3Forward','Line2PK3Forward'];
+		ss[1] = ['Line1PK3Defense','Line2PK3Defense'];
+		
+		pp[0] = ['Center'];
+		pp[1] = ['Defense1','Defense2'];
+		
+		check[0] = [];
+		check[1] = [];
+
+		var player = '';
+		var lineid = '';
+		var baseText = 'Duplicate Player PK4 Lines 1,2';
+		var duplicateText = '';
+
+		for(var x=0;x<2;x++){
+			ssuse = ss[x];
+			ppuse = pp[x];
+			duplicateText = (x==0) ? "Forward " + baseText : "Defense " + baseText;
+
+			for(var s=0;s<ssuse.length;s++){
+				for(p=0;p<ppuse.length;p++){
+					lineid = ssuse[s] + ppuse[p];
+					player = document.getElementById(lineid).value;
+					
+					if(inArray(player,check)){
+						errortext += '<div class="erroritem">'+ duplicateText +'</div>';
+						break;
+					}else{
+						check.push(player);
+					}	
+				}
+			}
+		}		
+	}	
+	
+	
 	return errortext;
 }
 function line_validator(BlockPlayerFromPlayingLines12,BlockPlayerFromPlayingLines123,BlockPlayerFromPlayingLines12inPPPK,ProForceGameStrategiesTo,ProForceGameStrategiesAt5,FarmForceGameStrategiesTo,FarmForceGameStrategiesAt5,PullGoalerMinGoal,PullGoalerMinGoalEnforce,PullGoalerMinPct,PullGoalerRemoveGoaliesSecond,PullGoalerMax,customOT){

@@ -5,7 +5,7 @@ require_once("STHSSetting.php");
 
 If (file_exists($DatabaseFile) == false){
 	echo "No Database File";
-}else{
+}else{try{
 	$db = new SQLite3($DatabaseFile);
 	$Query = "Select Name from TeamProInfo ORDER BY Name ";
 	$TeamName = $db->query($Query);
@@ -22,7 +22,7 @@ If (file_exists($DatabaseFile) == false){
 			}
 			$target_file = $target_dir . basename($_FILES['file']["name"]);
 			$FileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-			if($FileType != "shl" and $FileType != "stc") {
+			if($FileType != "shl") {
 				// Allow certain file formats
 				echo "FAIL - Unknown Format";
 			}elseif ($_FILES['file']["size"] > 500000 OR $_FILES['file']["size"] < 5000) {
@@ -45,10 +45,12 @@ If (file_exists($DatabaseFile) == false){
 				}
 			}
 		} catch (Exception $e) {
-			echo "FAIL Exception";
+			echo "FAIL Exception Code";
 		}	
 	}else{
 		echo "No Input";
 	}
-}
+} catch (Exception $e) {
+echo "FAIL Exception Database";
+}}
 ?>

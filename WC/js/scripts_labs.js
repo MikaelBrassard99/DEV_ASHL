@@ -30,6 +30,29 @@ function update_position_list(element,byName,display){
 		}
 	}
 }
+
+function toggleFullFarm(){
+	var values = [];
+	
+	var element = document.getElementById("FullFarmEnableLocal");
+	element.value = (element.value == "true") ? "false" : "true";
+	
+	document.querySelectorAll('input[type=hidden].rvField').forEach(function(elem) {
+			
+		// convert string/text value to real JavaScript type for better code handling
+		if (!isNaN(elem.value)) {
+			val = parseInt(elem.value);
+		}
+		else if(elem.value === 'true') {val = true;}
+		else if(elem.value === 'false') {val = false;}
+		else {val = elem.value;}
+		
+		values.push(val);
+	})
+	roster_validator.apply(null,values);
+}
+
+
 function inArray(needle, haystack) {
 	var ret = false;
     var length = haystack.length;
@@ -46,7 +69,8 @@ function position_number_array(){
 	positions[2] = [4,5,6,7,12,13,14,15]; // Right Wings
 	positions[3] = [8,9,10,11,12,13,14,15]; // Defense
 	positions[4] = [16]; // Goalies
-	positions[5] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]; // Forwards
+	positions[5] = [1,2,3,4,5,6,7,9,10,11,12,13,14,15]; // Forwards
+	positions[6] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]; // All
 
 	return positions;
 }

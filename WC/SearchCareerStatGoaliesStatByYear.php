@@ -28,7 +28,7 @@
 	<?php
 	echo "<option";	if($Search == TRUE OR $Team == 0){echo " selected=\"selected\"";}echo" value=\"\">" . $SearchLang['AllTeam'] . "</option>";
 	$Query = "SELECT Number, Name FROM TeamProInfo Order By Name";
-	If (file_exists($DatabaseFile) ==True){$TeamNameSearch = $db->query($Query);}
+	If (file_exists($DatabaseFile) ==True AND isset($db) == True){$TeamNameSearch = $db->query($Query);}
 	if (empty($TeamNameSearch) == false){while ($Row = $TeamNameSearch ->fetchArray()) {
 		echo "<option value=\"" . $Row['Name'] . "\""; 
 		if($Search == False){if ($Row['Name'] == $TeamName){echo " selected=\"selected\"";}}
@@ -43,7 +43,7 @@
 	<input type="checkbox" name="Playoff"<?php if($Playoff == "True"){echo " checked";}?>></td>
 </tr>
 <?php
-If ($UpdateCareerStatDBV1 == true){echo "<tr><td class=\"STHSW200\">" . $GeneralStatLang['Rookie'] . "</td><td><input type=\"checkbox\" name=\"Rookie\"";if($Rookie == "True"){echo " checked";}echo "></td></tr>";}
+If ($UpdateCareerStatDBV1 == true){echo "<tr><td class=\"STHSW200\">" . $PlayersLang['Rookie'] . "</td><td><input type=\"checkbox\" name=\"Rookie\"";if($Rookie == "True"){echo " checked";}echo "></td></tr>";}
 ?>
 <tr>
 	<td class="STHSW200 STHSPHPSearch_Field"><?php echo $SearchLang['Max'];?></td><td class="STHSW250">

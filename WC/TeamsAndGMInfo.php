@@ -1,19 +1,26 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
+If ($lang == "fr"){include 'LanguageFR-League.php';}else{include 'LanguageEN-League.php';}
 $LeagueName = (string)"";
 $MailTo = (string)"";
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	$TeamAndGM = Null;
-}else{
+	Goto STHSErrorTeamandGMInfo;
+}else{try{
 	$db = new SQLite3($DatabaseFile);
 	$Query = "SELECT TeamProInfo.*, TeamFarmInfo.Name AS FarmTeamName, TeamFarmInfo.TeamThemeID as FarmTeamThemeID FROM TeamProInfo LEFT JOIN TeamFarmInfo ON TeamProInfo.Number = TeamFarmInfo.Number ORDER BY TeamProInfo.Name";
 	$TeamAndGM = $db->query($Query);
+	
+	$Query = "Select HideEmailMessengerAddressOnWebsite from LeagueOutputOption";
+	$LeagueOutputOption = $db->querySingle($Query,true);
 
 	$Query = "Select Name, OutputName from LeagueGeneral";
 	$LeagueGeneral = $db->querySingle($Query,true);		
 	$LeagueName = $LeagueGeneral['Name'];
-}
+} catch (Exception $e) {
+STHSErrorTeamandGMInfo:
+	$LeagueName = $DatabaseNotFound;
+	$TeamAndGM = Null;
+	$LeagueOutputOption = Null;
+}}
 echo "<title>" . $LeagueName . " - " . $TeamAndGMLang['TeamAndGM'] . "</title>";
 
 ?>
@@ -66,16 +73,23 @@ echo "<title>" . $LeagueName . " - " . $TeamAndGMLang['TeamAndGM'] . "</title>";
 </tr></thead>
 <tbody>
 <?php
+If ($CookieTeamNumber > 0){
 if (empty($TeamAndGM) == false){while ($Row = $TeamAndGM ->fetchArray()) {
 	echo "<tr><td>";
-	If ($Row['TeamThemeID'] > 0){echo "<img src=\"./images/" . $Row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTeamGMInfoTeamImage\" />";}		
+	If ($Row['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $Row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTeamGMInfoTeamImage\" />";}		
 	echo $Row['Name'] . "</td><td>" . $Row['GMName'] . "</td>";
-	echo "<td>" . $Row['Messenger'] . "</td>";
-	echo "<td>" . $Row['Email'] . "</td>";
+	If ($LeagueOutputOption != Null){
+		If ($LeagueOutputOption['HideEmailMessengerAddressOnWebsite'] == "False"){
+			echo "<td>" . $Row['Messenger'] . "</td>";
+			echo "<td>" . $Row['Email'] . "</td>";
+		}else{
+			echo "<td></td><td></td>";
+		}
+	}
 	If (strlen($Row['Email']) > 0){$MailTo = $MailTo . $Row['Email'] . ";";}
 	echo "<td>" . $Row['City'] . "</td>";
 	echo "<td>" . $Row['Arena'] . "</td><td>";
-	If ($Row['FarmTeamThemeID'] > 0){echo "<img src=\"./images/" . $Row['FarmTeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTeamGMInfoTeamImage\" />";}		
+	If ($Row['FarmTeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $Row['FarmTeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPTeamGMInfoTeamImage\" />";}		
 	echo $Row['FarmTeamName'] . "</td><td>" . $Row['LastLoadFileDate'] . "</td>";
 	echo "<td>" . $Row['LinesLoad'] . "</td>";
 	echo "<td>" . $Row['FailAutoRoster'] . "</td>";	
@@ -83,7 +97,7 @@ if (empty($TeamAndGM) == false){while ($Row = $TeamAndGM ->fetchArray()) {
 	echo "<td>" . $Row['FailFarmAutoLine'] . "</td>";		
 	echo "<td>" . $Row['FailSimulation'] . "</td>";		
 	echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
-}}
+}}}
 echo "</tbody></table>";
 If (strlen($MailTo) > 0){echo "<a href=\"mailto:" . $MailTo . "\">" . $TeamAndGMLang['EmailAll'] . "</a>";}
 ?>

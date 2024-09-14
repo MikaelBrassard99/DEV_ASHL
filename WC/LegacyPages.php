@@ -1,14 +1,11 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
 $Title = (string)"";
 $Number = (integer)0;
 $HTML = (string)"";
 
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	echo "<title>" . $DatabaseNotFound . "</title>";
-	$HTML = "<h1>" . $DatabaseNotFound . "</h1>";
-}else{
+	Goto STHSErrorLegacyPages;
+}else{try{
 	
 	$db = new SQLite3($DatabaseFile);
 
@@ -38,7 +35,12 @@ If (file_exists($DatabaseFile) == false){
 		echo "<title>" . $IncorrectLegacyPagesQuery . "</title>";
 		$HTML = "<h1>" . $IncorrectLegacyPagesQuery . "</h1>";
 	}
-}?>
+} catch (Exception $e) {
+STHSErrorLegacyPages:
+	$LeagueName = $DatabaseNotFound;
+	echo "<title>" . $DatabaseNotFound . "</title>";
+	$HTML = "<h1>" . $DatabaseNotFound . "</h1>";	
+}}?>
 
 </head><body>
 <?php 

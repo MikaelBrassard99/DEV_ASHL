@@ -1,12 +1,11 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
+If ($lang == "fr"){include 'LanguageFR-Main.php';}else{include 'LanguageEN-Main.php';}
 $LeagueName = (string)"";
 $UploadLineAssumeName = (string)"";
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	echo "<style>Div{display:none}</style>";
-	$Title = $DatabaseNotFound;
-}else{
+	Goto STHSErrorUpload;
+
+}else{try{
 	$db = new SQLite3($DatabaseFile);
 	$Query = "Select Name, OutputName from LeagueGeneral";
 	$LeagueGeneral = $db->querySingle($Query,true);		
@@ -18,7 +17,12 @@ If (file_exists($DatabaseFile) == false){
 		$UploadLineAssumeName = str_replace(' ', '', $TeamName['Name']) . ".shl";
 	}
 	If ($CookieTeamNumber == 102){$DoNotRequiredLoginDynamicWebsite = TRUE;} // Commish is allow to upload anything so we are using the code from the 'Do Not Required Login Dynamic Website' to achieve this goal.
-}
+} catch (Exception $e) {
+STHSErrorUpload:
+	$LeagueName = $DatabaseNotFound;
+	echo "<style>Div{display:none}</style>";
+	$Title = $DatabaseNotFound;
+}}
 echo "<title>" . $LeagueName . " - " . $UploadLang['UploadLine'] . "</title>";
 ?>
 <style>
@@ -33,7 +37,7 @@ input[type="file"] {
 
 <div style="width:95%;margin:auto;">
 <h1><?php echo $UploadLang['UploadLine'];?></h1>
-<?php If ($CookieTeamNumber == 0 AND $DoNotRequiredLoginDynamicWebsite == FALSE){echo "<div style=\"color:#FF0000; font-weight: bold;padding:1px 1px 1px 5px;text-align:center;\">" . $NoUserLogin . "<br /><br /></div>";}?>
+<?php If ($CookieTeamNumber == 0 AND $DoNotRequiredLoginDynamicWebsite == FALSE){echo "<div class=\"STHSDivInformationMessage\">" . $NoUserLogin . "<br /><br /></div>";}?>
 
 <?php
 if(isset($_POST["submit"]) AND isset($_FILES["fileToUpload"]) == True) {
@@ -50,7 +54,7 @@ if(isset($_POST["submit"]) AND isset($_FILES["fileToUpload"]) == True) {
 		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 		$FileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-		if($FileType != "shl" and $FileType != "stc") {
+		if($FileType != "shl") {
 			// Allow certain file formats
 			echo "<br /><h2>" . $UploadLang['FileFormat'] . "</h2><hr />";
 		}elseif ($_FILES["fileToUpload"]["size"] > 500000 OR $_FILES["fileToUpload"]["size"] < 5000) {

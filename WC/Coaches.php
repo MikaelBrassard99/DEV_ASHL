@@ -1,14 +1,12 @@
-<?php include "Header.php";?>
-<?php
+<?php include "Header.php";
+If ($lang == "fr"){include 'LanguageFR-League.php';}else{include 'LanguageEN-League.php';}
+$CoachesQueryOK = (boolean)False;
 $HistoryOutput = (boolean)False;
 $ExtraH1 = (string)"";
+$CoachLifeTime = Null;
 If (file_exists($DatabaseFile) == false){
-	$LeagueName = $DatabaseNotFound;
-	$Coach = Null;
-	echo "<style>Div{display:none}</style>";
-	$Title = $DatabaseNotFound;
-	$LeagueSimulationMenu = Null;
-}else{
+	Goto STHSErrorCoach;
+}else{try{
 	
 	$Playoff = (boolean)False;
 	$PlayoffString = (string)"False";
@@ -31,8 +29,8 @@ If (file_exists($DatabaseFile) == false){
 			$CareerDBFormatV2CheckCheck = $db->querySingle("Select Count(Name) As CountName from LeagueGeneral  WHERE Year = " . $Year . " And Playoff = '" . $PlayoffString. "'",true);
 			If ($CareerDBFormatV2CheckCheck['CountName'] == 1){$LeagueName = $LeagueGeneral['Name'];}else{$Year = (integer)0;$HistoryOutput = (boolean)False;Goto RegularSeason;}
 			
-			$Title = $LeagueName . " - " . $CoachesLang['CoachesTitle'] . " - " . $Year;
-			$ExtraH1 = " - " . $Year;
+			$Title = $LeagueName . " - " . $CoachesLang['CoachesTitle'] . " - " . $CoachesLang['Year'] . $Year;
+			$ExtraH1 = " - " . $CoachesLang['Year'] . $Year;
 			If ($Playoff == True){$Title = $Title . $TopMenuLang['Playoff'];$ExtraH1 = $ExtraH1 . $TopMenuLang['Playoff'];}
 		}else{
 			Goto RegularSeason;
@@ -44,12 +42,35 @@ If (file_exists($DatabaseFile) == false){
 		$Query = "Select FarmEnable from LeagueSimulation";
 		$LeagueSimulationMenu = $db->querySingle($Query,true);
 		
-		$Query = "Select Name, OutputName from LeagueGeneral";
+		$Query = "Select StandardStandingOutput From LeagueOutputOption";
+		$LeagueOutputOption = $db->querySingle($Query,true);			
+		
+		$Query = "Select Name, OutputName, PointSystemSO from LeagueGeneral";
 		$LeagueGeneral = $db->querySingle($Query,true);		
 		$LeagueName = $LeagueGeneral['Name'];
 		$Title = $LeagueName . " - " . $CoachesLang['CoachesTitle'];
+		
+		$CoachLifeTimeValue = $db->querySingle("SELECT Count(name) AS CountName  FROM CoachInfo WHERE LifeTimeGP > 0",true);
+		If ($CoachLifeTimeValue['CountName'] > 0){
+			If ($LeagueOutputOption['StandardStandingOutput'] == "True"){
+				$Query = "SELECT CoachInfo.* FROM CoachInfo WHERE LifeTimeGP > 0 ORDER BY CoachInfo.LifeTimeGP DESC, (CoachInfo.LifeTimeW + CoachInfo.LifeTimeOTW + CoachInfo.LifeTimeSOW) DESC";
+			}else{
+				$Query = "SELECT CoachInfo.* FROM CoachInfo WHERE LifeTimeGP > 0 ORDER BY CoachInfo.LifeTimeGP DESC, CoachInfo.LifeTimeW DESC";
+			}	
+			$CoachLifeTime = $db->query($Query);
+		}
+		
 	}
-}
+	$CoachesQueryOK = True;
+} catch (Exception $e) {
+STHSErrorCoach:
+	$LeagueName = $DatabaseNotFound;
+	$Coach = Null;
+	echo "<style>Div{display:none}</style>";
+	$Title = $DatabaseNotFound;
+	$LeagueSimulationMenu = Null;
+	$HistoryOutput = False;
+}}
 echo "<title>" . $Title  . "</title>";
 ?>
 <style>
@@ -115,7 +136,24 @@ $(function() {
 	  filter_searchDelay : 500,	  
       filter_reset: '.tablesorter_Reset'	 
     }
-  });  
+  }); 
+  $(".STHSPHPLifeTimeCoaches_Table").tablesorter({
+    widgets: ['columnSelector', 'stickyHeaders', 'filter'],
+    widgetOptions : {
+      columnSelector_container : $('#tablesorter_ColumnSelectorAvailable'),
+      columnSelector_layout : '<label><input type="checkbox">{name}</label>',
+      columnSelector_name  : 'title',
+      columnSelector_mediaquery: true,
+      columnSelector_mediaqueryName: 'Automatic',
+      columnSelector_mediaqueryState: true,
+      columnSelector_mediaqueryHidden: true,
+      columnSelector_breakpoints : [ '20em', '40em', '50em', '55em', '60em', '65em' ],		
+	  filter_columnFilters: true,
+      filter_placeholder: { search : '<?php echo $TableSorterLang['Search'];?>' },
+	  filter_searchDelay : 500,	  
+      filter_reset: '.tablesorter_Reset'	 
+    }
+  }); 
 });
 </script>
 
@@ -148,11 +186,12 @@ If($HistoryOutput == True){
 <th data-priority="6" title="Country" class="STHSW35">CNT</th>
 <th data-priority="5" title="Age" class="STHSW35"><?php echo $CoachesLang['Age'];?></th>
 <th data-priority="4" title="Contract" class="STHSW25"><?php echo $CoachesLang['Contract'];?></th>
+<th data-priority="6" title="Contract Signature Date" class="STHSW55"><?php echo $CoachesLang['ContractSignatureDate'];?></th>
 <th data-priority="4" title="Salary" class="STHSW100"><?php echo $CoachesLang['Salary'];?></th>
 </tr></thead>
 <tbody>
 <?php
-If ($HistoryOutput == False){
+If($CoachesQueryOK == True){If ($HistoryOutput == False){
 	$Query = "SELECT CoachInfo.*, TeamProInfo.Name as TeamProName, TeamFarmInfo.Name As TeamFarmName, TeamProInfo.CoachID as ProCoachTeamID, TeamFarmInfo.CoachID as FarmCoachTeamID, TeamProInfo.TeamThemeID As TeamThemeID FROM (CoachInfo LEFT JOIN TeamFarmInfo ON CoachInfo.Team = TeamFarmInfo.Number) LEFT JOIN TeamProInfo ON CoachInfo.Team = TeamProInfo.Number WHERE TEAM <> 0 ORDER BY CoachInfo.Name";
 	If (file_exists($DatabaseFile) ==True){$Coach = $db->query($Query);}
 }else{
@@ -162,7 +201,7 @@ If ($HistoryOutput == False){
 if (empty($Coach) == false){while ($row = $Coach ->fetchArray()) {
 	If ($row['Number'] == $row['ProCoachTeamID']){
 		echo "<tr><td>" . $row['Name'] . "</td><td>";
-		If ($row['TeamThemeID'] > 0){echo "<img src=\"./images/" . $row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPCoachesTeamImage\" />";}
+		If ($row['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPCoachesTeamImage\" />";}
 		echo $row['TeamProName'] . "</td>";
 		echo "<td>" . $row['PH'] . "</td>";
 		echo "<td>" . $row['DF'] . "</td>";
@@ -174,10 +213,11 @@ if (empty($Coach) == false){while ($row = $Coach ->fetchArray()) {
 		echo "<td>" . $row['Country'] . "</td>";
 		echo "<td>" . $row['Age'] . "</td>";
 		echo "<td>" . $row['Contract'] . "</td>";
+		echo "<td>" . $row['ContractSignatureDate'] . "</td>";
 		echo "<td>" . number_format($row['Salary'],0) . "$</td>";
 		echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
 	}
-}}
+}}}
 ?>
 </tbody></table>
 <br />
@@ -203,11 +243,12 @@ if (empty($Coach) == false){while ($row = $Coach ->fetchArray()) {
 <th data-priority="6" title="Country" class="STHSW35">CNT</th>
 <th data-priority="5" title="Age" class="STHSW35"><?php echo $CoachesLang['Age'];?></th>
 <th data-priority="4" title="Contract" class="STHSW25"><?php echo $CoachesLang['Contract'];?></th>
+<th data-priority="6" title="Contract Signature Date" class="STHSW55"><?php echo $CoachesLang['ContractSignatureDate'];?></th>
 <th data-priority="4" title="Salary" class="STHSW100"><?php echo $CoachesLang['Salary'];?></th>
 </tr></thead>
 <tbody>
 <?php
-If ($HistoryOutput == False){
+If($CoachesQueryOK == True){If ($HistoryOutput == False){
 	$Query = "SELECT CoachInfo.*, TeamProInfo.Name as TeamProName, TeamFarmInfo.Name As TeamFarmName, TeamProInfo.CoachID as ProCoachTeamID, TeamFarmInfo.CoachID as FarmCoachTeamID, TeamFarmInfo.TeamThemeID As TeamThemeID  FROM (CoachInfo LEFT JOIN TeamFarmInfo ON CoachInfo.Team = TeamFarmInfo.Number) LEFT JOIN TeamProInfo ON CoachInfo.Team = TeamProInfo.Number WHERE TEAM <> 0 ORDER BY CoachInfo.Name";
 	If (file_exists($DatabaseFile) ==True){$Coach = $db->query($Query);}
 }else{
@@ -217,7 +258,7 @@ If ($HistoryOutput == False){
 if (empty($Coach) == false){while ($row = $Coach ->fetchArray()) {
 	If ($row['Number'] == $row['FarmCoachTeamID']){
 		echo "<tr><td>" . $row['Name'] . "</td><td>";
-		If ($row['TeamThemeID'] > 0){echo "<img src=\"./images/" . $row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPCoachesTeamImage\" />";}		
+		If ($row['TeamThemeID'] > 0){echo "<img src=\"" . $ImagesCDNPath . "/images/" . $row['TeamThemeID'] .".png\" alt=\"\" class=\"STHSPHPCoachesTeamImage\" />";}		
 		echo $row['TeamFarmName'] . "</td>";
 		echo "<td>" . $row['PH'] . "</td>";
 		echo "<td>" . $row['DF'] . "</td>";
@@ -229,10 +270,11 @@ if (empty($Coach) == false){while ($row = $Coach ->fetchArray()) {
 		echo "<td>" . $row['Country'] . "</td>";
 		echo "<td>" . $row['Age'] . "</td>";
 		echo "<td>" . $row['Contract'] . "</td>";
+		echo "<td>" . $row['ContractSignatureDate'] . "</td>";
 		echo "<td>" . number_format($row['Salary'],0) . "$</td>";
 		echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
 	}
-}}
+}}}
 ?>
 </tbody></table>
 <br />
@@ -257,11 +299,12 @@ if (empty($Coach) == false){while ($row = $Coach ->fetchArray()) {
 <th data-priority="6" title="Country" class="STHSW35">CNT</th>
 <th data-priority="5" title="Age" class="STHSW35"><?php echo $CoachesLang['Age'];?></th>
 <th data-priority="4" title="Contract" class="STHSW25"><?php echo $CoachesLang['Contract'];?></th>
+<th data-priority="6" title="Contract Signature Date" class="STHSW55"><?php echo $CoachesLang['ContractSignatureDate'];?></th>
 <th data-priority="4" title="Salary" class="STHSW100"><?php echo $CoachesLang['Salary'];?></th>
 </tr></thead>
 <tbody>
 <?php
-If ($HistoryOutput == False){
+If($CoachesQueryOK == True){If ($HistoryOutput == False){
 	$Query = "SELECT CoachInfo.*, TeamProInfo.Name as TeamProName, TeamFarmInfo.Name As TeamFarmName, TeamProInfo.CoachID as ProCoachTeamID, TeamFarmInfo.CoachID as FarmCoachTeamID FROM (CoachInfo LEFT JOIN TeamFarmInfo ON CoachInfo.Team = TeamFarmInfo.Number) LEFT JOIN TeamProInfo ON CoachInfo.Team = TeamProInfo.Number WHERE TEAM = 0 ORDER BY CoachInfo.Name";
 	If (file_exists($DatabaseFile) ==True){$Coach = $db->query($Query);}
 }else{
@@ -280,9 +323,52 @@ if (empty($Coach) == false){while ($row = $Coach ->fetchArray()) {
 	echo "<td>" . $row['Country'] . "</td>";
 	echo "<td>" . $row['Age'] . "</td>";
 	echo "<td>" . $row['Contract'] . "</td>";
+	echo "<td>" . $row['ContractSignatureDate'] . "</td>";
 	echo "<td>" . number_format($row['Salary'],0) . "$</td>";
 	echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
-}}
+}}}
+?>
+</tbody></table>
+<?php
+/* $CoachLifeTime */
+if (empty($CoachLifeTime ) == false){
+	echo "<a id=\"LifeTime\"></a><br /><h1> " . $CoachesLang['LifeTimeCoachesRecord'] . "</h1>";
+	echo "<table class=\"STHSPHPLifeTimeCoaches_Table tablesorter\"><thead><tr>";
+	echo "<th data-priority=\"critical\" title=\"Coaches Name\" class=\"STHSW200\">" . $CoachesLang['CoachesName'] . "</th>";
+	echo "<th data-priority=\"2\" title=\"LifeTimeGP\" class=\"STHSW35\">GP</th>";
+	If ($LeagueOutputOption['StandardStandingOutput'] == "True"){
+		echo "<th data-priority=\"2\" title=\"LifeTimeW\" class=\"STHSW35\">W</th>";
+		echo "<th data-priority=\"2\" title=\"LifeTimeL\" class=\"STHSW35\">L</th>";
+		echo "<th data-priority=\"4\" title=\"LifeTimeOTL\" class=\"STHSW35\">OTL</th>";
+	}else{
+		echo "<th data-priority=\"2\" title=\"LifeTimeW\" class=\"STHSW35\">W</th>";
+		echo "<th data-priority=\"4\" title=\"LifeTimeOTW\" class=\"STHSW35\">OTW</th>";
+		echo "<th data-priority=\"4\" title=\"LifeTimeSOW\" class=\"STHSW35\">SOW</th>";
+		echo "<th data-priority=\"2\" title=\"LifeTimeL\" class=\"STHSW35\">L</th>";
+		echo "<th data-priority=\"4\" title=\"LifeTimeOTL\" class=\"STHSW35\">OTL</th>";
+		echo "<th data-priority=\"4\" title=\"LifeTimeSOL\" class=\"STHSW35\">SOL</th>";
+		if ($LeagueGeneral['PointSystemSO'] == "False"){echo "<th data-priority=\"3\" title=\"LifeTimeT\" class=\"STHSW35\">T</th>";}
+	}
+	echo "</tr></thead><tbody>";	
+	while ($row = $CoachLifeTime ->fetchArray()) {
+		echo "<tr><td>" . $row['Name'] . "</td>";
+		echo "<td>" . $row['LifeTimeGP'] . "</td>";
+		If ($LeagueOutputOption['StandardStandingOutput'] == "True"){
+			echo "<td>" . ($row['LifeTimeW'] + $row['LifeTimeOTW'] + $row['LifeTimeSOW']) . "</td>";
+			echo "<td>" . $row['LifeTimeL'] . "</td>";
+			echo "<td>" . ($row['LifeTimeOTL']  + $row['LifeTimeSOL']) . "</td>";
+		}else{
+			echo "<td>" . $row['LifeTimeW'] . "</td>";
+			echo "<td>" . $row['LifeTimeOTW'] . "</td>";
+			echo "<td>" . $row['LifeTimeSOW'] . "</td>";
+			echo "<td>" . $row['LifeTimeL'] . "</td>";
+			echo "<td>" . $row['LifeTimeOTL'] . "</td>";
+			echo "<td>" . $row['LifeTimeSOL'] . "</td>";
+			if ($LeagueGeneral['PointSystemSO'] == "False"){echo "<td>" . $row['LifeTimeT'] . "</td>";}
+		}
+		echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
+	}
+}
 ?>
 </tbody></table>
 

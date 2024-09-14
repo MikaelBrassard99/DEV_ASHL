@@ -49,9 +49,9 @@ If (file_exists($DatabaseFile) == false){
 	}
 			
 	If ($SubmitPlayer==False OR empty($SelectPlayers) == True){
-		$Query = "SELECT MainTable.* FROM (SELECT PlayerInfo.Number, PlayerInfo.Name, PlayerInfo.Team, PlayerInfo.TeamName, PlayerInfo.ProTeamName, PlayerInfo.Age, PlayerInfo.AgeDate, PlayerInfo.Contract, PlayerInfo.Rookie, PlayerInfo.NoTrade, PlayerInfo.CanPlayPro, PlayerInfo.CanPlayFarm, PlayerInfo.ForceWaiver, PlayerInfo.WaiverPossible, PlayerInfo.ExcludeSalaryCap, PlayerInfo.ProSalaryinFarm, PlayerInfo.SalaryAverage, PlayerInfo.Salary1, PlayerInfo.Salary2, PlayerInfo.Salary3, PlayerInfo.Salary4, PlayerInfo.Salary5, PlayerInfo.Salary6, PlayerInfo.Salary7, PlayerInfo.Salary8, PlayerInfo.Salary9, PlayerInfo.Salary10, PlayerInfo.SalaryRemaining, PlayerInfo.SalaryAverageRemaining, PlayerInfo.SalaryCap, PlayerInfo.SalaryCapRemaining, PlayerInfo.Condition, PlayerInfo.Status1, PlayerInfo.URLLink, PlayerInfo.NHLID, PlayerInfo.PProtected,PlayerInfo.PosC, PlayerInfo.PosLW, PlayerInfo.PosRW, PlayerInfo.PosD, 'False' AS PosG, PlayerInfo.Retire as Retire FROM PlayerInfo WHERE " . $TeamQuery . " AND Retire = 'False' AND Status1 >= 2 UNION ALL SELECT GoalerInfo.Number +10000, GoalerInfo.Name, GoalerInfo.Team, GoalerInfo.TeamName, GoalerInfo.ProTeamName, GoalerInfo.Age, GoalerInfo.AgeDate, GoalerInfo.Contract, GoalerInfo.Rookie, GoalerInfo.NoTrade, GoalerInfo.CanPlayPro, GoalerInfo.CanPlayFarm, GoalerInfo.ForceWaiver, GoalerInfo.WaiverPossible, GoalerInfo.ExcludeSalaryCap, GoalerInfo.ProSalaryinFarm, GoalerInfo.SalaryAverage, GoalerInfo.Salary1, GoalerInfo.Salary2, GoalerInfo.Salary3, GoalerInfo.Salary4, GoalerInfo.Salary5, GoalerInfo.Salary6, GoalerInfo.Salary7, GoalerInfo.Salary8, GoalerInfo.Salary9, GoalerInfo.Salary10, GoalerInfo.SalaryRemaining, GoalerInfo.SalaryAverageRemaining, GoalerInfo.SalaryCap, GoalerInfo.SalaryCapRemaining, GoalerInfo.Condition, GoalerInfo.Status1, GoalerInfo.URLLink, GoalerInfo.NHLID, GoalerInfo.PProtected,'False' AS PosC, 'False' AS PosLW, 'False' AS PosRW, 'False' AS PosD, 'True' AS PosG, GoalerInfo.Retire as Retire FROM GoalerInfo WHERE " . $TeamQuery . " AND Retire = 'False' AND Status1 >= 2) AS MainTable ORDER BY PosG ASC, PosD ASC, Name ASC";
+		$Query = "SELECT MainTable.* FROM (SELECT PlayerInfo.Number, PlayerInfo.Name, PlayerInfo.Team, PlayerInfo.TeamName, PlayerInfo.ProTeamName, PlayerInfo.Age, PlayerInfo.AgeDate, PlayerInfo.Contract, PlayerInfo.Rookie, PlayerInfo.NoTrade, PlayerInfo.CanPlayPro, PlayerInfo.CanPlayFarm, PlayerInfo.ForceWaiver, PlayerInfo.WaiverPossible, PlayerInfo.ExcludeSalaryCap, PlayerInfo.ProSalaryinFarm, PlayerInfo.SalaryAverage, PlayerInfo.Salary1, PlayerInfo.Salary2, PlayerInfo.Salary3, PlayerInfo.Salary4, PlayerInfo.Salary5, PlayerInfo.Salary6, PlayerInfo.Salary7, PlayerInfo.Salary8, PlayerInfo.Salary9, PlayerInfo.Salary10, PlayerInfo.SalaryCap1, PlayerInfo.SalaryCap2, PlayerInfo.SalaryCap3, PlayerInfo.SalaryCap4, PlayerInfo.SalaryCap5, PlayerInfo.SalaryCap6, PlayerInfo.SalaryCap7, PlayerInfo.SalaryCap8, PlayerInfo.SalaryCap9, PlayerInfo.SalaryCap10, PlayerInfo.SalaryRemaining, PlayerInfo.SalaryCap, PlayerInfo.SalaryCapRemaining, PlayerInfo.Condition, PlayerInfo.Status1, PlayerInfo.URLLink, PlayerInfo.NHLID, PlayerInfo.PProtected,PlayerInfo.PosC, PlayerInfo.PosLW, PlayerInfo.PosRW, PlayerInfo.PosD, 'False' AS PosG, PlayerInfo.Retire, NextYearFreeAgent.PlayerType AS NextYearFreeAgentPlayerType, NextYearFreeAgent.Contract as NextYearFreeAgentContract, NextYearFreeAgent.Salary as NextYearFreeAgentSalary FROM PlayerInfo LEFT JOIN NextYearFreeAgent ON PlayerInfo.Number = NextYearFreeAgent.Number WHERE PlayerInfo." . $TeamQuery . " AND PlayerInfo.Retire = 'False' AND PlayerInfo.Status1 >= 2 UNION ALL SELECT GoalerInfo.Number +10000, GoalerInfo.Name, GoalerInfo.Team, GoalerInfo.TeamName, GoalerInfo.ProTeamName, GoalerInfo.Age, GoalerInfo.AgeDate, GoalerInfo.Contract, GoalerInfo.Rookie, GoalerInfo.NoTrade, GoalerInfo.CanPlayPro, GoalerInfo.CanPlayFarm, GoalerInfo.ForceWaiver, GoalerInfo.WaiverPossible, GoalerInfo.ExcludeSalaryCap, GoalerInfo.ProSalaryinFarm, GoalerInfo.SalaryAverage, GoalerInfo.Salary1, GoalerInfo.Salary2, GoalerInfo.Salary3, GoalerInfo.Salary4, GoalerInfo.Salary5, GoalerInfo.Salary6, GoalerInfo.Salary7, GoalerInfo.Salary8, GoalerInfo.Salary9, GoalerInfo.Salary10, GoalerInfo.SalaryCap1, GoalerInfo.SalaryCap2, GoalerInfo.SalaryCap3, GoalerInfo.SalaryCap4, GoalerInfo.SalaryCap5, GoalerInfo.SalaryCap6, GoalerInfo.SalaryCap7, GoalerInfo.SalaryCap8, GoalerInfo.SalaryCap9, GoalerInfo.SalaryCap10, GoalerInfo.SalaryRemaining, GoalerInfo.SalaryCap, GoalerInfo.SalaryCapRemaining, GoalerInfo.Condition, GoalerInfo.Status1, GoalerInfo.URLLink, GoalerInfo.NHLID, GoalerInfo.PProtected,'False' AS PosC, 'False' AS PosLW, 'False' AS PosRW, 'False' AS PosD, 'True' AS PosG, GoalerInfo.Retire as Retire, NextYearFreeAgent.PlayerType AS NextYearFreeAgentPlayerType, NextYearFreeAgent.Contract as NextYearFreeAgentContract, NextYearFreeAgent.Salary as NextYearFreeAgentSalary FROM GoalerInfo LEFT JOIN NextYearFreeAgent ON GoalerInfo.Number = NextYearFreeAgent.Number WHERE GoalerInfo." . $TeamQuery . " AND GoalerInfo.Retire = 'False' AND GoalerInfo.Status1 >= 2) AS MainTable ORDER BY PosG ASC, PosD ASC, Name ASC";
 	}else{
-		$Query = "SELECT MainTable.* FROM (SELECT PlayerInfo.Number, PlayerInfo.Name, PlayerInfo.Team, PlayerInfo.TeamName, PlayerInfo.ProTeamName, PlayerInfo.Age, PlayerInfo.AgeDate, PlayerInfo.Contract, PlayerInfo.Rookie, PlayerInfo.NoTrade, PlayerInfo.CanPlayPro, PlayerInfo.CanPlayFarm, PlayerInfo.ForceWaiver, PlayerInfo.WaiverPossible, PlayerInfo.ExcludeSalaryCap, PlayerInfo.ProSalaryinFarm, PlayerInfo.SalaryAverage, PlayerInfo.Salary1, PlayerInfo.Salary2, PlayerInfo.Salary3, PlayerInfo.Salary4, PlayerInfo.Salary5, PlayerInfo.Salary6, PlayerInfo.Salary7, PlayerInfo.Salary8, PlayerInfo.Salary9, PlayerInfo.Salary10, PlayerInfo.SalaryRemaining, PlayerInfo.SalaryAverageRemaining, PlayerInfo.SalaryCap, PlayerInfo.SalaryCapRemaining, PlayerInfo.Condition, PlayerInfo.Status1, PlayerInfo.URLLink, PlayerInfo.NHLID, PlayerInfo.PProtected,PlayerInfo.PosC, PlayerInfo.PosLW, PlayerInfo.PosRW, PlayerInfo.PosD, 'False' AS PosG, PlayerInfo.Retire as Retire FROM PlayerInfo WHERE Retire = 'False' AND Status1 >= 2 UNION ALL SELECT GoalerInfo.Number + 10000, GoalerInfo.Name, GoalerInfo.Team, GoalerInfo.TeamName, GoalerInfo.ProTeamName, GoalerInfo.Age, GoalerInfo.AgeDate, GoalerInfo.Contract, GoalerInfo.Rookie, GoalerInfo.NoTrade, GoalerInfo.CanPlayPro, GoalerInfo.CanPlayFarm, GoalerInfo.ForceWaiver, GoalerInfo.WaiverPossible, GoalerInfo.ExcludeSalaryCap, GoalerInfo.ProSalaryinFarm, GoalerInfo.SalaryAverage, GoalerInfo.Salary1, GoalerInfo.Salary2, GoalerInfo.Salary3, GoalerInfo.Salary4, GoalerInfo.Salary5, GoalerInfo.Salary6, GoalerInfo.Salary7, GoalerInfo.Salary8, GoalerInfo.Salary9, GoalerInfo.Salary10, GoalerInfo.SalaryRemaining, GoalerInfo.SalaryAverageRemaining, GoalerInfo.SalaryCap, GoalerInfo.SalaryCapRemaining, GoalerInfo.Condition, GoalerInfo.Status1, GoalerInfo.URLLink, GoalerInfo.NHLID, GoalerInfo.PProtected,'False' AS PosC, 'False' AS PosLW, 'False' AS PosRW, 'False' AS PosD, 'True' AS PosG, GoalerInfo.Retire as Retire FROM GoalerInfo WHERE Retire = 'False' AND Status1 >= 2) AS MainTable WHERE ";
+		$Query = "SELECT MainTable.* FROM (SELECT PlayerInfo.Number, PlayerInfo.Name, PlayerInfo.Team, PlayerInfo.TeamName, PlayerInfo.ProTeamName, PlayerInfo.Age, PlayerInfo.AgeDate, PlayerInfo.Contract, PlayerInfo.Rookie, PlayerInfo.NoTrade, PlayerInfo.CanPlayPro, PlayerInfo.CanPlayFarm, PlayerInfo.ForceWaiver, PlayerInfo.WaiverPossible, PlayerInfo.ExcludeSalaryCap, PlayerInfo.ProSalaryinFarm, PlayerInfo.SalaryAverage, PlayerInfo.Salary1, PlayerInfo.Salary2, PlayerInfo.Salary3, PlayerInfo.Salary4, PlayerInfo.Salary5, PlayerInfo.Salary6, PlayerInfo.Salary7, PlayerInfo.Salary8, PlayerInfo.Salary9, PlayerInfo.Salary10, PlayerInfo.SalaryCap1, PlayerInfo.SalaryCap2, PlayerInfo.SalaryCap3, PlayerInfo.SalaryCap4, PlayerInfo.SalaryCap5, PlayerInfo.SalaryCap6, PlayerInfo.SalaryCap7, PlayerInfo.SalaryCap8, PlayerInfo.SalaryCap9, PlayerInfo.SalaryCap10, PlayerInfo.SalaryRemaining, PlayerInfo.SalaryCap, PlayerInfo.SalaryCapRemaining, PlayerInfo.Condition, PlayerInfo.Status1, PlayerInfo.URLLink, PlayerInfo.NHLID, PlayerInfo.PProtected,PlayerInfo.PosC, PlayerInfo.PosLW, PlayerInfo.PosRW, PlayerInfo.PosD, 'False' AS PosG, PlayerInfo.Retire as Retire, NextYearFreeAgent.PlayerType AS NextYearFreeAgentPlayerType, NextYearFreeAgent.Contract as NextYearFreeAgentContract, NextYearFreeAgent.Salary as NextYearFreeAgentSalary FROM PlayerInfo LEFT JOIN NextYearFreeAgent ON PlayerInfo.Number = NextYearFreeAgent.Number WHERE PlayerInfo.Retire = 'False' AND PlayerInfo.Status1 >= 2 UNION ALL SELECT GoalerInfo.Number + 10000, GoalerInfo.Name, GoalerInfo.Team, GoalerInfo.TeamName, GoalerInfo.ProTeamName, GoalerInfo.Age, GoalerInfo.AgeDate, GoalerInfo.Contract, GoalerInfo.Rookie, GoalerInfo.NoTrade, GoalerInfo.CanPlayPro, GoalerInfo.CanPlayFarm, GoalerInfo.ForceWaiver, GoalerInfo.WaiverPossible, GoalerInfo.ExcludeSalaryCap, GoalerInfo.ProSalaryinFarm, GoalerInfo.SalaryAverage, GoalerInfo.Salary1, GoalerInfo.Salary2, GoalerInfo.Salary3, GoalerInfo.Salary4, GoalerInfo.Salary5, GoalerInfo.Salary6, GoalerInfo.Salary7, GoalerInfo.Salary8, GoalerInfo.Salary9, GoalerInfo.Salary10, GoalerInfo.SalaryCap1, GoalerInfo.SalaryCap2, GoalerInfo.SalaryCap3, GoalerInfo.SalaryCap4, GoalerInfo.SalaryCap5, GoalerInfo.SalaryCap6, GoalerInfo.SalaryCap7, GoalerInfo.SalaryCap8, GoalerInfo.SalaryCap9, GoalerInfo.SalaryCap10, GoalerInfo.SalaryRemaining, GoalerInfo.SalaryCap, GoalerInfo.SalaryCapRemaining, GoalerInfo.Condition, GoalerInfo.Status1, GoalerInfo.URLLink, GoalerInfo.NHLID, GoalerInfo.PProtected,'False' AS PosC, 'False' AS PosLW, 'False' AS PosRW, 'False' AS PosD, 'True' AS PosG, GoalerInfo.Retire as Retire, NextYearFreeAgent.PlayerType AS NextYearFreeAgentPlayerType, NextYearFreeAgent.Contract as NextYearFreeAgentContract, NextYearFreeAgent.Salary as NextYearFreeAgentSalary FROM GoalerInfo LEFT JOIN NextYearFreeAgent ON GoalerInfo.Number = NextYearFreeAgent.Number WHERE GoalerInfo.Retire = 'False' AND GoalerInfo.Status1 >= 2) AS MainTable WHERE ";
 		foreach ($SelectPlayers as $values){
 			$Query = $Query . "Number = " . $values . " OR ";
 		}
@@ -90,7 +90,7 @@ $(function() {
       columnSelector_mediaqueryName: 'Automatic',
       columnSelector_mediaqueryState: true,
       columnSelector_mediaqueryHidden: true,
-      columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],
+      columnSelector_breakpoints : [ '5em', '20em', '60em', '70em', '80em', '90em' ],
 	  filter_columnFilters: true,
       filter_placeholder: { search : '<?php echo $TableSorterLang['Search'];?>' },
 	  filter_searchDelay : 1000,	  
@@ -146,16 +146,16 @@ $(function() {
 <th data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName'];?></th>
 <th data-priority="2" title="Position" class="STHSW45">POS</th>
 <th data-priority="1" title="Age" class="STHSW25"><?php echo $PlayersLang['Age'];?></th>
-<th data-priority="4" title="Birthday" class="STHSW45"><?php echo $PlayersLang['Birthday'];?></th>
+<th data-priority="2" title="Birthday" class="STHSW45"><?php echo $PlayersLang['Birthday'];?></th>
 <th data-priority="2" title="Terms" class="STHSW35"><?php echo $PlayersLang['Terms'];?></th>
 <th data-priority="1" title="Contract Duration" class="STHSW25"><?php echo $PlayersLang['Contract'];?></th>
 <th data-priority="2" title="Cap %" class="STHSW25">Cap %</th>
 <?php
-echo "<th data-priority=\"2\" title=\"Year " . $LeagueYear . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . $LeagueYear . "</th>";
-echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 1) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 1) . "</th>";
-echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 2) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 2) . "</th>";
-echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 3) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 3) . "</th>";
-echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 4) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 4) . "</th>";
+echo "<th data-priority=\"2\" title=\"Year " . $LeagueYear . "\" class=\"STHSW75\">" . $PlayersLang['SalaryCapYear'] . " " . $LeagueYear . "</th>";
+echo "<th data-priority=\"3\" title=\"Year " . ($LeagueYear + 1) . "\" class=\"STHSW75\">" . $PlayersLang['SalaryCapYear'] . " " . ($LeagueYear + 1) . "</th>";
+echo "<th data-priority=\"4\" title=\"Year " . ($LeagueYear + 2) . "\" class=\"STHSW75\">" . $PlayersLang['SalaryCapYear'] . " " . ($LeagueYear + 2) . "</th>";
+echo "<th data-priority=\"5\" title=\"Year " . ($LeagueYear + 3) . "\" class=\"STHSW75\">" . $PlayersLang['SalaryCapYear'] . " " . ($LeagueYear + 3) . "</th>";
+echo "<th data-priority=\"6\" title=\"Year " . ($LeagueYear + 4) . "\" class=\"STHSW75\">" . $PlayersLang['SalaryCapYear'] . " " . ($LeagueYear + 4) . "</th>";
 ?>
 </tr></thead>
 <?php
@@ -166,10 +166,10 @@ $AverageTotalCap1=(integer)0;$AverageTotalCap2=(integer)0;$AverageTotalCap3=(int
 if (empty($PlayerSalaryCap) == false){while ($Row = $PlayerSalaryCap ->fetchArray()) {
 	if ($Row['PosD']== "True" And $FoundD == False){
 		If ($AverageCount > 0){
-			echo "</tbody>\n<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"2\">" . $TeamLang['Average'] . " (" . $AverageCount . ")"  . "</th>";
-			echo "<th>" . number_format($AverageAge / $AverageCount,2) . "</th><th colspan=\"3\"></th>";
-			If ($SalaryCap > 0){echo "<th>" . number_Format(($AverageCap1 / $SalaryCap)*100,2) . "%</th>";}else{echo "<th>N/A</th>";}
-			echo "<th>" . number_format($AverageCap1,0) . "$</th><th>" . number_format($AverageCap2,0) . "$</th><th>" . number_format($AverageCap3,0) . "$</th><th>" . number_format($AverageCap4,0) . "$</th><th>" . number_format($AverageCap5,0) . "$</th></tr>";		
+			echo "</tbody>\n<tbody class=\"tablesorter-no-sort STHSPHPTeamSalaryCapDetail_Table_AverageTH\"><tr><td colspan=\"2\">" . $TeamLang['Average'] . " (" . $AverageCount . ")"  . "</td>";
+			echo "<td>" . number_format($AverageAge / $AverageCount,2) . "</td><td colspan=\"3\"></td>";
+			If ($SalaryCap > 0){echo "<td>" . number_Format(($AverageCap1 / $SalaryCap)*100,2) . "%</td>";}else{echo "<td>N/A</td>";}
+			echo "<td>" . number_format($AverageCap1,0) . "$</td><td>" . number_format($AverageCap2,0) . "$</td><td>" . number_format($AverageCap3,0) . "$</td><td>" . number_format($AverageCap4,0) . "$</td><td>" . number_format($AverageCap5,0) . "$</td></tr>";		
 		}
 		echo "</tbody>\n<tbody></tbody><tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"12\">" . $TeamLang['Defenseman'] . "</th></tr></tbody><tbody>";		
 		$AverageTotalCap1=$AverageTotalCap1+$AverageCap1;$AverageTotalCap2=$AverageTotalCap2+$AverageCap2;$AverageTotalCap3=$AverageTotalCap3+$AverageCap3;$AverageTotalCap4=$AverageTotalCap4+$AverageCap4;$AverageTotalCap5=$AverageTotalCap5+$AverageCap5;$AverageTotalCount=$AverageTotalCount+$AverageCount;
@@ -177,10 +177,10 @@ if (empty($PlayerSalaryCap) == false){while ($Row = $PlayerSalaryCap ->fetchArra
 	}
 	if ($Row['PosG']== "True" And $FoundG == False){
 		If ($AverageCount > 0){
-			echo "</tbody>\n<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"2\">" . $TeamLang['Average'] . " (" . $AverageCount . ")"  . "</th>";
-			echo "<th>" . number_format($AverageAge / $AverageCount,2) . "</th><th colspan=\"3\"></th>";
-			If ($SalaryCap > 0){echo "<th>" . number_Format(($AverageCap1 / $SalaryCap)*100,2) . "%</th>";}else{echo "<th>N/A</th>";}
-			echo "<th>" . number_format($AverageCap1,0) . "$</th><th>" . number_format($AverageCap2,0) . "$</th><th>" . number_format($AverageCap3,0) . "$</th><th>" . number_format($AverageCap4,0) . "$</th><th>" . number_format($AverageCap5,0) . "$</th></tr>";		
+			echo "</tbody>\n<tbody class=\"tablesorter-no-sort STHSPHPTeamSalaryCapDetail_Table_AverageTH\"><tr><td colspan=\"2\">" . $TeamLang['Average'] . " (" . $AverageCount . ")"  . "</td>";
+			echo "<td>" . number_format($AverageAge / $AverageCount,2) . "</td><td colspan=\"3\"></td>";
+			If ($SalaryCap > 0){echo "<td>" . number_Format(($AverageCap1 / $SalaryCap)*100,2) . "%</td>";}else{echo "<td>N/A</td>";}
+			echo "<td>" . number_format($AverageCap1,0) . "$</td><td>" . number_format($AverageCap2,0) . "$</td><td>" . number_format($AverageCap3,0) . "$</td><td>" . number_format($AverageCap4,0) . "$</td><td>" . number_format($AverageCap5,0) . "$</td></tr>";		
 		}	
 		echo "</tbody>\n<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"12\">" . $TeamLang['Goalies'] . "</th></tr></tbody><tbody>";
 		$AverageTotalCap1=$AverageTotalCap1+$AverageCap1;$AverageTotalCap2=$AverageTotalCap2+$AverageCap2;$AverageTotalCap3=$AverageTotalCap3+$AverageCap3;$AverageTotalCap4=$AverageTotalCap4+$AverageCap4;$AverageTotalCap5=$AverageTotalCap5+$AverageCap5;$AverageTotalCount=$AverageTotalCount+$AverageCount;
@@ -203,29 +203,29 @@ if (empty($PlayerSalaryCap) == false){while ($Row = $PlayerSalaryCap ->fetchArra
 	If ($Row['Condition'] < '95'){echo "IN ";}
 	If ($Row['CanPlayPro']== "True" AND $Row['CanPlayFarm']== "True"){echo "TW ";}		
 	echo "</td>";	
-	echo "<td>" . $Row['Contract'] . "</td>";
+	$AllContract = $Row['Contract'] + $Row['NextYearFreeAgentContract'];
+	echo "<td>" . $AllContract  . "</td>";
 	If ($SalaryCap > 0){echo "<td>" . number_Format(($Row['SalaryCap'] / $SalaryCap)*100,2) . "%</td>";}else{echo "<td>N/A</td>";}
 	for ($i=1;$i <=5;$i = $i + 1){
-		If ($Row['Contract'] >= $i){
+		If ($AllContract >= $i){
 			If ($i == 1){
 				echo "<td>" .  number_format($Row['SalaryCap'],0) . "$</td>";$AverageCap1=$AverageCap1+$Row['SalaryCap'];
 			}else{
 				If ($LeagueFinance['SalaryCapOption'] >=1 and $LeagueFinance['SalaryCapOption'] <=3 ){
-					If ($i == 2){echo "<td>" .  number_format($Row['Salary2'],0) . "$</td>";$AverageCap2=$AverageCap2+$Row['Salary2'];}
-					If ($i == 3){echo "<td>" .  number_format($Row['Salary3'],0) . "$</td>";$AverageCap3=$AverageCap3+$Row['Salary3'];}
-					If ($i == 4){echo "<td>" .  number_format($Row['Salary4'],0) . "$</td>";$AverageCap4=$AverageCap4+$Row['Salary4'];}
-					If ($i == 5){echo "<td>" .  number_format($Row['Salary5'],0) . "$</td>";$AverageCap5=$AverageCap5+$Row['Salary5'];}
+					If ($i == 2 and $Row['Contract'] >= 2){echo "<td>" .  number_format($Row['Salary2'],0) . "$</td>";$AverageCap2=$AverageCap2+$Row['Salary2'];}elseif($i == 2 and $AllContract >= 2){echo "<td>" .  number_format($Row['NextYearFreeAgentSalary'],0) . "$</td>";$AverageCap2=$AverageCap2+$Row['NextYearFreeAgentSalary'];}
+					If ($i == 3 and $Row['Contract'] >= 3){echo "<td>" .  number_format($Row['Salary3'],0) . "$</td>";$AverageCap3=$AverageCap3+$Row['Salary3'];}elseif($i == 3 and $AllContract >= 3){echo "<td>" .  number_format($Row['NextYearFreeAgentSalary'],0) . "$</td>";$AverageCap3=$AverageCap3+$Row['NextYearFreeAgentSalary'];}
+					If ($i == 4 and $Row['Contract'] >= 4){echo "<td>" .  number_format($Row['Salary4'],0) . "$</td>";$AverageCap4=$AverageCap4+$Row['Salary4'];}elseif($i == 4 and $AllContract >= 4){echo "<td>" .  number_format($Row['NextYearFreeAgentSalary'],0) . "$</td>";$AverageCap4=$AverageCap4+$Row['NextYearFreeAgentSalary'];}
+					If ($i == 5 and $Row['Contract'] >= 5){echo "<td>" .  number_format($Row['Salary5'],0) . "$</td>";$AverageCap5=$AverageCap5+$Row['Salary5'];}elseif($i == 5 and $AllContract >= 5){echo "<td>" .  number_format($Row['NextYearFreeAgentSalary'],0) . "$</td>";$AverageCap5=$AverageCap5+$Row['NextYearFreeAgentSalary'];}
 				}elseif($LeagueFinance['SalaryCapOption'] >= 4 and $LeagueFinance['SalaryCapOption'] <= 6){
-					echo "<td>" .  number_format($Row['SalaryCap'],0) . "$</td>";
-					If ($i == 2){$AverageCap2=$AverageCap2+$Row['SalaryAverage'];}
-					If ($i == 3){$AverageCap3=$AverageCap3+$Row['SalaryAverage'];}
-					If ($i == 4){$AverageCap4=$AverageCap4+$Row['SalaryAverage'];}
-					If ($i == 5){$AverageCap5=$AverageCap5+$Row['SalaryAverage'];}
+					If ($i == 2 and $Row['Contract'] >= 2){echo "<td>" .  number_format($Row['SalaryCap2'],0) . "$</td>";$AverageCap2=$AverageCap2+$Row['SalaryCap2'];}elseif($i == 2 and $AllContract >= 2){echo "<td>" .  number_format($Row['NextYearFreeAgentSalary'],0) . "$</td>";$AverageCap2=$AverageCap2+$Row['NextYearFreeAgentSalary'];}
+					If ($i == 3 and $Row['Contract'] >= 3){echo "<td>" .  number_format($Row['SalaryCap3'],0) . "$</td>";$AverageCap3=$AverageCap3+$Row['SalaryCap3'];}elseif($i == 3 and $AllContract >= 3){echo "<td>" .  number_format($Row['NextYearFreeAgentSalary'],0) . "$</td>";$AverageCap3=$AverageCap3+$Row['NextYearFreeAgentSalary'];}
+					If ($i == 4 and $Row['Contract'] >= 3){echo "<td>" .  number_format($Row['SalaryCap4'],0) . "$</td>";$AverageCap4=$AverageCap4+$Row['SalaryCap4'];}elseif($i == 4 and $AllContract >= 4){echo "<td>" .  number_format($Row['NextYearFreeAgentSalary'],0) . "$</td>";$AverageCap4=$AverageCap4+$Row['NextYearFreeAgentSalary'];}
+					If ($i == 5 and $Row['Contract'] >= 4){echo "<td>" .  number_format($Row['SalaryCap5'],0) . "$</td>";$AverageCap5=$AverageCap5+$Row['SalaryCap5'];}elseif($i == 5 and $AllContract >= 5){echo "<td>" .  number_format($Row['NextYearFreeAgentSalary'],0) . "$</td>";$AverageCap5=$AverageCap5+$Row['NextYearFreeAgentSalary'];}
 				}else{
 					echo "<td></td>";
 				}
 			}
-		}elseif ($Row['Contract'] + 1 == $i){
+		}elseif ($AllContract + 1 == $i){
 			if ($LeagueOutputOption['FreeAgentUseDateInsteadofDay'] == "True"){
 				$age = date_diff(date_create($Row['AgeDate']), date_create($LeagueOutputOption['FreeAgentRealDate']))->y;
 			}else{
@@ -243,31 +243,31 @@ if (empty($PlayerSalaryCap) == false){while ($Row = $PlayerSalaryCap ->fetchArra
 	echo "</tr>\n";
 }}
 If ($AverageCount > 0){
-	echo "</tbody>\n<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"2\">" . $TeamLang['Average'] . " (" . $AverageCount . ")"  . "</th>";
-	echo "<th>" . number_format($AverageAge / $AverageCount,2) . "</th><th colspan=\"3\"></th>";
-	If ($SalaryCap > 0){echo "<th>" . number_Format(($AverageCap1 / $SalaryCap)*100,2) . "%</th>";}else{echo "<th>N/A</th>";}
-	echo "<th>" . number_format($AverageCap1,0) . "$</th><th>" . number_format($AverageCap2,0) . "$</th><th>" . number_format($AverageCap3,0) . "$</th><th>" . number_format($AverageCap4,0) . "$</th><th>" . number_format($AverageCap5,0) . "$</th></tr>";		
+	echo "</tbody>\n<tbody class=\"tablesorter-no-sort STHSPHPTeamSalaryCapDetail_Table_AverageTH\"><tr><td colspan=\"2\">" . $TeamLang['Average'] . " (" . $AverageCount . ")"  . "</td>";
+	echo "<td>" . number_format($AverageAge / $AverageCount,2) . "</td><td colspan=\"3\"></td>";
+	If ($SalaryCap > 0){echo "<td>" . number_Format(($AverageCap1 / $SalaryCap)*100,2) . "%</td>";}else{echo "<td>N/A</td>";}
+	echo "<td>" . number_format($AverageCap1,0) . "$</td><td>" . number_format($AverageCap2,0) . "$</td><td>" . number_format($AverageCap3,0) . "$</td><td>" . number_format($AverageCap4,0) . "$</td><td>" . number_format($AverageCap5,0) . "$</td></tr>";		
 	$AverageTotalCap1=$AverageTotalCap1+$AverageCap1;$AverageTotalCap2=$AverageTotalCap2+$AverageCap2;$AverageTotalCap3=$AverageTotalCap3+$AverageCap3;$AverageTotalCap4=$AverageTotalCap4+$AverageCap4;$AverageTotalCap5=$AverageTotalCap5+$AverageCap5;$AverageTotalCount=$AverageTotalCount+$AverageCount;
 }
 echo "</tbody>\n";
 If ($LeagueFinance['BonusIncludeSalaryCap'] == "True"){
 	// Add Special in Salary Cap
-	echo "<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"7\">" . $TeamLang['SpecialSalaryCapValue'] . "</th><th>" . number_format($TeamFinance['SpecialSalaryCapY1'],0) . "$</th><th>" . number_format($TeamFinance['SpecialSalaryCapY2'],0) . "$</th><th>" . number_format($TeamFinance['SpecialSalaryCapY3'],0) . "$</th><th>" . number_format($TeamFinance['SpecialSalaryCapY4'],0) . "$</th><th>" . number_format($TeamFinance['SpecialSalaryCapY5'],0) . "$</th></tbody>\n";
+	echo "<tbody class=\"tablesorter-no-sort\"><tr><td colspan=\"7\">" . $TeamLang['SpecialSalaryCapValue'] . "</td><td>" . number_format($TeamFinance['SpecialSalaryCapY1'],0) . "$</td><td>" . number_format($TeamFinance['SpecialSalaryCapY2'],0) . "$</td><td>" . number_format($TeamFinance['SpecialSalaryCapY3'],0) . "$</td><td>" . number_format($TeamFinance['SpecialSalaryCapY4'],0) . "$</td><td>" . number_format($TeamFinance['SpecialSalaryCapY5'],0) . "$</td></tbody>\n";
 	$AverageTotalCap1=$AverageTotalCap1+$TeamFinance['SpecialSalaryCapY1'];$AverageTotalCap2=$AverageTotalCap2+$TeamFinance['SpecialSalaryCapY2'];$AverageTotalCap3=$AverageTotalCap3+$TeamFinance['SpecialSalaryCapY3'];$AverageTotalCap4=$AverageTotalCap4+$TeamFinance['SpecialSalaryCapY4'];$AverageTotalCap5=$AverageTotalCap5+$TeamFinance['SpecialSalaryCapY5'];
 }
-echo "<tbody class=\"tablesorter-no-sort\"><tr><th colspan=\"6\">" . $TeamLang['Total'] . " (" . $AverageTotalCount . ")"  . "</th>";
+echo "<tbody class=\"tablesorter-no-sort\"><tr><td colspan=\"6\">" . $TeamLang['Total'] . " (" . $AverageTotalCount . ")"  . "</td>";
 If ($SalaryCap > 0){
 	If ($AverageTotalCap1 / $SalaryCap > 1){
-		echo "<th style=\"background-color:#f44336;color:#fff;\">" . number_Format(($AverageTotalCap1 / $SalaryCap)*100,2) . "%</th>";
+		echo "<td style=\"background-color:#f44336;color:#fff;\">" . number_Format(($AverageTotalCap1 / $SalaryCap)*100,2) . "%</td>";
 	}elseif ($AverageTotalCap1 / $SalaryCap > 0.95){
-		echo "<th style=\"background-color:#FFA500\">" . number_Format(($AverageTotalCap1 / $SalaryCap)*100,2) . "%</th>";
+		echo "<td style=\"background-color:#FFA500\">" . number_Format(($AverageTotalCap1 / $SalaryCap)*100,2) . "%</td>";
 	}elseif($AverageTotalCap1 / $SalaryCap > 0.90){
-		echo "<th style=\"background-color:#FFFF00\">" . number_Format(($AverageTotalCap1 / $SalaryCap)*100,2) . "%</th>";
+		echo "<td style=\"background-color:#FFFF00\">" . number_Format(($AverageTotalCap1 / $SalaryCap)*100,2) . "%</td>";
 	}else{
-		echo "<th style=\"background-color:#00ff00\">" . number_Format(($AverageTotalCap1 / $SalaryCap)*100,2) . "%</th>";
+		echo "<td style=\"background-color:#00ff00\">" . number_Format(($AverageTotalCap1 / $SalaryCap)*100,2) . "%</td>";
 	}
-}else{echo "<th>N/A</th>";}
-echo "<th>" . number_format($AverageTotalCap1,0) . "$</th><th>" . number_format($AverageTotalCap2,0) . "$</th><th>" . number_format($AverageTotalCap3,0) . "$</th><th>" . number_format($AverageTotalCap4,0) . "$</th><th>" . number_format($AverageTotalCap5,0) . "$</th></tr>";		
+}else{echo "<td>N/A</td>";}
+echo "<td>" . number_format($AverageTotalCap1,0) . "$</td><td>" . number_format($AverageTotalCap2,0) . "$</td><td>" . number_format($AverageTotalCap3,0) . "$</td><td>" . number_format($AverageTotalCap4,0) . "$</td><td>" . number_format($AverageTotalCap5,0) . "$</td></tr>";		
 echo "</tbody></table><br />";
 echo $TeamLang['TermsLegend'] . "<br /><br />";
 echo $TeamLang['NoteContractOverviewSalaryCap'] . "<strong>" . number_format($SalaryCap,0) . "$</strong>.<br /><br />";
@@ -306,7 +306,7 @@ echo $TeamLang['SalaryCapSimulationNote'] . "<br /><br /><br />";
     </tr>
 	</table>
 </form>
-<script type="text/javascript">
+<script>
 $('#SelectPlayers').multiSelect();
 </script>
 </div>
