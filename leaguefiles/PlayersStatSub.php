@@ -1,11 +1,6 @@
-<th data-priority="3" title="Order Number" class="STHSW10 sorter-false">jjjj#</th>
-<th data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName']; ?></th>
+<th  title="Order Number" class="STHSW10 sorter-false">#</th>
+<th class="sticky-col first-col" data-priority="critical" title="Player Name" class="STHSW140Min"><?php echo $PlayersLang['PlayerName']; ?></th>
 <?php
-if ($Team >= 0) {
-	echo "<th class=\"columnSelector-false STHSW140Min\" data-priority=\"6\" title=\"Team Name\">" . $PlayersLang['TeamName'] . "</th>";
-} else {
-	echo "<th data-priority=\"2\" title=\"Team Name\" class=\"x\">" . $PlayersLang['TeamName'] . "</th>";
-}
 if ($CareerLeaderSubPrintOut == 0 or $CareerLeaderSubPrintOut == 2) {
 	echo "<th data-priority=\"2\" title=\"Position\" class=\"STHSW25\">POS</th>";
 }
@@ -13,49 +8,49 @@ if ($CareerLeaderSubPrintOut == 1 or $CareerLeaderSubPrintOut == 2) {
 	echo "<th data-priority=\"2\" title=\"Year\" class=\"STHSW25\">" . $SearchLang['Year'] . "</th><th data-priority=\"5\" title=\"Rookie\" class=\"STHSW25\">" . $PlayersLang['Rookie'] . "</th>";
 }
 ?>
-<th data-priority="1" title="Games Played" class="STHSW25">GP</th>
-<th data-priority="1" title="Goals" class="STHSW25">G</th>
-<th data-priority="1" title="Assists" class="STHSW25">A</th>
-<th data-priority="1" title="Points" class="STHSW25">P</th>
-<th data-priority="2" title="Plus/Minus" class="STHSW25">+/-</th>
-<th data-priority="2" title="Penalty Minutes" class="STHSW25">PIM</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Penalty Minutes for Major Penalty">PIM5</th>
-<th data-priority="2" title="Hits" class="STHSW25">HIT</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Hits Received">HTT</th>
-<th data-priority="2" title="Shots" class="STHSW25">SHT</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Own Shots Block by others players">OSB</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Own Shots Miss the net">OSM</th>
-<th data-priority="3" title="Shooting Percentage" class="STHSW55">SHT%</th>
-<th data-priority="3" title="Shots Blocked" class="STHSW25">SB</th>
-<th data-priority="3" title="Minutes Played" class="STHSW35">MP</th>
-<th data-priority="3" title="Average Minutes Played per Game" class="STHSW35">AMG</th>
-<th data-priority="4" title="Power Play Goals" class="STHSW25">PPG</th>
-<th data-priority="4" title="Power Play Assists" class="STHSW25">PPA</th>
-<th data-priority="4" title="Power Play Points" class="STHSW25">PPP</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Power Play Shots">PPS</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Power Play Minutes Played">PPM</th>
-<th data-priority="5" title="Short Handed Goals" class="STHSW25">PKG</th>
-<th data-priority="5" title="Short Handed Assists" class="STHSW25">PKA</th>
-<th data-priority="5" title="Short Handed Points" class="STHSW25">PKP</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Penalty Kill Shots">PKS</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Penalty Kill Minutes Played">PKM</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Game Winning Goals">GW</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Game Tying Goals">GT</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Face offs Percentage">FO%</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Face offs Taken">FOT</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Give Aways">GA</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Take Aways">TA</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Empty Net Goals">EG</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Hat Tricks">HT</th>
-<th data-priority="4" title="Points per 20 Minutes" class="STHSW25">P/20</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Penalty Shots Goals">PSG</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Penalty Shots Taken">PSS</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Fight Won">FW</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Fight Lost">FL</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Fight Ties">FT</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Number of time players was star #1 in a game">S1</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Number of time players was star #2 in a game">S2</th>
-<th class="columnSelector-false STHSW25" data-priority="6" title="Number of time players was star #3 in a game">S3</th>
+<th  title="Games Played" class="STHSW25">GP</th>
+<th  title="Goals" class="STHSW25">G</th>
+<th  title="Assists" class="STHSW25">A</th>
+<th  title="Points" class="STHSW25">P</th>
+<th  title="Plus/Minus" class="STHSW25">+/-</th>
+<th  title="Penalty Minutes" class="STHSW25">PIM</th>
+<th class=" STHSW25"  title="Penalty Minutes for Major Penalty">PIM5</th>
+<th  title="Hits" class="STHSW25">HIT</th>
+<th class=" STHSW25"  title="Hits Received">HTT</th>
+<th  title="Shots" class="STHSW25">SHT</th>
+<th class=" STHSW25"  title="Own Shots Block by others players">OSB</th>
+<th class=" STHSW25"  title="Own Shots Miss the net">OSM</th>
+<th  title="Shooting Percentage" class="STHSW55">SHT%</th>
+<th  title="Shots Blocked" class="STHSW25">SB</th>
+<th  title="Minutes Played" class="STHSW35">MP</th>
+<th  title="Average Minutes Played per Game" class="STHSW35">AMG</th>
+<th  title="Power Play Goals" class="STHSW25">PPG</th>
+<th  title="Power Play Assists" class="STHSW25">PPA</th>
+<th  title="Power Play Points" class="STHSW25">PPP</th>
+<th class=" STHSW25"  title="Power Play Shots">PPS</th>
+<th class=" STHSW25"  title="Power Play Minutes Played">PPM</th>
+<th  title="Short Handed Goals" class="STHSW25">PKG</th>
+<th  title="Short Handed Assists" class="STHSW25">PKA</th>
+<th  title="Short Handed Points" class="STHSW25">PKP</th>
+<th class=" STHSW25"  title="Penalty Kill Shots">PKS</th>
+<th class=" STHSW25"  title="Penalty Kill Minutes Played">PKM</th>
+<th class=" STHSW25"  title="Game Winning Goals">GW</th>
+<th class=" STHSW25"  title="Game Tying Goals">GT</th>
+<th class=" STHSW25"  title="Face offs Percentage">FO%</th>
+<th class=" STHSW25"  title="Face offs Taken">FOT</th>
+<th class=" STHSW25"  title="Give Aways">GA</th>
+<th class=" STHSW25"  title="Take Aways">TA</th>
+<th class=" STHSW25"  title="Empty Net Goals">EG</th>
+<th class=" STHSW25"  title="Hat Tricks">HT</th>
+<th  title="Points per 20 Minutes" class="STHSW25">P/20</th>
+<th class=" STHSW25"  title="Penalty Shots Goals">PSG</th>
+<th class=" STHSW25"  title="Penalty Shots Taken">PSS</th>
+<th class=" STHSW25"  title="Fight Won">FW</th>
+<th class=" STHSW25"  title="Fight Lost">FL</th>
+<th class=" STHSW25"  title="Fight Ties">FT</th>
+<th class=" STHSW25"  title="Number of time players was star #1 in a game">S1</th>
+<th class=" STHSW25"  title="Number of time players was star #2 in a game">S2</th>
+<th class=" STHSW25"  title="Number of time players was star #3 in a game">S3</th>
 </tr>
 </thead>
 <tbody>
@@ -72,13 +67,10 @@ if ($CareerLeaderSubPrintOut == 1 or $CareerLeaderSubPrintOut == 2) {
 			$Order += 1;
 			echo "<tr><td>" . $Order . "</td>";
 			if ($Row['Number'] != Null) {
-				echo "<td><a href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $Row['Name'] . "</a></td>";
+				echo "<td class=\"sticky-col first-col\"><a href=\"PlayerReport.php?Player=" . $Row['Number'] . "\">" . $Row['Name'] . "</a></td>";
 			} else {
-				echo "<td>" . $Row['Name'] . "</td>";
+				echo "<td class=\"sticky-col first-col\">" . $Row['Name'] . "</td>";
 			}
-			echo "<td>";
-			echo "<img src=\"./images/" . $TypeText . "-team/" . $Row['Team'] . ".png\" alt=\"\" class=\"STHSPHPPlayersStatsTeamImage\" />";
-			echo $Row['TeamName'] . "</td>";
 			if ($CareerLeaderSubPrintOut == 0 or $CareerLeaderSubPrintOut == 2) {
 				echo "<td>" . $Position = (string)"";
 				if ($Row['PosC'] == "True") {

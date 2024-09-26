@@ -1599,12 +1599,6 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 										echo " active";
 									} ?>" id="tabmain2">
 
-					<div class="tablesorter_ColumnSelectorWrapper">
-						<input id="tablesorter_colSelect2P" type="checkbox" class="hidden">
-						<label class="tablesorter_ColumnSelectorButton" for="tablesorter_colSelect2P"><?php echo $TableSorterLang['ShoworHideColumn']; ?></label>
-						<div id="tablesorter_ColumnSelector2P" class="tablesorter_ColumnSelector"></div>
-						<?php include "FilterTip.php"; ?>
-					</div>
 					<div style="overflow-x:auto;">
 						<table class="tablesorter STHSPHPTeam_PlayersScoringTable">
 							<thead>
@@ -1614,7 +1608,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 									if ($PlayerStatTeam != Null) {
 										if ($PlayerStatTeam['SumOfGP'] > 0) {
 											echo "</tbody><tbody class=\"tablesorter-no-sort\">";
-											echo "<tr><td colspan=\"2\" style=\"text-align:right;font-weight:bold\">" . $TeamLang['TeamTotalAverage'] . "</td><td></td><td></td>";
+											echo "<tr><td></td><td  class=\"sticky-col first-col\"  style=\"text-align:right;font-weight:bold\">" . $TeamLang['TeamTotalAverage'] . "</td><td></td>";
 											echo "<td>" . $PlayerStatTeam['SumOfGP'] . "</td>";
 											echo "<td>" . $PlayerStatTeam['SumOfG'] . "</td>";
 											echo "<td>" . $PlayerStatTeam['SumOfA'] . "</td>";
@@ -1665,12 +1659,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 									</tbody>
 						</table>
 					</div>
-					<div class="tablesorter_ColumnSelectorWrapper">
-						<input id="tablesorter_colSelect2G" type="checkbox" class="hidden">
-						<label class="tablesorter_ColumnSelectorButton" for="tablesorter_colSelect2G"><?php echo $TableSorterLang['ShoworHideColumn']; ?></label>
-						<div id="tablesorter_ColumnSelector2G" class="tablesorter_ColumnSelector"></div>
-						<?php include "FilterTip.php"; ?>
-					</div>
+
 					<div style="overflow-x:auto;">
 						<table class="tablesorter STHSPHPTeam_GoaliesScoringTable">
 							<thead>
@@ -1680,7 +1669,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 									if ($PlayerStatTeam != Null) {
 										if ($PlayerStatTeam['SumOfGP'] > 0) {
 											echo "</tbody><tbody class=\"tablesorter-no-sort\">";
-											echo "<tr><td colspan=\"2\" style=\"text-align:right;font-weight:bold\">" . $TeamLang['TeamTotalAverage'] . "</td><td></td>";
+											echo "<tr><td></td><td class=\"sticky-col first-col\" style=\"text-align:right;font-weight:bold\">" . $TeamLang['TeamTotalAverage'] . "</td><td></td>";
 											echo "<td>" . $GoalieStatTeam['SumOfGP'] . "</td>";
 											echo "<td>" . $GoalieStatTeam['SumOfW'] . "</td>";
 											echo "<td>" . $GoalieStatTeam['SumOfL'] . "</td>";
@@ -2404,16 +2393,16 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 				<div class="tabmain<?php if($SubMenu ==5){echo " active";}?>" id="tabmain5">
 <?php If (isset($PerformanceMonitorStart)){echo "<script>console.log(\"STHS 5 Page PHP Performance : " . (microtime(true)-$PerformanceMonitorStart) . "\"); </script>";}?>
 
-<div class="tablesorter_ColumnSelectorWrapper">
-    <input id="tablesorter_colSelect5" type="checkbox" class="hidden">
-    <label class="tablesorter_ColumnSelectorButton" for="tablesorter_colSelect5"><?php echo $TableSorterLang['ShoworHideColumn'];?></label>
-    <div id="tablesorter_ColumnSelector5" class="tablesorter_ColumnSelector"></div>
-	<?php include "FilterTip.php";?>
+
+<div style="overflow-x:auto">
+	<table class="tablesorter STHSPHPTeamsStatSub_Table" >
+		<thead>
+			<tr>
+				<?php include "TeamsStatSub.php";?>
+		</tbody>
+	</table>
 </div>
 
-<table class="tablesorter STHSPHPTeamsStatSub_Table"><thead><tr>
-<?php include "TeamsStatSub.php";?>
-</tbody></table>
 
 <br />
 <table class="STHSPHPTeamStat_Table"><tr>
