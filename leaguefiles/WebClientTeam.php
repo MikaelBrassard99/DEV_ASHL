@@ -291,7 +291,7 @@ function validateForm(fName) {
 }
 </script>
 <?php if ($InformationMessage != ""){echo "<div class=\"STHSDivInformationMessage\">" . $InformationMessage . "<br /></div>";}?>
-<div id="WebClientMainDiv" style="width:99%;margin:auto;">
+<div id="WebClientMainDiv" style="overflow-x:auto;width:99%;margin:auto;">
 <?php 
 echo "<table class=\"STHSPHPWebClientTeam_Main\"><tr><td style=\"width:50%;text-align:center;font-size:25px;padding:20px;margin:auto;\">" . $TeamProName . "</td><td style=\"width:50%;text-align:center;font-size:25px;padding:20px;margin:auto;\">";
 if(isset($LeagueSimulationMenu)){If ($LeagueSimulationMenu['FarmEnable'] == "True"){echo $TeamFarmName;}}

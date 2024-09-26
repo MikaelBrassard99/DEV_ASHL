@@ -2451,20 +2451,19 @@ a.tabmenuhome {
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "SF Obliquities Extended", sans-serif;
-  font-size: 1.9vw;
+  font-size: 1vw;
 }
 
 .STHSPHPPlayerJerseyPlayerNumber {
   position: absolute;
   top: 50%;
-  left: 49%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-family: "SF Obliquities Extended", sans-serif;
-  font-size: 5vw;
+  font-size: 2.8vw;
 }
 .STHSPHPPlayerJerseyTeamImage {
-  width: 100%;
-  height: 100%;
+  width: 15vw;
   padding-left: 0px;
   padding-right: 0px;
   vertical-align: middle;
