@@ -20,7 +20,8 @@ If (file_exists($DatabaseFile) == false){
 	$LeagueName = $LeagueGeneral['Name'];
 	
 	$Query = "Select FarmEnable from LeagueSimulation";
-	$LeagueSimulationMenu = $db->querySingle($Query,true);		
+	$LeagueSimulationMenu = $db->querySingle($Query,true);	
+// $CookieTeamNumber=12;	
 	If($CookieTeamNumber > 0 AND $CookieTeamNumber <= 100){$Team = $CookieTeamNumber;}
 	
 If ($Team == 0 OR $Team > 100){
@@ -396,52 +397,52 @@ If ($LeagueWebClient['AllowWebsitePasswordChange'] == "True"){
 	echo "</table></form>\n";
 }
 
-// echo "</td></tr></table>\n";
-// echo "<br /><br />\n";
-// echo "<div style=\"width:90%;margin:auto;\">\n";
-// echo "<h1>" . $WebClientLang['EditPlayer'] . "</h1>\n";
-// echo "<table class=\"tablesorter STHSPHPAllPlayerInformation_Table\"><thead><tr>\n";
-// echo "<th data-priority=\"critical\" title=\"Player Name\" class=\"STHSW140Min\">" . $PlayersLang['PlayerName'] . "</th>\n";
-// echo "<th data-priority=\"2\" title=\"Position\" class=\"STHSW45\">POS</th>\n";
-// echo "<th data-priority=\"4\" title=\"AvailableForTrade\" class=\"STHSW55\">" . $PlayersLang['AvailableForTrade'] . "</th>\n";
-// If ($LeagueGeneral['OffSeason'] == "True"){
-// 	echo "<th data-priority=\"4\" title=\"Protected\" class=\"STHSW55\">" . $PlayersLang['Protected'] . "</th>\n";
-// 	echo "<th data-priority=\"4\" title=\"Protected\" class=\"STHSW55\">" . $PlayersLang['ForceUFA'] . "</th>\n";
-// }
-// echo "<th data-priority=\"4\" title=\"AutoRosterCanPlayPro\" class=\"STHSW55\">" . $PlayersLang['AutoRosterCanPlayPro'] . "</th>\n";
-// echo "<th data-priority=\"3\" title=\"AutoRosterCanPlayFarm\" class=\"STHSW55\">" . $PlayersLang['AutoRosterCanPlayFarm'] . "</th>\n";
-// echo "<th data-priority=\"3\" title=\"AutoRosterCanPlayFarm\" class=\"STHSW55\">" . $PlayersLang['EmergencyRecall'] . "</th>\n";
-// echo "<th data-priority=\"2\" title=\"Edit\" class=\"STHSW55\">" . $PlayersLang['Edit'] . "</th>\n";
-// echo "</tr></thead><tbody>\n";
+echo "</td></tr></table>\n";
+echo "<br /><br />\n";
+echo "<div style=\"width:90%;margin:auto;\">\n";
+echo "<h1>" . $WebClientLang['EditPlayer'] . "</h1>\n";
+echo "<table class=\"tablesorter STHSPHPAllPlayerInformation_Table\"><thead><tr>\n";
+echo "<th data-priority=\"critical\" title=\"Player Name\" class=\"STHSW140Min\">" . $PlayersLang['PlayerName'] . "</th>\n";
+echo "<th data-priority=\"2\" title=\"Position\" class=\"STHSW45\">POS</th>\n";
+echo "<th data-priority=\"4\" title=\"AvailableForTrade\" class=\"STHSW55\">" . $PlayersLang['AvailableForTrade'] . "</th>\n";
+If ($LeagueGeneral['OffSeason'] == "True"){
+	echo "<th data-priority=\"4\" title=\"Protected\" class=\"STHSW55\">" . $PlayersLang['Protected'] . "</th>\n";
+	echo "<th data-priority=\"4\" title=\"Protected\" class=\"STHSW55\">" . $PlayersLang['ForceUFA'] . "</th>\n";
+}
+echo "<th data-priority=\"4\" title=\"AutoRosterCanPlayPro\" class=\"STHSW55\">" . $PlayersLang['AutoRosterCanPlayPro'] . "</th>\n";
+echo "<th data-priority=\"3\" title=\"AutoRosterCanPlayFarm\" class=\"STHSW55\">" . $PlayersLang['AutoRosterCanPlayFarm'] . "</th>\n";
+echo "<th data-priority=\"3\" title=\"AutoRosterCanPlayFarm\" class=\"STHSW55\">" . $PlayersLang['EmergencyRecall'] . "</th>\n";
+echo "<th data-priority=\"2\" title=\"Edit\" class=\"STHSW55\">" . $PlayersLang['Edit'] . "</th>\n";
+echo "</tr></thead><tbody>\n";
  
-// if (empty($PlayerInfo) == false){while ($Row = $PlayerInfo ->fetchArray()) { 
-// 	echo "<tr><td>";
-// 	if ($Row['PosG']== "True"){echo "<a href=\"GoalieReport.php?Goalie=";}else{echo "<a href=\"PlayerReport.php?Player=";}
-// 	echo $Row['Number'] . "\">" . $Row['Name'] . "</a></td>";
-// 	echo "<td>" .$Position = (string)"";
-// 	if ($Row['PosC']== "True"){if ($Position == ""){$Position = "C";}else{$Position = $Position . "/C";}}
-// 	if ($Row['PosLW']== "True"){if ($Position == ""){$Position = "LW";}else{$Position = $Position . "/LW";}}
-// 	if ($Row['PosRW']== "True"){if ($Position == ""){$Position = "RW";}else{$Position = $Position . "/RW";}}
-// 	if ($Row['PosD']== "True"){if ($Position == ""){$Position = "D";}else{$Position = $Position . "/D";}}
-// 	if ($Row['PosG']== "True"){if ($Position == ""){$Position = "G";}}
-// 	echo $Position . "</td>";	
-// 	echo "<td class=\"STHSCenter\"><form name=\"" . $Row['Number'] . "\" action=\"WebClientTeam.php";If ($lang == "fr"){echo "?Lang=fr";} echo "\" method=\"post\" onsubmit=\"return validateForm(" . $Row['Number'] .")\" >";
-// 	echo "<input type=\"checkbox\" name=\"AvailableForTrade\""; if($Row['AvailableForTrade'] == "True"){echo " checked";}echo "></td>";
-// 	If ($LeagueGeneral['OffSeason'] == "True"){
-// 		echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"PProtected\""; if($Row['PProtected'] == "True"){echo " checked";}echo "></td>";
-// 		echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"ForceUFA\""; if($Row['ForceUFA'] == "True"){echo " checked";}echo "></td>";
+if (empty($PlayerInfo) == false){while ($Row = $PlayerInfo ->fetchArray()) { 
+	echo "<tr><td>";
+	if ($Row['PosG']== "True"){echo "<a href=\"GoalieReport.php?Goalie=";}else{echo "<a href=\"PlayerReport.php?Player=";}
+	echo $Row['Number'] . "\">" . $Row['Name'] . "</a></td>";
+	echo "<td>" .$Position = (string)"";
+	if ($Row['PosC']== "True"){if ($Position == ""){$Position = "C";}else{$Position = $Position . "/C";}}
+	if ($Row['PosLW']== "True"){if ($Position == ""){$Position = "LW";}else{$Position = $Position . "/LW";}}
+	if ($Row['PosRW']== "True"){if ($Position == ""){$Position = "RW";}else{$Position = $Position . "/RW";}}
+	if ($Row['PosD']== "True"){if ($Position == ""){$Position = "D";}else{$Position = $Position . "/D";}}
+	if ($Row['PosG']== "True"){if ($Position == ""){$Position = "G";}}
+	echo $Position . "</td>";	
+	echo "<td class=\"STHSCenter\"><form name=\"" . $Row['Number'] . "\" action=\"WebClientTeam.php";If ($lang == "fr"){echo "?Lang=fr";} echo "\" method=\"post\" onsubmit=\"return validateForm(" . $Row['Number'] .")\" >";
+	echo "<input type=\"checkbox\" name=\"AvailableForTrade\""; if($Row['AvailableForTrade'] == "True"){echo " checked";}echo "></td>";
+	If ($LeagueGeneral['OffSeason'] == "True"){
+		echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"PProtected\""; if($Row['PProtected'] == "True"){echo " checked";}echo "></td>";
+		echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"ForceUFA\""; if($Row['ForceUFA'] == "True"){echo " checked";}echo "></td>";
 		
-// 	}
-// 	echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"AutoRosterCanPlayPro\""; if($Row['AutoRosterCanPlayPro'] == "True"){echo " checked";}echo "></td>";
-// 	echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"AutoRosterCanPlayFarm\""; if($Row['AutoRosterCanPlayFarm'] == "True"){echo " checked";}echo "></td>";
-// 	echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"EmergencyRecall\""; if($Row['EmergencyRecall'] == "True"){echo " checked disabled";}echo "></td>";
-// 	echo "<td class=\"STHSCenter\"><input type=\"submit\" class=\"SubmitButtonSmall\" value=\"" . $PlayersLang['Edit'] . "\">";
-// 	echo "<input type=\"hidden\" name=\"TeamEdit\" value=\"" . $CookieTeamNumber . "\">";
-// 	echo "<input type=\"hidden\" name=\"EditType\" value=\"5\">";
-// 	echo "<input type=\"hidden\" name=\"PlayerName\" value=\"" . $Row['Name'] . "\">";
-// 	echo "<input type=\"hidden\" name=\"PlayerNumber\" value=\"";If($Row['PosG']== "True"){echo ($Row['Number']+10000);}else{echo $Row['Number'];}echo "\"></form></td>";
-// 	echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
-// }}
+	}
+	echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"AutoRosterCanPlayPro\""; if($Row['AutoRosterCanPlayPro'] == "True"){echo " checked";}echo "></td>";
+	echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"AutoRosterCanPlayFarm\""; if($Row['AutoRosterCanPlayFarm'] == "True"){echo " checked";}echo "></td>";
+	echo "<td class=\"STHSCenter\"><input type=\"checkbox\" name=\"EmergencyRecall\""; if($Row['EmergencyRecall'] == "True"){echo " checked disabled";}echo "></td>";
+	echo "<td class=\"STHSCenter\"><input type=\"submit\" class=\"SubmitButtonSmall\" value=\"" . $PlayersLang['Edit'] . "\">";
+	echo "<input type=\"hidden\" name=\"TeamEdit\" value=\"" . $CookieTeamNumber . "\">";
+	echo "<input type=\"hidden\" name=\"EditType\" value=\"5\">";
+	echo "<input type=\"hidden\" name=\"PlayerName\" value=\"" . $Row['Name'] . "\">";
+	echo "<input type=\"hidden\" name=\"PlayerNumber\" value=\"";If($Row['PosG']== "True"){echo ($Row['Number']+10000);}else{echo $Row['Number'];}echo "\"></form></td>";
+	echo "</tr>\n"; /* The \n is for a new line in the HTML Code */
+}}
 ?>
 </tbody></table></div>
 
