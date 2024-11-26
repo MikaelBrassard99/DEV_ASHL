@@ -100,7 +100,6 @@ if ($Player == 0) {
 	}
 }
 
-
 echo "<style>";
 if ($PlayerCareerStatFound == true) {
 	echo "#tablesorter_colSelect2:checked + label {background: #5797d7;  border-color: #555;}";
@@ -343,6 +342,8 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 					echo "<li><a href=\"#tabmain7\">" . $PlayersLang['CareerFarmStat'] . "</a></li>";
 				}
 				?>
+				<li><a href="#tabmain9">Calcul retention salariale</a></li>
+				
 			</ul>
 			<div class="STHSPHPPlayerStat_Tabmain-content">
 
@@ -1893,14 +1894,49 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 					</table>
 					<br />
 				</div>
+
+				<div class="tabmain" id="tabmain9">
+					<table>
+						<td>
+							<form action="" method="post">
+								<td><button type="submit" name="10%">10%</button></td>
+								<td><button type="submit" name="20%">20%</button></td>
+								<td><button type="submit" name="30%">30%</button></td>
+								<td><button type="submit" name="40%">40%</button></td>
+								<td><button type="submit" name="50%">50%</button></td>
+							</form>
+						</td>
+					</table>
+				</div>
 			</div>
-
-
-
 		</div>
 	</div>
 </body>
 <?php
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+	if(isset($_POST['10%'])){
+		func(0.10, salaryRemmaining: $PlayerInfo['SalaryRemaining']);
+	}
+	if(isset($_POST['20%'])){
+		func(0.20, $PlayerInfo['SalaryRemaining']);
+	}
+	if(isset($_POST['30%'])){
+		func(0.30, $PlayerInfo['SalaryRemaining']);
+	}
+	if(isset($_POST['40%'])){
+		func(0.40, $PlayerInfo['SalaryRemaining']);
+	}
+	if(isset($_POST['50%'])){
+		func(0.50, $PlayerInfo['SalaryRemaining']);
+	}
+}
+function func($percent, $salaryRemmaining)
+{
+	$value = $salaryRemmaining*$percent;
+	echo "<script>alert('$value');</script>";
+}
 
 echo "<script type=\"text/javascript\">\$(function() {\$(\".STHSPHPProCareerStat_Table\").tablesorter( {widgets: ['staticRow', 'columnSelector'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector2'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],}});});</script>";
 echo "<script type=\"text/javascript\">\$(function() {\$(\".STHSPHPFarmCareerStat_Table\").tablesorter({widgets: ['staticRow', 'columnSelector'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector3'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],}});});</script>";
@@ -1911,6 +1947,7 @@ echo "<script type=\"text/javascript\">\$(function() {\$(\".STHSPHPFarmPlayerSta
 //"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" . ((strtolower(str_replace(" ", "-", $PlayerInfo['Name'])) == 'mike-reilly') ? 'mike-reilly-106004' : strtolower(str_replace(" ", "-", $PlayerInfo['Name']))) . "&width=200&height=200";
 
 ?>
+
 
 
 <?php include "Footer.php"; ?>
