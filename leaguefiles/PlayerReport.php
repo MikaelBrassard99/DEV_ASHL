@@ -1901,6 +1901,7 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 							<form action="" method="post">
 								<td><button type="submit" name="10%">10%</button></td>
 								<td><button type="submit" name="20%">20%</button></td>
+								<td><button type="submit" name="25%">25%</button></td>
 								<td><button type="submit" name="30%">30%</button></td>
 								<td><button type="submit" name="40%">40%</button></td>
 								<td><button type="submit" name="50%">50%</button></td>
@@ -1922,6 +1923,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	if(isset($_POST['20%'])){
 		func(0.20, $PlayerInfo['SalaryRemaining']);
 	}
+	if(isset($_POST['25%'])){
+		func(0.25, $PlayerInfo['SalaryRemaining']);
+	}
 	if(isset($_POST['30%'])){
 		func(0.30, $PlayerInfo['SalaryRemaining']);
 	}
@@ -1935,7 +1939,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 function func($percent, $salaryRemmaining)
 {
 	$value = $salaryRemmaining*$percent;
-	echo "<script>alert('$value');</script>";
+	echo "<script>alert('Le retenue salariale sera de : $value$');</script>";
 }
 
 echo "<script type=\"text/javascript\">\$(function() {\$(\".STHSPHPProCareerStat_Table\").tablesorter( {widgets: ['staticRow', 'columnSelector'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector2'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],}});});</script>";

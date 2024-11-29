@@ -106,6 +106,8 @@ function createPickturePlayer($name)
 			break;
 		case "lucas-raymond":
 			return "lucas-raymond-386513";
+		case "nils-höglander":
+			return "nils-hoglander";
 		default:
 			return strtolower(str_replace([" ", "'", "é"], ["-", "", "e"], $name));
 			break;
