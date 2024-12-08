@@ -128,6 +128,8 @@ $dictPlayerFarmStats[[]];
 $dictPlayerProSeasonStats[[]];
 $dictPlayerFarmSeasonStats[[]];
 
+echo $PlayerName;
+
 foreach ($arrayDbs as $Dbs) {
 	$db = new SQLite3($Dbs);
 	$Query = "Select Name, OutputName, LeagueYearOutput, PreSeasonSchedule, PlayOffStarted, LeagueYear from LeagueGeneral";
