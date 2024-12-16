@@ -3,7 +3,7 @@
 	$Order = 0;
 	foreach ($arrayDbs as $Dbs) {
 		if ($dictPlayerProSeasonStats[$Order] <> Null) {
-			if ($dictPlayerProSeasonStats[$Order]['GP'] <> 0 && $dictPlayerProSeasonStats[$Order]['GP'] <> Null) {
+			if ($dictPlayerProSeasonStats[$Order]['GP'] <> 0 && $dictPlayerProSeasonStats[$Order]['GP'] <> Null &&  $dictPlayerProSeasonStats[$Order]['Name'] == $PlayerName){
 				$Row = $dictPlayerProSeasonStats[$Order];
 				$Row1 = $dictPlayerInfo[$Order];
 				$Order += 1;
