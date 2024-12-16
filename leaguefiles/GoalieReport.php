@@ -308,6 +308,8 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
 					echo "<li><a href=\"#tabmain5\">" . $PlayersLang['CareerFarmStat'] . "</a></li>";
 				}
 				?>
+				<li><a href="#tabmain9">Calcul retention salariale</a></li>
+
 			</ul>
 			<div class="STHSPHPPlayerStat_Tabmain-content">
 				<div class="tabmain active" id="tabmain1">
@@ -1082,6 +1084,22 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
 					</table>
 					<br />
 				</div>
+
+				<div class="tabmain" id="tabmain9">
+					<table>
+						<td>
+							<form action="" method="post">
+								<td><button type="submit" name="10%">10%</button></td>
+								<td><button type="submit" name="20%">20%</button></td>
+								<td><button type="submit" name="25%">25%</button></td>
+								<td><button type="submit" name="30%">30%</button></td>
+								<td><button type="submit" name="40%">40%</button></td>
+								<td><button type="submit" name="50%">50%</button></td>
+							</form>
+						</td>
+					</table>
+				</div>
+				
 			</div>
 
 
@@ -1098,6 +1116,34 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
 	}
 	if ($GoalieFarmStatMultipleTeamFound == TRUE) {
 		echo "<script type=\"text/javascript\">\$(function() {\$(\".STHSPHPFarmGoalieStatPerTeam_Table\").tablesorter( {widgets: ['columnSelector', 'stickyHeaders', 'filter'], widgetOptions : {columnSelector_container : \$('#tablesorter_ColumnSelector5'), columnSelector_layout : '<label><input type=\"checkbox\">{name}</label>', columnSelector_name  : 'title', columnSelector_mediaquery: true, columnSelector_mediaqueryName: 'Automatic', columnSelector_mediaqueryState: true, columnSelector_mediaqueryHidden: true, columnSelector_breakpoints : [ '20em', '40em', '60em', '80em', '90em', '95em' ],filter_columnFilters: true,filter_placeholder: { search : '" . $TableSorterLang['Search'] . "' },filter_searchDelay : 1000,filter_reset: '.tablesorter_Reset'}});});</script>";
+	}
+
+	
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		if(isset($_POST['10%'])){
+			func(0.10, salaryRemmaining: $GoalieInfo['SalaryRemaining']);
+		}
+		if(isset($_POST['20%'])){
+			func(0.20, $GoalieInfo['SalaryRemaining']);
+		}
+		if(isset($_POST['25%'])){
+			func(0.25, $GoalieInfo['SalaryRemaining']);
+		}
+		if(isset($_POST['30%'])){
+			func(0.30, $GoalieInfo['SalaryRemaining']);
+		}
+		if(isset($_POST['40%'])){
+			func(0.40, $GoalieInfo['SalaryRemaining']);
+		}
+		if(isset($_POST['50%'])){
+			func(0.50, $GoalieInfo['SalaryRemaining']);
+		}
+	}
+	function func($percent, $salaryRemmaining)
+	{
+		$value = $salaryRemmaining*$percent;
+		echo "<script>alert('Le retenue salariale sera de : $value$');</script>";
 	}
 	?>
 

@@ -1810,13 +1810,13 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 									<th data-priority="1" title="Contract Duration" class="STHSW25"><?php echo $PlayersLang['Contract']; ?></th>
 									<th data-priority="2" title="Cap %" class="STHSW25">Cap %</th>
 									<?php
-									echo "<th data-priority=\"2\" title=\"Year " . $LeagueYear . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . $LeagueYear . "</th>";
-									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 1) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 1) . "</th>";
-									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 2) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 2) . "</th>";
-									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 3) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 3) . "</th>";
-									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 4) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 4) . "</th>";
-									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 5) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 5) . "</th>";
-									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 6) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 6) . "</th>";
+									echo "<th data-priority=\"2\" title=\"Year " . $LeagueYear . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . $LeagueYear . "-". ($LeagueYear + 1) . "</th>";
+									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 1) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 1) . "-". ($LeagueYear + 2) . "</th>";
+									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 2) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 2) . "-". ($LeagueYear + 3) . "</th>";
+									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 3) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 3) . "-". ($LeagueYear + 4) . "</th>";
+									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 4) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 4) . "-". ($LeagueYear + 5) . "</th>";
+									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 5) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 5) . "-". ($LeagueYear + 6) . "</th>";
+									echo "<th data-priority=\"2\" title=\"Year " . ($LeagueYear + 6) . "\" class=\"STHSW75\">" . $SearchLang['Year'] . " " . ($LeagueYear + 6) . "-". ($LeagueYear + 7) . "</th>";
 
 									?>
 								</tr>
