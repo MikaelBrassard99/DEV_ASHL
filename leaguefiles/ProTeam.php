@@ -726,9 +726,9 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 							<li<?php if ($SubMenu == 3) {
 									echo " class=\"activemain\"";
 								} ?>><a href="#tabmain3"><?php echo $TeamLang['PlayersInfo']; ?></a></li>
-								<li<?php if ($SubMenu == 4) {
+								<!-- <li<?php if ($SubMenu == 4) {
 											echo " class=\"activemain\"";
-										} ?>><a href="#tabmain4"><?php echo $TeamLang['Lines']; ?></a></li>
+										} ?>><a href="#tabmain4"><?php echo $TeamLang['Lines']; ?></a></li> -->
 								<li<?php if ($SubMenu == 5) {
 										echo " class=\"activemain\"";
 									} ?>><a href="#tabmain5"><?php echo $TeamLang['TeamStats']; ?></a></li>
