@@ -546,7 +546,9 @@ if (file_exists($DatabaseFile) == false) {
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.min.js" />
 	</script>
 	<script type="text/javascript" src="magicscroll/magicscroll.js"></script>
+	
 </body>
+
 <script type="text/javascript">
 	function navigateTo(i) {
 		var href = "/" + i;

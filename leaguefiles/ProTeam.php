@@ -761,6 +761,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 															// if ($LeagueOutputOption['ShowWebClientInDymanicWebsite'] == "True") {
 															echo "<li><a class=\"tabmenuhome\" href=\"WebClientRoster.php?TeamID=" . $Team . "\">" . $TeamLang['WebRosterEditor'] . "</a></li>\n";
 															echo "<li><a class=\"tabmenuhome\" href=\"WebClientLines.php?League=Pro&TeamID=" . $Team . "\">" . $TeamLang['WebLinesEditor'] . "</a></li>\n";
+															echo "<li><a class=\"tabmenuhome\" href=\"WebClientLines.php?League=Farm&TeamID=" . $Team . "\">" . $TeamLang['WebLinesEditorFarm'] . "</a></li>\n";
 															// }
 														} ?>
 			</ul>
