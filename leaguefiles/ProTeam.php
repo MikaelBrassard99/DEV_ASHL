@@ -707,8 +707,10 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 	<div class="STHSPHPTeamStat_Main">
 		<br />
 		<div class="tabsmain standard">
-			<ul class="tabmain-links">
-				<?php
+			<?php
+				echo "<ul class=\"tabmain-links tabmain-links-TeamNameColor_" . $TeamInfo['UniqueID'] . "\">";
+			?>	
+			<?php
 				if ($LeagueSimulation != Null and $TeamFarmInfo != Null) {
 					if ($LeagueSimulation['FarmEnable'] == "True") {
 						echo "<li><a class=\"tabmenuhome\" href=\"FarmTeam.php?Team=" . $Team . "\">" . $TeamFarmInfo['Name'] . "</a></li>";
