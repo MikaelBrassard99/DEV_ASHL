@@ -8,6 +8,7 @@ if ($CareerLeaderSubPrintOut == 1 or $CareerLeaderSubPrintOut == 2) {
 	echo "<th data-priority=\"2\" title=\"Year\" class=\"STHSW25\">" . $SearchLang['Year'] . "</th><th data-priority=\"5\" title=\"Rookie\" class=\"STHSW25\">" . $PlayersLang['Rookie'] . "</th>";
 }
 ?>
+<th  title="Team Name" class="STHSW25">Team</th>
 <th  title="Games Played" class="STHSW25">GP</th>
 <th  title="Goals" class="STHSW25">G</th>
 <th  title="Assists" class="STHSW25">A</th>
@@ -107,6 +108,7 @@ if ($CareerLeaderSubPrintOut == 1 or $CareerLeaderSubPrintOut == 2) {
 				echo "<td>" . $Row['Year'] . "</td>";
 				echo "<td>" . $Row['Rookie'] . "</td>";
 			}
+			echo "<td>" . $Row['TeamName'] . "</td>";
 			echo "<td>" . $Row['GP'] . "</td>";
 			echo "<td>" . $Row['G'] . "</td>";
 			echo "<td>" . $Row['A'] . "</td>";
