@@ -1905,6 +1905,7 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 								<td><button type="submit" name="20%">20%</button></td>
 								<td><button type="submit" name="25%">25%</button></td>
 								<td><button type="submit" name="30%">30%</button></td>
+								<td><button type="submit" name="35%">35%</button></td>
 								<td><button type="submit" name="40%">40%</button></td>
 								<td><button type="submit" name="50%">50%</button></td>
 							</form>
@@ -1930,6 +1931,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	}
 	if(isset($_POST['30%'])){
 		func(0.30, $PlayerInfo['SalaryRemaining']);
+	}
+	if(isset($_POST['35%'])){
+		func(0.35, $PlayerInfo['SalaryRemaining']);
 	}
 	if(isset($_POST['40%'])){
 		func(0.40, $PlayerInfo['SalaryRemaining']);

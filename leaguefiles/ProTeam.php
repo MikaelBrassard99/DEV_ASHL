@@ -1612,6 +1612,7 @@ echo "<title>" . $LeagueName . " - " . $TeamName . "</title>";
 										if ($PlayerStatTeam['SumOfGP'] > 0) {
 											echo "</tbody><tbody class=\"tablesorter-no-sort\">";
 											echo "<tr><td></td><td  class=\"sticky-col first-col\"  style=\"text-align:right;font-weight:bold\">" . $TeamLang['TeamTotalAverage'] . "</td><td></td>";
+											echo "<td></td>";
 											echo "<td>" . $PlayerStatTeam['SumOfGP'] . "</td>";
 											echo "<td>" . $PlayerStatTeam['SumOfG'] . "</td>";
 											echo "<td>" . $PlayerStatTeam['SumOfA'] . "</td>";
