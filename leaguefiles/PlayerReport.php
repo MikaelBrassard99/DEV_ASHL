@@ -309,9 +309,9 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 					If($PlayerInfo != Null){
 						function getRankPlayerStat($DatabaseFile, $PlayerInfo, $Rating){
 							$db = new SQLite3(filename: $DatabaseFile);
-							$QueryForPlayerRatingRank = "SELECT ROW_NUMBER() OVER(ORDER BY (PlayerInfo." . $Rating. ") DESC, PlayerInfo.Overall DESC) AS PlayerRatingRank, PlayerInfo.Number, PlayerInfo." . $Rating . ", PlayerInfo.Overall FROM PlayerInfo";
+							$QueryForPlayerRatingRank = "SELECT ROW_NUMBER() OVER(ORDER BY (PlayerInfo." . $Rating. ") DESC, PlayerInfo.Overall DESC) AS PlayerRatingRank, PlayerInfo.Number, PlayerInfo." . $Rating . ", PlayerInfo.Overall FROM PlayerInfo WHERE PlayerInfo.Status1 = 3";
 							$PlayerRatingRank = $db->query($QueryForPlayerRatingRank);
-							if (empty($PlayerRatingRank) == false)
+							if (empty($PlayerRatingRank) == false and $PlayerInfo['Status1']==3)
 							{
 								while ($Row = $PlayerRatingRank ->fetchArray()) {
 									if($PlayerInfo['Number'] == $Row['Number']){
@@ -319,10 +319,12 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 											return $PlayerInfo[$Rating];
 										}
 										else{
-											return $PlayerInfo[$Rating] . "(" . $Row['PlayerRatingRank'] . ")";
+											return $PlayerInfo[$Rating] . "<br>(" . $Row['PlayerRatingRank'] . "e)";
 										}
 									}
 								}
+							}else{
+								return $PlayerInfo[$Rating];
 							}	
 						}
 					
@@ -331,7 +333,7 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'CK') . "</td>";
 						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'FG') . "</td>";
 						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'DI') . "</td>";
-						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'CK') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'SK') . "</td>";
 						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'ST') . "</td>";
 						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'EN') . "</td>";
 						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'DU') . "</td>";

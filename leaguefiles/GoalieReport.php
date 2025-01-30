@@ -266,28 +266,27 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
 					<th>EX</th>
 					<th>LD</th>
 					<th>PO</th>
-					<th>MO</th>
-					<th>OV</th>
+					<!-- <th>MO</th>
+					<th>OV</th> -->
 				</tr>
 				<tr>
 					<?php
-					if ($GoalieInfo != Null) {
-						echo "<td>" . $GoalieInfo['SK'] . "</td>";
-						echo "<td>" . $GoalieInfo['DU'] . "</td>";
-						echo "<td>" . $GoalieInfo['EN'] . "</td>";
-						echo "<td>" . $GoalieInfo['SZ'] . "</td>";
-						echo "<td>" . $GoalieInfo['AG'] . "</td>";
-						echo "<td>" . $GoalieInfo['RB'] . "</td>";
-						echo "<td>" . $GoalieInfo['SC'] . "</td>";
-						echo "<td>" . $GoalieInfo['HS'] . "</td>";
-						echo "<td>" . $GoalieInfo['RT'] . "</td>";
-						echo "<td>" . $GoalieInfo['PH'] . "</td>";
-						echo "<td>" . $GoalieInfo['PS'] . "</td>";
-						echo "<td>" . $GoalieInfo['EX'] . "</td>";
-						echo "<td>" . $GoalieInfo['LD'] . "</td>";
-						echo "<td>" . $GoalieInfo['PO'] . "</td>";
-						echo "<td>" . $GoalieInfo['MO'] . "</td>";
-						echo "<td>" . $GoalieInfo['Overall'] . "</td>";
+					if ($GoalieInfo <> Null) {
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'SK') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'DU') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'EN') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'SZ') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'AG') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'RB') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'SC') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'HS') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'RT') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'PH') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'PS') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'EX') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'LD') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $GoalieInfo, 'PO') . "</td>";
+
 					} ?>
 				</tr>
 			</table>
@@ -327,7 +326,7 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
 						<tr>
 							<td><?php echo $TeamLang['Annee de contrat | Salaire'] ?></td>
 
-							<td><?php echo ($GoalieInfo['NoTrade'] == "False") ? $GoalieInfo['Contract'] . "an(s) | " . $GoalieInfo['SalaryAverage'] . "$ avg" : $GoalieInfo['Contract'] . "an(s) | " . $PlayerInfo['SalaryAverage'] . "$ avg + NTC"; ?></td>
+							<td><?php echo ($GoalieInfo['NoTrade'] == "False") ? $GoalieInfo['Contract'] . "an(s) | " . $GoalieInfo['SalaryAverage'] . "$ avg" : $GoalieInfo['Contract'] . "an(s) | " . $GoalieInfo['SalaryAverage'] . "$ avg + NTC"; ?></td>
 						</tr>
 						<tr>
 							<td><?php echo $PlayersLang['SalaryRemaining'] ?></td>
@@ -1144,6 +1143,27 @@ echo "<title>" . $LeagueName . " - " . $GoalieName .  "</title>";
 	{
 		$value = $salaryRemmaining*$percent;
 		echo "<script>alert('Le retenue salariale sera de : $value$');</script>";
+	}
+	
+	function getRankPlayerStat($DatabaseFile, $GoalieInfo, $Rating){
+		$db = new SQLite3(filename: $DatabaseFile);
+		$QueryForPlayerRatingRank = "SELECT ROW_NUMBER() OVER(ORDER BY (GoalerInfo." . $Rating. ") DESC, GoalerInfo.Overall DESC) AS PlayerRatingRank, GoalerInfo.Number, GoalerInfo." . $Rating . ", GoalerInfo.Overall FROM GoalerInfo WHERE GoalerInfo.Status1 = 3";
+		$PlayerRatingRank = $db->query($QueryForPlayerRatingRank);
+		if (empty($PlayerRatingRank) == false and $GoalieInfo['Status1'] == 3)
+		{
+			while ($Row = $PlayerRatingRank ->fetchArray()) {
+				if($GoalieInfo['Number'] == $Row['Number']){
+					if($Rating == 'PO'){
+						return $GoalieInfo[$Rating];
+					}
+					else{
+						return $GoalieInfo[$Rating] . "<br>(" . $Row['PlayerRatingRank'] . "e)";
+					}
+				}
+			}
+		}else{
+			return $GoalieInfo[$Rating];
+		}
 	}
 	?>
 
