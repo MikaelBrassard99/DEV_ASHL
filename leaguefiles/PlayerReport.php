@@ -31,7 +31,7 @@ if (file_exists($DatabaseFile) == false) {
 	$LeagueOutputOption = Null;
 	$LeagueGeneral = Null;
 } else {
-	$db = new SQLite3($DatabaseFile);
+	$db = new SQLite3(filename: $DatabaseFile);
 	$Query = "Select Name, OutputName, LeagueYearOutput, PreSeasonSchedule, PlayOffStarted, LeagueYear from LeagueGeneral";
 	$LeagueGeneral = $db->querySingle($Query, true);
 	$Query = "Select PlayersMugShotBaseURL, PlayersMugShotFileExtension,OutputSalariesRemaining,OutputSalariesAverageTotal,OutputSalariesAverageRemaining from LeagueOutputOption";
@@ -301,30 +301,50 @@ echo "<title>" . $LeagueName . " - " . $PlayerName .  "</title>";
 					<th>EX</th>
 					<th>LD</th>
 					<th>PO</th>
-					<th>MO</th>
-					<th>OV</th>
+					<!-- <th>MO</th>
+					<th>OV</th> -->
 				</tr>
 				<tr>
 					<?php
+					If($PlayerInfo != Null){
+						function getRankPlayerStat($DatabaseFile, $PlayerInfo, $Rating){
+							$db = new SQLite3(filename: $DatabaseFile);
+							$QueryForPlayerRatingRank = "SELECT ROW_NUMBER() OVER(ORDER BY (PlayerInfo." . $Rating. ") DESC, PlayerInfo.Overall DESC) AS PlayerRatingRank, PlayerInfo.Number, PlayerInfo." . $Rating . ", PlayerInfo.Overall FROM PlayerInfo";
+							$PlayerRatingRank = $db->query($QueryForPlayerRatingRank);
+							if (empty($PlayerRatingRank) == false)
+							{
+								while ($Row = $PlayerRatingRank ->fetchArray()) {
+									if($PlayerInfo['Number'] == $Row['Number']){
+										if($Rating == 'PO'){
+											return $PlayerInfo[$Rating];
+										}
+										else{
+											return $PlayerInfo[$Rating] . "(" . $Row['PlayerRatingRank'] . ")";
+										}
+									}
+								}
+							}	
+						}
+					
+					}
 					if ($PlayerInfo <> Null) {
-						echo "<td>" . $PlayerInfo['CK'] . "</td>";
-						echo "<td>" . $PlayerInfo['FG'] . "</td>";
-						echo "<td>" . $PlayerInfo['DI'] . "</td>";
-						echo "<td>" . $PlayerInfo['SK'] . "</td>";
-						echo "<td>" . $PlayerInfo['ST'] . "</td>";
-						echo "<td>" . $PlayerInfo['EN'] . "</td>";
-						echo "<td>" . $PlayerInfo['DU'] . "</td>";
-						echo "<td>" . $PlayerInfo['PH'] . "</td>";
-						echo "<td>" . $PlayerInfo['FO'] . "</td>";
-						echo "<td>" . $PlayerInfo['PA'] . "</td>";
-						echo "<td>" . $PlayerInfo['SC'] . "</td>";
-						echo "<td>" . $PlayerInfo['DF'] . "</td>";
-						echo "<td>" . $PlayerInfo['PS'] . "</td>";
-						echo "<td>" . $PlayerInfo['EX'] . "</td>";
-						echo "<td>" . $PlayerInfo['LD'] . "</td>";
-						echo "<td>" . $PlayerInfo['PO'] . "</td>";
-						echo "<td>" . $PlayerInfo['MO'] . "</td>";
-						echo "<td>" . $PlayerInfo['Overall'] . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'CK') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'FG') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'DI') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'CK') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'ST') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'EN') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'DU') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'PH') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'FO') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'PA') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'SC') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'DF') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'PS') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'EX') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'LD') . "</td>";
+						echo "<td>" . getRankPlayerStat($DatabaseFile, $PlayerInfo, 'PO') . "</td>";
+
 					} ?>
 				</tr>
 			</table>
