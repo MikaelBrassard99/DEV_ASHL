@@ -101,10 +101,11 @@ If (file_exists($DatabaseFile) == false){
 			
 			
 			$_COOKIE[$Cookie_Name] = $TeamInput;
-
+			header(header: "Location: /leaguefiles/WebClientIndex.php");
+			exit();
 			
 		}else{
-			$InformationMessage = $TopMenuLang['IncorrectPassword'];
+			$InformationMessage = $News['IncorrectPassword'];
 		}
 	}} catch (Exception $e) {
 	STHSErrorLogin:

@@ -756,7 +756,9 @@ $TopMenuLang = array(
     'SearchHistory' => 'Recherche dans l’historique',
     'AllStar' => 'Match des Étoiles',
     'CupWinner' => 'Gagnants de la Coupe Stanley',
-    'Login' => 'Se connecter'
+    'Login' => 'Se connecter',
+    'Logout' => 'Se deconnecter'
+
 );
 
 $EntryDraftLang = array(
